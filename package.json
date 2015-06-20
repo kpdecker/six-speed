@@ -1,0 +1,19 @@
+{
+  "name": "six-speed",
+  "version": "0.0.0",
+  "description": "ES6 polyfill vs. feature performance tests",
+  "keywords": [
+    "es6",
+    "benchmark",
+    "performance",
+    "polyfill"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Decker <kpdecker@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
