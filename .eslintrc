@@ -32,8 +32,7 @@
     "comma-dangle": [2, "never"],
     "no-cond-assign": [2, "except-parens"],
 
-    // Allow for debugging
-    "no-console": 1,
+    "no-console": 0,
 
     "no-constant-condition": 2,
     "no-control-regex": 2,
@@ -134,7 +133,7 @@
     "no-catch-shadow": 2,
     "no-delete-var": 2,
     "no-label-var": 2,
-    "no-shadow": 1,
+    "no-shadow": 0,
     "no-shadow-restricted-names": 2,
     "no-undef": 2,
     "no-undef-init": 2,
