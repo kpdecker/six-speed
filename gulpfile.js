@@ -45,10 +45,10 @@ Gulp.task('build:webpack', function(callback) {
       path: 'build/',
       filename: 'runner.js'
     },
+    externals: {
+      benchmark: 'Benchmark'
+    },
     module: {
-      noParse: [
-        /\/benchmark.js/
-      ],
       loaders: [{
         test: /\.jsx?$/,
         exclude: /node_modules|vendor/,
@@ -113,6 +113,7 @@ Gulp.task('build:tests', function() {
 
 Gulp.task('build:browser', ['build:webpack', 'build:tests'], function() {
   var scripts = [
+    require.resolve('benchmark'),
     'runner.js'
   ];
 
