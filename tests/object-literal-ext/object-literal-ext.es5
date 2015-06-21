@@ -1,0 +1,15 @@
+function fn() {
+  var name = 'foo';
+  var ret = {
+    'bizz buzz': function() {
+      return 1;
+    },
+    name: name
+  };
+  ret[name] = 'bar';
+  return ret;
+}
+
+test(function() {
+  fn();
+});
