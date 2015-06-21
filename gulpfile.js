@@ -154,7 +154,7 @@ Gulp.task('build:browser', ['build:webpack', 'build:tests'], function() {
 Gulp.task('build', ['build:browser']);
 
 Gulp.task('watch', ['build'], function() {
-  Gulp.watch('tests/**', ['build']);
+  Gulp.watch(['lib/*.js', 'tests/**'], ['build']);
 });
 
 Gulp.task('clean', function(callback) {
