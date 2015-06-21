@@ -1,0 +1,14 @@
+var obj = {
+  value: 42,
+  fn: function() {
+    return function() {
+      return this.value;
+    }.bind(this);
+  }
+};
+
+var fn = obj.fn();
+
+test(function() {
+  fn();
+});
