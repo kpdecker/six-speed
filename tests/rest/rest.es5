@@ -1,0 +1,9 @@
+function fn() {
+  return arguments[1];
+}
+
+test(function() {
+  fn();
+  fn(2);
+  fn(2, 4);
+});
