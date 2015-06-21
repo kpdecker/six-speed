@@ -1,0 +1,13 @@
+var i = 0;
+function generate() {
+  return i++;
+}
+
+function fn() {
+  var args = [generate(), generate(), generate()];
+  return Math.max.apply(Math, args);
+}
+
+test(function() {
+  fn();
+});
