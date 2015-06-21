@@ -1,0 +1,10 @@
+function fn(arg, other) {
+  arg = arg === undefined ? 1 : arg;
+  other = other === undefined ? 3 : other;
+  return other;
+}
+
+test(function() {
+  fn();
+  fn(2, 4);
+});
