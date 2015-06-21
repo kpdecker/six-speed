@@ -132,7 +132,7 @@ Gulp.task('build:browser', ['build:webpack', 'build:tests'], function() {
           + _.map(scripts, function(script) {
             return '<script src="' + script + '"></script>';
           }).join('\n')
-          + '\n<script>SixSpeed.run();</script>'
+          + '\n<script>SixSpeed.run(window.location.hash.replace(/^#/, ""));</script>'
         )
       }));
 
@@ -143,7 +143,7 @@ Gulp.task('build:browser', ['build:webpack', 'build:tests'], function() {
           + _.map(scripts, function(script) {
             return '<script src="' + script + '" type="application/javascript;version=1.7"></script>';
           }).join('\n')
-          + '\n<script>SixSpeed.run();</script>'
+          + '\n<script>SixSpeed.run(window.location.hash.replace(/^#/, ""));</script>'
         )
       }));
       callback();
