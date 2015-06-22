@@ -1,0 +1,23 @@
+function C() {
+  this.foo = 'bar';
+}
+C.prototype.bar = function() {
+};
+
+
+function D() {
+  C.call(this);
+  this.baz = 'bat';
+}
+D.prototype = Object.create(C.prototype);
+D.prototype.bar = function() {
+  C.prototype.bar.call(this);
+};
+function fn() {
+  var d = new D();
+  return d.bar();
+}
+
+test(function() {
+  fn();
+});
