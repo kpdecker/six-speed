@@ -111,9 +111,14 @@ Gulp.task('build:tests', function() {
     .pipe(Gulp.dest('build/'));
 });
 
-Gulp.task('build:browser', ['build:webpack', 'build:tests'], function() {
+Gulp.task('build:browser-runner', function() {
+  return Gulp.src(['lib/browser.js', require.resolve('benchmark')])
+      .pipe(Gulp.dest('build'));
+});
+
+Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:tests'], function() {
   var scripts = [
-    require.resolve('benchmark'),
+    'benchmark.js',
     'runner.js'
   ];
 
@@ -125,25 +130,30 @@ Gulp.task('build:browser', ['build:webpack', 'build:tests'], function() {
       return callback();
     },
     function(callback) {
+      scripts.push('browser.js');
+
       this.push(new GUtil.File({
         path: 'index.html',
         contents: new Buffer(
           '<!doctype html>\n'
+          + '<body>\n'
           + _.map(scripts, function(script) {
             return '<script src="' + script + '"></script>';
           }).join('\n')
-          + '\n<script>SixSpeed.run(window.location.hash.replace(/^#/, ""));</script>'
+          + '</body>'
         )
       }));
 
+      // We need a special mime type to enable all of the features on Firefox.
       this.push(new GUtil.File({
         path: 'index-moz.html',
         contents: new Buffer(
           '<!doctype html>\n'
+          + '<body>\n'
           + _.map(scripts, function(script) {
             return '<script src="' + script + '" type="application/javascript;version=1.7"></script>';
           }).join('\n')
-          + '\n<script>SixSpeed.run(window.location.hash.replace(/^#/, ""));</script>'
+          + '</body>'
         )
       }));
       callback();
