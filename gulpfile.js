@@ -85,7 +85,7 @@ Gulp.task('build:tests', function() {
             function createFile(testType, src) {
               var fileName = 'tests/' + testName + '-' + testType + '.js';
 
-              src = 'function(suite, testName, testType) {' + src + '}';
+              src = 'function(suite, testName, testType, require) {' + src + '}';
               scripts.push(fileName);
               return new GUtil.File({
                 path: fileName,
@@ -97,7 +97,7 @@ Gulp.task('build:tests', function() {
             }
 
             if (ext === 'es6') {
-              this.push(createFile('babel', Babel.transform(content).code));
+              this.push(createFile('babel', Babel.transform(content, {optional: ['runtime']}).code));
             }
             this.push(createFile(ext, content));
 
