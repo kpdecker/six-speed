@@ -1,0 +1,11 @@
+var i = 0;
+function next() {
+  return i++;
+}
+
+test(function() {
+  next();
+  next();
+  next();
+});
+
