@@ -1,0 +1,9 @@
+test(function() {
+  var map = {};
+  map.foo = 'bar';
+  var ret = 'foo' in map;
+
+  var set = [];
+  set.push('bar');
+  return set.indexOf('bar') >= 0 && ret;
+});
