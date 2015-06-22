@@ -4,10 +4,6 @@ function C() {
 C.prototype.bar = function() {
 };
 
-function fn() {
-  return new C();
-}
-
 test(function() {
-  fn();
+  return new C();
 });

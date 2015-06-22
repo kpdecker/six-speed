@@ -1,9 +1,5 @@
-function fn() {
+test(function() {
   var ret = [1];
   ret.push(1,2,3);
   return ret;
-}
-
-test(function() {
-  fn();
 });

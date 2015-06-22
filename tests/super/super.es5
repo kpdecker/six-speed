@@ -13,11 +13,7 @@ D.prototype = Object.create(C.prototype);
 D.prototype.bar = function() {
   C.prototype.bar.call(this);
 };
-function fn() {
+test(function() {
   var d = new D();
   return d.bar();
-}
-
-test(function() {
-  fn();
 });

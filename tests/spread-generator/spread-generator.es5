@@ -3,11 +3,7 @@ function generate() {
   return i++;
 }
 
-function fn() {
+test(function() {
   var args = [generate(), generate(), generate()];
   return Math.max.apply(Math, args);
-}
-
-test(function() {
-  fn();
 });

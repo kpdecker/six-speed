@@ -15,11 +15,7 @@ class D extends C {
     super.bar();
   }
 }
-function fn() {
+test(function() {
   var d = new D();
   return d.bar();
-}
-
-test(function() {
-  fn();
 });

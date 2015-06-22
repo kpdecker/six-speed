@@ -1,4 +1,4 @@
-function fn() {
+test(function() {
   var name = 'foo';
   var ret = {
     'bizz buzz': function() {
@@ -8,8 +8,4 @@ function fn() {
   };
   ret[name] = 'bar';
   return ret;
-}
-
-test(function() {
-  fn();
 });

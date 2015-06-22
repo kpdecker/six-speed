@@ -5,10 +5,6 @@ class C {
   bar() {
   }
 }
-function fn() {
-  return new C();
-}
-
 test(function() {
-  fn();
+  return new C();
 });

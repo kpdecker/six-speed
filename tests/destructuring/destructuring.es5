@@ -3,13 +3,10 @@ var data = {
   b: {c: 'd'},
   arr: [1, 2, 3]
 };
-function fn() {
+
+test(function() {
   var a = data.a,
       b = data.c,
       c = data.arr[1];
   return a;
-}
-
-test(function() {
-  fn();
 });

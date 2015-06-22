@@ -4,10 +4,6 @@ function *generate() {
   yield 3;
 }
 
-function fn() {
-  return Math.max(... generate());
-}
-
 test(function() {
-  fn();
+  return Math.max(... generate());
 });

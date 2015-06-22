@@ -1,7 +1,3 @@
-function fn() {
-  return Math.max.apply(Math, [1,2,3]);
-}
-
 test(function() {
-  fn();
+  return Math.max.apply(Math, [1,2,3]);
 });
