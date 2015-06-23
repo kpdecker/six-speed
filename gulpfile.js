@@ -121,12 +121,18 @@ Gulp.task('build:tests', function() {
 });
 
 Gulp.task('build:browser-runner', function() {
-  return Gulp.src(['lib/browser.js', require.resolve('benchmark'), require.resolve('traceur/bin/traceur-runtime')])
+  return Gulp.src([
+        'lib/browser.js',
+        'lib/native-features.js',
+        require.resolve('benchmark'),
+        require.resolve('traceur/bin/traceur-runtime')
+      ])
       .pipe(Gulp.dest('build'));
 });
 
 Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:tests'], function() {
   var scripts = [
+    'native-features.js',
     'benchmark.js',
     'traceur-runtime.js',
     'runner.js'

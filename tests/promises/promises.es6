@@ -1,5 +1,6 @@
-// Create an instance so we throw safely here, rather in the async test
-new Promise(function() {});   // eslint-disable-line no-new
+if (testType === 'es6' && !NativeFeatures.Promise) {
+  throw new Error('Promises not natively supported');
+}
 
 test({
   defer: true,

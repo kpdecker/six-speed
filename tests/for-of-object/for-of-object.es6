@@ -1,3 +1,7 @@
+if (testType === 'es6' && !NativeFeatures.Symbol) {
+  throw new Error('Promises not natively supported');
+}
+
 var data = {'a': 'b', 'c': 'd'};
 data[Symbol.iterator] = function() {
   var array = Object.keys(data),
