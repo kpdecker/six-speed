@@ -1,6 +1,5 @@
 {
   "node": {
-
     "0.10.39": {
       "stats": {
         "arrow-args": {
@@ -93,14 +92,14 @@
           "errors": {}
         },
         "for-of-object": {
-          "baseline": 7346559.632966736,
+          "baseline": 7536221.128481672,
           "relative": {
-            "babel": 0.08077870432052826,
-            "traceur": 0.11286374384999819
+            "babel": 0.07723846024700834,
+            "traceur": 0.10678145433768414
           },
           "raw": {
-            "babel": 593445.5683645486,
-            "traceur": 829160.2245938944
+            "babel": 582086.116044896,
+            "traceur": 804728.6523096561
           },
           "errors": {}
         },
@@ -117,19 +116,18 @@
           "errors": {}
         },
         "map-set": {
-          "supportsES6": true,
-          "baseline": 2400260.631690959,
+          "baseline": 2414814.8864556127,
           "relative": {
-            "babel": 0.08864515163276429,
-            "es6": 0.250468565621092,
-            "traceur": 0.251582028318871
+            "babel": 0.08532184622495657,
+            "traceur": 0.21420588626274187
           },
           "raw": {
-            "babel": 212771.46765439966,
-            "es6": 601189.8375364107,
-            "traceur": 603862.4382147461
+            "babel": 206036.46440390174,
+            "traceur": 517267.5629136869
           },
-          "errors": {}
+          "errors": {
+            "es6": "ReferenceError: NativeFeatures is not defined"
+          }
         },
         "object-literal-ext": {
           "baseline": 4030015.5595351816,
@@ -144,19 +142,18 @@
           "errors": {}
         },
         "promises": {
-          "supportsES6": true,
-          "baseline": 738.7530129275732,
+          "baseline": 728.9191549934517,
           "relative": {
-            "babel": 0.9853350106420141,
-            "es6": 1.0230626933398612,
-            "traceur": 1.0269232389607774
+            "babel": 0.9887307544922391,
+            "traceur": 1.0313647148242082
           },
           "raw": {
-            "babel": 727.9192078548103,
-            "es6": 755.7906471186204,
-            "traceur": 758.6426368276166
+            "babel": 720.7047860805209,
+            "traceur": 751.7814964197241
           },
-          "errors": {}
+          "errors": {
+            "es6": "ReferenceError: NativeFeatures is not defined"
+          }
         },
         "proto": {
           "supportsES6": true,
@@ -423,19 +420,18 @@
           "errors": {}
         },
         "map-set": {
-          "supportsES6": true,
-          "baseline": 4842907.919274,
+          "baseline": 5021695.062990102,
           "relative": {
-            "babel": 0.17842788951163058,
-            "es6": 0.7671149639022102,
-            "traceur": 0.7560088468931375
+            "babel": 0.1765726298368893,
+            "traceur": 0.7823219487064901
           },
           "raw": {
-            "babel": 864109.8391352221,
-            "es6": 3715067.1336756027,
-            "traceur": 3661281.231659981
+            "babel": 886693.9035110858,
+            "traceur": 3928582.267488177
           },
-          "errors": {}
+          "errors": {
+            "es6": "ReferenceError: NativeFeatures is not defined"
+          }
         },
         "object-literal-ext": {
           "baseline": 4167531.9013212556,
@@ -450,19 +446,18 @@
           "errors": {}
         },
         "promises": {
-          "supportsES6": true,
-          "baseline": 727.0126286966603,
+          "baseline": 716.9243897280023,
           "relative": {
-            "babel": 1.0070742264267338,
-            "es6": 1.0175677099102118,
-            "traceur": 1.0092165511707079
+            "babel": 1.0208266096730683,
+            "traceur": 1.050739007053754
           },
           "raw": {
-            "babel": 732.1556806471554,
-            "es6": 739.7845756586638,
-            "traceur": 733.7131777907938
+            "babel": 731.85549415797,
+            "traceur": 753.3004213954197
           },
-          "errors": {}
+          "errors": {
+            "es6": "ReferenceError: NativeFeatures is not defined"
+          }
         },
         "proto": {
           "supportsES6": true,
@@ -727,19 +722,18 @@
           "errors": {}
         },
         "map-set": {
-          "supportsES6": true,
-          "baseline": 10870467.87489748,
+          "baseline": 10206075.140032256,
           "relative": {
-            "babel": 0.32376125195839245,
-            "es6": 0.9095388895012403,
-            "traceur": 0.8749736817238404
+            "babel": 0.3497899404500334,
+            "traceur": 0.9355594271095617
           },
           "raw": {
-            "babel": 3519436.288550294,
-            "es6": 9887113.27929316,
-            "traceur": 9511373.29855978
+            "babel": 3569982.415460449,
+            "traceur": 9548389.811045717
           },
-          "errors": {}
+          "errors": {
+            "es6": "ReferenceError: NativeFeatures is not defined"
+          }
         },
         "object-literal-ext": {
           "supportsES6": true,
@@ -757,19 +751,18 @@
           "errors": {}
         },
         "promises": {
-          "supportsES6": true,
-          "baseline": 747.0648077821204,
+          "baseline": 738.1772728577936,
           "relative": {
-            "babel": 1.0078585249888923,
-            "es6": 1.0327777344200195,
-            "traceur": 1.028559065567753
+            "babel": 1.0612771335654985,
+            "traceur": 1.0151034345891305
           },
           "raw": {
-            "babel": 752.9356352423982,
-            "es6": 771.5518996461457,
-            "traceur": 768.4002806109307
+            "babel": 783.4106602017159,
+            "traceur": 749.3262850135841
           },
-          "errors": {}
+          "errors": {
+            "es6": "ReferenceError: NativeFeatures is not defined"
+          }
         },
         "proto": {
           "supportsES6": true,
@@ -996,32 +989,32 @@
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.133575577398275,
-            "traceur": 0.130457713440535,
-            "es6": 0.145957061310147
+            "babel": 0.142534442605375,
+            "traceur": 0.152934530662563,
+            "es6": 0.172841615098147
           },
           "raw": {
-            "babel": 2166201.96511487,
-            "traceur": 2115639.40597218,
-            "es6": 2366993.12247564
+            "babel": 1535575.6165905,
+            "traceur": 1647619.56427847,
+            "es6": 1862085.85676137
           },
           "errors": {},
-          "baseline": 16217051.1055027,
+          "baseline": 10773365.2899737,
           "supportsES6": true
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.121877675131695,
-            "traceur": 0.121205281079507,
-            "es6": 0.138563338996426
+            "babel": 0.137537784198109,
+            "traceur": 0.137777228022812,
+            "es6": 0.137701382935878
           },
           "raw": {
-            "babel": 360361.608841514,
-            "traceur": 358373.508870293,
-            "es6": 409696.917119966
+            "babel": 289827.351032215,
+            "traceur": 290331.920520805,
+            "es6": 290172.095489719
           },
           "errors": {},
-          "baseline": 2956748.3007214,
+          "baseline": 2107256.21851482,
           "supportsES6": true
         },
         "generator": {
@@ -1041,17 +1034,17 @@
         },
         "map-set": {
           "relative": {
-            "babel": 0.227650874941641,
-            "traceur": 0.489236738768918,
-            "es6": 0.483757310828694
+            "babel": 0.250552511351676,
+            "traceur": 0.509938913577709,
+            "es6": 0.518524980528562
           },
           "raw": {
-            "babel": 1501368.1621054,
-            "traceur": 3226539.1622511,
-            "es6": 3190402.07884164
+            "babel": 1039531.59063986,
+            "traceur": 2115714.61447676,
+            "es6": 2151337.83687676
           },
           "errors": {},
-          "baseline": 6595046.7464282,
+          "baseline": 4148956.97924483,
           "supportsES6": true
         },
         "object-literal-ext": {
@@ -1069,17 +1062,17 @@
         },
         "promises": {
           "relative": {
-            "babel": 5.7434881405576,
-            "traceur": 1.94699237785355,
-            "es6": 1.96421222056299
+            "babel": 5.47797541880906,
+            "traceur": 1.90050997165134,
+            "es6": 1.90240043687608
           },
           "raw": {
-            "babel": 702.431138537078,
-            "traceur": 238.118028492335,
-            "es6": 240.224022867844
+            "babel": 686.510798583635,
+            "traceur": 238.17569788186,
+            "es6": 238.412614752037
           },
           "errors": {},
-          "baseline": 122.300442056608,
+          "baseline": 125.321993272633,
           "supportsES6": true
         },
         "proto": {
@@ -1214,61 +1207,61 @@
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435095656186,
+          "timestamp": 1435102816429,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435095656269,
+          "timestamp": 1435102816439,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
-          "timestamp": 1435095656521,
+          "timestamp": 1435102816809,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-          "timestamp": 1435095656833,
+          "timestamp": 1435102816812,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/object-literal-ext-es6.js 10:0 Uncaught SyntaxError: Unexpected token [",
-          "timestamp": 1435095657167,
+          "timestamp": 1435102817397,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095657496,
+          "timestamp": 1435102817767,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095657572,
+          "timestamp": 1435102817848,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095657643,
+          "timestamp": 1435102817917,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095657722,
+          "timestamp": 1435102817998,
           "level": "SEVERE"
         },
         {
           "source": "network",
           "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
-          "timestamp": 1435095658485,
+          "timestamp": 1435102818833,
           "level": "SEVERE"
         }
       ]
@@ -1361,32 +1354,32 @@
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.119787581485328,
-            "traceur": 0.122415391434641,
-            "es6": 0.133391124726744
+            "babel": 0.136688577420561,
+            "traceur": 0.109798230850027,
+            "es6": 0.132237487986643
           },
           "raw": {
-            "babel": 1837938.30721452,
-            "traceur": 1878257.6166958,
-            "es6": 2046661.7235088
+            "babel": 1504903.28262851,
+            "traceur": 1208848.03361889,
+            "es6": 1455898.02390988
           },
           "errors": {},
-          "baseline": 15343312.5907099,
+          "baseline": 11009722.3266744,
           "supportsES6": true
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.0954514065261564,
-            "traceur": 0.100956137242271,
-            "es6": 0.110772377645489
+            "babel": 0.126740222974019,
+            "traceur": 0.116648809071461,
+            "es6": 0.130103056703543
           },
           "raw": {
-            "babel": 325190.697161933,
-            "traceur": 343944.608543757,
-            "es6": 377387.280332538
+            "babel": 295863.497537349,
+            "traceur": 272306.011663902,
+            "es6": 303713.726340066
           },
           "errors": {},
-          "baseline": 3406871.71616294,
+          "baseline": 2334408.84507516,
           "supportsES6": true
         },
         "generator": {
@@ -1406,17 +1399,17 @@
         },
         "map-set": {
           "relative": {
-            "babel": 0.329020588039972,
-            "traceur": 0.669362252418591,
-            "es6": 0.6611854446243
+            "babel": 0.214564629674464,
+            "traceur": 0.442921419747173,
+            "es6": 0.411450578030099
           },
           "raw": {
-            "babel": 1401402.08712478,
-            "traceur": 2851024.19629739,
-            "es6": 2816196.60214226
+            "babel": 1271699.52253704,
+            "traceur": 2625143.57034749,
+            "es6": 2438619.56382246
           },
           "errors": {},
-          "baseline": 4259314.27414057,
+          "baseline": 5926883.31001461,
           "supportsES6": true
         },
         "object-literal-ext": {
@@ -1436,17 +1429,17 @@
         },
         "promises": {
           "relative": {
-            "babel": 6.38195298925755,
-            "traceur": 1.90512935526415,
-            "es6": 1.91748631578634
+            "babel": 6.45310041931175,
+            "traceur": 1.96535126034525,
+            "es6": 1.9715827006007
           },
           "raw": {
-            "babel": 798.492874891205,
-            "traceur": 238.364685306382,
-            "es6": 239.910755129975
+            "babel": 779.359652338642,
+            "traceur": 237.361171445919,
+            "es6": 238.113760557428
           },
           "errors": {},
-          "baseline": 125.117323213642,
+          "baseline": 120.772900109582,
           "supportsES6": true
         },
         "proto": {
@@ -1581,55 +1574,55 @@
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435095672149,
+          "timestamp": 1435102834422,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435095672158,
+          "timestamp": 1435102834428,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
-          "timestamp": 1435095672529,
+          "timestamp": 1435102834721,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-          "timestamp": 1435095672638,
+          "timestamp": 1435102834855,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095673797,
+          "timestamp": 1435102835872,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095673899,
+          "timestamp": 1435102836007,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095673954,
+          "timestamp": 1435102836072,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095674082,
+          "timestamp": 1435102836193,
           "level": "SEVERE"
         },
         {
           "source": "network",
           "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
-          "timestamp": 1435095674928,
+          "timestamp": 1435102837308,
           "level": "SEVERE"
         }
       ]
@@ -1722,32 +1715,32 @@
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.103496116732323,
-            "traceur": 0.107593839240901,
-            "es6": 0.123665363878569
+            "babel": 0.11889990447826,
+            "traceur": 0.113550540938967,
+            "es6": 0.124841343784283
           },
           "raw": {
-            "babel": 1111587.23677544,
-            "traceur": 1155598.31839083,
-            "es6": 1328212.54032303
+            "babel": 1815442.74031933,
+            "traceur": 1733765.1036101,
+            "es6": 1906160.58321836
           },
           "errors": {},
-          "baseline": 10740376.2756664,
+          "baseline": 15268664.4138665,
           "supportsES6": true
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.111099691278672,
-            "traceur": 0.120144491970082,
-            "es6": 0.121219226544496
+            "babel": 0.139923815048936,
+            "traceur": 0.141947240101955,
+            "es6": 0.139990433861243
           },
           "raw": {
-            "babel": 240802.551721328,
-            "traceur": 260406.666379389,
-            "es6": 262736.095246053
+            "babel": 393990.865050454,
+            "traceur": 399688.329679508,
+            "es6": 394178.447153473
           },
           "errors": {},
-          "baseline": 2167445.7322957,
+          "baseline": 2815752.73596322,
           "supportsES6": true
         },
         "generator": {
@@ -1767,17 +1760,17 @@
         },
         "map-set": {
           "relative": {
-            "babel": 0.186257398654452,
-            "traceur": 0.326507850492773,
-            "es6": 0.322535729370202
+            "babel": 0.153324243892423,
+            "traceur": 0.268534540813751,
+            "es6": 0.26268062403898
           },
           "raw": {
-            "babel": 640595.349416931,
-            "traceur": 1122958.9379256,
-            "es6": 1109297.61581533
+            "babel": 865546.190905199,
+            "traceur": 1515931.48628797,
+            "es6": 1482884.94884778
           },
           "errors": {},
-          "baseline": 3439301.49376442,
+          "baseline": 5645201.10408955,
           "supportsES6": true
         },
         "object-literal-ext": {
@@ -1797,17 +1790,17 @@
         },
         "promises": {
           "relative": {
-            "babel": 6.16363735109895,
-            "traceur": 1.91171116618543,
-            "es6": 1.94293812425627
+            "babel": 3.34970726958219,
+            "traceur": 1.92120808135494,
+            "es6": 1.92884959641503
           },
           "raw": {
-            "babel": 613.672592930927,
-            "traceur": 190.336433093172,
-            "es6": 193.445494713298
+            "babel": 411.362475906724,
+            "traceur": 235.934918927035,
+            "es6": 236.873339004318
           },
           "errors": {},
-          "baseline": 99.5633840822111,
+          "baseline": 122.80549994389,
           "supportsES6": true
         },
         "proto": {
@@ -1942,55 +1935,55 @@
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435095677310,
+          "timestamp": 1435102824250,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435095677311,
+          "timestamp": 1435102824266,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
-          "timestamp": 1435095677316,
+          "timestamp": 1435102824553,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-          "timestamp": 1435095677318,
+          "timestamp": 1435102824643,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095677336,
+          "timestamp": 1435102825565,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095677339,
+          "timestamp": 1435102825691,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095677340,
+          "timestamp": 1435102825750,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435095677343,
+          "timestamp": 1435102825896,
           "level": "SEVERE"
         },
         {
           "source": "network",
           "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
-          "timestamp": 1435095677980,
+          "timestamp": 1435102826760,
           "level": "SEVERE"
         }
       ]
@@ -2091,33 +2084,33 @@
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.07075359697496358,
-            "traceur": 0.04328707555064932,
-            "es6": 0.2036873432214753
+            "babel": 0.07871830172428865,
+            "traceur": 0.042980696667027314,
+            "es6": 0.23709567196596318
           },
           "raw": {
-            "babel": 1439653.641426813,
-            "traceur": 880780.6049106091,
-            "es6": 4144513.3239673143
+            "babel": 1431897.588583317,
+            "traceur": 781825.2498473037,
+            "es6": 4312805.453307329
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 20347426.886808876
+          "baseline": 18190148.379960574
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.14993843819327138,
-            "traceur": 0.10416533225471093,
-            "es6": 0.28181960864602823
+            "babel": 0.15373730157981005,
+            "traceur": 0.12243021828646383,
+            "es6": 0.3101044309486805
           },
           "raw": {
-            "babel": 1221829.7440426017,
-            "traceur": 848830.3785239606,
-            "es6": 2296513.0519387736
+            "babel": 1196980.904144705,
+            "traceur": 953227.563338543,
+            "es6": 2414437.3442351236
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 8148876.023822905
+          "baseline": 7785884.6997084385
         },
         "generator": {
           "relative": {
@@ -2136,18 +2129,18 @@
         },
         "map-set": {
           "relative": {
-            "babel": 0.008861315458768582,
-            "traceur": 0.04713712641306895,
-            "es6": 0.05079771220975066
+            "babel": 0.009154735152562418,
+            "traceur": 0.05123054883314004,
+            "es6": 0.05470761401044
           },
           "raw": {
-            "babel": 101930.09477439383,
-            "traceur": 542209.7638925934,
-            "es6": 584316.8143549882
+            "babel": 100514.41997587161,
+            "traceur": 562485.8409549197,
+            "es6": 600662.2801080265
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 11502817.527337935
+          "baseline": 10979500.586397361
         },
         "object-literal-ext": {
           "relative": {
@@ -2166,18 +2159,18 @@
         },
         "promises": {
           "relative": {
-            "babel": 19.934101180855013,
-            "traceur": 34.913649839561955,
-            "es6": 33.79852052540502
+            "babel": 23.374775182543004,
+            "traceur": 36.20530115434267,
+            "es6": 37.28878957037119
           },
           "raw": {
-            "babel": 4839.514495463026,
-            "traceur": 8476.184251054012,
-            "es6": 8205.458000032406
+            "babel": 5305.976245904617,
+            "traceur": 8218.452002235072,
+            "es6": 8464.399343044306
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 242.77565622627435
+          "baseline": 226.99581940224527
         },
         "proto": {
           "relative": {
@@ -2313,39 +2306,34 @@
       },
       "log": [
         {
-          "timestamp": 1435095663238,
-          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous3158054815545998821webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "timestamp": 1435102815368,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous5057145486485906037webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435095663239,
+          "timestamp": 1435102815369,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435095665062,
+          "timestamp": 1435102817026,
           "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435095665251,
+          "timestamp": 1435102817173,
           "message": "SyntaxError: class is a reserved identifier",
           "level": "SEVERE"
         },
         {
-          "timestamp": 1435095665643,
+          "timestamp": 1435102817233,
           "message": "SyntaxError: invalid regular expression flag u",
           "level": "SEVERE"
         },
         {
-          "timestamp": 1435095665643,
+          "timestamp": 1435102817333,
           "message": "SyntaxError: class is a reserved identifier",
           "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435095724700,
-          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
-          "level": "WARNING"
         }
       ]
     },
@@ -2443,33 +2431,33 @@
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.05064487792787375,
-            "traceur": 0.03688591385654538,
-            "es6": 0.17258495877205413
+            "babel": 0.05557253227044246,
+            "traceur": 0.04364351381261901,
+            "es6": 0.19918483685300223
           },
           "raw": {
-            "babel": 821365.0263254519,
-            "traceur": 598220.4093564436,
-            "es6": 2799004.6576292864
+            "babel": 1061000.67929233,
+            "traceur": 833249.7352567425,
+            "es6": 3802872.3646658594
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 16218126.29295315
+          "baseline": 19092178.022930365
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.1671781334479421,
-            "traceur": 0.11231305460069965,
-            "es6": 0.2943284160333553
+            "babel": 0.16066720922207328,
+            "traceur": 0.11855369721951389,
+            "es6": 0.3332122807467835
           },
           "raw": {
-            "babel": 932020.5361244099,
-            "traceur": 626146.9200773801,
-            "es6": 1640885.2189600333
+            "babel": 1130755.0347031553,
+            "traceur": 834365.5850046446,
+            "es6": 2345104.927780015
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 5575014.608083499
+          "baseline": 7037870.640674615
         },
         "generator": {
           "relative": {
@@ -2488,18 +2476,18 @@
         },
         "map-set": {
           "relative": {
-            "babel": 0.07330097436319791,
-            "traceur": 0.3981728540173254,
-            "es6": 0.39143618430452437
+            "babel": 0.07329148613637272,
+            "traceur": 0.33494073414806846,
+            "es6": 0.46226993571819713
           },
           "raw": {
-            "babel": 76910.88160032043,
-            "traceur": 417781.9667178044,
-            "es6": 410713.53125479864
+            "babel": 105388.43996710313,
+            "traceur": 481623.218658998,
+            "es6": 664714.4155104854
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 1049247.738771327
+          "baseline": 1437935.6392229232
         },
         "object-literal-ext": {
           "relative": {
@@ -2518,18 +2506,18 @@
         },
         "promises": {
           "relative": {
-            "babel": 16.05863225416992,
-            "traceur": 26.213235554233496,
-            "es6": 24.91037052110879
+            "babel": 23.822075041514246,
+            "traceur": 35.39801525839868,
+            "es6": 34.934904593508975
           },
           "raw": {
-            "babel": 3333.605563181197,
-            "traceur": 5441.595927316968,
-            "es6": 5171.134654292238
+            "babel": 5665.172066332377,
+            "traceur": 8418.067985094402,
+            "es6": 8307.934774709425
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 207.58963219396006
+          "baseline": 237.81186384728437
         },
         "proto": {
           "relative": {
@@ -2665,39 +2653,34 @@
       },
       "log": [
         {
-          "timestamp": 1435095674154,
-          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous6256639827930548415webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "timestamp": 1435102822131,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous2928792775665697152webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435095674156,
+          "timestamp": 1435102822132,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435095676087,
+          "timestamp": 1435102823875,
           "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435095676209,
+          "timestamp": 1435102823889,
           "message": "SyntaxError: class is a reserved identifier",
           "level": "SEVERE"
         },
         {
-          "timestamp": 1435095676385,
+          "timestamp": 1435102824097,
           "message": "SyntaxError: invalid regular expression flag u",
           "level": "SEVERE"
         },
         {
-          "timestamp": 1435095676557,
+          "timestamp": 1435102824111,
           "message": "SyntaxError: class is a reserved identifier",
           "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435095735241,
-          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
-          "level": "WARNING"
         }
       ]
     },
@@ -2795,33 +2778,33 @@
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.0686456343860182,
-            "traceur": 0.04034873002650644,
-            "es6": 0.18665121888935704
+            "babel": 0.0723280054932466,
+            "traceur": 0.04416680553972652,
+            "es6": 0.20494499023879617
           },
           "raw": {
-            "babel": 1318902.8540170847,
-            "traceur": 775228.5438673617,
-            "es6": 3586168.6981376586
+            "babel": 1402265.8313873827,
+            "traceur": 856287.9878620781,
+            "es6": 3973389.7702006786
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 19213208.033018336
+          "baseline": 19387591.595047023
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.18007285880175677,
-            "traceur": 0.11216935374446863,
-            "es6": 0.2772458380890633
+            "babel": 0.1893184889936253,
+            "traceur": 0.10151377378866272,
+            "es6": 0.30795284060341754
           },
           "raw": {
-            "babel": 1330566.4979778423,
-            "traceur": 828824.4279862532,
-            "es6": 2048582.0368477313
+            "babel": 1500953.3419216173,
+            "traceur": 804820.6956917921,
+            "es6": 2441509.266818195
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 7389045.227757896
+          "baseline": 7928192.063545136
         },
         "generator": {
           "relative": {
@@ -2840,18 +2823,18 @@
         },
         "map-set": {
           "relative": {
-            "babel": 0.07183275027998007,
-            "traceur": 0.40167277714181604,
-            "es6": 0.42768753908830764
+            "babel": 0.061590412798677205,
+            "traceur": 0.3682511017957218,
+            "es6": 0.3784395855434926
           },
           "raw": {
-            "babel": 93803.53510430857,
-            "traceur": 524528.5236081025,
-            "es6": 558500.1678228454
+            "babel": 93159.71693001957,
+            "traceur": 557005.0084677151,
+            "es6": 572415.7878205176
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 1305860.2759701351
+          "baseline": 1512568.477735879
         },
         "object-literal-ext": {
           "relative": {
@@ -2870,18 +2853,18 @@
         },
         "promises": {
           "relative": {
-            "babel": 20.989422740237355,
-            "traceur": 1.0460414840337682,
-            "es6": 1.0456754551939529
+            "babel": 24.10673389973463,
+            "traceur": 1.0286817858652757,
+            "es6": 1.026670291176742
           },
           "raw": {
-            "babel": 4713.5963172930215,
-            "traceur": 234.9096184253393,
-            "es6": 234.82741929996413
+            "babel": 5371.912192147259,
+            "traceur": 229.23006701419314,
+            "es6": 228.7818282404664
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 224.5700787309846
+          "baseline": 222.83865638913423
         },
         "proto": {
           "relative": {
@@ -3017,119 +3000,109 @@
       },
       "log": [
         {
-          "timestamp": 1435096130884,
-          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous564485918395910944webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "timestamp": 1435102883182,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous4957516274427358744webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130884,
+          "timestamp": 1435102883182,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130884,
+          "timestamp": 1435102883182,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130884,
+          "timestamp": 1435102883183,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130885,
+          "timestamp": 1435102883183,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130885,
+          "timestamp": 1435102883183,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130885,
+          "timestamp": 1435102883183,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130885,
+          "timestamp": 1435102883183,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130885,
+          "timestamp": 1435102883183,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130885,
+          "timestamp": 1435102883183,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130885,
+          "timestamp": 1435102883183,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130885,
+          "timestamp": 1435102883184,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130886,
+          "timestamp": 1435102883184,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130886,
+          "timestamp": 1435102883184,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130886,
+          "timestamp": 1435102883184,
           "message": "SyntaxError: unreachable code after return statement",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096130888,
+          "timestamp": 1435102883186,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096132845,
+          "timestamp": 1435102884885,
           "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096132859,
+          "timestamp": 1435102884893,
           "message": "SyntaxError: unreachable code after return statement",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435096132866,
+          "timestamp": 1435102884894,
           "message": "SyntaxError: class is a reserved identifier",
           "level": "SEVERE"
         },
         {
-          "timestamp": 1435096133020,
+          "timestamp": 1435102884894,
           "message": "SyntaxError: invalid regular expression flag u",
           "level": "SEVERE"
         },
         {
-          "timestamp": 1435096133281,
+          "timestamp": 1435102884894,
           "message": "SyntaxError: class is a reserved identifier",
           "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435096133313,
-          "message": "SyntaxError: unreachable code after return statement",
-          "level": "WARNING"
-        },
-        {
-          "timestamp": 1435096191880,
-          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
-          "level": "WARNING"
         }
       ]
     }
@@ -3221,29 +3194,29 @@
         },
         "for-of-array": {
           "relative": {
-            "traceur": 0.09610190411606778,
-            "babel": 0.0652100345613362
+            "traceur": 0.01100807059954182,
+            "babel": 0.06961369266932935
           },
           "raw": {
-            "traceur": 770868.9054322009,
-            "babel": 523073.7978383988
+            "traceur": 88846.7760263113,
+            "babel": 561856.1495430274
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 8021369.737910482
+          "baseline": 8071057.977227116
         },
         "for-of-object": {
           "relative": {
-            "traceur": 0.01970222068034375,
-            "babel": 0.1548600473676527
+            "traceur": 0.1968057747719925,
+            "babel": 0.1711520975631944
           },
           "raw": {
-            "traceur": 58026.44315320534,
-            "babel": 456089.5891419383
+            "traceur": 600723.3751261542,
+            "babel": 522418.9474480532
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 2945172.734314989
+          "baseline": 3052366.607748764
         },
         "generator": {
           "relative": {
@@ -3260,18 +3233,18 @@
         },
         "map-set": {
           "relative": {
-            "traceur": 0.004152535906701398,
-            "es6": 0.03456291463823367,
-            "babel": 0.01731653515954213
+            "traceur": 0.003422794595368216,
+            "es6": 0.03351713727705103,
+            "babel": 0.01688607746114942
           },
           "raw": {
-            "traceur": 13164.55956804763,
-            "es6": 109572.9353877664,
-            "babel": 54897.67307059099
+            "traceur": 12136.11180531943,
+            "es6": 118840.8226245817,
+            "babel": 59872.51595497737
           },
           "errors": null,
           "supportsES6": true,
-          "baseline": 3170245.812156024
+          "baseline": 3545673.416027426
         },
         "object-literal-ext": {
           "relative": {
@@ -3288,18 +3261,18 @@
         },
         "promises": {
           "relative": {
-            "traceur": 0.2156219115514751,
-            "es6": 0.9348687852423424,
-            "babel": 0.932719969665656
+            "traceur": 0.893500376480204,
+            "babel": 0.8991252438745563
           },
           "raw": {
-            "traceur": 46.33378231119277,
-            "es6": 200.8887059449297,
-            "babel": 200.4269590267213
+            "traceur": 199.2750971213958,
+            "babel": 200.5295968684693
           },
-          "errors": null,
-          "supportsES6": true,
-          "baseline": 214.8843871098489
+          "errors": {
+            "es6": "Error: Promises not natively supported"
+          },
+          "supportsES6": null,
+          "baseline": 223.0274349815127
         },
         "proto": {
           "relative": {
@@ -3421,9 +3394,7 @@
           "baseline": 5482964.232340781
         }
       }
-    }
-  },
-  "edge": {
+    },
     "12.9600": {
       "stats": {
         "arrow-args": {
@@ -3858,18 +3829,18 @@
         },
         "map-set": {
           "relative": {
-            "traceur": 0.05328204703424347,
-            "es6": 0.05186721117748206,
-            "babel": 0.010981368001185716
+            "traceur": 0.05938774649347774,
+            "es6": 0.05768078928756184,
+            "babel": 0.009888477762662782
           },
           "raw": {
-            "traceur": 573680.1791303589,
-            "es6": 558446.8438340386,
-            "babel": 118234.81853029864
+            "traceur": 624064.9701952669,
+            "es6": 606127.7312742465,
+            "babel": 103911.20971243527
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 10766856.9633157
+          "baseline": 10508312.017931255
         },
         "object-literal-ext": {
           "relative": {
@@ -3886,18 +3857,18 @@
         },
         "promises": {
           "relative": {
-            "traceur": 3.122697671150386,
-            "es6": 3.119703791969229,
-            "babel": 2.9824671648503713
+            "traceur": 3.333461319657693,
+            "es6": 3.3080932922748842,
+            "babel": 3.1032454775143368
           },
           "raw": {
-            "traceur": 669.3134824794121,
-            "es6": 668.6717797236904,
-            "babel": 639.2567243793117
+            "traceur": 740.5854609232173,
+            "es6": 734.9495196446368,
+            "babel": 689.4390730650039
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 214.33822706020732
+          "baseline": 222.1671079715023
         },
         "proto": {
           "relative": {
