@@ -1,0 +1,30 @@
+table {
+  border-collapse: collapse;
+  margin: 10px;
+  text-align: center;
+}
+
+td {
+  padding: 5px;
+}
+
+.feature-row {
+  margin-top: 5px;
+  border-top: 1px solid #cdcdcd;
+}
+
+.browser-first {
+  border-left: 2px solid #cdcdcd;
+}
+
+.test-error {
+  background: red;
+}
+
+.test-ok {
+  background: green;
+}
+
+.test-slow {
+  background: yellow;
+}
