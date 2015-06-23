@@ -25,6 +25,9 @@ exports.start = function(done) {
       if (userAgent.match(/MSIE ([\.\d]+)/)) {
         browserName = 'internet explorer';
         browserVersion = RegExp.$1;
+      } else if (userAgent.match(/Trident\/.*rv:([\.\d]+)/)) {
+        browserName = 'internet explorer';
+        browserVersion = RegExp.$1;
       } else if (userAgent.match(/(Edge|Firefox)\/(\S+)/)) {
         browserName = RegExp.$1.toLowerCase();
         browserVersion = RegExp.$2;
