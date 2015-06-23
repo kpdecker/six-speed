@@ -1,14 +1,3018 @@
 {
   "node": {
+    "2.3.0": {
+      "stats": {
+        "arrow-args": {
+          "supportsES6": true,
+          "baseline": 117252191.48282705,
+          "relative": {
+            "babel": 0.8777395153560366,
+            "es6": 0.3470071680939459
+          },
+          "raw": {
+            "babel": 102916881.72656982,
+            "es6": 40687350.9192649
+          },
+          "errors": {}
+        },
+        "arrow": {
+          "supportsES6": true,
+          "baseline": 103690063.10628198,
+          "relative": {
+            "babel": 1.096325183596235,
+            "es5-bind": 0.07100687295403456
+          },
+          "raw": {
+            "babel": 113678027.4720998,
+            "es5-bind": 7362707.13758359
+          },
+          "errors": {
+            "es6": "ReferenceError: fn is not defined"
+          }
+        },
+        "bindings": {
+          "supportsES6": true,
+          "baseline": 117278855.86039932,
+          "relative": {
+            "babel": 0.9839848609318725,
+            "es6": 0.9401368718026494
+          },
+          "raw": {
+            "babel": 115400618.67404415,
+            "es6": 110258176.67718963
+          },
+          "errors": {}
+        },
+        "classes": {
+          "supportsES6": true,
+          "baseline": 99249599.89028288,
+          "relative": {
+            "babel": 0.6438169981919557,
+            "es6": 0.9631725019808769
+          },
+          "raw": {
+            "babel": 63898579.47311458,
+            "es6": 95594485.44692473
+          },
+          "errors": {}
+        },
+        "defaults": {
+          "baseline": 106630620.44497286,
+          "relative": {
+            "babel": 0.0953051392711795
+          },
+          "raw": {
+            "babel": 10162446.132080419
+          },
+          "errors": {}
+        },
+        "destructuring": {
+          "baseline": 104477893.09538618,
+          "relative": {
+            "babel": 0.3693585727386953
+          },
+          "raw": {
+            "babel": 38589805.47645783
+          },
+          "errors": {}
+        },
+        "for-of-array": {
+          "supportsES6": true,
+          "baseline": 24554733.583807833,
+          "relative": {
+            "babel": 0.12294518303881359,
+            "es6": 0.14595576685964123
+          },
+          "raw": {
+            "babel": 3018886.214930557,
+            "es6": 3583904.970258859
+          },
+          "errors": {}
+        },
+        "for-of-object": {
+          "supportsES6": true,
+          "baseline": 5896464.419083668,
+          "relative": {
+            "babel": 0.22703481195547315,
+            "es6": 0.29879998749868397
+          },
+          "raw": {
+            "babel": 1338702.6905887988,
+            "es6": 1761863.4947086347
+          },
+          "errors": {}
+        },
+        "generator": {
+          "supportsES6": true,
+          "baseline": 78250684.4137249,
+          "relative": {
+            "babel": 0.0009575143343872554,
+            "es6": 0.0514887041894412
+          },
+          "raw": {
+            "babel": 74926.15200175498,
+            "es6": 4029026.3423995986
+          },
+          "errors": {}
+        },
+        "map-set": {
+          "supportsES6": true,
+          "baseline": 10366569.998004306,
+          "relative": {
+            "babel": 0.33994243849148675,
+            "es6": 0.8831277310131744
+          },
+          "raw": {
+            "babel": 3524037.0839142706,
+            "es6": 9155005.44072679
+          },
+          "errors": {}
+        },
+        "object-literal-ext": {
+          "supportsES6": true,
+          "baseline": 37016914.01477067,
+          "relative": {
+            "babel": 0.02890947615594758,
+            "es6": 0.07318033958543706
+          },
+          "raw": {
+            "babel": 1070139.5930767746,
+            "es6": 2708910.3380058417
+          },
+          "errors": {}
+        },
+        "promises": {
+          "supportsES6": true,
+          "baseline": 801.8527721317414,
+          "relative": {
+            "babel": 0.9835144729732805,
+            "es6": 1.0069984815032476
+          },
+          "raw": {
+            "babel": 788.6338065853137,
+            "es6": 807.4645239258332
+          },
+          "errors": {}
+        },
+        "proto": {
+          "supportsES6": true,
+          "baseline": 785158.2557202005,
+          "relative": {
+            "babel": 0.9683334168344263,
+            "es6": 0.9615191249198017
+          },
+          "raw": {
+            "babel": 760294.9765173,
+            "es6": 754944.6789636451
+          },
+          "errors": {}
+        },
+        "regex-u": {
+          "supportsES6": true,
+          "baseline": 10684044.56767108,
+          "relative": {
+            "babel": 1.4329517463431816,
+            "es6": 0.9725925810620475
+          },
+          "raw": {
+            "babel": 15309720.321252655,
+            "es6": 10391222.482253162
+          },
+          "errors": {}
+        },
+        "rest": {
+          "supportsES6": true,
+          "baseline": 14748855.55825831,
+          "relative": {
+            "babel": 0.9436829119944529,
+            "es6": 0.2971036992034487
+          },
+          "raw": {
+            "babel": 13918242.961802773,
+            "es6": 4381939.545375889
+          },
+          "errors": {}
+        },
+        "spread": {
+          "baseline": 16045287.186891096,
+          "relative": {
+            "babel": 1.0611975255122044
+          },
+          "raw": {
+            "babel": 17027219.05886151
+          },
+          "errors": {}
+        },
+        "spread-generator": {
+          "baseline": 14449955.981963553,
+          "relative": {
+            "babel": 0.0043010061637337674
+          },
+          "raw": {
+            "babel": 62149.34974410687
+          },
+          "errors": {}
+        },
+        "spread-literal": {
+          "baseline": 6245537.572849315,
+          "relative": {
+            "babel": 1.0160207225929414
+          },
+          "raw": {
+            "babel": 6345595.597747726
+          },
+          "errors": {}
+        },
+        "super": {
+          "supportsES6": true,
+          "baseline": 50003276.14234613,
+          "relative": {
+            "babel": 0.018539396789609478,
+            "es6": 0.0711795010296214
+          },
+          "raw": {
+            "babel": 927030.577183368,
+            "es6": 3559208.245658569
+          },
+          "errors": {}
+        },
+        "template_string": {
+          "supportsES6": true,
+          "baseline": 29588581.24969114,
+          "relative": {
+            "babel": 1.0009702194605283,
+            "es6": 0.966521556521134
+          },
+          "raw": {
+            "babel": 29617288.667029016,
+            "es6": 28598001.604703523
+          },
+          "errors": {}
+        },
+        "template_string_tag": {
+          "supportsES6": true,
+          "baseline": 29351581.283467323,
+          "relative": {
+            "babel": 0.013277005829746428,
+            "es6": 0.21024815724418358
+          },
+          "raw": {
+            "babel": 389701.1158128718,
+            "es6": 6171115.877051873
+          },
+          "errors": {}
+        }
+      },
+      "log": [
+        "Failed to load defaults-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/defaults-es6.js:3\n6\"] = function(suite, testName, testType, require) {function fn(arg = 1, other\n                                                                    ^\nUnexpected token =",
+        "Failed to load destructuring-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/destructuring-es6.js:10\n  var {a, b:{c:b}, arr:[, c]} = data;\n      ^\nUnexpected token {",
+        "Failed to load spread-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread-es6.js:4\n  return Math.max(...[1,2,3]);\n                  ^^^\nUnexpected token ...",
+        "Failed to load spread-generator-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread-generator-es6.js:10\n  return Math.max(... generate());\n                  ^^^\nUnexpected token ...",
+        "Failed to load spread-literal-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread-literal-es6.js:4\n  return [1, ... [1,2,3]];\n             ^^^\nUnexpected token ..."
+      ]
+    }
   },
   "chrome": {
+    "43.0.2357.65": {
+      "stats": {
+        "arrow-args": {
+          "relative": {
+            "babel": 0.951723338317471
+          },
+          "raw": {
+            "babel": 76764682.1735872
+          },
+          "errors": {},
+          "baseline": 80658610.6307929,
+          "supportsES6": null
+        },
+        "arrow": {
+          "relative": {
+            "babel": 1.00338329183114,
+            "es5-bind": 0.050744509264396
+          },
+          "raw": {
+            "babel": 79606664.9810951,
+            "es5-bind": 4025980.08311333
+          },
+          "errors": {},
+          "baseline": 79338240.559912,
+          "supportsES6": null
+        },
+        "bindings": {
+          "relative": {
+            "babel": 0.996429121281897,
+            "es6": 0.988282212864624
+          },
+          "raw": {
+            "babel": 78636821.2625131,
+            "es6": 77993878.4105148
+          },
+          "errors": {},
+          "baseline": 78918630.1192678,
+          "supportsES6": true
+        },
+        "classes": {
+          "relative": {
+            "babel": 0.751784447964492,
+            "es6": 0.939421650518654
+          },
+          "raw": {
+            "babel": 48202137.5151273,
+            "es6": 60232865.5581962
+          },
+          "errors": {},
+          "baseline": 64116965.5020636,
+          "supportsES6": true
+        },
+        "defaults": {
+          "relative": {
+            "babel": 0.0866816211413936
+          },
+          "raw": {
+            "babel": 7262969.22361096
+          },
+          "errors": {},
+          "baseline": 83789033.1073034,
+          "supportsES6": null
+        },
+        "destructuring": {
+          "relative": {
+            "babel": 0.40612172217668
+          },
+          "raw": {
+            "babel": 27824749.6878535
+          },
+          "errors": {},
+          "baseline": 68513325.3614751,
+          "supportsES6": null
+        },
+        "for-of-array": {
+          "relative": {
+            "babel": 0.127762949365728,
+            "es6": 0.154167053995738
+          },
+          "raw": {
+            "babel": 2081460.1603383,
+            "es6": 2511624.71218694
+          },
+          "errors": {},
+          "baseline": 16291578.8236855,
+          "supportsES6": true
+        },
+        "for-of-object": {
+          "relative": {
+            "babel": 0.215420951473857,
+            "es6": 0.24527391175703
+          },
+          "raw": {
+            "babel": 734165.43857171,
+            "es6": 835905.82885877
+          },
+          "errors": {},
+          "baseline": 3408050.30127633,
+          "supportsES6": true
+        },
+        "generator": {
+          "relative": {
+            "babel": 0.00066145668572483,
+            "es6": 0.0373419242469303
+          },
+          "raw": {
+            "babel": 41554.4932872142,
+            "es6": 2345920.41162958
+          },
+          "errors": {},
+          "baseline": 62822697.5159809,
+          "supportsES6": true
+        },
+        "map-set": {
+          "relative": {
+            "babel": 0.241826118988854,
+            "es6": 0.439978661119724
+          },
+          "raw": {
+            "babel": 1618447.45788663,
+            "es6": 2944604.77880143
+          },
+          "errors": {},
+          "baseline": 6692608.16264941,
+          "supportsES6": true
+        },
+        "object-literal-ext": {
+          "relative": {
+            "babel": 0.0238767120603307
+          },
+          "raw": {
+            "babel": 565832.464282781
+          },
+          "errors": {},
+          "baseline": 23698089.7056956,
+          "supportsES6": null
+        },
+        "promises": {
+          "relative": {
+            "babel": 5.68524000998529,
+            "es6": 1.95594541564182
+          },
+          "raw": {
+            "babel": 696.799989182543,
+            "es6": 239.726509710606
+          },
+          "errors": {},
+          "baseline": 122.562985548318,
+          "supportsES6": true
+        },
+        "proto": {
+          "relative": {
+            "babel": 1.06535687261294,
+            "es6": 1.02433119991084
+          },
+          "raw": {
+            "babel": 682674.441943047,
+            "es6": 656385.431248863
+          },
+          "errors": {},
+          "baseline": 640794.140904812,
+          "supportsES6": true
+        },
+        "regex-u": {
+          "relative": {
+            "babel": 1.93735950144123
+          },
+          "raw": {
+            "babel": 12612477.9145648
+          },
+          "errors": {
+            "es6": "SyntaxError: Invalid flags supplied to RegExp constructor 'u'"
+          },
+          "baseline": 6510138.10559283,
+          "supportsES6": true
+        },
+        "rest": {
+          "relative": {
+            "babel": 0.964476850704711
+          },
+          "raw": {
+            "babel": 10535191.2058
+          },
+          "errors": {},
+          "baseline": 10923218.321002,
+          "supportsES6": null
+        },
+        "spread": {
+          "relative": {
+            "babel": 1.03572923844912
+          },
+          "raw": {
+            "babel": 11268098.3206824
+          },
+          "errors": {},
+          "baseline": 10879386.1391371,
+          "supportsES6": null
+        },
+        "spread-generator": {
+          "relative": {
+            "babel": 0.00352811085272341
+          },
+          "raw": {
+            "babel": 32565.9958407707
+          },
+          "errors": {},
+          "baseline": 9230434.41666025,
+          "supportsES6": null
+        },
+        "spread-literal": {
+          "relative": {
+            "babel": 0.924654383874287
+          },
+          "raw": {
+            "babel": 3005526.13291143
+          },
+          "errors": {},
+          "baseline": 3250431.92929916,
+          "supportsES6": null
+        },
+        "super": {
+          "relative": {
+            "babel": 0.0201611906235656,
+            "es6": 0.0449526145882931
+          },
+          "raw": {
+            "babel": 787618.803887584,
+            "es6": 1756122.70102078
+          },
+          "errors": {},
+          "baseline": 39066085.8573981,
+          "supportsES6": true
+        },
+        "template_string": {
+          "relative": {
+            "babel": 0.961296921518565,
+            "es6": 0.507964174965789
+          },
+          "raw": {
+            "babel": 18285597.7539586,
+            "es6": 9662392.92868317
+          },
+          "errors": {},
+          "baseline": 19021799.9710982,
+          "supportsES6": true
+        },
+        "template_string_tag": {
+          "relative": {
+            "babel": 0.0103083621817309,
+            "es6": 0.205134761460498
+          },
+          "raw": {
+            "babel": 195661.397172167,
+            "es6": 3893630.56209584
+          },
+          "errors": {},
+          "baseline": 18980842.3222586,
+          "supportsES6": true
+        }
+      },
+      "log": [
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
+          "timestamp": 1435083269861,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
+          "timestamp": 1435083269862,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
+          "timestamp": 1435083270028,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
+          "timestamp": 1435083270097,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/object-literal-ext-es6.js 10:0 Uncaught SyntaxError: Unexpected token [",
+          "timestamp": 1435083270436,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083270666,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083270739,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083270816,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083270893,
+          "level": "SEVERE"
+        },
+        {
+          "source": "network",
+          "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "timestamp": 1435083271637,
+          "level": "SEVERE"
+        }
+      ]
+    },
+    "44.0.2403.52": {
+      "stats": {
+        "arrow-args": {
+          "relative": {
+            "babel": 1.18792035240523
+          },
+          "raw": {
+            "babel": 75877650.5170696
+          },
+          "errors": {},
+          "baseline": 63874358.5489022,
+          "supportsES6": null
+        },
+        "arrow": {
+          "relative": {
+            "babel": 1.04815003479324,
+            "es5-bind": 0.0628145391793639
+          },
+          "raw": {
+            "babel": 66275379.4788107,
+            "es5-bind": 3971814.41845791
+          },
+          "errors": {},
+          "baseline": 63230813.6037835,
+          "supportsES6": null
+        },
+        "bindings": {
+          "relative": {
+            "babel": 0.986110642419967,
+            "es6": 0.98367138678587
+          },
+          "raw": {
+            "babel": 58376018.646009,
+            "es6": 58231618.9952468
+          },
+          "errors": {},
+          "baseline": 59198244.2282047,
+          "supportsES6": true
+        },
+        "classes": {
+          "relative": {
+            "babel": 0.844646664339916,
+            "es6": 0.979234977798593
+          },
+          "raw": {
+            "babel": 40570569.4822428,
+            "es6": 47035195.1691746
+          },
+          "errors": {},
+          "baseline": 48032593.0298302,
+          "supportsES6": true
+        },
+        "defaults": {
+          "relative": {
+            "babel": 0.106157510368112
+          },
+          "raw": {
+            "babel": 6400007.19530588
+          },
+          "errors": {},
+          "baseline": 60287841.8409892,
+          "supportsES6": null
+        },
+        "destructuring": {
+          "relative": {
+            "babel": 0.362670705048311
+          },
+          "raw": {
+            "babel": 20864774.4595927
+          },
+          "errors": {},
+          "baseline": 57530906.6024876,
+          "supportsES6": null
+        },
+        "for-of-array": {
+          "relative": {
+            "babel": 0.116193993840426,
+            "es6": 0.148522494236201
+          },
+          "raw": {
+            "babel": 1860961.20121939,
+            "es6": 2378733.96159774
+          },
+          "errors": {},
+          "baseline": 16015984.4731314,
+          "supportsES6": true
+        },
+        "for-of-object": {
+          "relative": {
+            "babel": 0.208883996430734,
+            "es6": 0.246791339419772
+          },
+          "raw": {
+            "babel": 764038.057286935,
+            "es6": 902692.301696024
+          },
+          "errors": {},
+          "baseline": 3657714.6662372,
+          "supportsES6": true
+        },
+        "generator": {
+          "relative": {
+            "babel": 0.00077639838842498,
+            "es6": 0.0455883681749609
+          },
+          "raw": {
+            "babel": 41160.1884230129,
+            "es6": 2416833.74405972
+          },
+          "errors": {},
+          "baseline": 53014263.0853619,
+          "supportsES6": true
+        },
+        "map-set": {
+          "relative": {
+            "babel": 0.2288932341355,
+            "es6": 0.490953880489673
+          },
+          "raw": {
+            "babel": 1342525.08679976,
+            "es6": 2879586.64880803
+          },
+          "errors": {},
+          "baseline": 5865289.51749185,
+          "supportsES6": true
+        },
+        "object-literal-ext": {
+          "relative": {
+            "babel": 0.0284238913585703,
+            "es6": 0.0642872266248183
+          },
+          "raw": {
+            "babel": 661325.672210185,
+            "es6": 1495741.48120178
+          },
+          "errors": {},
+          "baseline": 23266542.3557772,
+          "supportsES6": true
+        },
+        "promises": {
+          "relative": {
+            "babel": 6.39698873837012,
+            "es6": 1.94916662358634
+          },
+          "raw": {
+            "babel": 783.470454421139,
+            "es6": 238.723956345873
+          },
+          "errors": {},
+          "baseline": 122.474884115672,
+          "supportsES6": true
+        },
+        "proto": {
+          "relative": {
+            "babel": 1.01582103493356,
+            "es6": 1.06647572509253
+          },
+          "raw": {
+            "babel": 615814.223792793,
+            "es6": 646522.269431705
+          },
+          "errors": {},
+          "baseline": 606223.14621893,
+          "supportsES6": true
+        },
+        "regex-u": {
+          "relative": {
+            "babel": 1.63440957680075
+          },
+          "raw": {
+            "babel": 11356062.3717309
+          },
+          "errors": {
+            "es6": "SyntaxError: Invalid flags supplied to RegExp constructor 'u'"
+          },
+          "baseline": 6948112.96563722,
+          "supportsES6": true
+        },
+        "rest": {
+          "relative": {
+            "babel": 0.941530424217261
+          },
+          "raw": {
+            "babel": 8941903.7539739
+          },
+          "errors": {},
+          "baseline": 9497201.07176326,
+          "supportsES6": null
+        },
+        "spread": {
+          "relative": {
+            "babel": 0.977436929241969
+          },
+          "raw": {
+            "babel": 10437243.0273038
+          },
+          "errors": {},
+          "baseline": 10678175.4556769,
+          "supportsES6": null
+        },
+        "spread-generator": {
+          "relative": {
+            "babel": 0.00365005287191052
+          },
+          "raw": {
+            "babel": 36118.7356097169
+          },
+          "errors": {},
+          "baseline": 9895400.66328177,
+          "supportsES6": null
+        },
+        "spread-literal": {
+          "relative": {
+            "babel": 0.938624092363568
+          },
+          "raw": {
+            "babel": 3297472.27752332
+          },
+          "errors": {},
+          "baseline": 3513091.45413036,
+          "supportsES6": null
+        },
+        "super": {
+          "relative": {
+            "babel": 0.0260784648546211,
+            "es6": 0.0626911001647332
+          },
+          "raw": {
+            "babel": 849544.881800933,
+            "es6": 2042256.07513018
+          },
+          "errors": {},
+          "baseline": 32576491.2366149,
+          "supportsES6": true
+        },
+        "template_string": {
+          "relative": {
+            "babel": 0.999339805426833,
+            "es6": 0.527215700463287
+          },
+          "raw": {
+            "babel": 17519078.2368824,
+            "es6": 9242434.90949919
+          },
+          "errors": {},
+          "baseline": 17530651.8781164,
+          "supportsES6": true
+        },
+        "template_string_tag": {
+          "relative": {
+            "babel": 0.0100090003649594,
+            "es6": 0.142132756306279
+          },
+          "raw": {
+            "babel": 183739.394818847,
+            "es6": 2609190.29627353
+          },
+          "errors": {},
+          "baseline": 18357417.1364906,
+          "supportsES6": true
+        }
+      },
+      "log": [
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
+          "timestamp": 1435083279712,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
+          "timestamp": 1435083279829,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
+          "timestamp": 1435083280031,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
+          "timestamp": 1435083280092,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083280750,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083280879,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083280943,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083281008,
+          "level": "SEVERE"
+        },
+        {
+          "source": "network",
+          "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "timestamp": 1435083281793,
+          "level": "SEVERE"
+        }
+      ]
+    },
+    "45.0.2431.0": {
+      "stats": {
+        "arrow-args": {
+          "relative": {
+            "babel": 1.07261027693393
+          },
+          "raw": {
+            "babel": 41430526.4767385
+          },
+          "errors": {},
+          "baseline": 38625889.9133132,
+          "supportsES6": null
+        },
+        "arrow": {
+          "relative": {
+            "babel": 1.12187605500671,
+            "es5-bind": 0.0718492516521893
+          },
+          "raw": {
+            "babel": 41107774.9981942,
+            "es5-bind": 2632699.80451555
+          },
+          "errors": {},
+          "baseline": 36641993.3955615,
+          "supportsES6": null
+        },
+        "bindings": {
+          "relative": {
+            "babel": 0.988704198681468,
+            "es6": 1.01552242983808
+          },
+          "raw": {
+            "babel": 34113010.4114706,
+            "es6": 35038313.0448395
+          },
+          "errors": {},
+          "baseline": 34502746.5818023,
+          "supportsES6": true
+        },
+        "classes": {
+          "relative": {
+            "babel": 0.858883289124854,
+            "es6": 0.962471275604084
+          },
+          "raw": {
+            "babel": 25531274.2031725,
+            "es6": 28610543.9019118
+          },
+          "errors": {},
+          "baseline": 29726127.5500973,
+          "supportsES6": true
+        },
+        "defaults": {
+          "relative": {
+            "babel": 0.125565233645706
+          },
+          "raw": {
+            "babel": 4122778.96576907
+          },
+          "errors": {},
+          "baseline": 32833761.7512971,
+          "supportsES6": null
+        },
+        "destructuring": {
+          "relative": {
+            "babel": 0.439067558906228
+          },
+          "raw": {
+            "babel": 13184636.0394481
+          },
+          "errors": {},
+          "baseline": 30028718.2963201,
+          "supportsES6": null
+        },
+        "for-of-array": {
+          "relative": {
+            "babel": 0.125458300851357,
+            "es6": 0.136671860742859
+          },
+          "raw": {
+            "babel": 1202601.95006444,
+            "es6": 1310091.44180133
+          },
+          "errors": {},
+          "baseline": 9585670.63242225,
+          "supportsES6": true
+        },
+        "for-of-object": {
+          "relative": {
+            "babel": 0.247465325332546,
+            "es6": 0.255256216665148
+          },
+          "raw": {
+            "babel": 517302.010965959,
+            "es6": 533588.105788157
+          },
+          "errors": {},
+          "baseline": 2090401.99983898,
+          "supportsES6": true
+        },
+        "generator": {
+          "relative": {
+            "babel": 0.000735176036223324,
+            "es6": 0.0415674332581048
+          },
+          "raw": {
+            "babel": 25098.1842478998,
+            "es6": 1419071.14380872
+          },
+          "errors": {},
+          "baseline": 34139012.986375,
+          "supportsES6": true
+        },
+        "map-set": {
+          "relative": {
+            "babel": 0.157200144765622,
+            "es6": 0.301166735296493
+          },
+          "raw": {
+            "babel": 551156.272352472,
+            "es6": 1055914.64581704
+          },
+          "errors": {},
+          "baseline": 3506079.92870631,
+          "supportsES6": true
+        },
+        "object-literal-ext": {
+          "relative": {
+            "babel": 0.0239635605481545,
+            "es6": 0.0591670196886281
+          },
+          "raw": {
+            "babel": 385858.503273802,
+            "es6": 952700.564440278
+          },
+          "errors": {},
+          "baseline": 16101885.2978222,
+          "supportsES6": true
+        },
+        "promises": {
+          "relative": {
+            "babel": 3.09172991601819,
+            "es6": 1.92805051195026
+          },
+          "raw": {
+            "babel": 377.717067253616,
+            "es6": 235.550195092268
+          },
+          "errors": {},
+          "baseline": 122.170136950408,
+          "supportsES6": true
+        },
+        "proto": {
+          "relative": {
+            "babel": 1.04096425742339,
+            "es6": 1.11757088527688
+          },
+          "raw": {
+            "babel": 310776.524510697,
+            "es6": 333647.186388867
+          },
+          "errors": {},
+          "baseline": 298546.777465669,
+          "supportsES6": true
+        },
+        "regex-u": {
+          "relative": {
+            "babel": 1.83325796440636
+          },
+          "raw": {
+            "babel": 7928732.06855211
+          },
+          "errors": {
+            "es6": "SyntaxError: Invalid flags supplied to RegExp constructor 'u'"
+          },
+          "baseline": 4324940.74619747,
+          "supportsES6": true
+        },
+        "rest": {
+          "relative": {
+            "babel": 1.05343506954184
+          },
+          "raw": {
+            "babel": 6317850.54960823
+          },
+          "errors": {},
+          "baseline": 5997380.12553163,
+          "supportsES6": null
+        },
+        "spread": {
+          "relative": {
+            "babel": 1.03226985866464
+          },
+          "raw": {
+            "babel": 7602168.57896338
+          },
+          "errors": {},
+          "baseline": 7364516.66698635,
+          "supportsES6": null
+        },
+        "spread-generator": {
+          "relative": {
+            "babel": 0.00315301089627302
+          },
+          "raw": {
+            "babel": 20532.6950311746
+          },
+          "errors": {},
+          "baseline": 6512091.3649379,
+          "supportsES6": null
+        },
+        "spread-literal": {
+          "relative": {
+            "babel": 0.869158318005872
+          },
+          "raw": {
+            "babel": 2093168.45836839
+          },
+          "errors": {},
+          "baseline": 2408270.63954332,
+          "supportsES6": null
+        },
+        "super": {
+          "relative": {
+            "babel": 0.0270981223479895,
+            "es6": 0.0557258367625562
+          },
+          "raw": {
+            "babel": 533968.416161793,
+            "es6": 1098077.43921418
+          },
+          "errors": {},
+          "baseline": 19704996.8741251,
+          "supportsES6": true
+        },
+        "template_string": {
+          "relative": {
+            "babel": 1.04556802415439,
+            "es6": 0.562128871069374
+          },
+          "raw": {
+            "babel": 10841655.4970096,
+            "es6": 5828800.63684616
+          },
+          "errors": {},
+          "baseline": 10369153.652894,
+          "supportsES6": true
+        },
+        "template_string_tag": {
+          "relative": {
+            "babel": 0.0120823065426602,
+            "es6": 0.254309946110008
+          },
+          "raw": {
+            "babel": 117964.706667289,
+            "es6": 2482936.35735185
+          },
+          "errors": {},
+          "baseline": 9763426.06858876,
+          "supportsES6": true
+        }
+      },
+      "log": [
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
+          "timestamp": 1435083285932,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
+          "timestamp": 1435083285934,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
+          "timestamp": 1435083285938,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
+          "timestamp": 1435083285940,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083285959,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083285961,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083285965,
+          "level": "SEVERE"
+        },
+        {
+          "source": "javascript",
+          "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
+          "timestamp": 1435083285967,
+          "level": "SEVERE"
+        },
+        {
+          "source": "network",
+          "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "timestamp": 1435083286611,
+          "level": "SEVERE"
+        }
+      ]
+    }
   },
   "firefox": {
+    "38.0": {
+      "stats": {
+        "arrow-args": {
+          "relative": {
+            "babel": 1.0124574536861697,
+            "es6": 0.014755506459439075
+          },
+          "raw": {
+            "babel": 99195530.57310273,
+            "es6": 1445670.9136664611
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 97975011.40610918
+        },
+        "arrow": {
+          "relative": {
+            "babel": 0.9849734534950827,
+            "es5-bind": 0.15030515085134363,
+            "es6": 0.026063422209900725
+          },
+          "raw": {
+            "babel": 835694028.0880653,
+            "es5-bind": 127525383.056398,
+            "es6": 22113333.323922537
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 848443199.2788091
+        },
+        "bindings": {
+          "relative": {
+            "babel": 0.9938177263488814,
+            "es6": 0.42711076906428835
+          },
+          "raw": {
+            "babel": 867406565.6092327,
+            "es6": 372783333.9115902
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 872802469.3179281
+        },
+        "classes": {
+          "relative": {
+            "babel": 0.16783432915709048
+          },
+          "raw": {
+            "babel": 51293866.14690637
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 305622016.69061434
+        },
+        "defaults": {
+          "relative": {
+            "babel": 0.000579408400190608,
+            "es6": 1.0202836789563279
+          },
+          "raw": {
+            "babel": 482132.17701272754,
+            "es6": 848989402.1970427
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 832111127.2361956
+        },
+        "destructuring": {
+          "relative": {
+            "babel": 0.03555510126967603,
+            "es6": 0.03667696731813237
+          },
+          "raw": {
+            "babel": 5110601.077784867,
+            "es6": 5271855.289744069
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 143737491.81649944
+        },
+        "for-of-array": {
+          "relative": {
+            "babel": 0.07141262511823665,
+            "es6": 0.1894895370243881
+          },
+          "raw": {
+            "babel": 1384045.0859530496,
+            "es6": 3672488.752848673
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 19380957.97012797
+        },
+        "for-of-object": {
+          "relative": {
+            "babel": 0.13508385220402822,
+            "es6": 0.316583949030018
+          },
+          "raw": {
+            "babel": 1067122.6137883025,
+            "es6": 2500919.8779886533
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 7899705.230322716
+        },
+        "generator": {
+          "relative": {
+            "babel": 0.0002630745650836054,
+            "es6": 0.010408156379504364
+          },
+          "raw": {
+            "babel": 36873.81692162645,
+            "es6": 1458858.072073725
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 140164887.88989505
+        },
+        "map-set": {
+          "relative": {
+            "babel": 0.008171717689166316,
+            "es6": 0.05072513291106577
+          },
+          "raw": {
+            "babel": 94835.5961792988,
+            "es6": 588682.625107411
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 11605344.162222764
+        },
+        "object-literal-ext": {
+          "relative": {
+            "babel": 0.6223663080510131,
+            "es6": 0.5674418971762621
+          },
+          "raw": {
+            "babel": 1410176.4741855462,
+            "es6": 1285727.0766649367
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 2265830.3573688297
+        },
+        "promises": {
+          "relative": {
+            "babel": 21.932250265662336,
+            "es6": 39.26143568248371
+          },
+          "raw": {
+            "babel": 4891.515463477909,
+            "es6": 8756.416575269857
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 223.02843548781607
+        },
+        "proto": {
+          "relative": {
+            "babel": 0.9714094008493638,
+            "es6": 0.9861945992777217
+          },
+          "raw": {
+            "babel": 700998.1198117582,
+            "es6": 711667.561851603
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 721629.952519331
+        },
+        "regex-u": {
+          "relative": {
+            "babel": 1.102867344125071
+          },
+          "raw": {
+            "babel": 2867709.719531516
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 2600230.875279505
+        },
+        "rest": {
+          "relative": {
+            "babel": 1.040947187865266,
+            "es6": 41.20287344649648
+          },
+          "raw": {
+            "babel": 543953.5719843693,
+            "es6": 21530823.512001853
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 522556.35859864135
+        },
+        "spread": {
+          "relative": {
+            "babel": 1.0051575480853605,
+            "es6": 0.28586418167474004
+          },
+          "raw": {
+            "babel": 5101404.781391348,
+            "es6": 1450826.1973477222
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 5075229.043554995
+        },
+        "spread-generator": {
+          "relative": {
+            "babel": 0.005594616143231914,
+            "es6": 0.11627775383535527
+          },
+          "raw": {
+            "babel": 26876.29764622567,
+            "es6": 558593.3765079083
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 4803957.404430555
+        },
+        "spread-literal": {
+          "relative": {
+            "babel": 0.96893731876763,
+            "es6": 0.1327622884259924
+          },
+          "raw": {
+            "babel": 7988658.888683527,
+            "es6": 1094593.6491177927
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 8244763.344283328
+        },
+        "super": {
+          "relative": {
+            "babel": 0.015251836636708245
+          },
+          "raw": {
+            "babel": 358413.56881602365
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 23499698.911893073
+        },
+        "template_string": {
+          "relative": {
+            "babel": 1.0503685696002683,
+            "es6": 0.0015792267836498048
+          },
+          "raw": {
+            "babel": 837124681.3076763,
+            "es6": 1258615.0768758226
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 796981845.7403531
+        },
+        "template_string_tag": {
+          "relative": {
+            "babel": 0.00021327927650451492,
+            "es6": 0.002749778979732422
+          },
+          "raw": {
+            "babel": 177283.47261830256,
+            "es6": 2285690.2670028377
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 831226903.6347263
+        }
+      },
+      "log": [
+        {
+          "timestamp": 1435083271137,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous7316404466995485870webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083271138,
+          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083272973,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083272987,
+          "message": "SyntaxError: invalid regular expression flag u",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083273162,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083273162,
+          "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083332221,
+          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
+          "level": "WARNING"
+        }
+      ]
+    },
+    "39.0": {
+      "stats": {
+        "arrow-args": {
+          "relative": {
+            "babel": 0.9322443484489416,
+            "es6": 0.015942471550992196
+          },
+          "raw": {
+            "babel": 91365983.8462411,
+            "es6": 1562465.463717304
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 98006476.51901014
+        },
+        "arrow": {
+          "relative": {
+            "babel": 0.9819277572812589,
+            "es5-bind": 0.17116578316279318,
+            "es6": 0.025584996699042788
+          },
+          "raw": {
+            "babel": 858826527.0476931,
+            "es5-bind": 149707261.06176636,
+            "es6": 22377485.20360011
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 874633108.881242
+        },
+        "bindings": {
+          "relative": {
+            "babel": 0.9952977141790572,
+            "es6": 0.9816628897318533
+          },
+          "raw": {
+            "babel": 876318514.509922,
+            "es6": 864313614.935695
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 880458682.8904035
+        },
+        "classes": {
+          "relative": {
+            "babel": 0.16530060333472643
+          },
+          "raw": {
+            "babel": 52434515.22756014
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 317207040.80784607
+        },
+        "defaults": {
+          "relative": {
+            "babel": 0.0005557748080446415,
+            "es6": 1.017391566216027
+          },
+          "raw": {
+            "babel": 479624.9984395369,
+            "es6": 877993067.1480976
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 862984416.5247086
+        },
+        "destructuring": {
+          "relative": {
+            "babel": 0.03221421631002862,
+            "es6": 0.03230543959335763
+          },
+          "raw": {
+            "babel": 5283128.74381698,
+            "es6": 5298089.354549294
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 163999915.22290388
+        },
+        "for-of-array": {
+          "relative": {
+            "babel": 0.05929524185503247,
+            "es6": 0.2010723696936008
+          },
+          "raw": {
+            "babel": 1174304.5361964758,
+            "es6": 3982110.342213409
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 19804363.713828262
+        },
+        "for-of-object": {
+          "relative": {
+            "babel": 0.1682729986398346,
+            "es6": 0.3050809597050324
+          },
+          "raw": {
+            "babel": 1388964.7573590532,
+            "es6": 2518209.7222771877
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 8254234.301320932
+        },
+        "generator": {
+          "relative": {
+            "babel": 0.00028319070445193933,
+            "es6": 0.009827921926086721
+          },
+          "raw": {
+            "babel": 40061.890900895116,
+            "es6": 1390318.007603321
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 141466122.54956296
+        },
+        "map-set": {
+          "relative": {
+            "babel": 0.07761411258174233,
+            "es6": 0.3873804732710334
+          },
+          "raw": {
+            "babel": 110968.1247547628,
+            "es6": 553853.9739177688
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 1429741.5903311705
+        },
+        "object-literal-ext": {
+          "relative": {
+            "babel": 0.6580241038370666,
+            "es6": 0.48759979463970177
+          },
+          "raw": {
+            "babel": 1475979.1825472512,
+            "es6": 1093709.3977346404
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 2243047.289514973
+        },
+        "promises": {
+          "relative": {
+            "babel": 23.782349292561708,
+            "es6": 39.841888514522765
+          },
+          "raw": {
+            "babel": 5428.931764961678,
+            "es6": 9094.933871827592
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 228.27567193539028
+        },
+        "proto": {
+          "relative": {
+            "babel": 0.9772932095922144,
+            "es6": 0.9978755866275051
+          },
+          "raw": {
+            "babel": 734894.0836254614,
+            "es6": 750371.390703544
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 751968.8834552565
+        },
+        "regex-u": {
+          "relative": {
+            "babel": 1.123429652752717
+          },
+          "raw": {
+            "babel": 3133364.5593710416
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 2789106.1551503665
+        },
+        "rest": {
+          "relative": {
+            "babel": 1.094600533666244,
+            "es6": 43.766962599756745
+          },
+          "raw": {
+            "babel": 570803.167590597,
+            "es6": 22823231.050404117
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 521471.66937581747
+        },
+        "spread": {
+          "relative": {
+            "babel": 0.9929808650388087,
+            "es6": 0.27578672526163533
+          },
+          "raw": {
+            "babel": 5406868.257769851,
+            "es6": 1501683.0064224375
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 5445088.065779127
+        },
+        "spread-generator": {
+          "relative": {
+            "babel": 0.005559867015115229,
+            "es6": 0.11380021572860845
+          },
+          "raw": {
+            "babel": 27433.857196187608,
+            "es6": 561520.421029222
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 4934264.996195964
+        },
+        "spread-literal": {
+          "relative": {
+            "babel": 0.951935004856509,
+            "es6": 0.10714058838969209
+          },
+          "raw": {
+            "babel": 8027824.449924969,
+            "es6": 903534.2020895287
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 8433164.458675466
+        },
+        "super": {
+          "relative": {
+            "babel": 0.01654355368525572
+          },
+          "raw": {
+            "babel": 420029.7820352232
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 25389332.30588605
+        },
+        "template_string": {
+          "relative": {
+            "babel": 0.9976808525760883,
+            "es6": 0.0014737835538745534
+          },
+          "raw": {
+            "babel": 841795654.1965597,
+            "es6": 1243508.47034357
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 843752440.4953537
+        },
+        "template_string_tag": {
+          "relative": {
+            "babel": 0.00024036382464252365,
+            "es6": 0.002938484881636535
+          },
+          "raw": {
+            "babel": 202856.62956439753,
+            "es6": 2479953.628634633
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 843956572.3589731
+        }
+      },
+      "log": [
+        {
+          "timestamp": 1435083276708,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous3273892727852901037webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083276709,
+          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083278100,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083278181,
+          "message": "SyntaxError: invalid regular expression flag u",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083278319,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083278327,
+          "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083337647,
+          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
+          "level": "WARNING"
+        }
+      ]
+    },
+    "40.0": {
+      "stats": {
+        "arrow-args": {
+          "relative": {
+            "babel": 0.9724623253032787,
+            "es6": 0.014598511879672859
+          },
+          "raw": {
+            "babel": 93094154.13915129,
+            "es6": 1397520.5823060118
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 95730345.24511611
+        },
+        "arrow": {
+          "relative": {
+            "babel": 0.9412017608175994,
+            "es5-bind": 0.16619201251492122,
+            "es6": 0.025258919347359028
+          },
+          "raw": {
+            "babel": 812205576.9484923,
+            "es5-bind": 143414605.6969304,
+            "es6": 21797064.153169356
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 862945237.4196036
+        },
+        "bindings": {
+          "relative": {
+            "babel": 1.005737523206728,
+            "es6": 1.0016111411072302
+          },
+          "raw": {
+            "babel": 836325593.7844762,
+            "es6": 832894282.0556059
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 831554530.3688252
+        },
+        "classes": {
+          "relative": {
+            "babel": 0.1475481842126266
+          },
+          "raw": {
+            "babel": 47317954.78518637
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 320694931.2029357
+        },
+        "defaults": {
+          "relative": {
+            "babel": 0.0005008153361316258,
+            "es6": 0.9683591708705962
+          },
+          "raw": {
+            "babel": 435945.04544414533,
+            "es6": 842928225.825109
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 870470638.5620127
+        },
+        "destructuring": {
+          "relative": {
+            "babel": 0.030965072725789276,
+            "es6": 0.032312478862509326
+          },
+          "raw": {
+            "babel": 4963764.476662957,
+            "es6": 5179756.43561348
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 160302044.84321728
+        },
+        "for-of-array": {
+          "relative": {
+            "babel": 0.06803003964312133,
+            "es6": 0.1979519578646208
+          },
+          "raw": {
+            "babel": 1348832.4362268252,
+            "es6": 3924795.9134388613
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 19827012.350759503
+        },
+        "for-of-object": {
+          "relative": {
+            "babel": 0.170867416713896,
+            "es6": 0.34113429710498655
+          },
+          "raw": {
+            "babel": 1281380.2437929695,
+            "es6": 2558256.905835116
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 7499266.205554799
+        },
+        "generator": {
+          "relative": {
+            "babel": 0.0002443940625062844,
+            "es6": 0.00970483630812604
+          },
+          "raw": {
+            "babel": 33916.161072950264,
+            "es6": 1346803.5517620437
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 138776534.60618806
+        },
+        "map-set": {
+          "relative": {
+            "babel": 0.05995174301340474,
+            "es6": 0.3634714533219359
+          },
+          "raw": {
+            "babel": 90183.09182956076,
+            "es6": 546756.070878989
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 1504261.382515543
+        },
+        "object-literal-ext": {
+          "relative": {
+            "babel": 0.8172966356681276,
+            "es6": 0.5739161087043848
+          },
+          "raw": {
+            "babel": 1387606.952266176,
+            "es6": 974395.2779210139
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 1697800.8861272607
+        },
+        "promises": {
+          "relative": {
+            "babel": 20.653092249657906,
+            "es6": 1.012195187485147
+          },
+          "raw": {
+            "babel": 4747.02194717469,
+            "es6": 232.64858897321682
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 229.84557904414137
+        },
+        "proto": {
+          "relative": {
+            "babel": 0.6539656049676709,
+            "es6": 1.0653308898731733
+          },
+          "raw": {
+            "babel": 322920.8120886778,
+            "es6": 526048.3326458822
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 493788.67884747783
+        },
+        "regex-u": {
+          "relative": {
+            "babel": 1.0140804511621497
+          },
+          "raw": {
+            "babel": 2943103.828435422
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 2902238.9940192476
+        },
+        "rest": {
+          "relative": {
+            "babel": 0.9575771485154567,
+            "es6": 31.99688469511727
+          },
+          "raw": {
+            "babel": 480818.44641261944,
+            "es6": 16066269.34759364
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 502119.8001205835
+        },
+        "spread": {
+          "relative": {
+            "babel": 0.9643050195756762,
+            "es6": 0.298752323063615
+          },
+          "raw": {
+            "babel": 4469454.987788419,
+            "es6": 1384686.4149038722
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 4634897.565663525
+        },
+        "spread-generator": {
+          "relative": {
+            "babel": 0.005442026700051269,
+            "es6": 0.12208400130345036
+          },
+          "raw": {
+            "babel": 22660.48318577541,
+            "es6": 508355.1792869663
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 4163978.685654359
+        },
+        "spread-literal": {
+          "relative": {
+            "babel": 1.0045949638385634,
+            "es6": 0.131711519956694
+          },
+          "raw": {
+            "babel": 7416189.781619597,
+            "es6": 972329.8081169651
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 7382268.524702027
+        },
+        "super": {
+          "relative": {
+            "babel": 0.015427283282283804
+          },
+          "raw": {
+            "babel": 377084.01989667467
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 24442671.66142634
+        },
+        "template_string": {
+          "relative": {
+            "babel": 1.0891414030090207,
+            "es6": 0.0014815919732720714
+          },
+          "raw": {
+            "babel": 846510608.1821966,
+            "es6": 1151533.9687825772
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 777227461.7818247
+        },
+        "template_string_tag": {
+          "relative": {
+            "babel": 0.00021635567236725679,
+            "es6": 0.0030870319718630653
+          },
+          "raw": {
+            "babel": 166568.19898649197,
+            "es6": 2376648.368590538
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 769881358.6165091
+        }
+      },
+      "log": [
+        {
+          "timestamp": 1435083614154,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous8983090290234657731webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614154,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614154,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614154,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614154,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614155,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614155,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614155,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614155,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614155,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614155,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614155,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614155,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614156,
+          "message": "Only application manifests may use the 'binary-component' directive.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614156,
+          "message": "SyntaxError: unreachable code after return statement",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083614160,
+          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083616804,
+          "message": "SyntaxError: unreachable code after return statement",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083616816,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083616817,
+          "message": "SyntaxError: invalid regular expression flag u",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083616875,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435083616979,
+          "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083616979,
+          "message": "SyntaxError: unreachable code after return statement",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435083675295,
+          "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
+          "level": "WARNING"
+        }
+      ]
+    }
   },
   "internet explorer": {
+    "11.0": {
+      "stats": {
+        "arrow-args": {
+          "relative": {
+            "babel": 1.033408793995121
+          },
+          "raw": {
+            "babel": 14726876.42470932
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 14250775.21140085
+        },
+        "arrow": {
+          "relative": {
+            "babel": 1.010294123177892,
+            "es5-bind": 0.2986091712882721
+          },
+          "raw": {
+            "babel": 102140554.1382669,
+            "es5-bind": 30189333.50835926
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 101099820.1365188
+        },
+        "bindings": {
+          "relative": {
+            "babel": 1.02663110616683,
+            "es6": 0.9281932850864197
+          },
+          "raw": {
+            "babel": 128277657.0634175,
+            "es6": 115977841.6976332
+          },
+          "errors": null,
+          "supportsES6": true,
+          "baseline": 124950097.7448194
+        },
+        "classes": {
+          "relative": {
+            "babel": 0.7741481588472685
+          },
+          "raw": {
+            "babel": 17303076.41094546
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 22351117.43559565
+        },
+        "defaults": {
+          "relative": {
+            "babel": 0.005097336626540879
+          },
+          "raw": {
+            "babel": 378351.0270666105
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 74225238.548423
+        },
+        "destructuring": {
+          "relative": {
+            "babel": 1.815244828585175
+          },
+          "raw": {
+            "babel": 24783182.40892158
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 13652804.30422044
+        },
+        "for-of-array": {
+          "relative": {
+            "babel": 0.01498692854632284
+          },
+          "raw": {
+            "babel": 121432.3370299532
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 8102549.942412824
+        },
+        "for-of-object": {
+          "relative": {
+            "babel": 0.08911147182813
+          },
+          "raw": {
+            "babel": 399000.9965709247
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 4477549.168310014
+        },
+        "generator": {
+          "relative": {
+            "babel": 0.0001201195909476582
+          },
+          "raw": {
+            "babel": 5494.705474749277
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 45743624.59445589
+        },
+        "map-set": {
+          "relative": {
+            "babel": 0.01182448689506918,
+            "es6": 0.2736686504738957
+          },
+          "raw": {
+            "babel": 40754.59683416713,
+            "es6": 943233.7838578976
+          },
+          "errors": null,
+          "supportsES6": true,
+          "baseline": 3446627.087993294
+        },
+        "object-literal-ext": {
+          "relative": {
+            "babel": 0.3318135195990622
+          },
+          "raw": {
+            "babel": 1248638.182849468
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 3763072.054322036
+        },
+        "promises": {
+          "relative": {
+            "babel": 0.9924447571927058
+          },
+          "raw": {
+            "babel": 203.2557502534517
+          },
+          "errors": {
+            "es6": "ReferenceError: 'Promise' is undefined"
+          },
+          "supportsES6": null,
+          "baseline": 204.80308730573
+        },
+        "proto": {
+          "relative": {
+            "babel": 1.031362273147551,
+            "es6": 1.071662479092793
+          },
+          "raw": {
+            "babel": 697609.1402509358,
+            "es6": 724868.0314799092
+          },
+          "errors": null,
+          "supportsES6": true,
+          "baseline": 676395.8294905877
+        },
+        "regex-u": {
+          "relative": {
+            "babel": 0.8772292570178561
+          },
+          "raw": {
+            "babel": 3349963.253226295
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 3818800.189832367
+        },
+        "rest": {
+          "relative": {
+            "babel": 4.31672215833057
+          },
+          "raw": {
+            "babel": 167650.3479495744
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 38837.4191806708
+        },
+        "spread": {
+          "relative": {
+            "babel": 1.029097266414105
+          },
+          "raw": {
+            "babel": 4125130.400938331
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 4008494.177923893
+        },
+        "spread-generator": {
+          "relative": {
+            "babel": 0.007737769437694083
+          },
+          "raw": {
+            "babel": 33333.97298765209
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 4307956.350478424
+        },
+        "spread-literal": {
+          "relative": {
+            "babel": 0.346587193586138
+          },
+          "raw": {
+            "babel": 2904913.143368519
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 8381478.59218738
+        },
+        "super": {
+          "relative": {
+            "babel": 0.3673505055061561
+          },
+          "raw": {
+            "babel": 516108.3072599448
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 1404947.861848786
+        },
+        "template_string": {
+          "relative": {
+            "babel": 1.48830167862331
+          },
+          "raw": {
+            "babel": 9566363.74788451
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 6427704.735731715
+        },
+        "template_string_tag": {
+          "relative": {
+            "babel": 0.0328584208182111
+          },
+          "raw": {
+            "babel": 204390.8919598616
+          },
+          "errors": null,
+          "supportsES6": null,
+          "baseline": 6220350.426779554
+        }
+      }
+    }
   },
   "edge": {
+    "12.9600": {
+      "stats": {
+        "arrow-args": {
+          "supportsES6": true,
+          "baseline": 18542347.72183537,
+          "relative": {
+            "babel": 1.0247331986540678,
+            "es6": 1.0686522930389795
+          },
+          "raw": {
+            "babel": 19000959.291552328,
+            "es6": 19815322.411265466
+          },
+          "errors": {}
+        },
+        "arrow": {
+          "supportsES6": true,
+          "baseline": 116290788.81734474,
+          "relative": {
+            "babel": 1.0275291545921412,
+            "es5-bind": 0.282598375963061,
+            "es6": 0.9926835330799425
+          },
+          "raw": {
+            "babel": 119492175.92033947,
+            "es5-bind": 32863588.059244916,
+            "es6": 115439951.10785525
+          },
+          "errors": {}
+        },
+        "bindings": {
+          "supportsES6": true,
+          "baseline": 142870168.18648425,
+          "relative": {
+            "babel": 0.9961014678628314,
+            "es6": 0.895519747520701
+          },
+          "raw": {
+            "babel": 142313184.24436656,
+            "es6": 127943056.94260046
+          },
+          "errors": {}
+        },
+        "classes": {
+          "baseline": 22849136.44593316,
+          "relative": {
+            "babel": 0.7694659709174408
+          },
+          "raw": {
+            "babel": 17581632.959995043
+          },
+          "errors": {}
+        },
+        "defaults": {
+          "baseline": 116109773.89552231,
+          "relative": {
+            "babel": 0.00267446762143865
+          },
+          "raw": {
+            "babel": 310531.830816137
+          },
+          "errors": {}
+        },
+        "destructuring": {
+          "baseline": 118923795.6946711,
+          "relative": {
+            "babel": 0.17285385433196396
+          },
+          "raw": {
+            "babel": 20556436.45761092
+          },
+          "errors": {}
+        },
+        "for-of-array": {
+          "supportsES6": true,
+          "baseline": 6086572.250238837,
+          "relative": {
+            "babel": 0.0007828183341712225,
+            "es6": 0.26032246812214277
+          },
+          "raw": {
+            "babel": 4764.680349744755,
+            "es6": 1584471.5105859183
+          },
+          "errors": {}
+        },
+        "for-of-object": {
+          "supportsES6": true,
+          "baseline": 3170572.990902297,
+          "relative": {
+            "babel": 0.011942487584366617,
+            "es6": 0.32849618529537994
+          },
+          "raw": {
+            "babel": 37864.52857917882,
+            "es6": 1041521.1327119679
+          },
+          "errors": {}
+        },
+        "generator": {
+          "baseline": 43119636.50330562,
+          "relative": {
+            "babel": 0.0010010534801892994
+          },
+          "raw": {
+            "babel": 43165.06218613165
+          },
+          "errors": {}
+        },
+        "map-set": {
+          "supportsES6": true,
+          "baseline": 3160072.1359838606,
+          "relative": {
+            "babel": 0.05690830664163901,
+            "es6": 0.3556020619646763
+          },
+          "raw": {
+            "babel": 179834.35412426872,
+            "es6": 1123728.1675129798
+          },
+          "errors": {}
+        },
+        "object-literal-ext": {
+          "supportsES6": true,
+          "baseline": 3164910.5286260294,
+          "relative": {
+            "babel": 0.506289277082409,
+            "es6": 1.2616915369011417
+          },
+          "raw": {
+            "babel": 1602360.2635685774,
+            "es6": 3993140.82901678
+          },
+          "errors": {}
+        },
+        "promises": {
+          "supportsES6": true,
+          "baseline": 230.5397369101465,
+          "relative": {
+            "babel": 0.8478593573583111,
+            "es6": 0.5603436466088879
+          },
+          "raw": {
+            "babel": 195.4652731821909,
+            "es6": 129.18147686848513
+          },
+          "errors": {}
+        },
+        "proto": {
+          "supportsES6": true,
+          "baseline": 918602.9818882857,
+          "relative": {
+            "babel": 0.983341051553081,
+            "es6": 0.9905264448957045
+          },
+          "raw": {
+            "babel": 903300.0221698227,
+            "es6": 909900.5459203969
+          },
+          "errors": {}
+        },
+        "regex-u": {
+          "supportsES6": true,
+          "baseline": 2915951.9611468767,
+          "relative": {
+            "babel": 0.9702571489260835,
+            "es6": 1.0081615438992724
+          },
+          "raw": {
+            "babel": 2829223.2362277904,
+            "es6": 2939750.631085946
+          },
+          "errors": {}
+        },
+        "rest": {
+          "supportsES6": true,
+          "baseline": 301383.50603895116,
+          "relative": {
+            "babel": 0.6446268116787423,
+            "es6": 8.363686411690079
+          },
+          "raw": {
+            "babel": 194279.88859045005,
+            "es6": 2520677.1341654905
+          },
+          "errors": {}
+        },
+        "spread": {
+          "supportsES6": true,
+          "baseline": 3887095.3502666713,
+          "relative": {
+            "babel": 0.9318062499502394,
+            "es6": 0.730241079269551
+          },
+          "raw": {
+            "babel": 3622019.7415309995,
+            "es6": 2838516.703802387
+          },
+          "errors": {}
+        },
+        "spread-generator": {
+          "baseline": 3272402.524066911,
+          "relative": {
+            "babel": 0.001248922257552161
+          },
+          "raw": {
+            "babel": 4086.9763479770363
+          },
+          "errors": {}
+        },
+        "spread-literal": {
+          "supportsES6": true,
+          "baseline": 3626205.5520734447,
+          "relative": {
+            "babel": 0.58733719386744,
+            "es6": 0.4962159859619633
+          },
+          "raw": {
+            "babel": 2129805.393341348,
+            "es6": 1799381.16332287
+          },
+          "errors": {}
+        },
+        "super": {
+          "baseline": 17442068.89979112,
+          "relative": {
+            "babel": 0.0467451244296423
+          },
+          "raw": {
+            "babel": 815331.6810311301
+          },
+          "errors": {}
+        },
+        "template_string": {
+          "supportsES6": true,
+          "baseline": 4735690.893178117,
+          "relative": {
+            "babel": 1.46024694844021,
+            "es6": 1.3353403666924053
+          },
+          "raw": {
+            "babel": 6915278.175519438,
+            "es6": 6323759.213838352
+          },
+          "errors": {}
+        },
+        "template_string_tag": {
+          "supportsES6": true,
+          "baseline": 4713880.290233696,
+          "relative": {
+            "babel": 0.044862664620176,
+            "es6": 0.7674754514361978
+          },
+          "raw": {
+            "babel": 211477.23052041218,
+            "es6": 3617787.4037633007
+          },
+          "errors": {}
+        }
+      }
+    }
   },
   "safari": {
+    "8.0": {
+      "stats": {
+        "arrow-args": {
+          "relative": {
+            "babel": 0.9183826838494498
+          },
+          "raw": {
+            "babel": 17706298.32070063
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 19279869.527247336
+        },
+        "arrow": {
+          "relative": {
+            "babel": 1.0491688355208226,
+            "es5-bind": 0.4138928413944909
+          },
+          "raw": {
+            "babel": 19416719.27820327,
+            "es5-bind": 7659816.83836933
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 18506763.278538033
+        },
+        "bindings": {
+          "relative": {
+            "babel": 0.9715213773668234
+          },
+          "raw": {
+            "babel": 18019760.655268133
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 18547981.6245611
+        },
+        "classes": {
+          "relative": {
+            "babel": 0.9884290141290257
+          },
+          "raw": {
+            "babel": 15878841.14105567
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 16064725.856967717
+        },
+        "defaults": {
+          "relative": {
+            "babel": 0.2811897302194771
+          },
+          "raw": {
+            "babel": 3354361.922965815
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 11929176.504233046
+        },
+        "destructuring": {
+          "relative": {
+            "babel": 0.8361148098104333,
+            "es6": 1.5415986860159994
+          },
+          "raw": {
+            "babel": 9574489.574455101,
+            "es6": 17653102.629051995
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 11451166.11034059
+        },
+        "for-of-array": {
+          "relative": {
+            "babel": 0.03825792267329253,
+            "es6": 0.30901665206128703
+          },
+          "raw": {
+            "babel": 306233.29205978493,
+            "es6": 2473505.617911715
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 8004441.189211857
+        },
+        "for-of-object": {
+          "relative": {
+            "babel": 0.1676890074794896
+          },
+          "raw": {
+            "babel": 659048.6163904984
+          },
+          "errors": {
+            "es6": "ReferenceError: Can't find variable: Symbol"
+          },
+          "supportsES6": null,
+          "baseline": 3930183.774694403
+        },
+        "generator": {
+          "relative": {
+            "babel": 0.004617554060756616
+          },
+          "raw": {
+            "babel": 81315.05674726596
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 17609984.783576515
+        },
+        "map-set": {
+          "relative": {
+            "babel": 0.019048883257991717,
+            "es6": 0.19439954527312114
+          },
+          "raw": {
+            "babel": 177434.79105428487,
+            "es6": 1810775.058538565
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 9314708.303430038
+        },
+        "object-literal-ext": {
+          "relative": {
+            "babel": 0.393224768211251
+          },
+          "raw": {
+            "babel": 2602143.074367116
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 6617444.486531363
+        },
+        "promises": {
+          "relative": {
+            "babel": 3.185466271379159,
+            "es6": 3.1930560994702675
+          },
+          "raw": {
+            "babel": 711.4249616276616,
+            "es6": 713.120033148899
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 223.33463958469338
+        },
+        "proto": {
+          "relative": {
+            "babel": 1.0995091518451932,
+            "es6": 1.2025850778353733
+          },
+          "raw": {
+            "babel": 988786.7369971825,
+            "es6": 1081482.744439914
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 899298.3235635678
+        },
+        "regex-u": {
+          "relative": {
+            "babel": 0.9673109131499681
+          },
+          "raw": {
+            "babel": 6732493.204120101
+          },
+          "errors": {
+            "es6": "SyntaxError: Invalid flag supplied to RegExp constructor."
+          },
+          "supportsES6": true,
+          "baseline": 6960009.561141302
+        },
+        "rest": {
+          "relative": {
+            "babel": 0.93813741576791
+          },
+          "raw": {
+            "babel": 3646458.1973632555
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 3886912.659142218
+        },
+        "spread": {
+          "relative": {
+            "babel": 1.0080525944699945,
+            "es6": 0.43504998716242244
+          },
+          "raw": {
+            "babel": 13897696.931252109,
+            "es6": 5997894.261367766
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 13786678.401000619
+        },
+        "spread-generator": {
+          "relative": {
+            "babel": 0.00894897601345691
+          },
+          "raw": {
+            "babel": 42018.736013329086
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 4695368.045477375
+        },
+        "spread-literal": {
+          "relative": {
+            "babel": 0.5109125138670882,
+            "es6": 0.35093695305916506
+          },
+          "raw": {
+            "babel": 3717326.9381072144,
+            "es6": 2553367.462679675
+          },
+          "errors": {},
+          "supportsES6": true,
+          "baseline": 7275858.072003031
+        },
+        "super": {
+          "relative": {
+            "babel": 0.0635493374794316
+          },
+          "raw": {
+            "babel": 1017082.0817875296
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 16004605.588794984
+        },
+        "template_string": {
+          "relative": {
+            "babel": 0.879120842494377
+          },
+          "raw": {
+            "babel": 10094768.851239936
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 11482800.046689263
+        },
+        "template_string_tag": {
+          "relative": {
+            "babel": 0.014867237971457972
+          },
+          "raw": {
+            "babel": 158185.11930970056
+          },
+          "errors": {},
+          "supportsES6": null,
+          "baseline": 10639845.787992587
+        }
+      },
+      "log": []
+    }
   }
 }
