@@ -8,6 +8,8 @@ var _ = require('lodash'),
     Through = require('through2'),
     webpack = require('webpack');
 
+require('./tasks/server');
+
 Gulp.task('test:node', ['build:tests'], function(callback) {
   ChildProcess.exec('node  --v8-options | grep "in progress"', function(err, stdout) {
     if (err) {

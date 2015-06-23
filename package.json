@@ -25,6 +25,7 @@
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.5",
+    "hapi": "^8.6.1",
     "lodash": "^3.9.3",
     "node-libs-browser": "^0.5.2",
     "through2": "^2.0.0",
