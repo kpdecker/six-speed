@@ -8,7 +8,7 @@ var template = Handlebars.compile(Fs.readFileSync(__dirname + '/report.handlebar
 
 Gulp.task('report', ['report:static'], function() {
   var report = render();
-  Fs.writeFileSync('site/report.html', report);
+  Fs.writeFileSync('site/index.html', report);
 });
 
 Gulp.task('report:static', function() {
