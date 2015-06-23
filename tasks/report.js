@@ -1,8 +1,10 @@
 var _ = require('lodash'),
+    Babel = require('babel'),
     DataStore = require('../lib/data-store'),
     Fs = require('fs'),
     Gulp = require('gulp'),
-    Handlebars = require('handlebars');
+    Handlebars = require('handlebars'),
+    TraceurPackage = require('traceur/package');
 
 var template = Handlebars.compile(Fs.readFileSync(__dirname + '/report.handlebars').toString());
 
@@ -107,6 +109,9 @@ function render() {
 
   return template({
     browsers: browsers,
-    tests: tests
+    tests: tests,
+    date: new Date().toLocaleDateString(),
+    babelVersion: Babel.version,
+    traceurVersion: TraceurPackage.version
   });
 }
