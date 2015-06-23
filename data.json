@@ -1,30 +1,326 @@
 {
   "node": {
-    "2.3.0": {
+
+    "0.10.39": {
+      "stats": {
+        "arrow-args": {
+          "baseline": 64337003.68790411,
+          "relative": {
+            "babel": 1.0323718016964103,
+            "traceur": 0.8938278256846793
+          },
+          "raw": {
+            "babel": 66419708.413030155,
+            "traceur": 57506204.11742653
+          },
+          "errors": {}
+        },
+        "arrow": {
+          "baseline": 77876128.08577512,
+          "relative": {
+            "babel": 0.7329084600419052,
+            "es5-bind": 0.11765249004697105,
+            "traceur": 0.7895229689035208
+          },
+          "raw": {
+            "babel": 57076073.10937161,
+            "es5-bind": 9162320.3845083,
+            "traceur": 61484991.852992035
+          },
+          "errors": {}
+        },
+        "bindings": {
+          "supportsES6": true,
+          "baseline": 77041038.3280671,
+          "relative": {
+            "babel": 0.9988744649402809,
+            "es6": 0.9946456807690974,
+            "traceur": 1.0217754553799328
+          },
+          "raw": {
+            "babel": 76954325.93839169,
+            "es6": 76628536.01497842,
+            "traceur": 78718642.02060361
+          },
+          "errors": {}
+        },
+        "classes": {
+          "baseline": 74174631.28748088,
+          "relative": {
+            "babel": 0.4431839723193447,
+            "traceur": 0.9217148334380318
+          },
+          "raw": {
+            "babel": 32873007.739308525,
+            "traceur": 68367857.92246786
+          },
+          "errors": {}
+        },
+        "defaults": {
+          "baseline": 80635766.03406465,
+          "relative": {
+            "babel": 0.0630239315705206,
+            "traceur": 0.0697060028512133
+          },
+          "raw": {
+            "babel": 5081983.000667399,
+            "traceur": 5620796.937080279
+          },
+          "errors": {}
+        },
+        "destructuring": {
+          "baseline": 68166008.02351701,
+          "relative": {
+            "babel": 0.6026028603233355,
+            "traceur": 0.04597881489379521
+          },
+          "raw": {
+            "babel": 41077031.41179479,
+            "traceur": 3134192.264962248
+          },
+          "errors": {}
+        },
+        "for-of-array": {
+          "baseline": 24043184.49787585,
+          "relative": {
+            "babel": 0.05351011468581817,
+            "traceur": 0.08803271868083551
+          },
+          "raw": {
+            "babel": 1286553.5598936223,
+            "traceur": 2116586.89709293
+          },
+          "errors": {}
+        },
+        "for-of-object": {
+          "baseline": 7346559.632966736,
+          "relative": {
+            "babel": 0.08077870432052826,
+            "traceur": 0.11286374384999819
+          },
+          "raw": {
+            "babel": 593445.5683645486,
+            "traceur": 829160.2245938944
+          },
+          "errors": {}
+        },
+        "generator": {
+          "baseline": 62991697.08049674,
+          "relative": {
+            "babel": 0.001753136631022277,
+            "traceur": 0.013435688406225622
+          },
+          "raw": {
+            "babel": 110433.05160207786,
+            "traceur": 846336.8141529064
+          },
+          "errors": {}
+        },
+        "map-set": {
+          "supportsES6": true,
+          "baseline": 2400260.631690959,
+          "relative": {
+            "babel": 0.08864515163276429,
+            "es6": 0.250468565621092,
+            "traceur": 0.251582028318871
+          },
+          "raw": {
+            "babel": 212771.46765439966,
+            "es6": 601189.8375364107,
+            "traceur": 603862.4382147461
+          },
+          "errors": {}
+        },
+        "object-literal-ext": {
+          "baseline": 4030015.5595351816,
+          "relative": {
+            "babel": 0.2769563766110676,
+            "traceur": 0.10240784095263052
+          },
+          "raw": {
+            "babel": 1116138.507055088,
+            "traceur": 412705.19245750515
+          },
+          "errors": {}
+        },
+        "promises": {
+          "supportsES6": true,
+          "baseline": 738.7530129275732,
+          "relative": {
+            "babel": 0.9853350106420141,
+            "es6": 1.0230626933398612,
+            "traceur": 1.0269232389607774
+          },
+          "raw": {
+            "babel": 727.9192078548103,
+            "es6": 755.7906471186204,
+            "traceur": 758.6426368276166
+          },
+          "errors": {}
+        },
+        "proto": {
+          "supportsES6": true,
+          "baseline": 1711799.8720135656,
+          "relative": {
+            "babel": 0.9978408754015885,
+            "es6": 1.0169816751468406,
+            "traceur": 1.0299713669520694
+          },
+          "raw": {
+            "babel": 1708103.8828023435,
+            "es6": 1740869.1013565033,
+            "traceur": 1763104.8541261896
+          },
+          "errors": {}
+        },
+        "regex-u": {
+          "supportsES6": true,
+          "baseline": 11856410.167560592,
+          "relative": {
+            "babel": 1.3331404287631983,
+            "traceur": 1.3302129591689469
+          },
+          "raw": {
+            "babel": 15806259.73437407,
+            "traceur": 15771550.454111565
+          },
+          "errors": {
+            "es6": "SyntaxError: Invalid flags supplied to RegExp constructor 'u'"
+          }
+        },
+        "rest": {
+          "baseline": 7539547.668766935,
+          "relative": {
+            "babel": 1.004749760256928,
+            "traceur": 1.1096624194946436
+          },
+          "raw": {
+            "babel": 7575358.712639258,
+            "traceur": 8366352.708019118
+          },
+          "errors": {}
+        },
+        "spread": {
+          "baseline": 17195718.345787533,
+          "relative": {
+            "babel": 1.0149144598352589,
+            "traceur": 0.08310532956071105
+          },
+          "raw": {
+            "babel": 17452183.196394205,
+            "traceur": 1429055.840159838
+          },
+          "errors": {}
+        },
+        "spread-generator": {
+          "baseline": 15159894.857479513,
+          "relative": {
+            "babel": 0.0066635583474025355,
+            "traceur": 0.03500477653978588
+          },
+          "raw": {
+            "babel": 101018.84392330238,
+            "traceur": 530668.7318527194
+          },
+          "errors": {}
+        },
+        "spread-literal": {
+          "baseline": 5143726.050720912,
+          "relative": {
+            "babel": 0.9629960004242657,
+            "traceur": 0.16941008178747638
+          },
+          "raw": {
+            "babel": 4953387.614122342,
+            "traceur": 871399.0509450027
+          },
+          "errors": {}
+        },
+        "super": {
+          "baseline": 29521430.116469678,
+          "relative": {
+            "babel": 0.03370016817841123,
+            "traceur": 0.08314285385265255
+          },
+          "raw": {
+            "babel": 994877.1597922425,
+            "traceur": 2454495.949694934
+          },
+          "errors": {}
+        },
+        "template_string": {
+          "baseline": 26333086.538358107,
+          "relative": {
+            "babel": 0.928474554107244,
+            "traceur": 0.9955850374376106
+          },
+          "raw": {
+            "babel": 24449600.781969514,
+            "traceur": 26216826.947139096
+          },
+          "errors": {}
+        },
+        "template_string_tag": {
+          "baseline": 26125454.27211814,
+          "relative": {
+            "babel": 0.001594094103377899,
+            "traceur": 0.11398996468333832
+          },
+          "raw": {
+            "babel": 41646.43260325247,
+            "traceur": 2978039.6098149167
+          },
+          "errors": {}
+        }
+      },
+      "log": [
+        "Failed to load arrow-args-es6.js SyntaxError: Unexpected token )",
+        "Failed to load arrow-es6.js SyntaxError: Unexpected token )",
+        "Failed to load classes-es6.js SyntaxError: Unexpected reserved word",
+        "Failed to load defaults-es6.js SyntaxError: Unexpected token =",
+        "Failed to load destructuring-es6.js SyntaxError: Unexpected token {",
+        "Failed to load for-of-array-es6.js SyntaxError: Unexpected identifier",
+        "Failed to load for-of-object-es6.js SyntaxError: Unexpected identifier",
+        "Failed to load generator-es6.js SyntaxError: Unexpected token *",
+        "Failed to load object-literal-ext-es6.js SyntaxError: Unexpected token (",
+        "Failed to load rest-es6.js SyntaxError: Unexpected token .",
+        "Failed to load spread-es6.js SyntaxError: Unexpected token .",
+        "Failed to load spread-generator-es6.js SyntaxError: Unexpected token *",
+        "Failed to load spread-literal-es6.js SyntaxError: Unexpected token .",
+        "Failed to load super-es6.js SyntaxError: Unexpected reserved word",
+        "Failed to load template_string-es6.js SyntaxError: Unexpected token ILLEGAL",
+        "Failed to load template_string_tag-es6.js SyntaxError: Unexpected token ILLEGAL"
+      ]
+    },
+    "0.12.5": {
       "stats": {
         "arrow-args": {
           "supportsES6": true,
-          "baseline": 117252191.48282705,
+          "baseline": 114951503.1577839,
           "relative": {
-            "babel": 0.8777395153560366,
-            "es6": 0.3470071680939459
+            "babel": 1.0412342265846106,
+            "es6": 0.1205349942175264,
+            "traceur": 1.0376985155954717
           },
           "raw": {
-            "babel": 102916881.72656982,
-            "es6": 40687350.9192649
+            "babel": 119691439.48523355,
+            "es6": 13855678.76841945,
+            "traceur": 119285004.19230051
           },
           "errors": {}
         },
         "arrow": {
           "supportsES6": true,
-          "baseline": 103690063.10628198,
+          "baseline": 124003903.14503275,
           "relative": {
-            "babel": 1.096325183596235,
-            "es5-bind": 0.07100687295403456
+            "babel": 1.0049202151948229,
+            "es5-bind": 0.06839291649099245,
+            "traceur": 0.9269985038246239
           },
           "raw": {
-            "babel": 113678027.4720998,
-            "es5-bind": 7362707.13758359
+            "babel": 124614029.03350428,
+            "es5-bind": 8480988.59235534,
+            "traceur": 114951432.68385893
           },
           "errors": {
             "es6": "ReferenceError: fn is not defined"
@@ -32,233 +328,572 @@
         },
         "bindings": {
           "supportsES6": true,
-          "baseline": 117278855.86039932,
+          "baseline": 126250773.10692354,
           "relative": {
-            "babel": 0.9839848609318725,
-            "es6": 0.9401368718026494
+            "babel": 0.9877638210542053,
+            "es6": 0.8419458924565388,
+            "traceur": 0.9612480569811975
           },
           "raw": {
-            "babel": 115400618.67404415,
-            "es6": 110258176.67718963
+            "babel": 124705946.0551423,
+            "es6": 106296319.83683673,
+            "traceur": 121358310.34140427
           },
           "errors": {}
         },
         "classes": {
-          "supportsES6": true,
-          "baseline": 99249599.89028288,
+          "baseline": 93301564.70228149,
           "relative": {
-            "babel": 0.6438169981919557,
-            "es6": 0.9631725019808769
+            "babel": 0.6822338822422631,
+            "traceur": 0.9703523781429154
           },
           "raw": {
-            "babel": 63898579.47311458,
-            "es6": 95594485.44692473
+            "babel": 63653488.7061152,
+            "traceur": 90535395.19331394
           },
           "errors": {}
         },
         "defaults": {
-          "baseline": 106630620.44497286,
+          "baseline": 116234555.7349455,
           "relative": {
-            "babel": 0.0953051392711795
+            "babel": 0.03437257380543987,
+            "traceur": 0.035065617244570246
           },
           "raw": {
-            "babel": 10162446.132080419
+            "babel": 3995280.8457419286,
+            "traceur": 4075836.4419942666
           },
           "errors": {}
         },
         "destructuring": {
-          "baseline": 104477893.09538618,
+          "baseline": 111317243.11763154,
           "relative": {
-            "babel": 0.3693585727386953
+            "babel": 0.3901018458899948,
+            "traceur": 0.007427672299015502
           },
           "raw": {
-            "babel": 38589805.47645783
+            "babel": 43425062.01957338,
+            "traceur": 826828.0031076059
           },
           "errors": {}
         },
         "for-of-array": {
           "supportsES6": true,
-          "baseline": 24554733.583807833,
+          "baseline": 24292774.528710485,
           "relative": {
-            "babel": 0.12294518303881359,
-            "es6": 0.14595576685964123
+            "babel": 0.02405382846665193,
+            "es6": 0.025753736576822606,
+            "traceur": 0.02394277333931612
           },
           "raw": {
-            "babel": 3018886.214930557,
-            "es6": 3583904.970258859
+            "babel": 584334.2314926533,
+            "es6": 625629.7159325557,
+            "traceur": 581636.3943240271
           },
           "errors": {}
         },
         "for-of-object": {
           "supportsES6": true,
-          "baseline": 5896464.419083668,
+          "baseline": 6040174.631022963,
           "relative": {
-            "babel": 0.22703481195547315,
-            "es6": 0.29879998749868397
+            "babel": 0.14781041302807985,
+            "es6": 0.16957739438421518,
+            "traceur": 0.15977431176904194
           },
           "raw": {
-            "babel": 1338702.6905887988,
-            "es6": 1761863.4947086347
+            "babel": 892800.7069732338,
+            "es6": 1024277.0755545124,
+            "traceur": 965064.7446365207
           },
           "errors": {}
         },
         "generator": {
           "supportsES6": true,
-          "baseline": 78250684.4137249,
+          "baseline": 88369762.92224309,
           "relative": {
-            "babel": 0.0009575143343872554,
-            "es6": 0.0514887041894412
+            "babel": 0.0006573836970645035,
+            "es6": 0.057257119608076584,
+            "traceur": 0.006757333304198372
           },
           "raw": {
-            "babel": 74926.15200175498,
-            "es6": 4029026.3423995986
+            "babel": 58092.84145853785,
+            "es6": 5059798.085376244,
+            "traceur": 597143.9420785877
           },
           "errors": {}
         },
         "map-set": {
           "supportsES6": true,
-          "baseline": 10366569.998004306,
+          "baseline": 4842907.919274,
           "relative": {
-            "babel": 0.33994243849148675,
-            "es6": 0.8831277310131744
+            "babel": 0.17842788951163058,
+            "es6": 0.7671149639022102,
+            "traceur": 0.7560088468931375
           },
           "raw": {
-            "babel": 3524037.0839142706,
-            "es6": 9155005.44072679
+            "babel": 864109.8391352221,
+            "es6": 3715067.1336756027,
+            "traceur": 3661281.231659981
           },
           "errors": {}
         },
         "object-literal-ext": {
-          "supportsES6": true,
-          "baseline": 37016914.01477067,
+          "baseline": 4167531.9013212556,
           "relative": {
-            "babel": 0.02890947615594758,
-            "es6": 0.07318033958543706
+            "babel": 0.27019377178595083,
+            "traceur": 0.08862786748568914
           },
           "raw": {
-            "babel": 1070139.5930767746,
-            "es6": 2708910.3380058417
+            "babel": 1126041.163456265,
+            "traceur": 369359.46509268234
           },
           "errors": {}
         },
         "promises": {
           "supportsES6": true,
-          "baseline": 801.8527721317414,
+          "baseline": 727.0126286966603,
           "relative": {
-            "babel": 0.9835144729732805,
-            "es6": 1.0069984815032476
+            "babel": 1.0070742264267338,
+            "es6": 1.0175677099102118,
+            "traceur": 1.0092165511707079
           },
           "raw": {
-            "babel": 788.6338065853137,
-            "es6": 807.4645239258332
+            "babel": 732.1556806471554,
+            "es6": 739.7845756586638,
+            "traceur": 733.7131777907938
           },
           "errors": {}
         },
         "proto": {
           "supportsES6": true,
-          "baseline": 785158.2557202005,
+          "baseline": 1488493.0340552088,
           "relative": {
-            "babel": 0.9683334168344263,
-            "es6": 0.9615191249198017
+            "babel": 1.0067346837781597,
+            "es6": 0.9708980665979419,
+            "traceur": 0.9676368509318403
           },
           "raw": {
-            "babel": 760294.9765173,
-            "es6": 754944.6789636451
+            "babel": 1498517.5639455642,
+            "es6": 1445175.0089087067,
+            "traceur": 1440320.7121071627
           },
           "errors": {}
         },
         "regex-u": {
           "supportsES6": true,
-          "baseline": 10684044.56767108,
+          "baseline": 11292443.663847083,
           "relative": {
-            "babel": 1.4329517463431816,
-            "es6": 0.9725925810620475
+            "babel": 1.610302945124683,
+            "traceur": 1.5643068820611055
           },
           "raw": {
-            "babel": 15309720.321252655,
-            "es6": 10391222.482253162
+            "babel": 18184255.289547525,
+            "traceur": 17664847.338643316
+          },
+          "errors": {
+            "es6": "SyntaxError: Invalid flags supplied to RegExp constructor 'u'"
+          }
+        },
+        "rest": {
+          "baseline": 5356908.824397437,
+          "relative": {
+            "babel": 1.0128327935753598,
+            "traceur": 1.0918659016116787
+          },
+          "raw": {
+            "babel": 5425652.929542953,
+            "traceur": 5849026.083402266
+          },
+          "errors": {}
+        },
+        "spread": {
+          "baseline": 16311941.136449015,
+          "relative": {
+            "babel": 1.0184388024078956,
+            "traceur": 0.03359917667467274
+          },
+          "raw": {
+            "babel": 16612713.795953223,
+            "traceur": 548067.7921504126
+          },
+          "errors": {}
+        },
+        "spread-generator": {
+          "baseline": 6525261.928981324,
+          "relative": {
+            "babel": 0.008046380901367653,
+            "traceur": 0.06058634048647937
+          },
+          "raw": {
+            "babel": 52504.74296177678,
+            "traceur": 395341.7409927237
+          },
+          "errors": {}
+        },
+        "spread-literal": {
+          "baseline": 6531328.365046365,
+          "relative": {
+            "babel": 0.9346719751882292,
+            "traceur": 0.04540864400312235
+          },
+          "raw": {
+            "babel": 6104649.583560794,
+            "traceur": 296578.7645958855
+          },
+          "errors": {}
+        },
+        "super": {
+          "baseline": 32431702.796502087,
+          "relative": {
+            "babel": 0.037576422171328956,
+            "traceur": 0.08630658046726457
+          },
+          "raw": {
+            "babel": 1218667.3560164324,
+            "traceur": 2799069.3670967165
+          },
+          "errors": {}
+        },
+        "template_string": {
+          "baseline": 25362189.10152027,
+          "relative": {
+            "babel": 0.9262131976283855,
+            "traceur": 1.0044495842161165
+          },
+          "raw": {
+            "babel": 23490794.26657488,
+            "traceur": 25475040.29783256
+          },
+          "errors": {}
+        },
+        "template_string_tag": {
+          "baseline": 26719249.4455893,
+          "relative": {
+            "babel": 0.0037985904854036284,
+            "traceur": 0.13849968239281216
+          },
+          "raw": {
+            "babel": 101495.48672114169,
+            "traceur": 3700607.5619884403
+          },
+          "errors": {}
+        }
+      },
+      "log": [
+        "Failed to load classes-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/classes-es6.js:3\nts[\"classes\"][\"es6\"] = function(suite, testName, testType, require) {class C {\n                                                                     ^^^^^\nUnexpected reserved word",
+        "Failed to load defaults-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/defaults-es6.js:3\n6\"] = function(suite, testName, testType, require) {function fn(arg = 1, other\n                                                                    ^\nUnexpected token =",
+        "Failed to load destructuring-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/destructuring-es6.js:10\n  var {a, b:{c:b}, arr:[, c]} = data;\n      ^\nUnexpected token {",
+        "Failed to load object-literal-ext-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/object-literal-ext-es6.js:6\n    'bizz buzz'() {\n               ^\nUnexpected token (",
+        "Failed to load rest-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/rest-es6.js:3\n\"] = function(suite, testName, testType, require) {function fn(foo, ...args) {\n                                                                    ^\nUnexpected token .",
+        "Failed to load spread-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread-es6.js:4\n  return Math.max(...[1,2,3]);\n                  ^\nUnexpected token .",
+        "Failed to load spread-generator-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread-generator-es6.js:10\n  return Math.max(... generate());\n                  ^\nUnexpected token .",
+        "Failed to load spread-literal-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread-literal-es6.js:4\n  return [1, ... [1,2,3]];\n             ^\nUnexpected token .",
+        "Failed to load super-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/super-es6.js:4\nclass C {\n^^^^^\nUnexpected reserved word",
+        "Failed to load template_string-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/template_string-es6.js:5\n  return `${data[0]} ${data[1] + data[2]}`;\n         ^\nUnexpected token ILLEGAL",
+        "Failed to load template_string_tag-es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/template_string_tag-es6.js:9\n  fn`${data[0]} ${data[1] + data[2]}`;\n    ^\nUnexpected token ILLEGAL"
+      ]
+    },
+    "2.3.0": {
+      "stats": {
+        "arrow-args": {
+          "supportsES6": true,
+          "baseline": 115065219.426057,
+          "relative": {
+            "babel": 1.007117231951302,
+            "es6": 0.3454190441871875,
+            "traceur": 0.9969719518459706
+          },
+          "raw": {
+            "babel": 115884165.28223969,
+            "es6": 39745718.113337606,
+            "traceur": 114716796.40078095
+          },
+          "errors": {}
+        },
+        "arrow": {
+          "supportsES6": true,
+          "baseline": 114738002.42255394,
+          "relative": {
+            "babel": 0.9958706523445024,
+            "es5-bind": 0.06632428606492548,
+            "traceur": 0.9008641004077887
+          },
+          "raw": {
+            "babel": 114264209.3212539,
+            "es5-bind": 7609916.095191579,
+            "traceur": 103363347.33498074
+          },
+          "errors": {
+            "es6": "ReferenceError: fn is not defined"
+          }
+        },
+        "bindings": {
+          "supportsES6": true,
+          "baseline": 116531815.72984138,
+          "relative": {
+            "babel": 1.0279059868136766,
+            "es6": 0.9587945447680175,
+            "traceur": 1.0396694443493764
+          },
+          "raw": {
+            "babel": 119783751.04297213,
+            "es6": 111730069.21368377,
+            "traceur": 121154568.1088681
+          },
+          "errors": {}
+        },
+        "classes": {
+          "supportsES6": true,
+          "baseline": 99587168.73510835,
+          "relative": {
+            "babel": 0.6551467599833343,
+            "es6": 0.978540478744096,
+            "traceur": 0.9191157789037058
+          },
+          "raw": {
+            "babel": 65244210.932719834,
+            "es6": 97450075.77082199,
+            "traceur": 91532138.16078389
+          },
+          "errors": {}
+        },
+        "defaults": {
+          "baseline": 117955154.78673425,
+          "relative": {
+            "babel": 0.09018547202916731,
+            "traceur": 0.08920676693045494
+          },
+          "raw": {
+            "babel": 10637841.312715122,
+            "traceur": 10522398.00130594
+          },
+          "errors": {}
+        },
+        "destructuring": {
+          "baseline": 106224648.53516561,
+          "relative": {
+            "babel": 0.38405311150453325,
+            "traceur": 0.07205215405993373
+          },
+          "raw": {
+            "babel": 40795906.78840581,
+            "traceur": 7653714.741218066
+          },
+          "errors": {}
+        },
+        "for-of-array": {
+          "supportsES6": true,
+          "baseline": 23369120.82961266,
+          "relative": {
+            "babel": 0.11843549649339968,
+            "es6": 0.14322911015833717,
+            "traceur": 0.1258317289829192
+          },
+          "raw": {
+            "babel": 2767733.428069424,
+            "es6": 3347138.381608084,
+            "traceur": 2940576.878800912
+          },
+          "errors": {}
+        },
+        "for-of-object": {
+          "supportsES6": true,
+          "baseline": 5399530.264576382,
+          "relative": {
+            "babel": 0.15766863888925306,
+            "es6": 0.16778145214700327,
+            "traceur": 0.16311391212997992
+          },
+          "raw": {
+            "babel": 851336.5874570867,
+            "es6": 905941.0287023181,
+            "traceur": 880738.5051192791
+          },
+          "errors": {}
+        },
+        "generator": {
+          "supportsES6": true,
+          "baseline": 80906458.11057882,
+          "relative": {
+            "babel": 0.0009259360553755076,
+            "es6": 0.05627777450768828,
+            "traceur": 0.006121851340754443
+          },
+          "raw": {
+            "babel": 74914.2066773131,
+            "es6": 4553235.405762883,
+            "traceur": 495297.3090599401
+          },
+          "errors": {}
+        },
+        "map-set": {
+          "supportsES6": true,
+          "baseline": 10870467.87489748,
+          "relative": {
+            "babel": 0.32376125195839245,
+            "es6": 0.9095388895012403,
+            "traceur": 0.8749736817238404
+          },
+          "raw": {
+            "babel": 3519436.288550294,
+            "es6": 9887113.27929316,
+            "traceur": 9511373.29855978
+          },
+          "errors": {}
+        },
+        "object-literal-ext": {
+          "supportsES6": true,
+          "baseline": 38493392.809722155,
+          "relative": {
+            "babel": 0.026425727535236417,
+            "es6": 0.06902096829074393,
+            "traceur": 0.00984642398948152
+          },
+          "raw": {
+            "babel": 1017215.9102965463,
+            "es6": 2656851.244522983,
+            "traceur": 379022.26639818365
+          },
+          "errors": {}
+        },
+        "promises": {
+          "supportsES6": true,
+          "baseline": 747.0648077821204,
+          "relative": {
+            "babel": 1.0078585249888923,
+            "es6": 1.0327777344200195,
+            "traceur": 1.028559065567753
+          },
+          "raw": {
+            "babel": 752.9356352423982,
+            "es6": 771.5518996461457,
+            "traceur": 768.4002806109307
+          },
+          "errors": {}
+        },
+        "proto": {
+          "supportsES6": true,
+          "baseline": 777476.0864144355,
+          "relative": {
+            "babel": 1.002520988033373,
+            "es6": 1.013058766118328,
+            "traceur": 1.0003228116992309
+          },
+          "raw": {
+            "babel": 779436.09432452,
+            "es6": 787628.9647895145,
+            "traceur": 777727.0647910024
+          },
+          "errors": {}
+        },
+        "regex-u": {
+          "supportsES6": true,
+          "baseline": 10238050.976259403,
+          "relative": {
+            "babel": 1.6717517507985353,
+            "es6": 1.036973339919668,
+            "traceur": 1.7968205736564784
+          },
+          "raw": {
+            "babel": 17115479.64432631,
+            "es6": 10616585.915119529,
+            "traceur": 18395940.62828669
           },
           "errors": {}
         },
         "rest": {
           "supportsES6": true,
-          "baseline": 14748855.55825831,
+          "baseline": 13847218.26225613,
           "relative": {
-            "babel": 0.9436829119944529,
-            "es6": 0.2971036992034487
+            "babel": 1.0071595879199784,
+            "es6": 0.31821707114774384,
+            "traceur": 1.5025033566890043
           },
           "raw": {
-            "babel": 13918242.961802773,
-            "es6": 4381939.545375889
+            "babel": 13946358.638851883,
+            "es6": 4406421.238958697,
+            "traceur": 20805491.919845115
           },
           "errors": {}
         },
         "spread": {
-          "baseline": 16045287.186891096,
+          "baseline": 17332244.5740454,
           "relative": {
-            "babel": 1.0611975255122044
+            "babel": 0.9812399327319494,
+            "traceur": 0.15441725414352403
           },
           "raw": {
-            "babel": 17027219.05886151
+            "babel": 17007090.499930006,
+            "traceur": 2676397.615268084
           },
           "errors": {}
         },
         "spread-generator": {
-          "baseline": 14449955.981963553,
+          "baseline": 15268343.847234346,
           "relative": {
-            "babel": 0.0043010061637337674
+            "babel": 0.004151457769254082,
+            "traceur": 0.025270822317139886
           },
           "raw": {
-            "babel": 62149.34974410687
+            "babel": 63385.88468824379,
+            "traceur": 385843.60444045515
           },
           "errors": {}
         },
         "spread-literal": {
-          "baseline": 6245537.572849315,
+          "baseline": 6582422.549979621,
           "relative": {
-            "babel": 1.0160207225929414
+            "babel": 0.9536065374682912,
+            "traceur": 0.30570654258362745
           },
           "raw": {
-            "babel": 6345595.597747726
+            "babel": 6277041.1760392655,
+            "traceur": 2012289.6395787743
           },
           "errors": {}
         },
         "super": {
           "supportsES6": true,
-          "baseline": 50003276.14234613,
+          "baseline": 51851868.389390215,
           "relative": {
-            "babel": 0.018539396789609478,
-            "es6": 0.0711795010296214
+            "babel": 0.022278505041044408,
+            "es6": 0.07187793971623001,
+            "traceur": 0.051248080869565546
           },
           "raw": {
-            "babel": 927030.577183368,
-            "es6": 3559208.245658569
+            "babel": 1155182.1113006012,
+            "es6": 3727005.4702664823,
+            "traceur": 2657308.744457539
           },
           "errors": {}
         },
         "template_string": {
           "supportsES6": true,
-          "baseline": 29588581.24969114,
+          "baseline": 31306785.056340206,
           "relative": {
-            "babel": 1.0009702194605283,
-            "es6": 0.966521556521134
+            "babel": 0.9767584312913852,
+            "es6": 0.9994452872088287,
+            "traceur": 0.9759755297265938
           },
           "raw": {
-            "babel": 29617288.667029016,
-            "es6": 28598001.604703523
+            "babel": 30579166.26040744,
+            "es6": 31289418.782219004,
+            "traceur": 30554656.129398245
           },
           "errors": {}
         },
         "template_string_tag": {
           "supportsES6": true,
-          "baseline": 29351581.283467323,
+          "baseline": 31521246.685374565,
           "relative": {
-            "babel": 0.013277005829746428,
-            "es6": 0.21024815724418358
+            "babel": 0.003058899555272217,
+            "es6": 0.2049758073801504,
+            "traceur": 0.13460852410609164
           },
           "raw": {
-            "babel": 389701.1158128718,
-            "es6": 6171115.877051873
+            "babel": 96420.3274675181,
+            "es6": 6461092.988963541,
+            "traceur": 4243028.4943023035
           },
           "errors": {}
         }
@@ -277,259 +912,301 @@
       "stats": {
         "arrow-args": {
           "relative": {
-            "babel": 0.951723338317471
+            "babel": 1.01458665102729,
+            "traceur": 0.998999335690766
           },
           "raw": {
-            "babel": 76764682.1735872
+            "babel": 80239919.5584653,
+            "traceur": 79007176.2265195
           },
           "errors": {},
-          "baseline": 80658610.6307929,
+          "baseline": 79086315.0793683,
           "supportsES6": null
         },
         "arrow": {
           "relative": {
-            "babel": 1.00338329183114,
-            "es5-bind": 0.050744509264396
+            "babel": 0.970490325780222,
+            "es5-bind": 0.0520351941313979,
+            "traceur": 0.973281942105257
           },
           "raw": {
-            "babel": 79606664.9810951,
-            "es5-bind": 4025980.08311333
+            "babel": 79056263.4984022,
+            "es5-bind": 4238793.4316966,
+            "traceur": 79283668.913908
           },
           "errors": {},
-          "baseline": 79338240.559912,
+          "baseline": 81460125.2566276,
           "supportsES6": null
         },
         "bindings": {
           "relative": {
-            "babel": 0.996429121281897,
-            "es6": 0.988282212864624
+            "babel": 1.05940087572377,
+            "traceur": 1.11692947871384,
+            "es6": 1.01465653020728
           },
           "raw": {
-            "babel": 78636821.2625131,
-            "es6": 77993878.4105148
+            "babel": 76438461.4515005,
+            "traceur": 80589296.1381444,
+            "es6": 73210043.3820907
           },
           "errors": {},
-          "baseline": 78918630.1192678,
+          "baseline": 72152537.5361604,
           "supportsES6": true
         },
         "classes": {
           "relative": {
-            "babel": 0.751784447964492,
-            "es6": 0.939421650518654
+            "babel": 0.794914099379187,
+            "traceur": 1.01309029418115,
+            "es6": 0.938635145565709
           },
           "raw": {
-            "babel": 48202137.5151273,
-            "es6": 60232865.5581962
+            "babel": 48435607.0727094,
+            "traceur": 61729491.8488125,
+            "es6": 57192799.990291
           },
           "errors": {},
-          "baseline": 64116965.5020636,
+          "baseline": 60931875.6712665,
           "supportsES6": true
         },
         "defaults": {
           "relative": {
-            "babel": 0.0866816211413936
+            "babel": 0.0920198585104626,
+            "traceur": 0.0921986597011721
           },
           "raw": {
-            "babel": 7262969.22361096
+            "babel": 7832529.89501683,
+            "traceur": 7847749.06285914
           },
           "errors": {},
-          "baseline": 83789033.1073034,
+          "baseline": 85117821.5420346,
           "supportsES6": null
         },
         "destructuring": {
           "relative": {
-            "babel": 0.40612172217668
+            "babel": 0.396270092353892,
+            "traceur": 0.0725439164824744
           },
           "raw": {
-            "babel": 27824749.6878535
+            "babel": 28317393.0111037,
+            "traceur": 5183975.86200964
           },
           "errors": {},
-          "baseline": 68513325.3614751,
+          "baseline": 71459828.9335815,
           "supportsES6": null
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.127762949365728,
-            "es6": 0.154167053995738
+            "babel": 0.133575577398275,
+            "traceur": 0.130457713440535,
+            "es6": 0.145957061310147
           },
           "raw": {
-            "babel": 2081460.1603383,
-            "es6": 2511624.71218694
+            "babel": 2166201.96511487,
+            "traceur": 2115639.40597218,
+            "es6": 2366993.12247564
           },
           "errors": {},
-          "baseline": 16291578.8236855,
+          "baseline": 16217051.1055027,
           "supportsES6": true
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.215420951473857,
-            "es6": 0.24527391175703
+            "babel": 0.121877675131695,
+            "traceur": 0.121205281079507,
+            "es6": 0.138563338996426
           },
           "raw": {
-            "babel": 734165.43857171,
-            "es6": 835905.82885877
+            "babel": 360361.608841514,
+            "traceur": 358373.508870293,
+            "es6": 409696.917119966
           },
           "errors": {},
-          "baseline": 3408050.30127633,
+          "baseline": 2956748.3007214,
           "supportsES6": true
         },
         "generator": {
           "relative": {
-            "babel": 0.00066145668572483,
-            "es6": 0.0373419242469303
+            "babel": 0.000587765122906863,
+            "traceur": 0.00448918945761171,
+            "es6": 0.0358958863042252
           },
           "raw": {
-            "babel": 41554.4932872142,
-            "es6": 2345920.41162958
+            "babel": 36587.5021284781,
+            "traceur": 279445.347187667,
+            "es6": 2234465.37634653
           },
           "errors": {},
-          "baseline": 62822697.5159809,
+          "baseline": 62248508.2944871,
           "supportsES6": true
         },
         "map-set": {
           "relative": {
-            "babel": 0.241826118988854,
-            "es6": 0.439978661119724
+            "babel": 0.227650874941641,
+            "traceur": 0.489236738768918,
+            "es6": 0.483757310828694
           },
           "raw": {
-            "babel": 1618447.45788663,
-            "es6": 2944604.77880143
+            "babel": 1501368.1621054,
+            "traceur": 3226539.1622511,
+            "es6": 3190402.07884164
           },
           "errors": {},
-          "baseline": 6692608.16264941,
+          "baseline": 6595046.7464282,
           "supportsES6": true
         },
         "object-literal-ext": {
           "relative": {
-            "babel": 0.0238767120603307
+            "babel": 0.0244918238512423,
+            "traceur": 0.00941113384241856
           },
           "raw": {
-            "babel": 565832.464282781
+            "babel": 546109.134858486,
+            "traceur": 209845.791474608
           },
           "errors": {},
-          "baseline": 23698089.7056956,
+          "baseline": 22297609.9360924,
           "supportsES6": null
         },
         "promises": {
           "relative": {
-            "babel": 5.68524000998529,
-            "es6": 1.95594541564182
+            "babel": 5.7434881405576,
+            "traceur": 1.94699237785355,
+            "es6": 1.96421222056299
           },
           "raw": {
-            "babel": 696.799989182543,
-            "es6": 239.726509710606
+            "babel": 702.431138537078,
+            "traceur": 238.118028492335,
+            "es6": 240.224022867844
           },
           "errors": {},
-          "baseline": 122.562985548318,
+          "baseline": 122.300442056608,
           "supportsES6": true
         },
         "proto": {
           "relative": {
-            "babel": 1.06535687261294,
-            "es6": 1.02433119991084
+            "babel": 1.02168647946356,
+            "traceur": 0.909181361876857,
+            "es6": 1.01290098661987
           },
           "raw": {
-            "babel": 682674.441943047,
-            "es6": 656385.431248863
+            "babel": 712462.421974204,
+            "traceur": 634008.150363991,
+            "es6": 706335.95007165
           },
           "errors": {},
-          "baseline": 640794.140904812,
+          "baseline": 697339.581461705,
           "supportsES6": true
         },
         "regex-u": {
           "relative": {
-            "babel": 1.93735950144123
+            "babel": 1.69208285536595,
+            "traceur": 1.85517944879185
           },
           "raw": {
-            "babel": 12612477.9145648
+            "babel": 10958907.003468,
+            "traceur": 12015214.8516734
           },
           "errors": {
             "es6": "SyntaxError: Invalid flags supplied to RegExp constructor 'u'"
           },
-          "baseline": 6510138.10559283,
+          "baseline": 6476578.24125749,
           "supportsES6": true
         },
         "rest": {
           "relative": {
-            "babel": 0.964476850704711
+            "babel": 0.937607212590743,
+            "traceur": 1.20905831966744
           },
           "raw": {
-            "babel": 10535191.2058
+            "babel": 10412725.5213755,
+            "traceur": 13427363.0289658
           },
           "errors": {},
-          "baseline": 10923218.321002,
+          "baseline": 11105637.1810576,
           "supportsES6": null
         },
         "spread": {
           "relative": {
-            "babel": 1.03572923844912
+            "babel": 0.963619350496568,
+            "traceur": 0.179803180316581
           },
           "raw": {
-            "babel": 11268098.3206824
+            "babel": 11294460.2028622,
+            "traceur": 2107450.27420546
           },
           "errors": {},
-          "baseline": 10879386.1391371,
+          "baseline": 11720873.1819696,
           "supportsES6": null
         },
         "spread-generator": {
           "relative": {
-            "babel": 0.00352811085272341
+            "babel": 0.00304665783290325,
+            "traceur": 0.0223611073581388
           },
           "raw": {
-            "babel": 32565.9958407707
+            "babel": 30373.3888532702,
+            "traceur": 222927.104462944
           },
           "errors": {},
-          "baseline": 9230434.41666025,
+          "baseline": 9969412.55602913,
           "supportsES6": null
         },
         "spread-literal": {
           "relative": {
-            "babel": 0.924654383874287
+            "babel": 1.06205794382538,
+            "traceur": 0.461635992135361
           },
           "raw": {
-            "babel": 3005526.13291143
+            "babel": 3263331.71646842,
+            "traceur": 1418445.5597334
           },
           "errors": {},
-          "baseline": 3250431.92929916,
+          "baseline": 3072649.41187142,
           "supportsES6": null
         },
         "super": {
           "relative": {
-            "babel": 0.0201611906235656,
-            "es6": 0.0449526145882931
+            "babel": 0.0178620741950404,
+            "traceur": 0.0387757334277941,
+            "es6": 0.0525614396471873
           },
           "raw": {
-            "babel": 787618.803887584,
-            "es6": 1756122.70102078
+            "babel": 685212.367195647,
+            "traceur": 1487487.50014618,
+            "es6": 2016325.09699577
           },
           "errors": {},
-          "baseline": 39066085.8573981,
+          "baseline": 38361298.9014403,
           "supportsES6": true
         },
         "template_string": {
           "relative": {
-            "babel": 0.961296921518565,
-            "es6": 0.507964174965789
+            "babel": 1.0216306300573,
+            "traceur": 1.06538755605473,
+            "es6": 0.537646696582024
           },
           "raw": {
-            "babel": 18285597.7539586,
-            "es6": 9662392.92868317
+            "babel": 18764941.4844584,
+            "traceur": 19568652.8569683,
+            "es6": 9875299.84306383
           },
           "errors": {},
-          "baseline": 19021799.9710982,
+          "baseline": 18367637.903932,
           "supportsES6": true
         },
         "template_string_tag": {
           "relative": {
-            "babel": 0.0103083621817309,
-            "es6": 0.205134761460498
+            "babel": 0.00253546548185551,
+            "traceur": 0.132999077641027,
+            "es6": 0.201882585964655
           },
           "raw": {
-            "babel": 195661.397172167,
-            "es6": 3893630.56209584
+            "babel": 49446.9789784367,
+            "traceur": 2593765.38285766,
+            "es6": 3937140.55890097
           },
           "errors": {},
-          "baseline": 18980842.3222586,
+          "baseline": 19502130.6076903,
           "supportsES6": true
         }
       },
@@ -537,61 +1214,61 @@
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435083269861,
+          "timestamp": 1435095656186,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435083269862,
+          "timestamp": 1435095656269,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
-          "timestamp": 1435083270028,
+          "timestamp": 1435095656521,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-          "timestamp": 1435083270097,
+          "timestamp": 1435095656833,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/object-literal-ext-es6.js 10:0 Uncaught SyntaxError: Unexpected token [",
-          "timestamp": 1435083270436,
+          "timestamp": 1435095657167,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083270666,
+          "timestamp": 1435095657496,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083270739,
+          "timestamp": 1435095657572,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083270816,
+          "timestamp": 1435095657643,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083270893,
+          "timestamp": 1435095657722,
           "level": "SEVERE"
         },
         {
           "source": "network",
           "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
-          "timestamp": 1435083271637,
+          "timestamp": 1435095658485,
           "level": "SEVERE"
         }
       ]
@@ -600,261 +1277,303 @@
       "stats": {
         "arrow-args": {
           "relative": {
-            "babel": 1.18792035240523
+            "babel": 1.12726395619915,
+            "traceur": 1.01348418328852
           },
           "raw": {
-            "babel": 75877650.5170696
+            "babel": 74711905.0921927,
+            "traceur": 67170899.6796072
           },
           "errors": {},
-          "baseline": 63874358.5489022,
+          "baseline": 66277205.690229,
           "supportsES6": null
         },
         "arrow": {
           "relative": {
-            "babel": 1.04815003479324,
-            "es5-bind": 0.0628145391793639
+            "babel": 0.97342811393711,
+            "es5-bind": 0.0705271825223948,
+            "traceur": 0.996120278439123
           },
           "raw": {
-            "babel": 66275379.4788107,
-            "es5-bind": 3971814.41845791
+            "babel": 59438440.7271407,
+            "es5-bind": 4306456.42753691,
+            "traceur": 60824045.7404048
           },
           "errors": {},
-          "baseline": 63230813.6037835,
+          "baseline": 61060945.2060482,
           "supportsES6": null
         },
         "bindings": {
           "relative": {
-            "babel": 0.986110642419967,
-            "es6": 0.98367138678587
+            "babel": 0.969264721269718,
+            "traceur": 0.867546142496446,
+            "es6": 0.845910762761866
           },
           "raw": {
-            "babel": 58376018.646009,
-            "es6": 58231618.9952468
+            "babel": 58599111.4734193,
+            "traceur": 52449482.5788026,
+            "es6": 51141466.3052137
           },
           "errors": {},
-          "baseline": 59198244.2282047,
+          "baseline": 60457282.91509,
           "supportsES6": true
         },
         "classes": {
           "relative": {
-            "babel": 0.844646664339916,
-            "es6": 0.979234977798593
+            "babel": 0.618544635620148,
+            "traceur": 0.982617145517267,
+            "es6": 0.997142985587274
           },
           "raw": {
-            "babel": 40570569.4822428,
-            "es6": 47035195.1691746
+            "babel": 34254691.8585561,
+            "traceur": 54416844.9555487,
+            "es6": 55221278.6971587
           },
           "errors": {},
-          "baseline": 48032593.0298302,
+          "baseline": 55379498.7231804,
           "supportsES6": true
         },
         "defaults": {
           "relative": {
-            "babel": 0.106157510368112
+            "babel": 0.100889128002499,
+            "traceur": 0.0939169420238581
           },
           "raw": {
-            "babel": 6400007.19530588
+            "babel": 6704874.34663105,
+            "traceur": 6241517.86973723
           },
           "errors": {},
-          "baseline": 60287841.8409892,
+          "baseline": 66457848.1287399,
           "supportsES6": null
         },
         "destructuring": {
           "relative": {
-            "babel": 0.362670705048311
+            "babel": 0.417143280171106,
+            "traceur": 0.0809454124406633
           },
           "raw": {
-            "babel": 20864774.4595927
+            "babel": 23993486.6308674,
+            "traceur": 4655864.69576701
           },
           "errors": {},
-          "baseline": 57530906.6024876,
+          "baseline": 57518574.0041781,
           "supportsES6": null
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.116193993840426,
-            "es6": 0.148522494236201
+            "babel": 0.119787581485328,
+            "traceur": 0.122415391434641,
+            "es6": 0.133391124726744
           },
           "raw": {
-            "babel": 1860961.20121939,
-            "es6": 2378733.96159774
+            "babel": 1837938.30721452,
+            "traceur": 1878257.6166958,
+            "es6": 2046661.7235088
           },
           "errors": {},
-          "baseline": 16015984.4731314,
+          "baseline": 15343312.5907099,
           "supportsES6": true
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.208883996430734,
-            "es6": 0.246791339419772
+            "babel": 0.0954514065261564,
+            "traceur": 0.100956137242271,
+            "es6": 0.110772377645489
           },
           "raw": {
-            "babel": 764038.057286935,
-            "es6": 902692.301696024
+            "babel": 325190.697161933,
+            "traceur": 343944.608543757,
+            "es6": 377387.280332538
           },
           "errors": {},
-          "baseline": 3657714.6662372,
+          "baseline": 3406871.71616294,
           "supportsES6": true
         },
         "generator": {
           "relative": {
-            "babel": 0.00077639838842498,
-            "es6": 0.0455883681749609
+            "babel": 0.000820708932853265,
+            "traceur": 0.00534639822826427,
+            "es6": 0.0448245102103905
           },
           "raw": {
-            "babel": 41160.1884230129,
-            "es6": 2416833.74405972
+            "babel": 44971.8867272553,
+            "traceur": 292963.322190727,
+            "es6": 2456221.34119843
           },
           "errors": {},
-          "baseline": 53014263.0853619,
+          "baseline": 54796389.9587478,
           "supportsES6": true
         },
         "map-set": {
           "relative": {
-            "babel": 0.2288932341355,
-            "es6": 0.490953880489673
+            "babel": 0.329020588039972,
+            "traceur": 0.669362252418591,
+            "es6": 0.6611854446243
           },
           "raw": {
-            "babel": 1342525.08679976,
-            "es6": 2879586.64880803
+            "babel": 1401402.08712478,
+            "traceur": 2851024.19629739,
+            "es6": 2816196.60214226
           },
           "errors": {},
-          "baseline": 5865289.51749185,
+          "baseline": 4259314.27414057,
           "supportsES6": true
         },
         "object-literal-ext": {
           "relative": {
-            "babel": 0.0284238913585703,
-            "es6": 0.0642872266248183
+            "babel": 0.0242890631097248,
+            "traceur": 0.00878105340603379,
+            "es6": 0.0660492742580384
           },
           "raw": {
-            "babel": 661325.672210185,
-            "es6": 1495741.48120178
+            "babel": 596427.034862207,
+            "traceur": 215622.052702006,
+            "es6": 1621864.64840426
           },
           "errors": {},
-          "baseline": 23266542.3557772,
+          "baseline": 24555374.2508665,
           "supportsES6": true
         },
         "promises": {
           "relative": {
-            "babel": 6.39698873837012,
-            "es6": 1.94916662358634
+            "babel": 6.38195298925755,
+            "traceur": 1.90512935526415,
+            "es6": 1.91748631578634
           },
           "raw": {
-            "babel": 783.470454421139,
-            "es6": 238.723956345873
+            "babel": 798.492874891205,
+            "traceur": 238.364685306382,
+            "es6": 239.910755129975
           },
           "errors": {},
-          "baseline": 122.474884115672,
+          "baseline": 125.117323213642,
           "supportsES6": true
         },
         "proto": {
           "relative": {
-            "babel": 1.01582103493356,
-            "es6": 1.06647572509253
+            "babel": 0.991004376371607,
+            "traceur": 1.03461021787651,
+            "es6": 1.11326726041628
           },
           "raw": {
-            "babel": 615814.223792793,
-            "es6": 646522.269431705
+            "babel": 575007.952145125,
+            "traceur": 600309.258802421,
+            "es6": 645948.234805917
           },
           "errors": {},
-          "baseline": 606223.14621893,
+          "baseline": 580227.459994091,
           "supportsES6": true
         },
         "regex-u": {
           "relative": {
-            "babel": 1.63440957680075
+            "babel": 2.65687843538589,
+            "traceur": 2.45923114395766
           },
           "raw": {
-            "babel": 11356062.3717309
+            "babel": 12163339.9741213,
+            "traceur": 11258499.4783774
           },
           "errors": {
             "es6": "SyntaxError: Invalid flags supplied to RegExp constructor 'u'"
           },
-          "baseline": 6948112.96563722,
+          "baseline": 4578056.64426444,
           "supportsES6": true
         },
         "rest": {
           "relative": {
-            "babel": 0.941530424217261
+            "babel": 0.99626419101916,
+            "traceur": 1.22278683291761
           },
           "raw": {
-            "babel": 8941903.7539739
+            "babel": 10152211.3954579,
+            "traceur": 12460540.6189123
           },
           "errors": {},
-          "baseline": 9497201.07176326,
+          "baseline": 10190280.3362553,
           "supportsES6": null
         },
         "spread": {
           "relative": {
-            "babel": 0.977436929241969
+            "babel": 0.996224830451573,
+            "traceur": 0.163900294689603
           },
           "raw": {
-            "babel": 10437243.0273038
+            "babel": 11021653.4114376,
+            "traceur": 1813297.74854383
           },
           "errors": {},
-          "baseline": 10678175.4556769,
+          "baseline": 11063419.6965776,
           "supportsES6": null
         },
         "spread-generator": {
           "relative": {
-            "babel": 0.00365005287191052
+            "babel": 0.00364753758178704,
+            "traceur": 0.0204848132334048
           },
           "raw": {
-            "babel": 36118.7356097169
+            "babel": 34653.914429387,
+            "traceur": 194618.684242479
           },
           "errors": {},
-          "baseline": 9895400.66328177,
+          "baseline": 9500632.59181254,
           "supportsES6": null
         },
         "spread-literal": {
           "relative": {
-            "babel": 0.938624092363568
+            "babel": 0.91538858798652,
+            "traceur": 0.372715150158114
           },
           "raw": {
-            "babel": 3297472.27752332
+            "babel": 3320518.40507956,
+            "traceur": 1352002.34326084
           },
           "errors": {},
-          "baseline": 3513091.45413036,
+          "baseline": 3627441.33874701,
           "supportsES6": null
         },
         "super": {
           "relative": {
-            "babel": 0.0260784648546211,
-            "es6": 0.0626911001647332
+            "babel": 0.0239765572837032,
+            "traceur": 0.0591881395201459,
+            "es6": 0.0578660047527642
           },
           "raw": {
-            "babel": 849544.881800933,
-            "es6": 2042256.07513018
+            "babel": 833670.196556468,
+            "traceur": 2057984.6941208,
+            "es6": 2012013.77601295
           },
           "errors": {},
-          "baseline": 32576491.2366149,
+          "baseline": 34770221.0409963,
           "supportsES6": true
         },
         "template_string": {
           "relative": {
-            "babel": 0.999339805426833,
-            "es6": 0.527215700463287
+            "babel": 0.986206599155468,
+            "traceur": 1.01656948617836,
+            "es6": 0.468370386237211
           },
           "raw": {
-            "babel": 17519078.2368824,
-            "es6": 9242434.90949919
+            "babel": 18234296.8972657,
+            "traceur": 18795686.2624429,
+            "es6": 8659853.51127221
           },
           "errors": {},
-          "baseline": 17530651.8781164,
+          "baseline": 18489327.6042571,
           "supportsES6": true
         },
         "template_string_tag": {
           "relative": {
-            "babel": 0.0100090003649594,
-            "es6": 0.142132756306279
+            "babel": 0.00236685176900258,
+            "traceur": 0.131817183630282,
+            "es6": 0.14570548756182
           },
           "raw": {
-            "babel": 183739.394818847,
-            "es6": 2609190.29627353
+            "babel": 42828.2918629742,
+            "traceur": 2385238.0140612,
+            "es6": 2636547.51390043
           },
           "errors": {},
-          "baseline": 18357417.1364906,
+          "baseline": 18095046.0962,
           "supportsES6": true
         }
       },
@@ -862,55 +1581,55 @@
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435083279712,
+          "timestamp": 1435095672149,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435083279829,
+          "timestamp": 1435095672158,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
-          "timestamp": 1435083280031,
+          "timestamp": 1435095672529,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-          "timestamp": 1435083280092,
+          "timestamp": 1435095672638,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083280750,
+          "timestamp": 1435095673797,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083280879,
+          "timestamp": 1435095673899,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083280943,
+          "timestamp": 1435095673954,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083281008,
+          "timestamp": 1435095674082,
           "level": "SEVERE"
         },
         {
           "source": "network",
           "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
-          "timestamp": 1435083281793,
+          "timestamp": 1435095674928,
           "level": "SEVERE"
         }
       ]
@@ -919,261 +1638,303 @@
       "stats": {
         "arrow-args": {
           "relative": {
-            "babel": 1.07261027693393
+            "babel": 1.05685576559507,
+            "traceur": 0.997872108960723
           },
           "raw": {
-            "babel": 41430526.4767385
+            "babel": 44394891.5235154,
+            "traceur": 41917190.0970889
           },
           "errors": {},
-          "baseline": 38625889.9133132,
+          "baseline": 42006575.5127131,
           "supportsES6": null
         },
         "arrow": {
           "relative": {
-            "babel": 1.12187605500671,
-            "es5-bind": 0.0718492516521893
+            "babel": 1.15567990592042,
+            "es5-bind": 0.0746643797343901,
+            "traceur": 1.03026277420792
           },
           "raw": {
-            "babel": 41107774.9981942,
-            "es5-bind": 2632699.80451555
+            "babel": 43083119.3929435,
+            "es5-bind": 2783447.53596356,
+            "traceur": 38407636.8204688
           },
           "errors": {},
-          "baseline": 36641993.3955615,
+          "baseline": 37279457.0297826,
           "supportsES6": null
         },
         "bindings": {
           "relative": {
-            "babel": 0.988704198681468,
-            "es6": 1.01552242983808
+            "babel": 0.984257014080547,
+            "traceur": 1.01540517383975,
+            "es6": 0.982950054994156
           },
           "raw": {
-            "babel": 34113010.4114706,
-            "es6": 35038313.0448395
+            "babel": 36731185.9948552,
+            "traceur": 37893594.627098,
+            "es6": 36682411.9890791
           },
           "errors": {},
-          "baseline": 34502746.5818023,
+          "baseline": 37318693.6637357,
           "supportsES6": true
         },
         "classes": {
           "relative": {
-            "babel": 0.858883289124854,
-            "es6": 0.962471275604084
+            "babel": 0.828808925163153,
+            "traceur": 0.995074523747063,
+            "es6": 0.998586326088642
           },
           "raw": {
-            "babel": 25531274.2031725,
-            "es6": 28610543.9019118
+            "babel": 26291774.7747521,
+            "traceur": 31566111.8843542,
+            "es6": 31677514.5411247
           },
           "errors": {},
-          "baseline": 29726127.5500973,
+          "baseline": 31722359.6133168,
           "supportsES6": true
         },
         "defaults": {
           "relative": {
-            "babel": 0.125565233645706
+            "babel": 0.124523123568667,
+            "traceur": 0.109970056837221
           },
           "raw": {
-            "babel": 4122778.96576907
+            "babel": 4629823.20901706,
+            "traceur": 4088733.93832859
           },
           "errors": {},
-          "baseline": 32833761.7512971,
+          "baseline": 37180429.4361762,
           "supportsES6": null
         },
         "destructuring": {
           "relative": {
-            "babel": 0.439067558906228
+            "babel": 0.425397894329746,
+            "traceur": 0.0799761898101578
           },
           "raw": {
-            "babel": 13184636.0394481
+            "babel": 15127595.1482204,
+            "traceur": 2844037.16396275
           },
           "errors": {},
-          "baseline": 30028718.2963201,
+          "baseline": 35561048.4909788,
           "supportsES6": null
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.125458300851357,
-            "es6": 0.136671860742859
+            "babel": 0.103496116732323,
+            "traceur": 0.107593839240901,
+            "es6": 0.123665363878569
           },
           "raw": {
-            "babel": 1202601.95006444,
-            "es6": 1310091.44180133
+            "babel": 1111587.23677544,
+            "traceur": 1155598.31839083,
+            "es6": 1328212.54032303
           },
           "errors": {},
-          "baseline": 9585670.63242225,
+          "baseline": 10740376.2756664,
           "supportsES6": true
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.247465325332546,
-            "es6": 0.255256216665148
+            "babel": 0.111099691278672,
+            "traceur": 0.120144491970082,
+            "es6": 0.121219226544496
           },
           "raw": {
-            "babel": 517302.010965959,
-            "es6": 533588.105788157
+            "babel": 240802.551721328,
+            "traceur": 260406.666379389,
+            "es6": 262736.095246053
           },
           "errors": {},
-          "baseline": 2090401.99983898,
+          "baseline": 2167445.7322957,
           "supportsES6": true
         },
         "generator": {
           "relative": {
-            "babel": 0.000735176036223324,
-            "es6": 0.0415674332581048
+            "babel": 0.000640464920557078,
+            "traceur": 0.00436995662471999,
+            "es6": 0.0495223518360901
           },
           "raw": {
-            "babel": 25098.1842478998,
-            "es6": 1419071.14380872
+            "babel": 22536.5979876196,
+            "traceur": 153769.476693568,
+            "es6": 1742586.20403544
           },
           "errors": {},
-          "baseline": 34139012.986375,
+          "baseline": 35187872.5348724,
           "supportsES6": true
         },
         "map-set": {
           "relative": {
-            "babel": 0.157200144765622,
-            "es6": 0.301166735296493
+            "babel": 0.186257398654452,
+            "traceur": 0.326507850492773,
+            "es6": 0.322535729370202
           },
           "raw": {
-            "babel": 551156.272352472,
-            "es6": 1055914.64581704
+            "babel": 640595.349416931,
+            "traceur": 1122958.9379256,
+            "es6": 1109297.61581533
           },
           "errors": {},
-          "baseline": 3506079.92870631,
+          "baseline": 3439301.49376442,
           "supportsES6": true
         },
         "object-literal-ext": {
           "relative": {
-            "babel": 0.0239635605481545,
-            "es6": 0.0591670196886281
+            "babel": 0.0231661531022821,
+            "traceur": 0.00744925638911238,
+            "es6": 0.0634347115297903
           },
           "raw": {
-            "babel": 385858.503273802,
-            "es6": 952700.564440278
+            "babel": 350710.48098434,
+            "traceur": 112773.678032194,
+            "es6": 960332.865516806
           },
           "errors": {},
-          "baseline": 16101885.2978222,
+          "baseline": 15138917.5162531,
           "supportsES6": true
         },
         "promises": {
           "relative": {
-            "babel": 3.09172991601819,
-            "es6": 1.92805051195026
+            "babel": 6.16363735109895,
+            "traceur": 1.91171116618543,
+            "es6": 1.94293812425627
           },
           "raw": {
-            "babel": 377.717067253616,
-            "es6": 235.550195092268
+            "babel": 613.672592930927,
+            "traceur": 190.336433093172,
+            "es6": 193.445494713298
           },
           "errors": {},
-          "baseline": 122.170136950408,
+          "baseline": 99.5633840822111,
           "supportsES6": true
         },
         "proto": {
           "relative": {
-            "babel": 1.04096425742339,
-            "es6": 1.11757088527688
+            "babel": 1.01965400599503,
+            "traceur": 1.01816858978873,
+            "es6": 0.978293521578843
           },
           "raw": {
-            "babel": 310776.524510697,
-            "es6": 333647.186388867
+            "babel": 351234.349537559,
+            "traceur": 350722.676762337,
+            "es6": 336987.141411012
           },
           "errors": {},
-          "baseline": 298546.777465669,
+          "baseline": 344464.247158826,
           "supportsES6": true
         },
         "regex-u": {
           "relative": {
-            "babel": 1.83325796440636
+            "babel": 1.59478674872951,
+            "traceur": 1.64266223915901
           },
           "raw": {
-            "babel": 7928732.06855211
+            "babel": 7510163.92718762,
+            "traceur": 7735619.01170377
           },
           "errors": {
             "es6": "SyntaxError: Invalid flags supplied to RegExp constructor 'u'"
           },
-          "baseline": 4324940.74619747,
+          "baseline": 4709196.34438311,
           "supportsES6": true
         },
         "rest": {
           "relative": {
-            "babel": 1.05343506954184
+            "babel": 1.01194390172985,
+            "traceur": 1.26119495291785
           },
           "raw": {
-            "babel": 6317850.54960823
+            "babel": 6826080.6181294,
+            "traceur": 8507406.79308277
           },
           "errors": {},
-          "baseline": 5997380.12553163,
+          "baseline": 6745512.87523023,
           "supportsES6": null
         },
         "spread": {
           "relative": {
-            "babel": 1.03226985866464
+            "babel": 1.0630650586905,
+            "traceur": 0.17240859369506
           },
           "raw": {
-            "babel": 7602168.57896338
+            "babel": 7314904.53429819,
+            "traceur": 1186336.05108372
           },
           "errors": {},
-          "baseline": 7364516.66698635,
+          "baseline": 6880956.60232576,
           "supportsES6": null
         },
         "spread-generator": {
           "relative": {
-            "babel": 0.00315301089627302
+            "babel": 0.00283773917710894,
+            "traceur": 0.0196230098895233
           },
           "raw": {
-            "babel": 20532.6950311746
+            "babel": 18750.4788529077,
+            "traceur": 129659.848562531
           },
           "errors": {},
-          "baseline": 6512091.3649379,
+          "baseline": 6607541.31463574,
           "supportsES6": null
         },
         "spread-literal": {
           "relative": {
-            "babel": 0.869158318005872
+            "babel": 0.965544720215482,
+            "traceur": 0.388600084492212
           },
           "raw": {
-            "babel": 2093168.45836839
+            "babel": 2299418.43325593,
+            "traceur": 925440.509111569
           },
           "errors": {},
-          "baseline": 2408270.63954332,
+          "baseline": 2381472.74291217,
           "supportsES6": null
         },
         "super": {
           "relative": {
-            "babel": 0.0270981223479895,
-            "es6": 0.0557258367625562
+            "babel": 0.0245334477703151,
+            "traceur": 0.0620392280291316,
+            "es6": 0.0551601123257384
           },
           "raw": {
-            "babel": 533968.416161793,
-            "es6": 1098077.43921418
+            "babel": 482313.528983358,
+            "traceur": 1219655.68338663,
+            "es6": 1084416.20941416
           },
           "errors": {},
-          "baseline": 19704996.8741251,
+          "baseline": 19659427.142032,
           "supportsES6": true
         },
         "template_string": {
           "relative": {
-            "babel": 1.04556802415439,
-            "es6": 0.562128871069374
+            "babel": 1.00954016182819,
+            "traceur": 0.981860384464009,
+            "es6": 0.566883664672313
           },
           "raw": {
-            "babel": 10841655.4970096,
-            "es6": 5828800.63684616
+            "babel": 11068849.3837122,
+            "traceur": 10765361.421367,
+            "es6": 6215453.4704014
           },
           "errors": {},
-          "baseline": 10369153.652894,
+          "baseline": 10964248.677009,
           "supportsES6": true
         },
         "template_string_tag": {
           "relative": {
-            "babel": 0.0120823065426602,
-            "es6": 0.254309946110008
+            "babel": 0.00223976260965496,
+            "traceur": 0.112439645349682,
+            "es6": 0.225047425055338
           },
           "raw": {
-            "babel": 117964.706667289,
-            "es6": 2482936.35735185
+            "babel": 24861.8198788361,
+            "traceur": 1248102.90067064,
+            "es6": 2498072.12684188
           },
           "errors": {},
-          "baseline": 9763426.06858876,
+          "baseline": 11100203.10709,
           "supportsES6": true
         }
       },
@@ -1181,55 +1942,55 @@
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-args-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435083285932,
+          "timestamp": 1435095677310,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/arrow-es6.js 7:0 Uncaught SyntaxError: Unexpected token )",
-          "timestamp": 1435083285934,
+          "timestamp": 1435095677311,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/defaults-es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
-          "timestamp": 1435083285938,
+          "timestamp": 1435095677316,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/destructuring-es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-          "timestamp": 1435083285940,
+          "timestamp": 1435095677318,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/rest-es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083285959,
+          "timestamp": 1435095677336,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083285961,
+          "timestamp": 1435095677339,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-generator-es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083285965,
+          "timestamp": 1435095677340,
           "level": "SEVERE"
         },
         {
           "source": "javascript",
           "message": "http://localhost:9999/tests/spread-literal-es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-          "timestamp": 1435083285967,
+          "timestamp": 1435095677343,
           "level": "SEVERE"
         },
         {
           "source": "network",
           "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
-          "timestamp": 1435083286611,
+          "timestamp": 1435095677980,
           "level": "SEVERE"
         }
       ]
@@ -1240,307 +2001,349 @@
       "stats": {
         "arrow-args": {
           "relative": {
-            "babel": 1.0124574536861697,
-            "es6": 0.014755506459439075
+            "babel": 0.9742527619695946,
+            "traceur": 0.999948167813796,
+            "es6": 0.014969866562153896
           },
           "raw": {
-            "babel": 99195530.57310273,
-            "es6": 1445670.9136664611
+            "babel": 99903379.55088446,
+            "traceur": 102538278.8121168,
+            "es6": 1535063.917049104
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 97975011.40610918
+          "baseline": 102543593.87076834
         },
         "arrow": {
           "relative": {
-            "babel": 0.9849734534950827,
-            "es5-bind": 0.15030515085134363,
-            "es6": 0.026063422209900725
+            "babel": 1.0156642931620212,
+            "es5-bind": 0.15725797497318522,
+            "traceur": 1.0043589622244427,
+            "es6": 0.026133802223860508
           },
           "raw": {
-            "babel": 835694028.0880653,
-            "es5-bind": 127525383.056398,
-            "es6": 22113333.323922537
+            "babel": 882074044.0448295,
+            "es5-bind": 136573845.19352224,
+            "traceur": 872255702.4466138,
+            "es6": 22696425.156487305
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 848443199.2788091
+          "baseline": 868470074.2001165
         },
         "bindings": {
           "relative": {
-            "babel": 0.9938177263488814,
-            "es6": 0.42711076906428835
+            "babel": 0.9848607995396388,
+            "traceur": 0.9997034692159733,
+            "es6": 0.41128702658008043
           },
           "raw": {
-            "babel": 867406565.6092327,
-            "es6": 372783333.9115902
+            "babel": 861704267.2519702,
+            "traceur": 874690865.767707,
+            "es6": 359855713.6552631
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 872802469.3179281
+          "baseline": 874950315.4707379
         },
         "classes": {
           "relative": {
-            "babel": 0.16783432915709048
+            "babel": 0.16901077285757565,
+            "traceur": 0.6679879378014597
           },
           "raw": {
-            "babel": 51293866.14690637
+            "babel": 54400710.85811837,
+            "traceur": 215010073.30266833
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 305622016.69061434
+          "baseline": 321877179.4148384
         },
         "defaults": {
           "relative": {
-            "babel": 0.000579408400190608,
-            "es6": 1.0202836789563279
+            "babel": 0.0005790059766931209,
+            "traceur": 0.0005539248432647355,
+            "es6": 0.994943961705791
           },
           "raw": {
-            "babel": 482132.17701272754,
-            "es6": 848989402.1970427
+            "babel": 509694.4389462579,
+            "traceur": 487615.7130858985,
+            "es6": 875841398.4617257
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 832111127.2361956
+          "baseline": 880292189.481839
         },
         "destructuring": {
           "relative": {
-            "babel": 0.03555510126967603,
-            "es6": 0.03667696731813237
+            "babel": 0.03540675638107106,
+            "traceur": 0.03587961478410108,
+            "es6": 0.03590969937796621
           },
           "raw": {
-            "babel": 5110601.077784867,
-            "es6": 5271855.289744069
+            "babel": 5197013.827683477,
+            "traceur": 5266420.119314221,
+            "es6": 5270835.944605716
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 143737491.81649944
+          "baseline": 146780285.99258733
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.07141262511823665,
-            "es6": 0.1894895370243881
+            "babel": 0.07075359697496358,
+            "traceur": 0.04328707555064932,
+            "es6": 0.2036873432214753
           },
           "raw": {
-            "babel": 1384045.0859530496,
-            "es6": 3672488.752848673
+            "babel": 1439653.641426813,
+            "traceur": 880780.6049106091,
+            "es6": 4144513.3239673143
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 19380957.97012797
+          "baseline": 20347426.886808876
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.13508385220402822,
-            "es6": 0.316583949030018
+            "babel": 0.14993843819327138,
+            "traceur": 0.10416533225471093,
+            "es6": 0.28181960864602823
           },
           "raw": {
-            "babel": 1067122.6137883025,
-            "es6": 2500919.8779886533
+            "babel": 1221829.7440426017,
+            "traceur": 848830.3785239606,
+            "es6": 2296513.0519387736
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 7899705.230322716
+          "baseline": 8148876.023822905
         },
         "generator": {
           "relative": {
-            "babel": 0.0002630745650836054,
-            "es6": 0.010408156379504364
+            "babel": 0.0002977361990867946,
+            "traceur": 0.004709266849577292,
+            "es6": 0.01084699682240078
           },
           "raw": {
-            "babel": 36873.81692162645,
-            "es6": 1458858.072073725
+            "babel": 41921.87993178206,
+            "traceur": 663074.6279432065,
+            "es6": 1527279.853117717
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 140164887.88989505
+          "baseline": 140802092.79343018
         },
         "map-set": {
           "relative": {
-            "babel": 0.008171717689166316,
-            "es6": 0.05072513291106577
+            "babel": 0.008861315458768582,
+            "traceur": 0.04713712641306895,
+            "es6": 0.05079771220975066
           },
           "raw": {
-            "babel": 94835.5961792988,
-            "es6": 588682.625107411
+            "babel": 101930.09477439383,
+            "traceur": 542209.7638925934,
+            "es6": 584316.8143549882
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 11605344.162222764
+          "baseline": 11502817.527337935
         },
         "object-literal-ext": {
           "relative": {
-            "babel": 0.6223663080510131,
-            "es6": 0.5674418971762621
+            "babel": 0.5744935590329048,
+            "traceur": 0.19257916448654866,
+            "es6": 0.5220464992160808
           },
           "raw": {
-            "babel": 1410176.4741855462,
-            "es6": 1285727.0766649367
+            "babel": 1430043.4770989083,
+            "traceur": 479372.78611573257,
+            "es6": 1299490.9676672586
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 2265830.3573688297
+          "baseline": 2489224.5606830223
         },
         "promises": {
           "relative": {
-            "babel": 21.932250265662336,
-            "es6": 39.26143568248371
+            "babel": 19.934101180855013,
+            "traceur": 34.913649839561955,
+            "es6": 33.79852052540502
           },
           "raw": {
-            "babel": 4891.515463477909,
-            "es6": 8756.416575269857
+            "babel": 4839.514495463026,
+            "traceur": 8476.184251054012,
+            "es6": 8205.458000032406
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 223.02843548781607
+          "baseline": 242.77565622627435
         },
         "proto": {
           "relative": {
-            "babel": 0.9714094008493638,
-            "es6": 0.9861945992777217
+            "babel": 0.8301565691260634,
+            "traceur": 1.0260271506285341,
+            "es6": 0.9900693935490645
           },
           "raw": {
-            "babel": 700998.1198117582,
-            "es6": 711667.561851603
+            "babel": 637932.2561646502,
+            "traceur": 788448.6365935793,
+            "es6": 760816.9657095257
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 721629.952519331
+          "baseline": 768448.1215829264
         },
         "regex-u": {
           "relative": {
-            "babel": 1.102867344125071
+            "babel": 1.0558852070656566,
+            "traceur": 1.0583379060618618
           },
           "raw": {
-            "babel": 2867709.719531516
+            "babel": 3198540.5036651124,
+            "traceur": 3205970.3426572345
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 2600230.875279505
+          "baseline": 3029250.227450362
         },
         "rest": {
           "relative": {
-            "babel": 1.040947187865266,
-            "es6": 41.20287344649648
+            "babel": 1.004973557833468,
+            "traceur": 33.50575417472364,
+            "es6": 42.88568958303377
           },
           "raw": {
-            "babel": 543953.5719843693,
-            "es6": 21530823.512001853
+            "babel": 536618.8388211642,
+            "traceur": 17890837.78266629,
+            "es6": 22899377.567410544
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 522556.35859864135
+          "baseline": 533963.1422522324
         },
         "spread": {
           "relative": {
-            "babel": 1.0051575480853605,
-            "es6": 0.28586418167474004
+            "babel": 1.0034819944250324,
+            "traceur": 0.3596586625013423,
+            "es6": 0.26862985858597294
           },
           "raw": {
-            "babel": 5101404.781391348,
-            "es6": 1450826.1973477222
+            "babel": 5483188.271341937,
+            "traceur": 1965233.2287674316,
+            "es6": 1467837.0893688118
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 5075229.043554995
+          "baseline": 5464162.089409141
         },
         "spread-generator": {
           "relative": {
-            "babel": 0.005594616143231914,
-            "es6": 0.11627775383535527
+            "babel": 0.005586344812672426,
+            "traceur": 0.07402765686251936,
+            "es6": 0.11877968362939077
           },
           "raw": {
-            "babel": 26876.29764622567,
-            "es6": 558593.3765079083
+            "babel": 28158.139739000108,
+            "traceur": 373138.64009199693,
+            "es6": 598712.582546546
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 4803957.404430555
+          "baseline": 5040530.200556966
         },
         "spread-literal": {
           "relative": {
-            "babel": 0.96893731876763,
-            "es6": 0.1327622884259924
+            "babel": 0.9227546909095423,
+            "traceur": 0.1595437777477317,
+            "es6": 0.14722700315360374
           },
           "raw": {
-            "babel": 7988658.888683527,
-            "es6": 1094593.6491177927
+            "babel": 7828328.269574375,
+            "traceur": 1353513.645480557,
+            "es6": 1249022.4348748995
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 8244763.344283328
+          "baseline": 8483650.47254123
         },
         "super": {
           "relative": {
-            "babel": 0.015251836636708245
+            "babel": 0.016741944313198663,
+            "traceur": 0.03847309400828912
           },
           "raw": {
-            "babel": 358413.56881602365
+            "babel": 405303.7221334512,
+            "traceur": 931390.5190364687
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 23499698.911893073
+          "baseline": 24208880.076964915
         },
         "template_string": {
           "relative": {
-            "babel": 1.0503685696002683,
-            "es6": 0.0015792267836498048
+            "babel": 0.9835932725466028,
+            "traceur": 0.972692894132609,
+            "es6": 0.0016239160545195599
           },
           "raw": {
-            "babel": 837124681.3076763,
-            "es6": 1258615.0768758226
+            "babel": 848994870.2026782,
+            "traceur": 839586138.3466861,
+            "es6": 1401693.604875237
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 796981845.7403531
+          "baseline": 863156442.7078295
         },
         "template_string_tag": {
           "relative": {
-            "babel": 0.00021327927650451492,
-            "es6": 0.002749778979732422
+            "babel": 0.0000887674749910854,
+            "traceur": 0.0005991854456255303,
+            "es6": 0.0027667476194093163
           },
           "raw": {
-            "babel": 177283.47261830256,
-            "es6": 2285690.2670028377
+            "babel": 75769.5930362682,
+            "traceur": 511449.0118465215,
+            "es6": 2361623.344335982
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 831226903.6347263
+          "baseline": 853573823.564064
         }
       },
       "log": [
         {
-          "timestamp": 1435083271137,
-          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous7316404466995485870webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "timestamp": 1435095663238,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous3158054815545998821webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083271138,
+          "timestamp": 1435095663239,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083272973,
-          "message": "SyntaxError: class is a reserved identifier",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083272987,
-          "message": "SyntaxError: invalid regular expression flag u",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083273162,
-          "message": "SyntaxError: class is a reserved identifier",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083273162,
+          "timestamp": 1435095665062,
           "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083332221,
+          "timestamp": 1435095665251,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435095665643,
+          "message": "SyntaxError: invalid regular expression flag u",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435095665643,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435095724700,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         }
@@ -1550,307 +2353,349 @@
       "stats": {
         "arrow-args": {
           "relative": {
-            "babel": 0.9322443484489416,
-            "es6": 0.015942471550992196
+            "babel": 0.9235936601182654,
+            "traceur": 0.9952270815946765,
+            "es6": 0.01489484598187776
           },
           "raw": {
-            "babel": 91365983.8462411,
-            "es6": 1562465.463717304
+            "babel": 64168631.35246771,
+            "traceur": 69145515.46690303,
+            "es6": 1034851.0629019605
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 98006476.51901014
+          "baseline": 69477124.11132291
         },
         "arrow": {
           "relative": {
-            "babel": 0.9819277572812589,
-            "es5-bind": 0.17116578316279318,
-            "es6": 0.025584996699042788
+            "babel": 1.1087784247360415,
+            "es5-bind": 0.17579066970877552,
+            "traceur": 1.066839501707654,
+            "es6": 0.02402219979542983
           },
           "raw": {
-            "babel": 858826527.0476931,
-            "es5-bind": 149707261.06176636,
-            "es6": 22377485.20360011
+            "babel": 705067878.3280467,
+            "es5-bind": 111784601.6447689,
+            "traceur": 678399080.6500723,
+            "es6": 15275623.212607402
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 874633108.881242
+          "baseline": 635896102.0511351
         },
         "bindings": {
           "relative": {
-            "babel": 0.9952977141790572,
-            "es6": 0.9816628897318533
+            "babel": 1.0147071239907046,
+            "traceur": 0.99854739265698,
+            "es6": 1.0163236684803527
           },
           "raw": {
-            "babel": 876318514.509922,
-            "es6": 864313614.935695
+            "babel": 679440457.1261216,
+            "traceur": 668620019.4009582,
+            "es6": 680522883.4746149
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 880458682.8904035
+          "baseline": 669592674.6369683
         },
         "classes": {
           "relative": {
-            "babel": 0.16530060333472643
+            "babel": 0.15267147393014383,
+            "traceur": 0.5830617344953841
           },
           "raw": {
-            "babel": 52434515.22756014
+            "babel": 33687355.64755037,
+            "traceur": 128654079.95871498
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 317207040.80784607
+          "baseline": 220652586.7626346
         },
         "defaults": {
           "relative": {
-            "babel": 0.0005557748080446415,
-            "es6": 1.017391566216027
+            "babel": 0.0004885364284025769,
+            "traceur": 0.0004822914731873768,
+            "es6": 1.0342648049904872
           },
           "raw": {
-            "babel": 479624.9984395369,
-            "es6": 877993067.1480976
+            "babel": 325034.06447748386,
+            "traceur": 320879.15798931575,
+            "es6": 688119193.918226
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 862984416.5247086
+          "baseline": 665322063.1679089
         },
         "destructuring": {
           "relative": {
-            "babel": 0.03221421631002862,
-            "es6": 0.03230543959335763
+            "babel": 0.03486500084610794,
+            "traceur": 0.03395966165469505,
+            "es6": 0.0315743704580635
           },
           "raw": {
-            "babel": 5283128.74381698,
-            "es6": 5298089.354549294
+            "babel": 3811515.3927558614,
+            "traceur": 3712541.8037699717,
+            "es6": 3451776.7416294063
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 163999915.22290388
+          "baseline": 109322108.1387511
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.05929524185503247,
-            "es6": 0.2010723696936008
+            "babel": 0.05064487792787375,
+            "traceur": 0.03688591385654538,
+            "es6": 0.17258495877205413
           },
           "raw": {
-            "babel": 1174304.5361964758,
-            "es6": 3982110.342213409
+            "babel": 821365.0263254519,
+            "traceur": 598220.4093564436,
+            "es6": 2799004.6576292864
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 19804363.713828262
+          "baseline": 16218126.29295315
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.1682729986398346,
-            "es6": 0.3050809597050324
+            "babel": 0.1671781334479421,
+            "traceur": 0.11231305460069965,
+            "es6": 0.2943284160333553
           },
           "raw": {
-            "babel": 1388964.7573590532,
-            "es6": 2518209.7222771877
+            "babel": 932020.5361244099,
+            "traceur": 626146.9200773801,
+            "es6": 1640885.2189600333
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 8254234.301320932
+          "baseline": 5575014.608083499
         },
         "generator": {
           "relative": {
-            "babel": 0.00028319070445193933,
-            "es6": 0.009827921926086721
+            "babel": 0.00021975645678025803,
+            "traceur": 0.003274974888931723,
+            "es6": 0.008870656068827672
           },
           "raw": {
-            "babel": 40061.890900895116,
-            "es6": 1390318.007603321
+            "babel": 24995.14766402866,
+            "traceur": 372496.3632203415,
+            "es6": 1008950.3697216433
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 141466122.54956296
+          "baseline": 113740219.6515307
         },
         "map-set": {
           "relative": {
-            "babel": 0.07761411258174233,
-            "es6": 0.3873804732710334
+            "babel": 0.07330097436319791,
+            "traceur": 0.3981728540173254,
+            "es6": 0.39143618430452437
           },
           "raw": {
-            "babel": 110968.1247547628,
-            "es6": 553853.9739177688
+            "babel": 76910.88160032043,
+            "traceur": 417781.9667178044,
+            "es6": 410713.53125479864
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 1429741.5903311705
+          "baseline": 1049247.738771327
         },
         "object-literal-ext": {
           "relative": {
-            "babel": 0.6580241038370666,
-            "es6": 0.48759979463970177
+            "babel": 0.7171355664278684,
+            "traceur": 0.22646692243800148,
+            "es6": 0.478548680106431
           },
           "raw": {
-            "babel": 1475979.1825472512,
-            "es6": 1093709.3977346404
+            "babel": 1031873.1327737081,
+            "traceur": 325859.0755576836,
+            "es6": 688574.8648415614
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 2243047.289514973
+          "baseline": 1438881.546363099
         },
         "promises": {
           "relative": {
-            "babel": 23.782349292561708,
-            "es6": 39.841888514522765
+            "babel": 16.05863225416992,
+            "traceur": 26.213235554233496,
+            "es6": 24.91037052110879
           },
           "raw": {
-            "babel": 5428.931764961678,
-            "es6": 9094.933871827592
+            "babel": 3333.605563181197,
+            "traceur": 5441.595927316968,
+            "es6": 5171.134654292238
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 228.27567193539028
+          "baseline": 207.58963219396006
         },
         "proto": {
           "relative": {
-            "babel": 0.9772932095922144,
-            "es6": 0.9978755866275051
+            "babel": 0.8791200885728336,
+            "traceur": 0.9860795656294049,
+            "es6": 1.006968270082624
           },
           "raw": {
-            "babel": 734894.0836254614,
-            "es6": 750371.390703544
+            "babel": 455852.63587492506,
+            "traceur": 511314.63723493845,
+            "es6": 522146.1164705802
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 751968.8834552565
+          "baseline": 518532.8395975545
         },
         "regex-u": {
           "relative": {
-            "babel": 1.123429652752717
+            "babel": 1.1283306096599288,
+            "traceur": 1.0766569157953618
           },
           "raw": {
-            "babel": 3133364.5593710416
+            "babel": 2315369.851126455,
+            "traceur": 2209333.808280452
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 2789106.1551503665
+          "baseline": 2052031.4093262893
         },
         "rest": {
           "relative": {
-            "babel": 1.094600533666244,
-            "es6": 43.766962599756745
+            "babel": 1.0875066727170133,
+            "traceur": 31.287466873592678,
+            "es6": 41.67691961563667
           },
           "raw": {
-            "babel": 570803.167590597,
-            "es6": 22823231.050404117
+            "babel": 381940.57636266435,
+            "traceur": 10988395.22590895,
+            "es6": 14637249.681647561
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 521471.66937581747
+          "baseline": 351207.570440399
         },
         "spread": {
           "relative": {
-            "babel": 0.9929808650388087,
-            "es6": 0.27578672526163533
+            "babel": 0.9657445632539339,
+            "traceur": 0.30547245018920727,
+            "es6": 0.2372183149386547
           },
           "raw": {
-            "babel": 5406868.257769851,
-            "es6": 1501683.0064224375
+            "babel": 3964388.455437869,
+            "traceur": 1253966.6295444502,
+            "es6": 973782.9079695794
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 5445088.065779127
+          "baseline": 4105007.272399698
         },
         "spread-generator": {
           "relative": {
-            "babel": 0.005559867015115229,
-            "es6": 0.11380021572860845
+            "babel": 0.005061177469108796,
+            "traceur": 0.07763712327893564,
+            "es6": 0.1155634441353632
           },
           "raw": {
-            "babel": 27433.857196187608,
-            "es6": 561520.421029222
+            "babel": 17753.960937378615,
+            "traceur": 272341.0633983129,
+            "es6": 405381.72895356937
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 4934264.996195964
+          "baseline": 3507871.645628116
         },
         "spread-literal": {
           "relative": {
-            "babel": 0.951935004856509,
-            "es6": 0.10714058838969209
+            "babel": 0.856555566565411,
+            "traceur": 0.19620206016389827,
+            "es6": 0.14429745917991274
           },
           "raw": {
-            "babel": 8027824.449924969,
-            "es6": 903534.2020895287
+            "babel": 4293689.044365758,
+            "traceur": 983509.6158275786,
+            "es6": 723325.4254536364
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 8433164.458675466
+          "baseline": 5012738.474845776
         },
         "super": {
           "relative": {
-            "babel": 0.01654355368525572
+            "babel": 0.017293733606318393,
+            "traceur": 0.0404820844932025
           },
           "raw": {
-            "babel": 420029.7820352232
+            "babel": 272200.70254577155,
+            "traceur": 637181.7729134582
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 25389332.30588605
+          "baseline": 15739845.931610802
         },
         "template_string": {
           "relative": {
-            "babel": 0.9976808525760883,
-            "es6": 0.0014737835538745534
+            "babel": 0.9686362847509361,
+            "traceur": 0.9672197630682159,
+            "es6": 0.0016675628765870777
           },
           "raw": {
-            "babel": 841795654.1965597,
-            "es6": 1243508.47034357
+            "babel": 504294614.36802655,
+            "traceur": 503557140.1819186,
+            "es6": 868172.0796770975
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 843752440.4953537
+          "baseline": 520623295.1491127
         },
         "template_string_tag": {
           "relative": {
-            "babel": 0.00024036382464252365,
-            "es6": 0.002938484881636535
+            "babel": 0.00009756834331983328,
+            "traceur": 0.000731959248898899,
+            "es6": 0.003328762822424693
           },
           "raw": {
-            "babel": 202856.62956439753,
-            "es6": 2479953.628634633
+            "babel": 48332.29812860899,
+            "traceur": 362589.66209773655,
+            "es6": 1648964.7323975398
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 843956572.3589731
+          "baseline": 495368646.05944586
         }
       },
       "log": [
         {
-          "timestamp": 1435083276708,
-          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous3273892727852901037webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "timestamp": 1435095674154,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous6256639827930548415webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083276709,
+          "timestamp": 1435095674156,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083278100,
-          "message": "SyntaxError: class is a reserved identifier",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083278181,
-          "message": "SyntaxError: invalid regular expression flag u",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083278319,
-          "message": "SyntaxError: class is a reserved identifier",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083278327,
+          "timestamp": 1435095676087,
           "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083337647,
+          "timestamp": 1435095676209,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435095676385,
+          "message": "SyntaxError: invalid regular expression flag u",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435095676557,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435095735241,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         }
@@ -1860,387 +2705,429 @@
       "stats": {
         "arrow-args": {
           "relative": {
-            "babel": 0.9724623253032787,
-            "es6": 0.014598511879672859
+            "babel": 0.9783317016438628,
+            "traceur": 1.0108555521997564,
+            "es6": 0.015217129579043889
           },
           "raw": {
-            "babel": 93094154.13915129,
-            "es6": 1397520.5823060118
+            "babel": 90657768.57165907,
+            "traceur": 93671613.17242287,
+            "es6": 1410105.600568691
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 95730345.24511611
+          "baseline": 92665676.08851825
         },
         "arrow": {
           "relative": {
-            "babel": 0.9412017608175994,
-            "es5-bind": 0.16619201251492122,
-            "es6": 0.025258919347359028
+            "babel": 1.0391563817687401,
+            "es5-bind": 0.1637751999379292,
+            "traceur": 1.0281117687084191,
+            "es6": 0.02586455098242519
           },
           "raw": {
-            "babel": 812205576.9484923,
-            "es5-bind": 143414605.6969304,
-            "es6": 21797064.153169356
+            "babel": 841323013.0212028,
+            "es5-bind": 132595870.15709883,
+            "traceur": 832381060.3944511,
+            "es6": 20940488.212117013
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 862945237.4196036
+          "baseline": 809621177.1217661
         },
         "bindings": {
           "relative": {
-            "babel": 1.005737523206728,
-            "es6": 1.0016111411072302
+            "babel": 0.9826014430645235,
+            "traceur": 1.0233307196258057,
+            "es6": 1.024340234441986
           },
           "raw": {
-            "babel": 836325593.7844762,
-            "es6": 832894282.0556059
+            "babel": 835928147.3280175,
+            "traceur": 870577749.0950357,
+            "es6": 871436573.245912
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 831554530.3688252
+          "baseline": 850729614.9707826
         },
         "classes": {
           "relative": {
-            "babel": 0.1475481842126266
+            "babel": 0.14968684188199008,
+            "traceur": 0.6676517355559752
           },
           "raw": {
-            "babel": 47317954.78518637
+            "babel": 48052274.53093453,
+            "traceur": 214328688.37785715
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 320694931.2029357
+          "baseline": 321018694.27386224
         },
         "defaults": {
           "relative": {
-            "babel": 0.0005008153361316258,
-            "es6": 0.9683591708705962
+            "babel": 0.0005195386137385772,
+            "traceur": 0.0004569243481068775,
+            "es6": 1.0407113422549616
           },
           "raw": {
-            "babel": 435945.04544414533,
-            "es6": 842928225.825109
+            "babel": 430756.1416259063,
+            "traceur": 378841.8492883937,
+            "es6": 862867148.815311
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 870470638.5620127
+          "baseline": 829112851.7401313
         },
         "destructuring": {
           "relative": {
-            "babel": 0.030965072725789276,
-            "es6": 0.032312478862509326
+            "babel": 0.02728712658992697,
+            "traceur": 0.02923088082542614,
+            "es6": 0.02825710634358993
           },
           "raw": {
-            "babel": 4963764.476662957,
-            "es6": 5179756.43561348
+            "babel": 4479102.01971341,
+            "traceur": 4798163.59233296,
+            "es6": 4638321.35925782
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 160302044.84321728
+          "baseline": 164147075.17671973
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.06803003964312133,
-            "es6": 0.1979519578646208
+            "babel": 0.0686456343860182,
+            "traceur": 0.04034873002650644,
+            "es6": 0.18665121888935704
           },
           "raw": {
-            "babel": 1348832.4362268252,
-            "es6": 3924795.9134388613
+            "babel": 1318902.8540170847,
+            "traceur": 775228.5438673617,
+            "es6": 3586168.6981376586
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 19827012.350759503
+          "baseline": 19213208.033018336
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.170867416713896,
-            "es6": 0.34113429710498655
+            "babel": 0.18007285880175677,
+            "traceur": 0.11216935374446863,
+            "es6": 0.2772458380890633
           },
           "raw": {
-            "babel": 1281380.2437929695,
-            "es6": 2558256.905835116
+            "babel": 1330566.4979778423,
+            "traceur": 828824.4279862532,
+            "es6": 2048582.0368477313
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 7499266.205554799
+          "baseline": 7389045.227757896
         },
         "generator": {
           "relative": {
-            "babel": 0.0002443940625062844,
-            "es6": 0.00970483630812604
+            "babel": 0.00022344556946843767,
+            "traceur": 0.0034309057549668353,
+            "es6": 0.008580472664107167
           },
           "raw": {
-            "babel": 33916.161072950264,
-            "es6": 1346803.5517620437
+            "babel": 31313.983921158742,
+            "traceur": 480812.07383804506,
+            "es6": 1202479.7971111573
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 138776534.60618806
+          "baseline": 140141440.24270722
         },
         "map-set": {
           "relative": {
-            "babel": 0.05995174301340474,
-            "es6": 0.3634714533219359
+            "babel": 0.07183275027998007,
+            "traceur": 0.40167277714181604,
+            "es6": 0.42768753908830764
           },
           "raw": {
-            "babel": 90183.09182956076,
-            "es6": 546756.070878989
+            "babel": 93803.53510430857,
+            "traceur": 524528.5236081025,
+            "es6": 558500.1678228454
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 1504261.382515543
+          "baseline": 1305860.2759701351
         },
         "object-literal-ext": {
           "relative": {
-            "babel": 0.8172966356681276,
-            "es6": 0.5739161087043848
+            "babel": 0.755376607088064,
+            "traceur": 0.24277124533831856,
+            "es6": 0.5640889183832679
           },
           "raw": {
-            "babel": 1387606.952266176,
-            "es6": 974395.2779210139
+            "babel": 1327041.3377969384,
+            "traceur": 426499.14647784666,
+            "es6": 990988.2115272991
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 1697800.8861272607
+          "baseline": 1756794.326624187
         },
         "promises": {
           "relative": {
-            "babel": 20.653092249657906,
-            "es6": 1.012195187485147
+            "babel": 20.989422740237355,
+            "traceur": 1.0460414840337682,
+            "es6": 1.0456754551939529
           },
           "raw": {
-            "babel": 4747.02194717469,
-            "es6": 232.64858897321682
+            "babel": 4713.5963172930215,
+            "traceur": 234.9096184253393,
+            "es6": 234.82741929996413
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 229.84557904414137
+          "baseline": 224.5700787309846
         },
         "proto": {
           "relative": {
-            "babel": 0.6539656049676709,
-            "es6": 1.0653308898731733
+            "babel": 0.6403277042418094,
+            "traceur": 1.105859009007808,
+            "es6": 1.0664996339819268
           },
           "raw": {
-            "babel": 322920.8120886778,
-            "es6": 526048.3326458822
+            "babel": 308041.8627762287,
+            "traceur": 531994.5815962979,
+            "es6": 513060.0030666424
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 493788.67884747783
+          "baseline": 481069.08499448845
         },
         "regex-u": {
           "relative": {
-            "babel": 1.0140804511621497
+            "babel": 1.3728974683336075,
+            "traceur": 1.2589276793160344
           },
           "raw": {
-            "babel": 2943103.828435422
+            "babel": 3114673.028266727,
+            "traceur": 2856111.3832218503
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 2902238.9940192476
+          "baseline": 2268685.826951992
         },
         "rest": {
           "relative": {
-            "babel": 0.9575771485154567,
-            "es6": 31.99688469511727
+            "babel": 1.0632067480980274,
+            "traceur": 28.244038603914966,
+            "es6": 34.95004167556336
           },
           "raw": {
-            "babel": 480818.44641261944,
-            "es6": 16066269.34759364
+            "babel": 508581.3861179695,
+            "traceur": 13510441.246206349,
+            "es6": 16718235.349838065
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 502119.8001205835
+          "baseline": 478346.6499133604
         },
         "spread": {
           "relative": {
-            "babel": 0.9643050195756762,
-            "es6": 0.298752323063615
+            "babel": 0.987637233260998,
+            "traceur": 0.3516621152737733,
+            "es6": 0.2308956556587679
           },
           "raw": {
-            "babel": 4469454.987788419,
-            "es6": 1384686.4149038722
+            "babel": 4647374.2690790035,
+            "traceur": 1654762.913845451,
+            "es6": 1086490.558286913
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 4634897.565663525
+          "baseline": 4705547.85964703
         },
         "spread-generator": {
           "relative": {
-            "babel": 0.005442026700051269,
-            "es6": 0.12208400130345036
+            "babel": 0.005476678460245437,
+            "traceur": 0.07972558873099818,
+            "es6": 0.12525889619392344
           },
           "raw": {
-            "babel": 22660.48318577541,
-            "es6": 508355.1792869663
+            "babel": 21967.474663917088,
+            "traceur": 319786.86775699235,
+            "es6": 502425.26533991913
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 4163978.685654359
+          "baseline": 4011094.4659936484
         },
         "spread-literal": {
           "relative": {
-            "babel": 1.0045949638385634,
-            "es6": 0.131711519956694
+            "babel": 1.0172451149612447,
+            "traceur": 0.17788145754595241,
+            "es6": 0.11959142708657271
           },
           "raw": {
-            "babel": 7416189.781619597,
-            "es6": 972329.8081169651
+            "babel": 7355150.696133252,
+            "traceur": 1286164.8653364682,
+            "es6": 864701.0983393969
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 7382268.524702027
+          "baseline": 7230460.572340493
         },
         "super": {
           "relative": {
-            "babel": 0.015427283282283804
+            "babel": 0.016267911530562555,
+            "traceur": 0.03523745806430866
           },
           "raw": {
-            "babel": 377084.01989667467
+            "babel": 389124.349295426,
+            "traceur": 842871.127885019
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 24442671.66142634
+          "baseline": 23919748.30723522
         },
         "template_string": {
           "relative": {
-            "babel": 1.0891414030090207,
-            "es6": 0.0014815919732720714
+            "babel": 1.0245458523885809,
+            "traceur": 0.9994538588695392,
+            "es6": 0.0015502211183965116
           },
           "raw": {
-            "babel": 846510608.1821966,
-            "es6": 1151533.9687825772
+            "babel": 826979980.8107946,
+            "traceur": 806726542.4014693,
+            "es6": 1251287.9025914099
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 777227461.7818247
+          "baseline": 807167369.7012291
         },
         "template_string_tag": {
           "relative": {
-            "babel": 0.00021635567236725679,
-            "es6": 0.0030870319718630653
+            "babel": 0.00007930757457907424,
+            "traceur": 0.0005705086360234217,
+            "es6": 0.003023022684961561
           },
           "raw": {
-            "babel": 166568.19898649197,
-            "es6": 2376648.368590538
+            "babel": 66223.34577023219,
+            "traceur": 476385.6525534364,
+            "es6": 2524281.918845715
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 769881358.6165091
+          "baseline": 835019178.4544324
         }
       },
       "log": [
         {
-          "timestamp": 1435083614154,
-          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous8983090290234657731webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
+          "timestamp": 1435096130884,
+          "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous564485918395910944webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614154,
+          "timestamp": 1435096130884,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614154,
+          "timestamp": 1435096130884,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614154,
+          "timestamp": 1435096130884,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614154,
+          "timestamp": 1435096130885,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614155,
+          "timestamp": 1435096130885,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614155,
+          "timestamp": 1435096130885,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614155,
+          "timestamp": 1435096130885,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614155,
+          "timestamp": 1435096130885,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614155,
+          "timestamp": 1435096130885,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614155,
+          "timestamp": 1435096130885,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614155,
+          "timestamp": 1435096130885,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614155,
+          "timestamp": 1435096130886,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614156,
+          "timestamp": 1435096130886,
           "message": "Only application manifests may use the 'binary-component' directive.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614156,
+          "timestamp": 1435096130886,
           "message": "SyntaxError: unreachable code after return statement",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083614160,
+          "timestamp": 1435096130888,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083616804,
-          "message": "SyntaxError: unreachable code after return statement",
-          "level": "WARNING"
-        },
-        {
-          "timestamp": 1435083616816,
-          "message": "SyntaxError: class is a reserved identifier",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083616817,
-          "message": "SyntaxError: invalid regular expression flag u",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083616875,
-          "message": "SyntaxError: class is a reserved identifier",
-          "level": "SEVERE"
-        },
-        {
-          "timestamp": 1435083616979,
+          "timestamp": 1435096132845,
           "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083616979,
+          "timestamp": 1435096132859,
           "message": "SyntaxError: unreachable code after return statement",
           "level": "WARNING"
         },
         {
-          "timestamp": 1435083675295,
+          "timestamp": 1435096132866,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435096133020,
+          "message": "SyntaxError: invalid regular expression flag u",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435096133281,
+          "message": "SyntaxError: class is a reserved identifier",
+          "level": "SEVERE"
+        },
+        {
+          "timestamp": 1435096133313,
+          "message": "SyntaxError: unreachable code after return statement",
+          "level": "WARNING"
+        },
+        {
+          "timestamp": 1435096191880,
           "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
           "level": "WARNING"
         }
@@ -2252,244 +3139,286 @@
       "stats": {
         "arrow-args": {
           "relative": {
-            "babel": 1.033408793995121
+            "traceur": 0.1006593527179614,
+            "babel": 1.01508141790881
           },
           "raw": {
-            "babel": 14726876.42470932
+            "traceur": 1416768.131416756,
+            "babel": 14287147.34254317
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 14250775.21140085
+          "baseline": 14074878.22206065
         },
         "arrow": {
           "relative": {
-            "babel": 1.010294123177892,
-            "es5-bind": 0.2986091712882721
+            "traceur": 0.9970847371001247,
+            "es5-bind": 0.2982441452855322,
+            "babel": 0.9921184519262192
           },
           "raw": {
-            "babel": 102140554.1382669,
-            "es5-bind": 30189333.50835926
+            "traceur": 96339615.92226242,
+            "es5-bind": 28816734.76562939,
+            "babel": 95859767.03037587
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 101099820.1365188
+          "baseline": 96621292.3913088
         },
         "bindings": {
           "relative": {
-            "babel": 1.02663110616683,
-            "es6": 0.9281932850864197
+            "traceur": 0.9667346318232782,
+            "es6": 0.0943166891354912,
+            "babel": 0.9661806615312657
           },
           "raw": {
-            "babel": 128277657.0634175,
-            "es6": 115977841.6976332
+            "traceur": 120371165.119382,
+            "es6": 11743667.17372032,
+            "babel": 120302188.5385334
           },
           "errors": null,
           "supportsES6": true,
-          "baseline": 124950097.7448194
+          "baseline": 124513140.58374
         },
         "classes": {
           "relative": {
-            "babel": 0.7741481588472685
+            "traceur": 0.9850241066673256,
+            "babel": 0.808813367880692
           },
           "raw": {
-            "babel": 17303076.41094546
+            "traceur": 20813620.60357626,
+            "babel": 17090276.73964834
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 22351117.43559565
+          "baseline": 21130062.16060628
         },
         "defaults": {
           "relative": {
-            "babel": 0.005097336626540879
+            "traceur": 0.00481368621013752,
+            "babel": 0.004893294184209492
           },
           "raw": {
-            "babel": 378351.0270666105
+            "traceur": 335760.6379711354,
+            "babel": 341313.3938000684
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 74225238.548423
+          "baseline": 69751251.6009105
         },
         "destructuring": {
           "relative": {
-            "babel": 1.815244828585175
+            "traceur": 0.1174837710439279,
+            "babel": 1.941998204309071
           },
           "raw": {
-            "babel": 24783182.40892158
+            "traceur": 1406884.57215825,
+            "babel": 23255699.81729547
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 13652804.30422044
+          "baseline": 11975139.71212421
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.01498692854632284
+            "traceur": 0.09610190411606778,
+            "babel": 0.0652100345613362
           },
           "raw": {
-            "babel": 121432.3370299532
+            "traceur": 770868.9054322009,
+            "babel": 523073.7978383988
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 8102549.942412824
+          "baseline": 8021369.737910482
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.08911147182813
+            "traceur": 0.01970222068034375,
+            "babel": 0.1548600473676527
           },
           "raw": {
-            "babel": 399000.9965709247
+            "traceur": 58026.44315320534,
+            "babel": 456089.5891419383
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 4477549.168310014
+          "baseline": 2945172.734314989
         },
         "generator": {
           "relative": {
-            "babel": 0.0001201195909476582
+            "traceur": 0.004627624623792024,
+            "babel": 0.001070440750541995
           },
           "raw": {
-            "babel": 5494.705474749277
+            "traceur": 195139.6837333705,
+            "babel": 45138.81018830548
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 45743624.59445589
+          "baseline": 42168434.04499538
         },
         "map-set": {
           "relative": {
-            "babel": 0.01182448689506918,
-            "es6": 0.2736686504738957
+            "traceur": 0.004152535906701398,
+            "es6": 0.03456291463823367,
+            "babel": 0.01731653515954213
           },
           "raw": {
-            "babel": 40754.59683416713,
-            "es6": 943233.7838578976
+            "traceur": 13164.55956804763,
+            "es6": 109572.9353877664,
+            "babel": 54897.67307059099
           },
           "errors": null,
           "supportsES6": true,
-          "baseline": 3446627.087993294
+          "baseline": 3170245.812156024
         },
         "object-literal-ext": {
           "relative": {
-            "babel": 0.3318135195990622
+            "traceur": 0.1337215319123379,
+            "babel": 0.3788423259518794
           },
           "raw": {
-            "babel": 1248638.182849468
+            "traceur": 499135.6958998952,
+            "babel": 1414085.864079751
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 3763072.054322036
+          "baseline": 3732650.148123544
         },
         "promises": {
           "relative": {
-            "babel": 0.9924447571927058
+            "traceur": 0.2156219115514751,
+            "es6": 0.9348687852423424,
+            "babel": 0.932719969665656
           },
           "raw": {
-            "babel": 203.2557502534517
-          },
-          "errors": {
-            "es6": "ReferenceError: 'Promise' is undefined"
-          },
-          "supportsES6": null,
-          "baseline": 204.80308730573
-        },
-        "proto": {
-          "relative": {
-            "babel": 1.031362273147551,
-            "es6": 1.071662479092793
-          },
-          "raw": {
-            "babel": 697609.1402509358,
-            "es6": 724868.0314799092
+            "traceur": 46.33378231119277,
+            "es6": 200.8887059449297,
+            "babel": 200.4269590267213
           },
           "errors": null,
           "supportsES6": true,
-          "baseline": 676395.8294905877
+          "baseline": 214.8843871098489
+        },
+        "proto": {
+          "relative": {
+            "traceur": 1.06152584940599,
+            "es6": 1.047561874468089,
+            "babel": 1.03396254685172
+          },
+          "raw": {
+            "traceur": 719370.5125338054,
+            "es6": 709907.462892849,
+            "babel": 700691.5259630261
+          },
+          "errors": null,
+          "supportsES6": true,
+          "baseline": 677675.9255898965
         },
         "regex-u": {
           "relative": {
-            "babel": 0.8772292570178561
+            "traceur": 9.139777817530497,
+            "babel": 9.100520253624028
           },
           "raw": {
-            "babel": 3349963.253226295
+            "traceur": 3346919.667991602,
+            "babel": 3332543.835736251
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 3818800.189832367
+          "baseline": 366192.6728210026
         },
         "rest": {
           "relative": {
-            "babel": 4.31672215833057
+            "traceur": 0.4364464321981394,
+            "babel": 0.5135193448244479
           },
           "raw": {
-            "babel": 167650.3479495744
+            "traceur": 154040.6863471785,
+            "babel": 181243.026620504
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 38837.4191806708
+          "baseline": 352942.9386588423
         },
         "spread": {
           "relative": {
-            "babel": 1.029097266414105
+            "traceur": 0.12056645520738,
+            "babel": 0.9773453066160633
           },
           "raw": {
-            "babel": 4125130.400938331
+            "traceur": 508143.8949374477,
+            "babel": 4119156.111444847
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 4008494.177923893
+          "baseline": 4214637.430149343
         },
         "spread-generator": {
           "relative": {
-            "babel": 0.007737769437694083
+            "traceur": 0.02880496565031205,
+            "babel": 0.007574779564752608
           },
           "raw": {
-            "babel": 33333.97298765209
+            "traceur": 125478.2405580652,
+            "babel": 32996.74174025782
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 4307956.350478424
+          "baseline": 4356132.275294204
         },
         "spread-literal": {
           "relative": {
-            "babel": 0.346587193586138
+            "traceur": 0.03770300002193152,
+            "babel": 0.3445067755696758
           },
           "raw": {
-            "babel": 2904913.143368519
+            "traceur": 309383.1145158092,
+            "babel": 2826952.20898989
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 8381478.59218738
+          "baseline": 8205795.675034975
         },
         "super": {
           "relative": {
-            "babel": 0.3673505055061561
+            "traceur": 0.01092074443457064,
+            "babel": 0.04118620115903523
           },
           "raw": {
-            "babel": 516108.3072599448
+            "traceur": 130872.7999142942,
+            "babel": 493570.1495269181
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 1404947.861848786
+          "baseline": 11983871.67636705
         },
         "template_string": {
           "relative": {
-            "babel": 1.48830167862331
+            "traceur": 1.029688484751909,
+            "babel": 1.534015085800483
           },
           "raw": {
-            "babel": 9566363.74788451
+            "traceur": 6113883.36719945,
+            "babel": 9108375.452376079
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 6427704.735731715
+          "baseline": 5937604.875393469
         },
         "template_string_tag": {
           "relative": {
-            "babel": 0.0328584208182111
+            "traceur": 0.06144380658699612,
+            "babel": 0.008035734902667482
           },
           "raw": {
-            "babel": 204390.8919598616
+            "traceur": 336894.1938153646,
+            "babel": 44059.64705189823
           },
           "errors": null,
           "supportsES6": null,
-          "baseline": 6220350.426779554
+          "baseline": 5482964.232340781
         }
       }
     }
@@ -2499,258 +3428,300 @@
       "stats": {
         "arrow-args": {
           "supportsES6": true,
-          "baseline": 18542347.72183537,
+          "baseline": 19197030.178111922,
           "relative": {
-            "babel": 1.0247331986540678,
-            "es6": 1.0686522930389795
+            "babel": 0.957500651082817,
+            "es6": 1.0486854158937908,
+            "traceur": 0.9909542410775518
           },
           "raw": {
-            "babel": 19000959.291552328,
-            "es6": 19815322.411265466
+            "babel": 18381168.894398652,
+            "es6": 20131645.576258954,
+            "traceur": 19023378.47109376
           },
           "errors": {}
         },
         "arrow": {
           "supportsES6": true,
-          "baseline": 116290788.81734474,
+          "baseline": 118188054.96444555,
           "relative": {
-            "babel": 1.0275291545921412,
-            "es5-bind": 0.282598375963061,
-            "es6": 0.9926835330799425
+            "babel": 0.9640292245753257,
+            "es5-bind": 0.2686864993328085,
+            "es6": 1.0366603404101742,
+            "traceur": 0.9301496743767488
           },
           "raw": {
-            "babel": 119492175.92033947,
-            "es5-bind": 32863588.059244916,
-            "es6": 115439951.10785525
+            "babel": 113936738.98144041,
+            "es5-bind": 31755534.751350436,
+            "es6": 122520869.2918585,
+            "traceur": 109932580.84040031
           },
           "errors": {}
         },
         "bindings": {
           "supportsES6": true,
-          "baseline": 142870168.18648425,
+          "baseline": 148430857.4873187,
           "relative": {
-            "babel": 0.9961014678628314,
-            "es6": 0.895519747520701
+            "babel": 0.9884341725432993,
+            "es6": 0.8702923363540649,
+            "traceur": 1.020150285447178
           },
           "raw": {
-            "babel": 142313184.24436656,
-            "es6": 127943056.94260046
+            "babel": 146714131.80037025,
+            "es6": 129178237.74967583,
+            "traceur": 151421781.63485757
           },
           "errors": {}
         },
         "classes": {
-          "baseline": 22849136.44593316,
+          "baseline": 24923629.45044008,
           "relative": {
-            "babel": 0.7694659709174408
+            "babel": 0.7557044251611515,
+            "traceur": 0.9015140814995918
           },
           "raw": {
-            "babel": 17581632.959995043
+            "babel": 18834897.06677437,
+            "traceur": 22469002.911649663
           },
           "errors": {}
         },
         "defaults": {
-          "baseline": 116109773.89552231,
+          "baseline": 130524992.84085296,
           "relative": {
-            "babel": 0.00267446762143865
+            "babel": 0.0029199629522145354,
+            "traceur": 0.002892776069388607
           },
           "raw": {
-            "babel": 310531.830816137
+            "babel": 381128.1434333581,
+            "traceur": 377579.5757471387
           },
           "errors": {}
         },
         "destructuring": {
-          "baseline": 118923795.6946711,
+          "baseline": 124889277.00763777,
           "relative": {
-            "babel": 0.17285385433196396
+            "babel": 0.1693646050284039,
+            "traceur": 0.023412284077007284
           },
           "raw": {
-            "babel": 20556436.45761092
+            "babel": 21151823.072681494,
+            "traceur": 2923943.23147487
           },
           "errors": {}
         },
         "for-of-array": {
           "supportsES6": true,
-          "baseline": 6086572.250238837,
+          "baseline": 8707682.80130278,
           "relative": {
-            "babel": 0.0007828183341712225,
-            "es6": 0.26032246812214277
+            "babel": 0.028866733396191033,
+            "es6": 0.2279573914009437,
+            "traceur": 0.13901262883795845
           },
           "raw": {
-            "babel": 4764.680349744755,
-            "es6": 1584471.5105859183
+            "babel": 251362.35792380525,
+            "es6": 1984980.6565318436,
+            "traceur": 1210477.8772961777
           },
           "errors": {}
         },
         "for-of-object": {
           "supportsES6": true,
-          "baseline": 3170572.990902297,
+          "baseline": 4491435.360105993,
           "relative": {
-            "babel": 0.011942487584366617,
-            "es6": 0.32849618529537994
+            "babel": 0.048633537036102056,
+            "es6": 0.2381850183253407,
+            "traceur": 0.18225659909054612
           },
           "raw": {
-            "babel": 37864.52857917882,
-            "es6": 1041521.1327119679
+            "babel": 218434.3879309732,
+            "es6": 1069792.6135539291,
+            "traceur": 818593.7337679407
           },
           "errors": {}
         },
         "generator": {
-          "baseline": 43119636.50330562,
+          "baseline": 72596108.4412005,
           "relative": {
-            "babel": 0.0010010534801892994
+            "babel": 0.0009907251643961946,
+            "traceur": 0.0037275603123424956
           },
           "raw": {
-            "babel": 43165.06218613165
+            "babel": 71922.79146993233,
+            "traceur": 270606.372655931
           },
           "errors": {}
         },
         "map-set": {
           "supportsES6": true,
-          "baseline": 3160072.1359838606,
+          "baseline": 3916126.1374497395,
           "relative": {
-            "babel": 0.05690830664163901,
-            "es6": 0.3556020619646763
+            "babel": 0.06161034856600844,
+            "es6": 0.4028593058362861,
+            "traceur": 0.3860869914779291
           },
           "raw": {
-            "babel": 179834.35412426872,
-            "es6": 1123728.1675129798
+            "babel": 241273.8963567347,
+            "es6": 1577647.8573003383,
+            "traceur": 1511965.358656053
           },
           "errors": {}
         },
         "object-literal-ext": {
           "supportsES6": true,
-          "baseline": 3164910.5286260294,
+          "baseline": 4364456.723101266,
           "relative": {
-            "babel": 0.506289277082409,
-            "es6": 1.2616915369011417
+            "babel": 0.4406601269166035,
+            "es6": 1.102319770915157,
+            "traceur": 0.19414460317859716
           },
           "raw": {
-            "babel": 1602360.2635685774,
-            "es6": 3993140.82901678
+            "babel": 1923242.053523827,
+            "es6": 4811026.935178105,
+            "traceur": 847335.7185966558
           },
           "errors": {}
         },
         "promises": {
           "supportsES6": true,
-          "baseline": 230.5397369101465,
+          "baseline": 243.96256036369482,
           "relative": {
-            "babel": 0.8478593573583111,
-            "es6": 0.5603436466088879
+            "babel": 0.8185384325590594,
+            "es6": 0.48995877080377154,
+            "traceur": 0.5470287694075748
           },
           "raw": {
-            "babel": 195.4652731821909,
-            "es6": 129.18147686848513
+            "babel": 199.69273176319368,
+            "es6": 119.53159619793684,
+            "traceur": 133.45453917727318
           },
           "errors": {}
         },
         "proto": {
           "supportsES6": true,
-          "baseline": 918602.9818882857,
+          "baseline": 1099494.2475572599,
           "relative": {
-            "babel": 0.983341051553081,
-            "es6": 0.9905264448957045
+            "babel": 0.9823395651235614,
+            "es6": 0.9643716609379219,
+            "traceur": 0.924696518132304
           },
           "raw": {
-            "babel": 903300.0221698227,
-            "es6": 909900.5459203969
+            "babel": 1080076.701001256,
+            "es6": 1060321.0937084854,
+            "traceur": 1016698.5024226957
           },
           "errors": {}
         },
         "regex-u": {
           "supportsES6": true,
-          "baseline": 2915951.9611468767,
+          "baseline": 3555965.1427511335,
           "relative": {
-            "babel": 0.9702571489260835,
-            "es6": 1.0081615438992724
+            "babel": 0.9551297049533815,
+            "es6": 1.0071047371239534,
+            "traceur": 0.9682945044070932
           },
           "raw": {
-            "babel": 2829223.2362277904,
-            "es6": 2939750.631085946
+            "babel": 3396407.937620399,
+            "es6": 3581229.3403123217,
+            "traceur": 3443221.505589107
           },
           "errors": {}
         },
         "rest": {
           "supportsES6": true,
-          "baseline": 301383.50603895116,
+          "baseline": 367961.9773863772,
           "relative": {
-            "babel": 0.6446268116787423,
-            "es6": 8.363686411690079
+            "babel": 0.6309775740057353,
+            "es6": 5.7749422616452515,
+            "traceur": 0.3954585597306006
           },
           "raw": {
-            "babel": 194279.88859045005,
-            "es6": 2520677.1341654905
+            "babel": 232175.75581760955,
+            "es6": 2124959.1738871443,
+            "traceur": 145513.71361284057
           },
           "errors": {}
         },
         "spread": {
           "supportsES6": true,
-          "baseline": 3887095.3502666713,
+          "baseline": 3929401.725302098,
           "relative": {
-            "babel": 0.9318062499502394,
-            "es6": 0.730241079269551
+            "babel": 1.0656577660202837,
+            "es6": 0.6303440722827043,
+            "traceur": 0.0025244935953033123
           },
           "raw": {
-            "babel": 3622019.7415309995,
-            "es6": 2838516.703802387
+            "babel": 4187397.464381682,
+            "es6": 2476875.0851616086,
+            "traceur": 9919.749488898931
           },
           "errors": {}
         },
         "spread-generator": {
-          "baseline": 3272402.524066911,
+          "baseline": 4015653.939733917,
           "relative": {
-            "babel": 0.001248922257552161
+            "babel": 0.002156416646741204,
+            "traceur": 0.0005775494527800092
           },
           "raw": {
-            "babel": 4086.9763479770363
+            "babel": 8659.423003194117,
+            "traceur": 2319.238735447212
           },
           "errors": {}
         },
         "spread-literal": {
           "supportsES6": true,
-          "baseline": 3626205.5520734447,
+          "baseline": 3733817.782786092,
           "relative": {
-            "babel": 0.58733719386744,
-            "es6": 0.4962159859619633
+            "babel": 0.5706235171838148,
+            "es6": 0.4677431153231859,
+            "traceur": 0.002664773843571908
           },
           "raw": {
-            "babel": 2129805.393341348,
-            "es6": 1799381.16332287
+            "babel": 2130604.2357368725,
+            "es6": 1746467.5617694773,
+            "traceur": 9949.779964232033
           },
           "errors": {}
         },
         "super": {
-          "baseline": 17442068.89979112,
+          "baseline": 16614879.97197342,
           "relative": {
-            "babel": 0.0467451244296423
+            "babel": 0.03779748964377177,
+            "traceur": 0.09110208787349922
           },
           "raw": {
-            "babel": 815331.6810311301
+            "babel": 628000.7536731763,
+            "traceur": 1513650.2552143647
           },
           "errors": {}
         },
         "template_string": {
           "supportsES6": true,
-          "baseline": 4735690.893178117,
+          "baseline": 4262085.6146126855,
           "relative": {
-            "babel": 1.46024694844021,
-            "es6": 1.3353403666924053
+            "babel": 1.424448350514779,
+            "es6": 1.3754548874634644,
+            "traceur": 1.0364553608360352
           },
           "raw": {
-            "babel": 6915278.175519438,
-            "es6": 6323759.213838352
+            "babel": 6071120.823487808,
+            "es6": 5862306.489406742,
+            "traceur": 4417461.483607465
           },
           "errors": {}
         },
         "template_string_tag": {
           "supportsES6": true,
-          "baseline": 4713880.290233696,
+          "baseline": 4231482.012130333,
           "relative": {
-            "babel": 0.044862664620176,
-            "es6": 0.7674754514361978
+            "babel": 0.011072010727866758,
+            "es6": 0.7844753010875001,
+            "traceur": 0.07724841653891767
           },
           "raw": {
-            "babel": 211477.23052041218,
-            "es6": 3617787.4037633007
+            "babel": 46851.014233082264,
+            "es6": 3319493.1255122838,
+            "traceur": 326875.28504998144
           },
           "errors": {}
         }
@@ -2762,254 +3733,296 @@
       "stats": {
         "arrow-args": {
           "relative": {
-            "babel": 0.9183826838494498
+            "traceur": 0.9934409786879017,
+            "babel": 1.1143773203425358
           },
           "raw": {
-            "babel": 17706298.32070063
+            "traceur": 19040322.957817655,
+            "babel": 21358192.918731168
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 19279869.527247336
+          "baseline": 19166033.379220348
         },
         "arrow": {
           "relative": {
-            "babel": 1.0491688355208226,
-            "es5-bind": 0.4138928413944909
+            "traceur": 0.9991568692465376,
+            "es5-bind": 0.3069898425815499,
+            "babel": 0.8427022797175023
           },
           "raw": {
-            "babel": 19416719.27820327,
-            "es5-bind": 7659816.83836933
+            "traceur": 25688173.10902702,
+            "es5-bind": 7892662.7656522365,
+            "babel": 21665749.10011802
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 18506763.278538033
+          "baseline": 25709849.874122795
         },
         "bindings": {
           "relative": {
-            "babel": 0.9715213773668234
+            "traceur": 1.0358330085516212,
+            "babel": 0.9878926182631874
           },
           "raw": {
-            "babel": 18019760.655268133
+            "traceur": 26028289.88127759,
+            "babel": 24823649.398547933
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 18547981.6245611
+          "baseline": 25127882.261323456
         },
         "classes": {
           "relative": {
-            "babel": 0.9884290141290257
+            "traceur": 0.9843036294780917,
+            "babel": 0.9680803702928363
           },
           "raw": {
-            "babel": 15878841.14105567
+            "traceur": 20803976.346595757,
+            "babel": 20461085.910914134
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 16064725.856967717
+          "baseline": 21135730.60542982
         },
         "defaults": {
           "relative": {
-            "babel": 0.2811897302194771
+            "traceur": 0.2280939391622676,
+            "babel": 0.21523770218518082
           },
           "raw": {
-            "babel": 3354361.922965815
+            "traceur": 3520792.0572944228,
+            "babel": 3322346.9026275957
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 11929176.504233046
+          "baseline": 15435710.69983454
         },
         "destructuring": {
           "relative": {
-            "babel": 0.8361148098104333,
-            "es6": 1.5415986860159994
+            "traceur": 0.15330604600778996,
+            "es6": 1.7131604328334944,
+            "babel": 0.7480304411468343
           },
           "raw": {
-            "babel": 9574489.574455101,
-            "es6": 17653102.629051995
+            "traceur": 2318849.7667492596,
+            "es6": 25912622.32331105,
+            "babel": 11314427.963829577
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 11451166.11034059
+          "baseline": 15125625.030022832
         },
         "for-of-array": {
           "relative": {
-            "babel": 0.03825792267329253,
-            "es6": 0.30901665206128703
+            "traceur": 0.24433949448065373,
+            "es6": 0.3079514618128544,
+            "babel": 0.15312429641695152
           },
           "raw": {
-            "babel": 306233.29205978493,
-            "es6": 2473505.617911715
+            "traceur": 1859657.6316547324,
+            "es6": 2343805.643687494,
+            "babel": 1165422.5896996437
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 8004441.189211857
+          "baseline": 7610958.005816681
         },
         "for-of-object": {
           "relative": {
-            "babel": 0.1676890074794896
+            "traceur": 0.2298079045841458,
+            "babel": 0.2045490529614237
           },
           "raw": {
-            "babel": 659048.6163904984
+            "traceur": 946409.664035859,
+            "babel": 842387.0399165961
           },
           "errors": {
-            "es6": "ReferenceError: Can't find variable: Symbol"
+            "es6": "ReferenceError: Can't find variable: data"
           },
-          "supportsES6": null,
-          "baseline": 3930183.774694403
+          "supportsES6": true,
+          "baseline": 4118264.1900349623
         },
         "generator": {
           "relative": {
-            "babel": 0.004617554060756616
+            "traceur": 0.0334471702824894,
+            "babel": 0.0036434845377650983
           },
           "raw": {
-            "babel": 81315.05674726596
+            "traceur": 783909.7553915284,
+            "babel": 85393.26492045702
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 17609984.783576515
+          "baseline": 23437251.904144753
         },
         "map-set": {
           "relative": {
-            "babel": 0.019048883257991717,
-            "es6": 0.19439954527312114
+            "traceur": 0.05328204703424347,
+            "es6": 0.05186721117748206,
+            "babel": 0.010981368001185716
           },
           "raw": {
-            "babel": 177434.79105428487,
-            "es6": 1810775.058538565
+            "traceur": 573680.1791303589,
+            "es6": 558446.8438340386,
+            "babel": 118234.81853029864
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 9314708.303430038
+          "baseline": 10766856.9633157
         },
         "object-literal-ext": {
           "relative": {
-            "babel": 0.393224768211251
+            "traceur": 0.18457105476308094,
+            "babel": 0.4286961219992003
           },
           "raw": {
-            "babel": 2602143.074367116
+            "traceur": 1327131.2461821684,
+            "babel": 3082476.9320008447
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 6617444.486531363
+          "baseline": 7190354.131560338
         },
         "promises": {
           "relative": {
-            "babel": 3.185466271379159,
-            "es6": 3.1930560994702675
+            "traceur": 3.122697671150386,
+            "es6": 3.119703791969229,
+            "babel": 2.9824671648503713
           },
           "raw": {
-            "babel": 711.4249616276616,
-            "es6": 713.120033148899
+            "traceur": 669.3134824794121,
+            "es6": 668.6717797236904,
+            "babel": 639.2567243793117
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 223.33463958469338
+          "baseline": 214.33822706020732
         },
         "proto": {
           "relative": {
-            "babel": 1.0995091518451932,
-            "es6": 1.2025850778353733
+            "traceur": 0.9615173854128691,
+            "es6": 0.9661022750089795,
+            "babel": 1.0894889663649554
           },
           "raw": {
-            "babel": 988786.7369971825,
-            "es6": 1081482.744439914
+            "traceur": 1315258.9069848305,
+            "es6": 1321530.5740085493,
+            "babel": 1490311.1361401964
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 899298.3235635678
+          "baseline": 1367899.246481193
         },
         "regex-u": {
           "relative": {
-            "babel": 0.9673109131499681
+            "traceur": 0.9694554250336108,
+            "babel": 0.9859268829834262
           },
           "raw": {
-            "babel": 6732493.204120101
+            "traceur": 7791626.723258909,
+            "babel": 7924009.758743359
           },
           "errors": {
             "es6": "SyntaxError: Invalid flag supplied to RegExp constructor."
           },
           "supportsES6": true,
-          "baseline": 6960009.561141302
+          "baseline": 8037117.047427709
         },
         "rest": {
           "relative": {
-            "babel": 0.93813741576791
+            "traceur": 1.3614162575553008,
+            "babel": 0.8866605228178207
           },
           "raw": {
-            "babel": 3646458.1973632555
+            "traceur": 6187060.028583689,
+            "babel": 4029496.3786462783
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 3886912.659142218
+          "baseline": 4544576.278010526
         },
         "spread": {
           "relative": {
-            "babel": 1.0080525944699945,
-            "es6": 0.43504998716242244
+            "traceur": 0.05669093280207905,
+            "es6": 0.4087351340070238,
+            "babel": 0.9736836333971679
           },
           "raw": {
-            "babel": 13897696.931252109,
-            "es6": 5997894.261367766
+            "traceur": 1013112.9253419156,
+            "es6": 7304428.183420004,
+            "babel": 17400515.839675397
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 13786678.401000619
+          "baseline": 17870810.64407466
         },
         "spread-generator": {
           "relative": {
-            "babel": 0.00894897601345691
+            "traceur": 0.07634870060571525,
+            "babel": 0.009558315996110733
           },
           "raw": {
-            "babel": 42018.736013329086
+            "traceur": 432502.23027414543,
+            "babel": 54146.212747378086
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 4695368.045477375
+          "baseline": 5664827.650541174
         },
         "spread-literal": {
           "relative": {
-            "babel": 0.5109125138670882,
-            "es6": 0.35093695305916506
+            "traceur": 0.08601561222377269,
+            "es6": 0.32475807727749456,
+            "babel": 0.5063841489541578
           },
           "raw": {
-            "babel": 3717326.9381072144,
-            "es6": 2553367.462679675
+            "traceur": 601708.6371879958,
+            "es6": 2271793.8644216084,
+            "babel": 3542330.377979902
           },
           "errors": {},
           "supportsES6": true,
-          "baseline": 7275858.072003031
+          "baseline": 6995342.143500988
         },
         "super": {
           "relative": {
-            "babel": 0.0635493374794316
+            "traceur": 0.13957991102827913,
+            "babel": 0.07007834987333077
           },
           "raw": {
-            "babel": 1017082.0817875296
+            "traceur": 2310280.2224229937,
+            "babel": 1159913.5186408998
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 16004605.588794984
+          "baseline": 16551667.10885012
         },
         "template_string": {
           "relative": {
-            "babel": 0.879120842494377
+            "traceur": 1.007907323385467,
+            "babel": 0.9191409995551323
           },
           "raw": {
-            "babel": 10094768.851239936
+            "traceur": 12271609.045598244,
+            "babel": 11190849.339634445
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 11482800.046689263
+          "baseline": 12175334.736510348
         },
         "template_string_tag": {
           "relative": {
-            "babel": 0.014867237971457972
+            "traceur": 0.08511035344969586,
+            "babel": 0.008770533004128537
           },
           "raw": {
-            "babel": 158185.11930970056
+            "traceur": 1175991.5097561986,
+            "babel": 121184.69646572175
           },
           "errors": {},
           "supportsES6": null,
-          "baseline": 10639845.787992587
+          "baseline": 13817255.622739997
         }
       },
       "log": []
