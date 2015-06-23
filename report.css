@@ -1,3 +1,8 @@
+a, a:visited {
+  color: #3352ff;
+  text-decoration: none;
+}
+
 table {
   border-collapse: collapse;
   margin: 10px;
@@ -22,9 +27,17 @@ td {
 }
 
 .test-ok {
-  background: green;
+  background: #3c3;
+}
+.test-faster {
+  background: #1ab31a;
 }
 
 .test-slow {
-  background: yellow;
+  background: #ff3;
+}
+
+
+.test-no-support {
+  background: #eee;
 }
