@@ -9,6 +9,7 @@ var _ = require('lodash'),
     webpack = require('webpack');
 
 require('./tasks/report');
+require('./tasks/sauce');
 require('./tasks/server');
 
 Gulp.task('test:node', ['build:tests'], function(callback) {
