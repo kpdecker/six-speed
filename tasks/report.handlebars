@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <link type="text/stylesheet" rel="stylesheet" href="report.css">
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td colspan="2"></td>
+          {{#each browsers}}
+            <th class="browser-first" colspan="{{versions.length}}">{{name}}</th>
+          {{/each}}
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          {{#each browsers}}
+            {{#each versions}}
+              <th class="{{#if @first}}browser-first{{/if}}">{{this}}</th>
+            {{/each}}
+          {{/each}}
+        </tr>
+      </thead>
+
+      <tbody>
+        {{#each tests}}
+          {{#each types}}
+            <tr class="{{#if @first}}feature-row{{/if}}">
+              {{#if @first}}
+                <th rowspan="{{../../types.length}}">{{../../name}}</th>
+              {{/if}}
+              <th>{{name}}</th>
+
+              {{#each results}}
+                <td class="{{clazz}}">{{text}}</td>
+              {{/each}}
+            </tr>
+          {{/each}}
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html>
