@@ -27,7 +27,11 @@
           {{#each types}}
             <tr class="{{#if @first}}feature-row{{/if}}">
               {{#if @first}}
-                <th rowspan="{{../../types.length}}">{{../../name}}</th>
+                <th rowspan="{{../../types.length}}">
+                  <a href="https://github.com/kpdecker/six-speed/tree/master/tests/{{../../name}}">
+                    {{../../name}}
+                  </a>
+                </th>
               {{/if}}
               <th>{{name}}</th>
 
