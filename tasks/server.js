@@ -22,7 +22,7 @@ exports.start = function(done) {
       var userAgent = UserAgent.parse(request.payload.browser),
           data = JSON.parse(request.payload.data);
 
-      GUtil.log('Storing data for browser', GUtil.colors.magenta(userAgent.name), GUtil.colors.magenta(userAgent.version), '{' + Object.keys(data).join(', ')+'}');
+      GUtil.log('Storing data for browser', GUtil.colors.magenta(userAgent.name), GUtil.colors.magenta(userAgent.version), '{' + Object.keys(data).join(', ') + '}');
       DataStore.store(userAgent.name, userAgent.version, data);
 
       reply({});
