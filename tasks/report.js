@@ -63,10 +63,18 @@ function render() {
               error = (stats.errors || {})[type];
 
           var text = '',
-              clazz = '';
+              clazz = 'test-no-support';
           if (speed && !error) {
-            clazz = speed > 0.9 ? 'test-ok' : 'test-slow';
-            text = (speed * 100).toFixed(3) + '%';
+            if (speed.toFixed(1) === '1.0') {
+              text = 'Identical';
+              clazz = 'test-ok';
+            } else if (speed > 1) {
+              text = speed.toFixed(1) + 'x faster';
+              clazz = 'test-faster';
+            } else {
+              text = (1 / speed).toFixed(1) + 'x slower';
+              clazz = 'test-slow';
+            }
           }
 
           if (firstVersion) {
