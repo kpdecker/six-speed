@@ -1,0 +1,133 @@
+/*eslint-disable no-process-env */
+
+var _ = require('lodash'),
+    DataStore = require('../lib/data-store'),
+    GUtil = require('gulp-util'),
+    WebdriverIO = require('webdriverio'),
+    UserAgent = require('../lib/user-agent');
+
+var browserOptions = {
+  chrome: {
+    chromeOptions: {
+      args: [
+        // Defaults from Sauce Labs
+        'disable-webgl',
+        'blacklist-webgl',
+        'blacklist-accelerated-compositing',
+        'disable-accelerated-2d-canvas',
+        'disable-accelerated-compositing',
+        'disable-accelerated-layers',
+        'disable-accelerated-plugins',
+        'disable-accelerated-video',
+        'disable-accelerated-video-decode',
+        'disable-gpu',
+        'test-type',
+
+        // Our own exec flags
+        'enable-javascript-harmony'
+      ]
+    }
+  }
+};
+
+module.exports.test = function(remote, config, done) {
+  var options = _.defaults({
+    desiredCapabilities: _.defaults({
+      name: 'SixSpeed - ' + config.browserName,
+      public: 'public',
+      build: process.env.TRAVIS_BUILD_ID,
+
+      loggingPrefs: {
+        'browser': 'WARNING'
+      },
+      recordVideo: false,
+      'webdriver.remote.quietExceptions': true
+    }, config, browserOptions[config.browserName])
+  }, remote);
+
+  var userAgent,
+      browserId,
+      browserLog,
+      stats;
+
+  var indexFile = config.browserName === 'firefox' ? 'index-moz.html' : 'index.html';
+
+  var client = WebdriverIO
+    .remote(options)
+    .init()
+    .url('http://localhost:9999/' + indexFile)
+    .execute(function() {
+        /*global navigator */
+        return navigator.userAgent;
+      },
+      function(err, data) {
+        if (err) {
+          throw new GUtil.PluginError('test:sauce', err);
+        }
+
+        userAgent = UserAgent.parse(data.value);
+        browserId = userAgent.name + ' ' + userAgent.version;
+
+        GUtil.log('testing browser', GUtil.colors.magenta(browserId));
+      });
+
+  (function exec() {
+    /*global SixSpeed */
+    client.pause(10000)
+      .execute(function() {
+          return !SixSpeed.running && SixSpeed.ran;
+        },
+        function(err, ret) {
+          if (err) {
+            throw new GUtil.PluginError('test:sauce', err);
+          }
+
+          if (!ret.value) {
+            exec();
+          } else {
+            cleanup();
+          }
+        });
+  }());
+
+  function cleanup() {
+    client
+      .log('browser', function(err, data) {
+        if (err) {
+          // Not supported under IE so just log and move on.
+          GUtil.log('test:sauce', GUtil.colors.red(err));
+        } else {
+          browserLog = data.value;
+        }
+      })
+      .execute(function() {
+          return SixSpeed.stats;
+        },
+        function(err, ret) {
+          if (err) {
+            throw new GUtil.PluginError('test:sauce', err);
+          }
+
+          stats = ret.value;
+        })
+      .end()
+      .call(function() {
+        // Log for the user
+        _.each(browserLog, function(message) {
+          GUtil.log(GUtil.colors.magenta(browserId), GUtil.colors.yellow(message.source || ''), '-', message.message);
+        });
+        _.each(_.keys(stats).sort(), function(name) {
+          var stat = stats[name];
+
+          GUtil.log(GUtil.colors.magenta(browserId), GUtil.colors.blue(name), _.map(stat.relative, function(relative, type) {
+            return GUtil.colors.yellow(type) + ': ' + (relative * 100).toFixed(5) + '%';
+          }).join(' '));
+        });
+
+        // Log in our data store
+        DataStore.store(userAgent.name, userAgent.version, stats, browserLog);
+
+        done();
+      });
+  }
+};

@@ -29,6 +29,7 @@
     "lodash": "^3.9.3",
     "node-libs-browser": "^0.5.2",
     "through2": "^2.0.0",
+    "webdriverio": "^2.4.5",
     "webpack": "^1.9.11"
   }
 }
