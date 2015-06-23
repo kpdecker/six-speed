@@ -1,7 +1,8 @@
 var DataStore = require('../lib/data-store'),
     Gulp = require('gulp'),
     GUtil = require('gulp-util'),
-    Hapi = require('hapi');
+    Hapi = require('hapi'),
+    UserAgent = require('../lib/user-agent');
 
 var server;
 
@@ -18,29 +19,11 @@ exports.start = function(done) {
     method: 'POST',
     path: '/log',
     handler: function(request, reply) {
-      var userAgent = request.payload.browser,
-          browserName = userAgent,
-          browserVersion = 'unknown';
+      var userAgent = UserAgent.parse(request.payload.browser),
+          data = JSON.parse(request.payload.data);
 
-      if (userAgent.match(/MSIE ([\.\d]+)/)) {
-        browserName = 'internet explorer';
-        browserVersion = RegExp.$1;
-      } else if (userAgent.match(/Trident\/.*rv:([\.\d]+)/)) {
-        browserName = 'internet explorer';
-        browserVersion = RegExp.$1;
-      } else if (userAgent.match(/(Edge|Firefox)\/(\S+)/)) {
-        browserName = RegExp.$1.toLowerCase();
-        browserVersion = RegExp.$2;
-      } else if (userAgent.match(/Chrome\/(\S+)/)) {
-        browserName = 'chrome';
-        browserVersion = RegExp.$1;
-      } else if (userAgent.match(/Safari\/\S+/) && userAgent.match(/Version\/(\S+)/)) {
-        browserName = 'safari';
-        browserVersion = RegExp.$1;
-      }
-
-      GUtil.log('Storing data for browser', GUtil.colors.yellow(browserName), GUtil.colors.yellow(browserVersion), userAgent);
-      DataStore.store(browserName, browserVersion, JSON.parse(request.payload.data));
+      GUtil.log('Storing data for browser', GUtil.colors.magenta(userAgent.name), GUtil.colors.magenta(userAgent.version), '{' + Object.keys(data).join(', ')+'}');
+      DataStore.store(userAgent.name, userAgent.version, data);
 
       reply({});
     }
