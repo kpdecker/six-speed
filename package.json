@@ -31,6 +31,7 @@
     "node-libs-browser": "^0.5.2",
     "sauce-tunnel": "^2.2.3",
     "through2": "^2.0.0",
+    "traceur": "0.0.90",
     "webdriverio": "^2.4.5",
     "webpack": "^1.9.11"
   }

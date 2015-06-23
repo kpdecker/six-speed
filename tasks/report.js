@@ -39,6 +39,15 @@ function render() {
         types = _.union(types, _.keys(stats.relative), _.keys(stats.errors));
       });
     });
+    types = types.sort(function(a, b) {
+      if (/^es/.test(a)) {
+        a = 'zz' + a;
+      }
+      if (/^es/.test(b)) {
+        b = 'zz' + b;
+      }
+      return a.localeCompare(b);
+    });
 
     // And then collect the results for each type
     types = _.map(types, function(type) {

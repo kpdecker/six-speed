@@ -6,6 +6,7 @@ var _ = require('lodash'),
     GUtil = require('gulp-util'),
     Path = require('path'),
     Through = require('through2'),
+    Traceur = require('traceur'),
     webpack = require('webpack');
 
 require('./tasks/report');
@@ -102,6 +103,7 @@ Gulp.task('build:tests', function() {
 
             if (ext === 'es6') {
               this.push(createFile('babel', Babel.transform(content, {optional: ['runtime']}).code));
+              this.push(createFile('traceur', Traceur.compile(content)));
             }
             this.push(createFile(ext, content));
 
@@ -116,13 +118,14 @@ Gulp.task('build:tests', function() {
 });
 
 Gulp.task('build:browser-runner', function() {
-  return Gulp.src(['lib/browser.js', require.resolve('benchmark')])
+  return Gulp.src(['lib/browser.js', require.resolve('benchmark'), require.resolve('traceur/bin/traceur-runtime')])
       .pipe(Gulp.dest('build'));
 });
 
 Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:tests'], function() {
   var scripts = [
     'benchmark.js',
+    'traceur-runtime.js',
     'runner.js'
   ];
 
