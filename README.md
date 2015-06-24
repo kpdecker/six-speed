@@ -2,6 +2,8 @@
 
 ES6 polyfill vs. feature performance tests.
 
+Report is located at http://kpdecker.github.io/six-speed/
+
 
 ## Usage
 
