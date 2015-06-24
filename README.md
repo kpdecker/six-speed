@@ -28,3 +28,8 @@ gulp report
 ```
 
 Generates the data report.
+
+
+## Thanks
+
+Thanks to [BrowserStack](browserstack.com) and [Sauce Labs](https://saucelabs.com/) for providing open source accounts which the majority of this testing was performed on.
