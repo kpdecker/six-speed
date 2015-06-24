@@ -1,0 +1,4 @@
+test(function() {
+  "use strict";
+  return {__proto__: []};
+});
