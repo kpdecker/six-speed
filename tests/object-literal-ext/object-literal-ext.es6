@@ -5,6 +5,7 @@ test(function() {
       return 1;
     },
     name,
-    [name]: 'bar'
+    [name]: 'bar',
+    [name + 'foo']: 'foo'
   };
 });

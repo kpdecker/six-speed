@@ -7,5 +7,6 @@ test(function() {
     name: name
   };
   ret[name] = 'bar';
+  ret[name + 'foo'] = 'foo';
   return ret;
 });
