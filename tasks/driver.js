@@ -73,7 +73,7 @@ module.exports.test = function(remote, config, done) {
 
   (function exec() {
     /*global SixSpeed */
-    client.pause(10000)
+    client.pause(15000)
       .execute(function() {
           return !SixSpeed.running && SixSpeed.ran;
         },
