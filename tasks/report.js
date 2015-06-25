@@ -1,5 +1,6 @@
 var _ = require('lodash'),
     Babel = require('babel'),
+    BabelRuntimePackage = require('babel-runtime/package'),
     DataStore = require('../lib/data-store'),
     Fs = require('fs'),
     Gulp = require('gulp'),
@@ -129,6 +130,7 @@ function render() {
     tests: tests,
     date: new Date().toLocaleDateString(),
     babelVersion: Babel.version,
+    babelRuntimeVersion: BabelRuntimePackage.version,
     traceurVersion: TraceurPackage.version
   });
 }
