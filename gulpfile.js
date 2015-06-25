@@ -106,6 +106,7 @@ Gulp.task('build:tests', function() {
 
             if (ext === 'es6') {
               this.push(createFile('babel', Babel.transform(content, {optional: ['runtime']}).code));
+              this.push(createFile('babel-loose', Babel.transform(content, {loose: 'all', optional: ['runtime']}).code));
               this.push(createFile('traceur', Traceur.compile(content)));
             }
             this.push(createFile(ext, content));
