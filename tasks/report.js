@@ -21,6 +21,24 @@ Gulp.task('report:static', function() {
 function render() {
   var data = DataStore.load();
 
+  // And the browsers tested
+  var browsers = _.map(data, function(browserData, browserName) {
+    var fullVersions = _.keys(browserData).sort();
+    return {
+      name: browserName,
+      fullVersions: fullVersions,
+      versions: _.map(fullVersions, function(versionName) {
+        if (browserName !== 'node') {
+          versionName = parseFloat(versionName);
+        }
+        return versionName;
+      })
+    };
+  });
+  browsers = _.filter(browsers, function(browser) {
+    return browser.versions.length > 0;
+  });
+
   // Pull out all of the tests that were actually run
   var tests = _.map(data, function(browserData) {
     return _.flatten(_.map(browserData, function(versionData) {
@@ -42,6 +60,7 @@ function render() {
       });
     });
     types = types.sort(function(a, b) {
+      // Push anything with es prefix to the end of the list
       if (/^es/.test(a)) {
         a = 'zz' + a;
       }
@@ -54,25 +73,28 @@ function render() {
     // And then collect the results for each type
     types = _.map(types, function(type) {
       var results = [];
-      _.each(data, function(browserData) {
+      _.each(browsers, function(browser) {
+        var browserData = data[browser.name];
         var firstVersion = true;
 
-        _.each(browserData, function(versionData) {
-          var stats = versionData.stats[test] || {},
+        _.each(browser.fullVersions, function(versionName) {
+          var versionData = browserData[versionName],
+              stats = versionData.stats[test] || {},
               speed = (stats.relative || {})[type],
               error = (stats.errors || {})[type];
 
           var text = '',
               clazz = 'test-no-support';
           if (speed && !error) {
-            if (speed.toFixed(1) === '1.0') {
+            if (speed.toFixed(1) === '1.0' || speed.toFixed(1) === '1.1' || speed.toFixed(1) === '0.9') {
               text = 'Identical';
               clazz = 'test-ok';
             } else if (speed > 1) {
-              text = speed.toFixed(1) + 'x faster';
+              text = speed.toFixed(speed > 3 ? 0 : 1) + 'x faster';
               clazz = 'test-faster';
             } else {
-              text = (1 / speed).toFixed(1) + 'x slower';
+              speed = 1 / speed;
+              text = speed.toFixed(speed > 3 ? 0 : 1) + 'x slower';
               clazz = 'test-slow';
             }
           }
@@ -99,19 +121,6 @@ function render() {
     return {
       name: test,
       types: types
-    };
-  });
-
-  // And the browsers tested
-  var browsers = _.map(data, function(browserData, browserName) {
-    return {
-      name: browserName,
-      versions: _.map(browserData, function(versionData, versionName) {
-        if (browserName !== 'node') {
-          versionName = parseFloat(versionName);
-        }
-        return versionName;
-      })
     };
   });
 
