@@ -1,9 +1,13 @@
 test(function() {
-  var map = {};
-  map.foo = 'bar';
-  var ret = 'foo' in map;
+  var map = {},
+      set = [];
 
-  var set = [];
+  for (var i = 0; i < 500; i++) {
+    map[i] = i;
+    set.push(i);
+  }
+
+  map.foo = 'bar';
   set.push('bar');
-  return set.indexOf('bar') >= 0 && ret;
+  return ('foo' in map) && set.indexOf('bar') >= 0;
 });

@@ -1,18 +1,19 @@
 if (testType === 'es6' && (!NativeFeatures.Map || !NativeFeatures.Set)) {
-  throw new Error('Promises not natively supported');
+  throw new Error('Map/Set not natively supported');
 }
 
 test(function() {
   var map = new Map(),
-      set = new Set();
+      set = new Set(),
+      key = {};
 
   for (var i = 0; i < 500; i++) {
     map.set(i, i);
     set.add(i);
   }
 
-  map.set('foo', 'bar');
-  set.add('bar');
+  map.set(key, 'bar');
+  set.add(key);
 
-  return map.has('foo') && set.has('bar');
+  return map.has(key) && set.has(key);
 });
