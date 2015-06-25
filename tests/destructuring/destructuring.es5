@@ -6,7 +6,7 @@ var data = {
 
 test(function() {
   var a = data.a,
-      b = data.c,
+      b = data.b.c,
       c = data.arr[1];
   return a;
 });
