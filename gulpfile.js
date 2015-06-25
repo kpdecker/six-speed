@@ -31,7 +31,6 @@ Gulp.task('test:node', ['build:tests'], function(callback) {
       args.push('--es_staging');
     }
     args.push('lib/node');
-    console.log(args);
 
     var test = ChildProcess.spawn('node', args, {stdio: 'inherit'});
     test.on('close', function(code) {
@@ -105,8 +104,12 @@ Gulp.task('build:tests', function() {
             }
 
             if (ext === 'es6') {
-              this.push(createFile('babel', Babel.transform(content, {optional: ['runtime']}).code));
-              this.push(createFile('babel-loose', Babel.transform(content, {loose: 'all', optional: ['runtime']}).code));
+              var babel = Babel.transform(content, {optional: ['runtime']}).code,
+                  babelLoose = Babel.transform(content, {loose: 'all', optional: ['runtime']}).code;
+              this.push(createFile('babel', babel));
+              if (babel !== babelLoose) {
+                this.push(createFile('babel-loose', babelLoose));
+              }
               this.push(createFile('traceur', Traceur.compile(content)));
             }
             this.push(createFile(ext, content));
