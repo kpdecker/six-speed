@@ -87,12 +87,12 @@ Gulp.task('build:tests', function() {
       Gulp.src(testDir.path + '/*.*')
           .pipe(Through.obj(function(testFile, enc, fileCallback) {
             var ext = Path.extname(testFile.path).replace(/^\./, ''),
-                content = testFile.contents.toString().replace(/\btest\(/g, 'suite.add(testType,');
+                content = testFile.contents.toString();
 
             function createFile(testType, src) {
               var fileName = 'tests/' + testName + '-' + testType + '.js';
 
-              src = 'function(suite, testName, testType, require) {' + src + '}';
+              src = 'function(test, testName, testType, require) {' + src + '}';
               scripts.push(fileName);
               return new GUtil.File({
                 path: fileName,
