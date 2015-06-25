@@ -1,11 +1,24 @@
-var i = 0;
-function next() {
-  return i++;
+function generator() {
+  var i = 0;
+  return {
+    next: function() {
+      i++;
+      if (i >= 3) {
+        return {done: true};
+      } else {
+        return {
+          value: i,
+          done: false
+        };
+      }
+    }
+  };
 }
 
 test(function() {
-  next();
-  next();
-  next();
+  var iterator = generator();
+  iterator.next();
+  iterator.next();
+  iterator.next();
 });
 

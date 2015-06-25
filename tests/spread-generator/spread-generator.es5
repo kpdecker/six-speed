@@ -1,9 +1,24 @@
-var i = 0;
-function generate() {
-  return i++;
+function generator() {
+  var i = 0;
+  return {
+    next: function() {
+      i++;
+      if (i >= 3) {
+        return {done: true};
+      } else {
+        return {
+          value: i,
+          done: false
+        };
+      }
+    }
+  };
 }
 
 test(function() {
-  var args = [generate(), generate(), generate()];
+  var iterator = generator();
+  var args = [iterator.next().value, iterator.next().value];
+  iterator.next();
+
   return Math.max.apply(Math, args);
 });
