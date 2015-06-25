@@ -1,0 +1,12 @@
+var obj = {
+  value: 42,
+  fn: function() {
+    return function() {
+      return obj.value;
+    };
+  }
+};
+
+test(function() {
+  obj.fn();
+});
