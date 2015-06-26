@@ -1,13 +1,7 @@
-var _ = require('lodash'),
-    Babel = require('babel'),
-    ChildProcess = require('child_process'),
+var ChildProcess = require('child_process'),
     del = require('del'),
     Gulp = require('gulp'),
-    GUtil = require('gulp-util'),
-    Path = require('path'),
-    Through = require('through2'),
-    Traceur = require('traceur'),
-    webpack = require('webpack');
+    GUtil = require('gulp-util');
 
 require('./tasks/build');
 require('./tasks/report');
