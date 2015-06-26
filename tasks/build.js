@@ -1,12 +1,15 @@
 var _ = require('lodash'),
     Babel = require('babel'),
+    Fs = require('fs'),
     Gulp = require('gulp'),
     GUtil = require('gulp-util'),
+    Handlebars = require('handlebars'),
     Path = require('path'),
     Through = require('through2'),
     Traceur = require('traceur'),
     webpack = require('webpack');
 
+var benchTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/bench.handlebars').toString());
 Gulp.task('build', ['build:browser']);
 
 Gulp.task('build:webpack', function(callback) {
@@ -118,28 +121,15 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
 
       this.push(new GUtil.File({
         path: 'index.html',
-        contents: new Buffer(
-          '<!doctype html>\n'
-          + '<body>\n'
-          + _.map(scripts, function(script) {
-            return '<script src="' + script + '"></script>';
-          }).join('\n')
-          + '</body>'
-        )
+        contents: new Buffer(benchTemplate({scripts: scripts}))
       }));
 
       // We need a special mime type to enable all of the features on Firefox.
       this.push(new GUtil.File({
         path: 'index-moz.html',
-        contents: new Buffer(
-          '<!doctype html>\n'
-          + '<body>\n'
-          + _.map(scripts, function(script) {
-            return '<script src="' + script + '" type="application/javascript;version=1.7"></script>';
-          }).join('\n')
-          + '</body>'
-        )
+        contents: new Buffer(benchTemplate({scripts: scripts, jsType: 'application/javascript;version=1.7'}))
       }));
+
       callback();
     }))
     .pipe(Gulp.dest('build/'));

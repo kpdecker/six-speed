@@ -1,0 +1,8 @@
+<!doctype html>
+<html>
+  <body>
+    {{#each scripts}}
+      <script src="{{.}}" {{#if ../jsType}}type="{{../../jsType}}"{{/if}}></script>
+    {{/each}}
+  </body>
+</html>
