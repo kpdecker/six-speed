@@ -33,7 +33,7 @@ Generates the data report.
 
 ## Testing methodology
 
-For each of the ES6 features in question, a ES5 implementation of that functionality was written along with a ES6 version. It should be noted that the functionality is frequently the same, but in some instances such as the `RegExp` unicode flag, the behaviors are not an exact match. In some cases the "common" vs. "correct" version was written, i.e. using `x[key] = value` vs. `defineProperty` to avoid an uncommon but particular nasty edge case.
+For each of the ES6 features in question, a ES5 implementation of that functionality was written along with a ES6 version. It should be noted that the functionality is frequently the same, but in some cases the "common" vs. "correct" version was written, i.e. using `x[key] = value` vs. `defineProperty` which is faster but can be hit but a particular nasty edge case for those who deem it fun to extend `Object.prototype`.
 
 Babel, in both loose+runtime and runtime mode, and Traceur were then used to compile the ES6 version to a ES5 compliant version, utilizing the runtime over polyfill to maintain test isolation and avoid native implementations where possible.
 
