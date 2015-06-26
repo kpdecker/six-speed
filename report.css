@@ -26,6 +26,12 @@ td {
   background: red;
 }
 
+.test-link {
+  display: block;
+  font-size: 0.9em;
+  padding-top: 5px;
+}
+
 .test-ok {
   background: #3c3;
 }
