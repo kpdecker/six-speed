@@ -3228,7 +3228,7 @@
       ]
     }
   },
-  "internet explorer": {
+  "ie": {
     "11.0": {
       "stats": {
         "template_string_tag": {
@@ -3559,8 +3559,10 @@
           "baseline": 23109203.24273146
         }
       }
-    },
-    "12.0": {
+    }
+  },
+  "edge": {
+    "12.9600": {
       "stats": {
         "arrow-args": {
           "supportsES6": true,
