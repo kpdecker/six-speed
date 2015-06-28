@@ -50,12 +50,13 @@ module.exports.test = function(remote, config, done) {
       browserLog,
       stats;
 
-  var indexFile = config.browserName === 'firefox' ? 'index-moz.html' : 'index.html';
+  var testServer = remote.testServer || 'http://localhost:9999/',
+      indexFile = config.browserName === 'firefox' ? 'index-moz.html' : 'index.html';
 
   var client = WebdriverIO
     .remote(options)
     .init()
-    .url('http://localhost:9999/' + indexFile)
+    .url(testServer + indexFile)
     .execute(function() {
         /*global navigator */
         return navigator.userAgent;
