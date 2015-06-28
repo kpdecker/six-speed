@@ -4,6 +4,7 @@ var ChildProcess = require('child_process'),
     GUtil = require('gulp-util');
 
 require('./tasks/build');
+require('./tasks/nightly');
 require('./tasks/report');
 require('./tasks/sauce');
 require('./tasks/server');
