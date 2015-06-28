@@ -29,7 +29,7 @@ function render() {
       name: browserName,
       fullVersions: fullVersions,
       versions: _.map(fullVersions, function(versionName) {
-        if (browserName !== 'node') {
+        if (browserName !== 'node' && browserName !== 'webkit') {
           versionName = parseFloat(versionName);
         }
         return versionName;
