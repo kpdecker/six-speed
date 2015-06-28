@@ -6,7 +6,7 @@ test(function() {
   var map = new Map(),
       set = new Set();
 
-  for (var i = 0; i < 500; i++) {
+  for (var i = 0; i < 250; i++) {
     map.set(i, i);
     set.add(i);
   }

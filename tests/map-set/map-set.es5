@@ -2,7 +2,7 @@ test(function() {
   var map = {},
       set = [];
 
-  for (var i = 0; i < 500; i++) {
+  for (var i = 0; i < 250; i++) {
     map[i] = i;
     set.push(i);
   }
