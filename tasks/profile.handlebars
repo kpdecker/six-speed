@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+  <body>
+    <div id="info"></div>
+    <button onclick="doIt()">Do It</button>
+    {{#each scripts}}
+      <script src="{{.}}" {{#if ../jsType}}type="{{../../jsType}}"{{/if}}></script>
+    {{/each}}
+  </body>
+</html>

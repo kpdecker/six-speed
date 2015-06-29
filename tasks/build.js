@@ -9,7 +9,9 @@ var _ = require('lodash'),
     Traceur = require('traceur'),
     webpack = require('webpack');
 
-var benchTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/bench.handlebars').toString());
+var benchTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/bench.handlebars').toString()),
+    profileTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/profile.handlebars').toString());
+
 Gulp.task('build', ['build:browser']);
 
 Gulp.task('build:webpack', function(callback) {
@@ -94,6 +96,7 @@ Gulp.task('build:tests', function() {
 Gulp.task('build:browser-runner', function() {
   return Gulp.src([
         'lib/browser.js',
+        'lib/browser-profile.js',
         'lib/native-features.js',
         require.resolve('benchmark'),
         require.resolve('traceur/bin/traceur-runtime')
@@ -128,6 +131,19 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
       this.push(new GUtil.File({
         path: 'index-moz.html',
         contents: new Buffer(benchTemplate({scripts: scripts, jsType: 'application/javascript;version=1.7'}))
+      }));
+
+
+      scripts[scripts.length-1] = 'browser-profile.js';
+      this.push(new GUtil.File({
+        path: 'profile.html',
+        contents: new Buffer(profileTemplate({scripts: scripts}))
+      }));
+
+      // We need a special mime type to enable all of the features on Firefox.
+      this.push(new GUtil.File({
+        path: 'profile-moz.html',
+        contents: new Buffer(profileTemplate({scripts: scripts, jsType: 'application/javascript;version=1.7'}))
       }));
 
       callback();
