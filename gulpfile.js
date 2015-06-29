@@ -1,4 +1,5 @@
-var ChildProcess = require('child_process'),
+var _ = require('lodash'),
+    ChildProcess = require('child_process'),
     del = require('del'),
     Gulp = require('gulp'),
     GUtil = require('gulp-util');
