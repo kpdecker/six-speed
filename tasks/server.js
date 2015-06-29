@@ -10,7 +10,17 @@ Gulp.task('server', function(callback) {    // eslint-disable-line no-unused-var
   exports.start(function() {});
 });
 
-exports.start = function(done) {
+Gulp.task('test:edge', function(callback) {
+  exports.start(function() {}, function() {
+    server.stop(function() {
+      callback();
+    });
+  });
+
+  GUtil.log('Open ' + GUtil.colors.magenta('http://' + server.info.uri + '/') + ' in Edge to begin test.');
+});
+
+exports.start = function(startup, testComplete) {
   server = new Hapi.Server();
   server.connection({ port: 9999 });
 
@@ -30,6 +40,18 @@ exports.start = function(done) {
   });
 
   server.route({
+    method: 'POST',
+    path: '/done',
+    handler: function(request, reply) {
+      reply({});
+
+      if (testComplete) {
+        testComplete();
+      }
+    }
+  });
+
+  server.route({
     method: 'GET',
     path: '/{param*}',
     handler: {
@@ -44,7 +66,7 @@ exports.start = function(done) {
     }
 
     GUtil.log('Server running at:', server.info.uri);
-    done();
+    startup();
   });
 };
 
