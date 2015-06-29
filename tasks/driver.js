@@ -32,7 +32,7 @@ var browserOptions = {
 
 module.exports.test = function(remote, config, done) {
   var options = _.defaults({
-    desiredCapabilities: _.defaults({
+    desiredCapabilities: _.merge({
       name: 'SixSpeed - ' + config.browserName,
       public: 'public',
       build: process.env.TRAVIS_BUILD_ID,
