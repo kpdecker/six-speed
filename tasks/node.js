@@ -1,9 +1,29 @@
 var _ = require('lodash'),
+    Args = require('../lib/args'),
     ChildProcess = require('child_process'),
     Gulp = require('gulp'),
     GUtil = require('gulp-util');
 
 Gulp.task('test:node', ['build:tests'], function(callback) {
+  findStagingArgs(function(args) {
+    args.push('lib/node');
+    runNode(args, callback);
+  });
+});
+
+Gulp.task('profile:node', ['build:tests'], function(callback) {
+  findStagingArgs(function(args) {
+    args.push('--prof');
+    args.push('lib/node-profile');
+    args.push('--testName=' + Args.testName);
+    args.push('--type=' + Args.type);
+    args.push('--count=' + Args.count);
+
+    runNode(args, callback);
+  });
+});
+
+function findStagingArgs(callback) {
   ChildProcess.exec('node  --v8-options | grep "in progress"', function(err, stdout) {
     if (err && err.code !== 1) {
       throw new GUtil.PluginError('test:node', err);
@@ -20,15 +40,17 @@ Gulp.task('test:node', ['build:tests'], function(callback) {
     } else {
       args.push('--es_staging');
     }
-    args.push('lib/node');
-
-    var test = ChildProcess.spawn('node', args, {stdio: 'inherit'});
-    test.on('close', function(code) {
-      if (code) {
-        throw new GUtil.PluginError('test:node', 'Exited with code: ' + code);
-      }
-
-      callback();
-    });
+    callback(args);
   });
-});
+}
+
+function runNode(args, callback) {
+  var test = ChildProcess.spawn('node', args, {stdio: 'inherit'});
+  test.on('close', function(code) {
+    if (code) {
+      throw new GUtil.PluginError('test:node', 'Exited with code: ' + code);
+    }
+
+    callback();
+  });
+}
