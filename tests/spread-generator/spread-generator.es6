@@ -4,6 +4,8 @@ function *generate() {
   yield 3;
 }
 
-test(function() {
+function fn() {
   return Math.max(... generate());
-});
+}
+assertEqual(fn(), 3);
+test(fn);

@@ -10,6 +10,9 @@ for (var i = 0; i < 500; i++) {
 map.set(key, 'bar');
 set.add(key);
 
-test(function() {
+function fn() {
   return map.has(key) && set.has(key);
-});
+}
+
+assertEqual(fn(), true);
+test(fn);

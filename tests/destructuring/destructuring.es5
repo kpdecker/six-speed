@@ -4,9 +4,12 @@ var data = {
   arr: [1, 2, 3]
 };
 
-test(function() {
+function fn() {
   var a = data.a,
       b = data.b.c,
       c = data.arr[1];
-  return a;
-});
+  return c;
+}
+
+assertEqual(fn(), 2);
+test(fn);

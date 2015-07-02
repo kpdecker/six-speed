@@ -1,4 +1,4 @@
-test(function() {
+function fn() {
   var keys = [],
       values = [],
       set = [],
@@ -15,4 +15,7 @@ test(function() {
   set.push(key);
 
   return set.indexOf(key) >= 0 && keys.indexOf(key) >= 0;
-});
+}
+
+assertEqual(fn(), true);
+test(fn);

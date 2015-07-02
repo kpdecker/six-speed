@@ -4,6 +4,8 @@ function C() {
 C.prototype.bar = function() {
 };
 
+assertEqual(new C().foo, 'bar');
+
 test(function() {
   return new C();
 });

@@ -1,4 +1,4 @@
-test(function() {
+function fn() {
   var name = 'foo';
   var ret = {
     'bizz buzz': function() {
@@ -9,4 +9,7 @@ test(function() {
   ret[name] = 'bar';
   ret[name + 'foo'] = 'foo';
   return ret;
-});
+}
+
+assertEqual(fn().foofoo, 'foo');
+test(fn);

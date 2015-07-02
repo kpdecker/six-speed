@@ -3,7 +3,7 @@ function generator() {
   return {
     next: function() {
       i++;
-      if (i >= 3) {
+      if (i >= 4) {
         return {done: true};
       } else {
         return {
@@ -15,10 +15,13 @@ function generator() {
   };
 }
 
-test(function() {
+function fn() {
   var iterator = generator();
-  var args = [iterator.next().value, iterator.next().value];
+  var args = [iterator.next().value, iterator.next().value, iterator.next().value];
   iterator.next();
 
   return Math.max.apply(Math, args);
-});
+}
+
+assertEqual(fn(), 3);
+test(fn);

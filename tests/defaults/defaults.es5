@@ -4,6 +4,9 @@ function fn(arg, other) {
   return other;
 }
 
+assertEqual(fn(), 3);
+assertEqual(fn(1, 2), 2);
+
 test(function() {
   fn();
   fn(2);

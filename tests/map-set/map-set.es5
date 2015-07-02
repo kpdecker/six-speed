@@ -1,4 +1,4 @@
-test(function() {
+function fn() {
   var map = {},
       set = [];
 
@@ -10,4 +10,7 @@ test(function() {
   map.foo = 'bar';
   set.push('bar');
   return ('foo' in map) && set.indexOf('bar') >= 0;
-});
+}
+
+assertEqual(fn(), true);
+test(fn);

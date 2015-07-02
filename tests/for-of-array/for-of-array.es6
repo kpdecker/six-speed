@@ -1,9 +1,13 @@
 var data = [1,2,3];
 
-test(function() {
+function fn() {
   var ret = '';
   for (var value of data) {
     ret += value;
   }
   return ret;
-});
+}
+
+assertEqual(fn(), '123');
+
+test(fn);

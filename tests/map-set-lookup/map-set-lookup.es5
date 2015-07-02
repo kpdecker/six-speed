@@ -13,6 +13,9 @@ keys.push(key);
 values.push('bar');
 set.push(key);
 
-test(function() {
+function fn() {
   return set.indexOf(key) >= 0 && keys.indexOf(key) >= 0;
-});
+}
+
+assertEqual(fn(), true);
+test(fn);

@@ -1,4 +1,4 @@
-test(function() {
+function fn() {
   var map = new Map(),
       set = new Set();
 
@@ -11,4 +11,7 @@ test(function() {
   set.add('bar');
 
   return map.has('foo') && set.has('bar');
-});
+}
+
+assertEqual(fn(), true);
+test(fn);

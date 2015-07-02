@@ -7,6 +7,7 @@ var obj = {
 };
 
 var fn = obj.fn();
+assertEqual(fn(), 42);
 
 test(function() {
   fn();

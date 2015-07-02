@@ -61,7 +61,7 @@ Gulp.task('build:tests', function() {
             function createFile(testType, src) {
               var fileName = 'tests/' + testName + '__' + testType + '.js';
 
-              src = 'function(test, testName, testType, require) {' + src + '}';
+              src = 'function(test, testName, testType, require, assertEqual) {' + src + '}';
               scripts.push(fileName);
               return new GUtil.File({
                 path: fileName,

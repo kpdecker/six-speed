@@ -3,10 +3,12 @@ function * generator() {
   yield 2;
 }
 
-test(function() {
+function fn() {
   var iterator = generator();
   iterator.next();
   iterator.next();
-  iterator.next();
-});
+  return iterator.next().done;
+}
 
+assertEqual(fn(), true);
+test(fn);

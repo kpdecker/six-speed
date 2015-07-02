@@ -1,5 +1,5 @@
 var data = {'a': 'b', 'c': 'd'};
-test(function() {
+function fn() {
   var ret = '';
   for (var name in data) {
     if (data.hasOwnProperty(name)) {
@@ -7,4 +7,7 @@ test(function() {
     }
   }
   return ret;
-});
+}
+
+assertEqual(fn(), 'bd');
+test(fn);

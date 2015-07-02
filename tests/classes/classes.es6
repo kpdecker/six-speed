@@ -5,6 +5,9 @@ class C {
   bar() {
   }
 }
+
+assertEqual(new C().foo, 'bar');
+
 test(function() {
   return new C();
 });

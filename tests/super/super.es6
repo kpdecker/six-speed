@@ -4,6 +4,7 @@ class C {
     this.foo = 'bar';
   }
   bar() {
+    return 41;
   }
 }
 class D extends C {
@@ -12,10 +13,13 @@ class D extends C {
     this.baz = 'bat';
   }
   bar() {
-    super.bar();
+    return super.bar() + 1;
   }
 }
-test(function() {
+function fn() {
   var d = new D();
   return d.bar();
-});
+}
+
+assertEqual(fn(), 42);
+test(fn);

@@ -6,16 +6,19 @@ data[Symbol.iterator] = function() {
   return {
     next: function() {
        return nextIndex < array.length ?
-         {value: array[nextIndex++], done: false} :
+         {value: data[array[nextIndex++]], done: false} :
          {done: true};
     }
   };
 };
 
-test(function() {
+function fn() {
   var ret = '';
   for (var value of data) {
     ret += value;
   }
   return ret;
-});
+}
+
+assertEqual(fn(), 'bd');
+test(fn);

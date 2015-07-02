@@ -6,6 +6,8 @@ var obj = {
   }
 };
 
+assertEqual(obj.fn()(), 42);
+
 test(function() {
   obj.fn();
 });
