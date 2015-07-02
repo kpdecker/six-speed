@@ -51,7 +51,7 @@ module.exports.test = function(remote, config, done) {
       stats;
 
   var testServer = remote.testServer || 'http://localhost:9999/',
-      indexFile = config.browserName === 'firefox' ? 'index-moz.html' : 'index.html';
+      indexFile = config.browserName === 'firefox' ? 'moz/index.html' : 'index.html';
 
   var client = WebdriverIO
     .remote(options)

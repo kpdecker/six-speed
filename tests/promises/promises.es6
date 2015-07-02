@@ -1,6 +1,5 @@
-if (testType === 'es6' && !NativeFeatures.Promise) {
-  throw new Error('Promises not natively supported');
-}
+// Fail early when promises arount around as the tests don't recover from this.
+new Promise(function() { /* NOP */ });
 
 test({
   defer: true,

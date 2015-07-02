@@ -59,7 +59,7 @@ Gulp.task('build:tests', function() {
                 content = testFile.contents.toString();
 
             function createFile(testType, src) {
-              var fileName = 'tests/' + testName + '-' + testType + '.js';
+              var fileName = 'tests/' + testName + '__' + testType + '.js';
 
               src = 'function(test, testName, testType, require) {' + src + '}';
               scripts.push(fileName);
@@ -97,7 +97,6 @@ Gulp.task('build:browser-runner', function() {
   return Gulp.src([
         'lib/browser.js',
         'lib/browser-profile.js',
-        'lib/native-features.js',
         require.resolve('benchmark'),
         require.resolve('traceur/bin/traceur-runtime')
       ])
@@ -106,7 +105,6 @@ Gulp.task('build:browser-runner', function() {
 
 Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:tests'], function() {
   var scripts = [
-    'native-features.js',
     'benchmark.js',
     'traceur-runtime.js',
     'runner.js'
@@ -120,6 +118,24 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
       return callback();
     },
     function(callback) {
+      var types = {};
+      _.each(scripts, function(script) {
+        if ((/.*__(.*)\.js$/).exec(script)) {
+          var type = types[RegExp.$1];
+          if (!type) {
+            type = types[RegExp.$1] = [];
+
+            type.push('benchmark.js');
+            if (RegExp.$1 === 'traceur') {
+              type.push('traceur-runtime.js');
+            } else if (RegExp.$1 === 'babel') {
+              type.push('browser-polyfill.js');
+            }
+            type.push('runner.js');
+          }
+          type.push(script);
+        }
+      });
       scripts.push('browser.js');
 
       this.push(new GUtil.File({
@@ -129,12 +145,28 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
 
       // We need a special mime type to enable all of the features on Firefox.
       this.push(new GUtil.File({
-        path: 'index-moz.html',
-        contents: new Buffer(benchTemplate({scripts: scripts, jsType: 'application/javascript;version=1.7'}))
+        path: 'moz/index.html',
+        contents: new Buffer(benchTemplate({
+          scripts: _.map(scripts, function(script) { return '../' + script; }),
+          jsType: 'application/javascript;version=1.7'
+        }))
       }));
 
+      _.each(types, function(scripts, name) {
+        this.push(new GUtil.File({
+          path: name + '.html',
+          contents: new Buffer(benchTemplate({scripts: scripts}))
+        }));
 
-      scripts[scripts.length-1] = 'browser-profile.js';
+        // We need a special mime type to enable all of the features on Firefox.
+        this.push(new GUtil.File({
+          path: 'moz/' + name + '.html',
+          contents: new Buffer(benchTemplate({scripts: scripts, jsType: 'application/javascript;version=1.7'}))
+        }));
+      }, this);
+
+
+      scripts[scripts.length - 1] = 'browser-profile.js';
       this.push(new GUtil.File({
         path: 'profile.html',
         contents: new Buffer(profileTemplate({scripts: scripts}))
@@ -142,8 +174,11 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
 
       // We need a special mime type to enable all of the features on Firefox.
       this.push(new GUtil.File({
-        path: 'profile-moz.html',
-        contents: new Buffer(profileTemplate({scripts: scripts, jsType: 'application/javascript;version=1.7'}))
+        path: 'moz/profile.html',
+        contents: new Buffer(profileTemplate({
+          scripts: _.map(scripts, function(script) { return '../' + script; }),
+          jsType: 'application/javascript;version=1.7'
+        }))
       }));
 
       callback();

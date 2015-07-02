@@ -24,9 +24,9 @@ gulp server
 
 Starts a server instance for manual browser testing. Tests may be accessed via `http://machineName:9999/` and the `#` component may be used to filter the tests to be executed, i.e. `http://machineName:9999/#promise`
 
-Profiling of specific tests may be done through `http://machineName:9999/profile.html?testName=$testName&type=$type&count=$number`, i.e. `http://localhost:9999/profile-moz.html?testName=generator&type=babel&count=1000000`.
+Profiling of specific tests may be done through `http://machineName:9999/profile.html?testName=$testName&type=$type&count=$number`, i.e. `http://localhost:9999/profile.html?testName=generator&type=babel&count=1000000`.
 
-Firefox browsers need to use `index-moz.html` and `profile-moz.html` respectively to enable all supported ES6 features.
+Firefox browsers need to use `/moz/index.html` and `/moz/profile.html` respectively to enable all supported ES6 features.
 
 ```
 gulp report

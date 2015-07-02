@@ -1,7 +1,3 @@
-if (testType === 'es6' && (!NativeFeatures.Map || !NativeFeatures.Set)) {
-  throw new Error('Map/Set not natively supported');
-}
-
 test(function() {
   var map = new Map(),
       set = new Set(),
