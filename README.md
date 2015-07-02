@@ -19,6 +19,12 @@ gulp test:node
 Tests against the current node version.
 
 ```
+gulp profile:node --testName=$name --type=$type --count=$iterationCount
+```
+
+Profiles a given test within the current Node environment.
+
+```
 gulp server
 ```
 
