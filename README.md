@@ -49,6 +49,12 @@ Babel, in both loose+runtime and runtime mode, and Traceur were then used to com
 
 All of these test instances were then benchmarked in the given JavaScript engine using [Benchmark.js](http://benchmarkjs.com/) and then the operations per second compared to the ES5 implementation. Cross browser and cross execution comparisions are avoided as much as possible to isolate environmental issues when executing on VMs in the cloud.
 
+## Links
+
+- [V8 Harmony Features](https://code.google.com/p/v8/issues/list?q=label:Harmony)
+- [Firefox ES6 Meta Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=694100)
+- [WebKit ES6 Meta Bug](https://bugs.webkit.org/show_bug.cgi?id=80559)
+
 
 ## Thanks
 
