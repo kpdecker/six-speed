@@ -73,9 +73,13 @@ Gulp.task('build:tests', function() {
             }
 
             if (ext === 'es6') {
-              var babel = Babel.transform(content, {optional: ['runtime']}).code,
+              var babel = Babel.transform(content, {optional: []}).code,
+                  babelRuntime = Babel.transform(content, {optional: ['runtime']}).code,
                   babelLoose = Babel.transform(content, {loose: 'all', optional: ['runtime']}).code;
               this.push(createFile('babel', babel));
+              if (babel !== babelRuntime) {
+                this.push(createFile('babel-runtime', babelRuntime));
+              }
               if (babel !== babelLoose) {
                 this.push(createFile('babel-loose', babelLoose));
               }
@@ -98,6 +102,7 @@ Gulp.task('build:browser-runner', function() {
         'lib/browser.js',
         'lib/browser-profile.js',
         require.resolve('benchmark'),
+        require.resolve('babel-core/browser-polyfill'),
         require.resolve('traceur/bin/traceur-runtime')
       ])
       .pipe(Gulp.dest('build'));
