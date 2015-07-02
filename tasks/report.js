@@ -98,6 +98,9 @@ function render() {
               text = speed.toFixed(speed > 3 ? 0 : 1) + 'x slower';
               clazz = 'test-slow';
             }
+          } else if (error && !(/SyntaxError|(Promise|Symbol)/.test(error))) {
+            text = (/AssertError/).test(error) ? 'Incorrect' : 'Error';
+            clazz = 'test-error';
           }
 
           if (firstVersion) {
