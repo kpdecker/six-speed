@@ -7,6 +7,7 @@ var _ = require('lodash'),
     Path = require('path'),
     Through = require('through2'),
     Traceur = require('traceur'),
+    TypeScript = require('typescript'),
     webpack = require('webpack');
 
 var benchTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/bench.handlebars').toString()),
@@ -84,6 +85,9 @@ Gulp.task('build:tests', function() {
                 this.push(createFile('babel-loose', babelLoose));
               }
               this.push(createFile('traceur', Traceur.compile(content)));
+
+              var typeScript = TypeScript.transpile(content, { module: TypeScript.ModuleKind.CommonJS });
+              this.push(createFile('typescript', typeScript));
             }
             this.push(createFile(ext, content));
 
