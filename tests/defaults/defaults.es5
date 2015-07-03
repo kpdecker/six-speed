@@ -6,5 +6,6 @@ function fn(arg, other) {
 
 test(function() {
   fn();
+  fn(2);
   fn(2, 4);
 });
