@@ -63,7 +63,7 @@ module.exports.test = function(remote, config, done) {
       },
       function(err, data) {
         if (err) {
-          throw new GUtil.PluginError('test:sauce', err);
+          throw new GUtil.PluginError('test:sauce', config.browserName, err);
         }
 
         userAgent = UserAgent.parse(data.value);
@@ -80,7 +80,7 @@ module.exports.test = function(remote, config, done) {
         },
         function(err, ret) {
           if (err) {
-            throw new GUtil.PluginError('test:sauce', err);
+            throw new GUtil.PluginError('test:sauce', browserId, err);
           }
 
           if (!ret.value) {
@@ -96,7 +96,7 @@ module.exports.test = function(remote, config, done) {
       .log('browser', function(err, data) {
         if (err) {
           // Not supported under IE so just log and move on.
-          GUtil.log('test:sauce', GUtil.colors.red(err));
+          GUtil.log('test:sauce', browserId, GUtil.colors.red(err));
         } else {
           browserLog = data.value;
         }
@@ -106,7 +106,7 @@ module.exports.test = function(remote, config, done) {
         },
         function(err, ret) {
           if (err) {
-            throw new GUtil.PluginError('test:sauce', err);
+            throw new GUtil.PluginError('test:sauce', browserId, err);
           }
 
           stats = ret.value;
