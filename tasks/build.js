@@ -105,6 +105,9 @@ Gulp.task('build:browser-runner', function() {
   return Gulp.src([
         'lib/browser.js',
         'lib/browser-profile.js',
+        'lib/iframe.js',
+        'lib/worker.js',
+        'lib/worker-test.js',
         require.resolve('benchmark'),
         require.resolve('babel-core/browser-polyfill'),
         require.resolve('traceur/bin/traceur-runtime')
@@ -145,6 +148,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
           type.push(script);
         }
       });
+      scripts.push('worker.js');
       scripts.push('browser.js');
 
       this.push(new GUtil.File({
@@ -153,24 +157,30 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
       }));
 
       // We need a special mime type to enable all of the features on Firefox.
+      var mozScripts = _.map(scripts, function(script) { return '../' + script; });
+      mozScripts[mozScripts.length - 2] = '../iframe.js';
       this.push(new GUtil.File({
         path: 'moz/index.html',
         contents: new Buffer(benchTemplate({
-          scripts: _.map(scripts, function(script) { return '../' + script; }),
+          scripts: mozScripts,
           jsType: 'application/javascript;version=1.7'
         }))
       }));
 
       _.each(types, function(scripts, name) {
+        var workerScripts = scripts.concat('worker-test.js');
         this.push(new GUtil.File({
-          path: name + '.html',
-          contents: new Buffer(benchTemplate({scripts: scripts}))
+          path: name + '.js',
+          contents: new Buffer(
+            '$type = ' + JSON.stringify(name) + ';\n'
+            + workerScripts.map(function(script) { return 'try { importScripts(' + JSON.stringify(script) + '); } catch (err) { console.log(' + JSON.stringify(script) + ' + err); }'; }).join('\n'))
         }));
 
         // We need a special mime type to enable all of the features on Firefox.
+        var mozScripts = _.map(scripts, function(script) { return '../' + script; });
         this.push(new GUtil.File({
           path: 'moz/' + name + '.html',
-          contents: new Buffer(benchTemplate({scripts: scripts, jsType: 'application/javascript;version=1.7'}))
+          contents: new Buffer(benchTemplate({scripts: mozScripts, jsType: 'application/javascript;version=1.7'}))
         }));
       }, this);
 
