@@ -11,7 +11,7 @@
           <td colspan="2"></td>
             <th class="browser-first" colspan="2">node</th>
             <th class="browser-first" colspan="3">chrome</th>
-            <th class="browser-first" colspan="4">firefox</th>
+            <th class="browser-first" colspan="3">firefox</th>
             <th class="browser-first" colspan="1">ie</th>
             <th class="browser-first" colspan="1">edge</th>
             <th class="browser-first" colspan="1">safari</th>
@@ -19,31 +19,30 @@
         </tr>
         <tr>
           <td colspan="2"></td>
-              <th class="browser-first">0.10.39</th>
-              <th class="">2.3.0</th>
+              <th class="browser-first">0.12.5</th>
+              <th class="">2.3.1</th>
               <th class="browser-first">43</th>
               <th class="">44</th>
               <th class="">45</th>
               <th class="browser-first">38</th>
               <th class="">39</th>
-              <th class="">40</th>
-              <th class="">41</th>
+              <th class="">42</th>
               <th class="browser-first">11</th>
               <th class="browser-first">12.96</th>
               <th class="browser-first">8</th>
-              <th class="browser-first">601.1.38+</th>
+              <th class="browser-first">601.1.39+</th>
         </tr>
       </thead>
 
       <tbody>
             <tr class="feature-row" id="test-arrow">
-                <th rowspan="4">
+                <th rowspan="5">
                   arrow
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/arrow">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
@@ -51,16 +50,15 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster browser-first">1.2x faster</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
@@ -68,48 +66,61 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster browser-first">1.2x faster</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">7x slower</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>es5-bind</th>
 
-                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow browser-first">14x slower</td>
                 <td class="test-slow">16x slower</td>
-                <td class="test-slow browser-first">20x slower</td>
+                <td class="test-slow browser-first">15x slower</td>
                 <td class="test-slow">15x slower</td>
-                <td class="test-slow">12x slower</td>
-                <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow">6x slower</td>
-                <td class="test-slow">7x slower</td>
-                <td class="test-slow">12x slower</td>
+                <td class="test-slow">16x slower</td>
+                <td class="test-slow browser-first">73x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow">10x slower</td>
                 <td class="test-slow browser-first">3x slower</td>
-                <td class="test-slow browser-first">3.0x slower</td>
-                <td class="test-slow browser-first">2.8x slower</td>
-                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">13x slower</td>
             </tr>
             <tr >
               <th>es6</th>
 
-                <td class="test-no-support browser-first"></td>
-                <td class="test-no-support"></td>
+                <td class="test-error browser-first">Error</td>
+                <td class="test-error">Error</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
                 <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">38x slower</td>
-                <td class="test-slow">37x slower</td>
-                <td class="test-slow">52x slower</td>
+                <td class="test-slow browser-first">37x slower</td>
+                <td class="test-slow">38x slower</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-no-support browser-first"></td>
+                <td class="test-error browser-first">Error</td>
             </tr>
             <tr class="feature-row" id="test-arrow-args">
-                <th rowspan="3">
+                <th rowspan="4">
                   arrow-args
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/arrow-args">tests</a>
                 </th>
@@ -119,14 +130,13 @@
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-faster">1.2x faster</td>
+                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow browser-first">1.3x slower</td>
                 <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">2.2x slower</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
@@ -140,86 +150,113 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
+              <th>typescript</th>
+
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+            </tr>
+            <tr >
               <th>es6</th>
 
-                <td class="test-no-support browser-first"></td>
-                <td class="test-slow">3x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
                 <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">68x slower</td>
-                <td class="test-slow">70x slower</td>
-                <td class="test-slow">68x slower</td>
-                <td class="test-slow">30x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error">Incorrect</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow browser-first">11x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
             </tr>
             <tr class="feature-row" id="test-arrow-declare">
-                <th rowspan="3">
+                <th rowspan="4">
                   arrow-declare
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/arrow-declare">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">1.4x slower</td>
-                <td class="test-slow">1.3x slower</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-slow">1.4x slower</td>
-                <td class="test-slow browser-first">11x slower</td>
-                <td class="test-slow">12x slower</td>
-                <td class="test-slow">13x slower</td>
-                <td class="test-slow">14x slower</td>
-                <td class="test-faster browser-first">5x faster</td>
-                <td class="test-slow browser-first">1.6x slower</td>
                 <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-slow">1.2x slower</td>
+                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow browser-first">10x slower</td>
+                <td class="test-slow">13x slower</td>
+                <td class="test-slow">17x slower</td>
+                <td class="test-slow browser-first">2.2x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">1.4x slower</td>
-                <td class="test-slow">1.2x slower</td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-slow">1.3x slower</td>
-                <td class="test-slow browser-first">8x slower</td>
-                <td class="test-slow">8x slower</td>
-                <td class="test-slow">8x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-faster browser-first">5x faster</td>
-                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow">11x slower</td>
+                <td class="test-slow">12x slower</td>
+                <td class="test-slow browser-first">2.2x slower</td>
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-slow">1.2x slower</td>
+                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow">11x slower</td>
+                <td class="test-slow">11x slower</td>
+                <td class="test-slow browser-first">2.4x slower</td>
                 <td class="test-slow browser-first">1.4x slower</td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-slow browser-first">1.7x slower</td>
             </tr>
             <tr >
               <th>es6</th>
 
-                <td class="test-no-support browser-first"></td>
-                <td class="test-ok">Identical</td>
+                <td class="test-error browser-first">Error</td>
+                <td class="test-error">Error</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
-                <td class="test-slow">1.3x slower</td>
-                <td class="test-slow browser-first">70x slower</td>
-                <td class="test-slow">66x slower</td>
-                <td class="test-slow">78x slower</td>
-                <td class="test-slow">64x slower</td>
+                <td class="test-slow">1.2x slower</td>
+                <td class="test-slow browser-first">60x slower</td>
+                <td class="test-slow">84x slower</td>
+                <td class="test-slow">95x slower</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-slow browser-first">1.4x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-error browser-first">Error</td>
             </tr>
             <tr class="feature-row" id="test-bindings">
-                <th rowspan="3">
+                <th rowspan="4">
                   bindings
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/bindings">tests</a>
                 </th>
@@ -227,11 +264,10 @@
 
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">1.2x slower</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
@@ -250,10 +286,25 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">6x slower</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
@@ -261,55 +312,68 @@
 
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-slow browser-first">2.3x slower</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">2.4x slower</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">1.2x slower</td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-classes">
-                <th rowspan="4">
+                <th rowspan="6">
                   classes
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/classes">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">2.5x slower</td>
-                <td class="test-slow">1.4x slower</td>
-                <td class="test-slow browser-first">1.3x slower</td>
-                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
                 <td class="test-slow">1.5x slower</td>
-                <td class="test-slow browser-first">27x slower</td>
-                <td class="test-slow">28x slower</td>
-                <td class="test-slow">30x slower</td>
-                <td class="test-slow">25x slower</td>
-                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-slow">1.7x slower</td>
+                <td class="test-slow">1.4x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow">9x slower</td>
+                <td class="test-slow">9x slower</td>
                 <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-slow browser-first">1.8x slower</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow browser-first">5x slower</td>
             </tr>
             <tr >
               <th>babel-loose</th>
 
-                <td class="test-slow browser-first">2.5x slower</td>
-                <td class="test-slow">1.4x slower</td>
                 <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow">1.5x slower</td>
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow">1.2x slower</td>
+                <td class="test-slow">1.4x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow">9x slower</td>
+                <td class="test-slow">9x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow">1.6x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow">1.2x slower</td>
                 <td class="test-slow">1.3x slower</td>
-                <td class="test-slow">1.4x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-slow">6x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
                 <td class="test-slow">8x slower</td>
-                <td class="test-slow">8x slower</td>
+                <td class="test-slow">9x slower</td>
                 <td class="test-slow browser-first">1.3x slower</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
@@ -319,13 +383,28 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">1.5x slower</td>
-                <td class="test-slow">1.4x slower</td>
-                <td class="test-slow">1.8x slower</td>
-                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow">1.6x slower</td>
+                <td class="test-slow">1.5x slower</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster browser-first">5x faster</td>
                 <td class="test-ok browser-first">Identical</td>
+                <td class="test-faster browser-first">1.5x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-faster browser-first">2.8x faster</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
@@ -338,50 +417,63 @@
                 <td class="test-ok">Identical</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
-                <td class="test-no-support"></td>
-                <td class="test-slow">1.7x slower</td>
+                <td class="test-slow">1.6x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-faster browser-first">5x faster</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-slow browser-first">1.2x slower</td>
             </tr>
             <tr class="feature-row" id="test-defaults">
-                <th rowspan="3">
+                <th rowspan="4">
                   defaults
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/defaults">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">18x slower</td>
-                <td class="test-slow">12x slower</td>
-                <td class="test-slow browser-first">12x slower</td>
-                <td class="test-slow">9x slower</td>
+                <td class="test-slow browser-first">28x slower</td>
+                <td class="test-slow">11x slower</td>
+                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow">8x slower</td>
                 <td class="test-slow">10x slower</td>
-                <td class="test-slow browser-first">1742x slower</td>
-                <td class="test-slow">1894x slower</td>
-                <td class="test-slow">2043x slower</td>
-                <td class="test-slow">1456x slower</td>
-                <td class="test-slow browser-first">206x slower</td>
-                <td class="test-slow browser-first">313x slower</td>
-                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow browser-first">1729x slower</td>
+                <td class="test-slow">1832x slower</td>
+                <td class="test-slow">1472x slower</td>
+                <td class="test-slow browser-first">166x slower</td>
+                <td class="test-slow browser-first">238x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
                 <td class="test-slow browser-first">6x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">16x slower</td>
+                <td class="test-slow browser-first">27x slower</td>
                 <td class="test-slow">11x slower</td>
-                <td class="test-slow browser-first">12x slower</td>
-                <td class="test-slow">9x slower</td>
+                <td class="test-slow browser-first">8x slower</td>
+                <td class="test-slow">8x slower</td>
                 <td class="test-slow">10x slower</td>
-                <td class="test-slow browser-first">1996x slower</td>
-                <td class="test-slow">1876x slower</td>
-                <td class="test-slow">1974x slower</td>
-                <td class="test-slow">1525x slower</td>
-                <td class="test-slow browser-first">215x slower</td>
-                <td class="test-slow browser-first">438x slower</td>
-                <td class="test-slow browser-first">4x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow browser-first">1900x slower</td>
+                <td class="test-slow">1940x slower</td>
+                <td class="test-slow">1428x slower</td>
+                <td class="test-slow browser-first">154x slower</td>
+                <td class="test-slow browser-first">233x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>es6</th>
@@ -394,37 +486,35 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-destructuring">
-                <th rowspan="4">
+                <th rowspan="6">
                   destructuring
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/destructuring">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">1.6x slower</td>
-                <td class="test-slow">1.4x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow">1.7x slower</td>
                 <td class="test-slow browser-first">1.3x slower</td>
-                <td class="test-slow">1.3x slower</td>
-                <td class="test-slow">1.3x slower</td>
-                <td class="test-slow browser-first">23x slower</td>
-                <td class="test-slow">23x slower</td>
-                <td class="test-slow">26x slower</td>
-                <td class="test-slow">29x slower</td>
-                <td class="test-faster browser-first">3x faster</td>
-                <td class="test-slow browser-first">2.8x slower</td>
+                <td class="test-slow">1.4x slower</td>
+                <td class="test-slow">1.7x slower</td>
+                <td class="test-slow browser-first">24x slower</td>
+                <td class="test-slow">22x slower</td>
+                <td class="test-slow">27x slower</td>
+                <td class="test-slow browser-first">2.9x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
                 <td class="test-slow browser-first">2.3x slower</td>
-                <td class="test-slow browser-first">8x slower</td>
             </tr>
             <tr >
               <th>babel-loose</th>
 
-                <td class="test-faster browser-first">1.2x faster</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
@@ -432,28 +522,58 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-faster browser-first">9x faster</td>
-                <td class="test-faster browser-first">2.1x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow">1.6x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow">1.4x slower</td>
+                <td class="test-slow browser-first">24x slower</td>
+                <td class="test-slow">23x slower</td>
+                <td class="test-slow">27x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow browser-first">2.3x slower</td>
+            </tr>
+            <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">28x slower</td>
-                <td class="test-slow">13x slower</td>
-                <td class="test-slow browser-first">14x slower</td>
+                <td class="test-slow browser-first">117x slower</td>
                 <td class="test-slow">12x slower</td>
-                <td class="test-slow">12x slower</td>
-                <td class="test-slow browser-first">166x slower</td>
-                <td class="test-slow">148x slower</td>
-                <td class="test-slow">176x slower</td>
-                <td class="test-slow">226x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-slow browser-first">18x slower</td>
                 <td class="test-slow browser-first">9x slower</td>
-                <td class="test-slow browser-first">71x slower</td>
+                <td class="test-slow">11x slower</td>
+                <td class="test-slow">13x slower</td>
+                <td class="test-slow browser-first">161x slower</td>
+                <td class="test-slow">159x slower</td>
+                <td class="test-slow">224x slower</td>
+                <td class="test-slow browser-first">58x slower</td>
+                <td class="test-slow browser-first">31x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow browser-first">32x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-no-support browser-first"></td>
             </tr>
             <tr >
               <th>es6</th>
@@ -463,17 +583,16 @@
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
                 <td class="test-no-support"></td>
-                <td class="test-slow browser-first">173x slower</td>
-                <td class="test-slow">165x slower</td>
-                <td class="test-slow">185x slower</td>
-                <td class="test-slow">242x slower</td>
+                <td class="test-slow browser-first">169x slower</td>
+                <td class="test-slow">159x slower</td>
+                <td class="test-slow">247x slower</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow browser-first">47x slower</td>
+                <td class="test-slow browser-first">27x slower</td>
             </tr>
             <tr class="feature-row" id="test-destructuring-simple">
-                <th rowspan="3">
+                <th rowspan="4">
                   destructuring-simple
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/destructuring-simple">tests</a>
                 </th>
@@ -487,9 +606,8 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -504,9 +622,24 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
+                <td class="test-faster browser-first">1.3x faster</td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -520,33 +653,31 @@
                 <td class="test-no-support"></td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-slow">4x slower</td>
+                <td class="test-slow">3x slower</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr class="feature-row" id="test-for-of-array">
-                <th rowspan="4">
+                <th rowspan="6">
                   for-of-array
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/for-of-array">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">16x slower</td>
-                <td class="test-slow">8x slower</td>
-                <td class="test-slow browser-first">8x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow browser-first">15x slower</td>
-                <td class="test-slow">19x slower</td>
-                <td class="test-slow">19x slower</td>
-                <td class="test-slow">16x slower</td>
-                <td class="test-slow browser-first">16x slower</td>
-                <td class="test-slow browser-first">77x slower</td>
+                <td class="test-slow browser-first">41x slower</td>
+                <td class="test-slow">7x slower</td>
                 <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow browser-first">18x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow">8x slower</td>
+                <td class="test-slow browser-first">17x slower</td>
+                <td class="test-slow">22x slower</td>
+                <td class="test-slow">19x slower</td>
+                <td class="test-slow browser-first">37x slower</td>
+                <td class="test-slow browser-first">15x slower</td>
+                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
             </tr>
             <tr >
               <th>babel-loose</th>
@@ -556,343 +687,564 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">1.5x slower</td>
-                <td class="test-slow">1.6x slower</td>
-                <td class="test-slow">1.7x slower</td>
-                <td class="test-slow">1.4x slower</td>
                 <td class="test-slow browser-first">1.4x slower</td>
-                <td class="test-slow browser-first">1.8x slower</td>
-                <td class="test-slow browser-first">1.8x slower</td>
-                <td class="test-slow browser-first">2.5x slower</td>
+                <td class="test-slow">1.6x slower</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">45x slower</td>
+                <td class="test-slow">8x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow">7x slower</td>
+                <td class="test-slow">8x slower</td>
+                <td class="test-slow browser-first">15x slower</td>
+                <td class="test-slow">18x slower</td>
+                <td class="test-slow">15x slower</td>
+                <td class="test-slow browser-first">52x slower</td>
+                <td class="test-slow browser-first">2831x slower</td>
+                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">10x slower</td>
-                <td class="test-slow">8x slower</td>
+                <td class="test-slow browser-first">41x slower</td>
+                <td class="test-slow">9x slower</td>
                 <td class="test-slow browser-first">8x slower</td>
                 <td class="test-slow">8x slower</td>
-                <td class="test-slow">8x slower</td>
-                <td class="test-slow browser-first">28x slower</td>
+                <td class="test-slow">9x slower</td>
+                <td class="test-slow browser-first">22x slower</td>
                 <td class="test-slow">26x slower</td>
-                <td class="test-slow">32x slower</td>
                 <td class="test-slow">22x slower</td>
                 <td class="test-slow browser-first">10x slower</td>
-                <td class="test-slow browser-first">10x slower</td>
+                <td class="test-slow browser-first">8x slower</td>
                 <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>es6</th>
 
-                <td class="test-no-support browser-first"></td>
+                <td class="test-slow browser-first">41x slower</td>
                 <td class="test-slow">7x slower</td>
-                <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow">8x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow">6x slower</td>
                 <td class="test-slow">8x slower</td>
                 <td class="test-slow browser-first">5x slower</td>
                 <td class="test-slow">5x slower</td>
-                <td class="test-slow">7x slower</td>
                 <td class="test-slow">6x slower</td>
                 <td class="test-no-support browser-first"></td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
                 <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow browser-first">3x slower</td>
-                <td class="test-slow browser-first">10x slower</td>
             </tr>
             <tr class="feature-row" id="test-for-of-object">
-                <th rowspan="4">
+                <th rowspan="6">
                   for-of-object
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/for-of-object">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow">4x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow">4x slower</td>
+                <td class="test-slow">2.8x slower</td>
+                <td class="test-slow browser-first">8x slower</td>
                 <td class="test-slow">7x slower</td>
-                <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow">9x slower</td>
                 <td class="test-slow">6x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
                 <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow">6x slower</td>
-                <td class="test-slow">5x slower</td>
-                <td class="test-slow">5x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-slow browser-first">13x slower</td>
-                <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-slow browser-first">2.7x slower</td>
             </tr>
             <tr >
               <th>babel-loose</th>
 
-                <td class="test-slow browser-first">12x slower</td>
-                <td class="test-slow">7x slower</td>
-                <td class="test-slow browser-first">8x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow">6x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow">3x slower</td>
                 <td class="test-slow browser-first">4x slower</td>
                 <td class="test-slow">4x slower</td>
+                <td class="test-slow">2.8x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
                 <td class="test-slow">4x slower</td>
                 <td class="test-slow">3x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-slow browser-first">14x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-slow browser-first">1636x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-slow browser-first">2.3x slower</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
                 <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow">4x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow">4x slower</td>
+                <td class="test-slow">3x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-slow browser-first">1938x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-slow browser-first">2.9x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
                 <td class="test-slow">7x slower</td>
                 <td class="test-slow browser-first">8x slower</td>
                 <td class="test-slow">9x slower</td>
-                <td class="test-slow">6x slower</td>
+                <td class="test-slow">7x slower</td>
                 <td class="test-slow browser-first">10x slower</td>
                 <td class="test-slow">10x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow">7x slower</td>
-                <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow browser-first">2.9x slower</td>
+                <td class="test-slow">8x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
                 <td class="test-slow browser-first">4x slower</td>
                 <td class="test-slow browser-first">4x slower</td>
             </tr>
             <tr >
+              <th>typescript</th>
+
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-error browser-first">Incorrect</td>
+            </tr>
+            <tr >
               <th>es6</th>
 
-                <td class="test-no-support browser-first"></td>
-                <td class="test-slow">7x slower</td>
-                <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow">6x slower</td>
-                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
                 <td class="test-slow">3x slower</td>
-                <td class="test-slow">3x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow">4x slower</td>
                 <td class="test-slow">2.8x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow">3x slower</td>
+                <td class="test-slow">2.6x slower</td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-slow browser-first">2.8x slower</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-slow browser-first">2.2x slower</td>
-                <td class="test-no-support browser-first"></td>
-                <td class="test-slow browser-first">4x slower</td>
             </tr>
             <tr class="feature-row" id="test-generator">
-                <th rowspan="3">
+                <th rowspan="5">
                   generator
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/generator">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">68x slower</td>
-                <td class="test-slow">62x slower</td>
-                <td class="test-slow browser-first">60x slower</td>
+                <td class="test-slow browser-first">73x slower</td>
+                <td class="test-slow">64x slower</td>
+                <td class="test-slow browser-first">63x slower</td>
                 <td class="test-slow">71x slower</td>
-                <td class="test-slow">66x slower</td>
-                <td class="test-slow browser-first">378x slower</td>
-                <td class="test-slow">776x slower</td>
-                <td class="test-slow">53x slower</td>
-                <td class="test-slow">408x slower</td>
-                <td class="test-slow browser-first">78x slower</td>
-                <td class="test-slow browser-first">110x slower</td>
-                <td class="test-slow browser-first">78x slower</td>
-                <td class="test-slow browser-first">138x slower</td>
+                <td class="test-slow">69x slower</td>
+                <td class="test-slow browser-first">486x slower</td>
+                <td class="test-slow">479x slower</td>
+                <td class="test-slow">321x slower</td>
+                <td class="test-slow browser-first">76x slower</td>
+                <td class="test-slow browser-first">167x slower</td>
+                <td class="test-slow browser-first">62x slower</td>
+                <td class="test-slow browser-first">108x slower</td>
+            </tr>
+            <tr >
+              <th>babel-loose</th>
+
+                <td class="test-slow browser-first">70x slower</td>
+                <td class="test-slow">68x slower</td>
+                <td class="test-slow browser-first">64x slower</td>
+                <td class="test-slow">69x slower</td>
+                <td class="test-slow">72x slower</td>
+                <td class="test-slow browser-first">486x slower</td>
+                <td class="test-slow">495x slower</td>
+                <td class="test-slow">328x slower</td>
+                <td class="test-slow browser-first">79x slower</td>
+                <td class="test-slow browser-first">169x slower</td>
+                <td class="test-slow browser-first">60x slower</td>
+                <td class="test-slow browser-first">102x slower</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">76x slower</td>
+                <td class="test-slow">64x slower</td>
+                <td class="test-slow browser-first">67x slower</td>
+                <td class="test-slow">74x slower</td>
+                <td class="test-slow">72x slower</td>
+                <td class="test-slow browser-first">464x slower</td>
+                <td class="test-slow">478x slower</td>
+                <td class="test-slow">319x slower</td>
+                <td class="test-slow browser-first">77x slower</td>
+                <td class="test-slow browser-first">175x slower</td>
+                <td class="test-slow browser-first">59x slower</td>
+                <td class="test-slow browser-first">112x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
                 <td class="test-slow">10x slower</td>
-                <td class="test-slow browser-first">9x slower</td>
-                <td class="test-slow">10x slower</td>
-                <td class="test-slow">10x slower</td>
-                <td class="test-slow browser-first">29x slower</td>
-                <td class="test-slow">51x slower</td>
-                <td class="test-slow">45x slower</td>
-                <td class="test-slow">30x slower</td>
+                <td class="test-slow browser-first">10x slower</td>
+                <td class="test-slow">12x slower</td>
+                <td class="test-slow">11x slower</td>
+                <td class="test-slow browser-first">32x slower</td>
+                <td class="test-slow">35x slower</td>
+                <td class="test-slow">28x slower</td>
                 <td class="test-slow browser-first">18x slower</td>
-                <td class="test-slow browser-first">20x slower</td>
-                <td class="test-slow browser-first">8x slower</td>
-                <td class="test-slow browser-first">23x slower</td>
+                <td class="test-slow browser-first">50x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow browser-first">16x slower</td>
             </tr>
             <tr >
               <th>es6</th>
 
-                <td class="test-no-support browser-first"></td>
+                <td class="test-faster browser-first">1.2x faster</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-slow">1.2x slower</td>
-                <td class="test-slow browser-first">10x slower</td>
-                <td class="test-slow">19x slower</td>
-                <td class="test-slow">18x slower</td>
-                <td class="test-slow">11x slower</td>
+                <td class="test-slow browser-first">14x slower</td>
+                <td class="test-slow">13x slower</td>
+                <td class="test-slow">9x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-map-set">
-                <th rowspan="3">
+                <th rowspan="6">
                   map-set
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/map-set">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow">13x slower</td>
-                <td class="test-slow browser-first">15x slower</td>
-                <td class="test-slow">11x slower</td>
+                <td class="test-slow browser-first">11x slower</td>
                 <td class="test-slow">10x slower</td>
+                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow">7x slower</td>
+                <td class="test-slow">7x slower</td>
+                <td class="test-slow browser-first">19x slower</td>
+                <td class="test-slow">17x slower</td>
+                <td class="test-slow">16x slower</td>
+                <td class="test-slow browser-first">44x slower</td>
+                <td class="test-slow browser-first">1.7x slower</td>
+                <td class="test-slow browser-first">59x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+            </tr>
+            <tr >
+              <th>babel-loose</th>
+
+                <td class="test-slow browser-first">25x slower</td>
+                <td class="test-slow">13x slower</td>
+                <td class="test-slow browser-first">16x slower</td>
+                <td class="test-slow">10x slower</td>
+                <td class="test-slow">12x slower</td>
+                <td class="test-slow browser-first">43x slower</td>
+                <td class="test-slow">44x slower</td>
+                <td class="test-slow">39x slower</td>
                 <td class="test-slow browser-first">40x slower</td>
-                <td class="test-slow">66x slower</td>
-                <td class="test-slow">31x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">61x slower</td>
+                <td class="test-slow browser-first">22x slower</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">25x slower</td>
+                <td class="test-slow">14x slower</td>
+                <td class="test-slow browser-first">16x slower</td>
+                <td class="test-slow">10x slower</td>
+                <td class="test-slow">11x slower</td>
+                <td class="test-slow browser-first">44x slower</td>
+                <td class="test-slow">88x slower</td>
                 <td class="test-slow">41x slower</td>
-                <td class="test-slow browser-first">203x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-slow browser-first">155x slower</td>
-                <td class="test-slow browser-first">26x slower</td>
+                <td class="test-slow browser-first">43x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">60x slower</td>
+                <td class="test-slow browser-first">22x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow browser-first">10x slower</td>
-                <td class="test-slow">6x slower</td>
-                <td class="test-slow">6x slower</td>
-                <td class="test-slow browser-first">14x slower</td>
-                <td class="test-slow">10x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow">14x slower</td>
-                <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow browser-first">9x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
                 <td class="test-slow browser-first">8x slower</td>
+                <td class="test-slow">9x slower</td>
+                <td class="test-slow browser-first">11x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow browser-first">17x slower</td>
+                <td class="test-slow">16x slower</td>
+                <td class="test-slow">15x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-slow browser-first">8x slower</td>
+                <td class="test-slow">9x slower</td>
+                <td class="test-slow browser-first">11x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow browser-first">18x slower</td>
+                <td class="test-slow">17x slower</td>
+                <td class="test-slow">15x slower</td>
+                <td class="test-slow browser-first">2.4x slower</td>
+                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
             </tr>
             <tr >
               <th>es6</th>
 
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow browser-first">10x slower</td>
-                <td class="test-slow">6x slower</td>
-                <td class="test-slow">6x slower</td>
-                <td class="test-slow browser-first">15x slower</td>
-                <td class="test-slow">10x slower</td>
-                <td class="test-slow">8x slower</td>
-                <td class="test-slow">14x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
                 <td class="test-slow browser-first">8x slower</td>
+                <td class="test-slow">9x slower</td>
+                <td class="test-slow browser-first">11x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow browser-first">17x slower</td>
+                <td class="test-slow">15x slower</td>
+                <td class="test-slow">15x slower</td>
+                <td class="test-slow browser-first">2.4x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
             </tr>
             <tr class="feature-row" id="test-map-set-lookup">
-                <th rowspan="3">
+                <th rowspan="6">
                   map-set-lookup
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/map-set-lookup">tests</a>
                 </th>
               <th>babel</th>
 
                 <td class="test-faster browser-first">5x faster</td>
+                <td class="test-faster">5x faster</td>
+                <td class="test-faster browser-first">6x faster</td>
+                <td class="test-faster">7x faster</td>
+                <td class="test-faster">9x faster</td>
+                <td class="test-faster browser-first">18x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-faster browser-first">19x faster</td>
+                <td class="test-faster browser-first">66x faster</td>
+                <td class="test-faster browser-first">17x faster</td>
+                <td class="test-faster browser-first">84x faster</td>
+            </tr>
+            <tr >
+              <th>babel-loose</th>
+
+                <td class="test-faster browser-first">4x faster</td>
                 <td class="test-faster">4x faster</td>
                 <td class="test-faster browser-first">5x faster</td>
                 <td class="test-faster">5x faster</td>
                 <td class="test-faster">5x faster</td>
-                <td class="test-faster browser-first">30x faster</td>
-                <td class="test-faster">20x faster</td>
-                <td class="test-faster">12x faster</td>
-                <td class="test-faster">28x faster</td>
-                <td class="test-faster browser-first">13x faster</td>
-                <td class="test-faster browser-first">3x faster</td>
-                <td class="test-faster browser-first">10x faster</td>
-                <td class="test-faster browser-first">11x faster</td>
+                <td class="test-faster browser-first">2.9x faster</td>
+                <td class="test-faster">1.5x faster</td>
+                <td class="test-faster">2.1x faster</td>
+                <td class="test-faster browser-first">17x faster</td>
+                <td class="test-faster browser-first">14x faster</td>
+                <td class="test-faster browser-first">17x faster</td>
+                <td class="test-faster browser-first">9x faster</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-faster browser-first">4x faster</td>
+                <td class="test-faster">4x faster</td>
+                <td class="test-faster browser-first">5x faster</td>
+                <td class="test-faster">5x faster</td>
+                <td class="test-faster">5x faster</td>
+                <td class="test-faster browser-first">2.9x faster</td>
+                <td class="test-faster">1.5x faster</td>
+                <td class="test-faster">2.1x faster</td>
+                <td class="test-faster browser-first">18x faster</td>
+                <td class="test-faster browser-first">14x faster</td>
+                <td class="test-faster browser-first">17x faster</td>
+                <td class="test-faster browser-first">9x faster</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-faster browser-first">36x faster</td>
+                <td class="test-faster browser-first">6x faster</td>
                 <td class="test-faster">6x faster</td>
                 <td class="test-faster browser-first">6x faster</td>
-                <td class="test-faster">8x faster</td>
+                <td class="test-faster">6x faster</td>
                 <td class="test-faster">9x faster</td>
-                <td class="test-faster browser-first">161x faster</td>
-                <td class="test-faster">179x faster</td>
-                <td class="test-faster">183x faster</td>
-                <td class="test-faster">167x faster</td>
-                <td class="test-faster browser-first">5x faster</td>
-                <td class="test-faster browser-first">17x faster</td>
-                <td class="test-faster browser-first">100x faster</td>
-                <td class="test-faster browser-first">81x faster</td>
+                <td class="test-faster browser-first">19x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-faster browser-first">52x faster</td>
+                <td class="test-faster browser-first">87x faster</td>
+                <td class="test-faster browser-first">93x faster</td>
+                <td class="test-faster browser-first">85x faster</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-faster browser-first">6x faster</td>
+                <td class="test-faster">5x faster</td>
+                <td class="test-faster browser-first">6x faster</td>
+                <td class="test-faster">6x faster</td>
+                <td class="test-faster">10x faster</td>
+                <td class="test-faster browser-first">18x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-faster browser-first">162x faster</td>
+                <td class="test-faster browser-first">86x faster</td>
+                <td class="test-faster browser-first">130x faster</td>
+                <td class="test-faster browser-first">85x faster</td>
             </tr>
             <tr >
               <th>es6</th>
 
-                <td class="test-faster browser-first">38x faster</td>
-                <td class="test-faster">5x faster</td>
                 <td class="test-faster browser-first">6x faster</td>
-                <td class="test-faster">8x faster</td>
-                <td class="test-faster">9x faster</td>
-                <td class="test-faster browser-first">178x faster</td>
-                <td class="test-faster">175x faster</td>
-                <td class="test-faster">187x faster</td>
-                <td class="test-faster">168x faster</td>
-                <td class="test-faster browser-first">48x faster</td>
-                <td class="test-faster browser-first">8x faster</td>
-                <td class="test-faster browser-first">112x faster</td>
-                <td class="test-faster browser-first">81x faster</td>
+                <td class="test-faster">6x faster</td>
+                <td class="test-faster browser-first">6x faster</td>
+                <td class="test-faster">6x faster</td>
+                <td class="test-faster">10x faster</td>
+                <td class="test-faster browser-first">18x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-faster browser-first">163x faster</td>
+                <td class="test-faster browser-first">80x faster</td>
+                <td class="test-faster browser-first">142x faster</td>
+                <td class="test-faster browser-first">84x faster</td>
             </tr>
             <tr class="feature-row" id="test-map-set-object">
-                <th rowspan="3">
+                <th rowspan="6">
                   map-set-object
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/map-set-object">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">2.8x slower</td>
+                <td class="test-slow browser-first">13x slower</td>
+                <td class="test-slow">11x slower</td>
+                <td class="test-slow browser-first">15x slower</td>
+                <td class="test-slow">8x slower</td>
+                <td class="test-slow">10x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow browser-first">54x slower</td>
+                <td class="test-slow browser-first">1.8x slower</td>
+                <td class="test-slow browser-first">44x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+            </tr>
+            <tr >
+              <th>babel-loose</th>
+
+                <td class="test-slow browser-first">32x slower</td>
                 <td class="test-slow">16x slower</td>
-                <td class="test-slow browser-first">17x slower</td>
+                <td class="test-slow browser-first">20x slower</td>
                 <td class="test-slow">12x slower</td>
                 <td class="test-slow">14x slower</td>
                 <td class="test-slow browser-first">13x slower</td>
-                <td class="test-slow">27x slower</td>
-                <td class="test-slow">26x slower</td>
+                <td class="test-slow">29x slower</td>
                 <td class="test-slow">12x slower</td>
-                <td class="test-slow browser-first">21x slower</td>
-                <td class="test-slow browser-first">1.8x slower</td>
-                <td class="test-slow browser-first">91x slower</td>
-                <td class="test-slow browser-first">19x slower</td>
+                <td class="test-slow browser-first">53x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">42x slower</td>
+                <td class="test-slow browser-first">13x slower</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">33x slower</td>
+                <td class="test-slow">16x slower</td>
+                <td class="test-slow browser-first">20x slower</td>
+                <td class="test-slow">12x slower</td>
+                <td class="test-slow">14x slower</td>
+                <td class="test-slow browser-first">13x slower</td>
+                <td class="test-slow">30x slower</td>
+                <td class="test-slow">12x slower</td>
+                <td class="test-slow browser-first">55x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">41x slower</td>
+                <td class="test-slow browser-first">15x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-faster browser-first">2.4x faster</td>
+                <td class="test-slow browser-first">11x slower</td>
                 <td class="test-slow">10x slower</td>
-                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow browser-first">14x slower</td>
                 <td class="test-slow">7x slower</td>
                 <td class="test-slow">9x slower</td>
                 <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow">4x slower</td>
-                <td class="test-slow">4x slower</td>
-                <td class="test-slow">4x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-slow browser-first">2.4x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow browser-first">1.6x slower</td>
                 <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-slow browser-first">11x slower</td>
+                <td class="test-slow">10x slower</td>
+                <td class="test-slow browser-first">14x slower</td>
+                <td class="test-slow">7x slower</td>
+                <td class="test-slow">8x slower</td>
                 <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow browser-first">2.9x slower</td>
+                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
             </tr>
             <tr >
               <th>es6</th>
 
-                <td class="test-faster browser-first">2.4x faster</td>
+                <td class="test-slow browser-first">10x slower</td>
                 <td class="test-slow">10x slower</td>
-                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow browser-first">14x slower</td>
                 <td class="test-slow">7x slower</td>
                 <td class="test-slow">9x slower</td>
                 <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow">4x slower</td>
-                <td class="test-slow">4x slower</td>
-                <td class="test-slow">4x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
-                <td class="test-faster browser-first">1.5x faster</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow">5x slower</td>
+                <td class="test-slow browser-first">2.9x slower</td>
+                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
                 <td class="test-slow browser-first">4x slower</td>
-                <td class="test-slow browser-first">5x slower</td>
             </tr>
             <tr class="feature-row" id="test-object-literal-ext">
-                <th rowspan="4">
+                <th rowspan="6">
                   object-literal-ext
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/object-literal-ext">tests</a>
                 </th>
@@ -901,16 +1253,15 @@
                 <td class="test-slow browser-first">1.3x slower</td>
                 <td class="test-slow">6x slower</td>
                 <td class="test-slow browser-first">8x slower</td>
-                <td class="test-slow">7x slower</td>
-                <td class="test-slow">7x slower</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow">8x slower</td>
+                <td class="test-slow">8x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
                 <td class="test-slow">1.2x slower</td>
                 <td class="test-slow">1.2x slower</td>
                 <td class="test-slow browser-first">1.5x slower</td>
-                <td class="test-faster browser-first">2.3x faster</td>
-                <td class="test-slow browser-first">1.3x slower</td>
-                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>babel-loose</th>
@@ -923,28 +1274,58 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster browser-first">2.0x faster</td>
                 <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow">7x slower</td>
+                <td class="test-slow">7x slower</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow">1.2x slower</td>
+                <td class="test-slow">1.2x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>traceur</th>
 
                 <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow">109x slower</td>
-                <td class="test-slow browser-first">144x slower</td>
-                <td class="test-slow">147x slower</td>
-                <td class="test-slow">109x slower</td>
+                <td class="test-slow">113x slower</td>
+                <td class="test-slow browser-first">187x slower</td>
+                <td class="test-slow">124x slower</td>
+                <td class="test-slow">119x slower</td>
                 <td class="test-slow browser-first">3x slower</td>
                 <td class="test-slow">3x slower</td>
-                <td class="test-slow">2.9x slower</td>
-                <td class="test-slow">2.6x slower</td>
-                <td class="test-slow browser-first">48x slower</td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow">2.5x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
                 <td class="test-slow browser-first">4x slower</td>
                 <td class="test-slow browser-first">5x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>es6</th>
@@ -952,19 +1333,18 @@
                 <td class="test-no-support browser-first"></td>
                 <td class="test-slow">22x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow">27x slower</td>
-                <td class="test-slow">19x slower</td>
-                <td class="test-slow browser-first">1.3x slower</td>
-                <td class="test-slow">1.4x slower</td>
+                <td class="test-slow">26x slower</td>
+                <td class="test-slow">20x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
                 <td class="test-slow">1.4x slower</td>
                 <td class="test-slow">1.3x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-faster browser-first">3x faster</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr class="feature-row" id="test-promises">
-                <th rowspan="3">
+                <th rowspan="6">
                   promises
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/promises">tests</a>
                 </th>
@@ -972,17 +1352,48 @@
 
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-faster browser-first">6x faster</td>
-                <td class="test-faster">6x faster</td>
-                <td class="test-faster">3x faster</td>
-                <td class="test-faster browser-first">23x faster</td>
-                <td class="test-faster">21x faster</td>
-                <td class="test-faster">16x faster</td>
-                <td class="test-faster">80x faster</td>
+                <td class="test-faster browser-first">4x faster</td>
+                <td class="test-faster">5x faster</td>
+                <td class="test-faster">1.8x faster</td>
+                <td class="test-faster browser-first">24x faster</td>
+                <td class="test-faster">23x faster</td>
+                <td class="test-faster">98x faster</td>
+                <td class="test-faster browser-first">1.8x faster</td>
+                <td class="test-faster browser-first">2.0x faster</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster browser-first">8x faster</td>
-                <td class="test-faster browser-first">3x faster</td>
-                <td class="test-faster browser-first">3x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>babel-loose</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-faster browser-first">4x faster</td>
+                <td class="test-faster">5x faster</td>
+                <td class="test-faster">1.5x faster</td>
+                <td class="test-faster browser-first">22x faster</td>
+                <td class="test-faster">24x faster</td>
+                <td class="test-faster">80x faster</td>
+                <td class="test-faster browser-first">1.8x faster</td>
+                <td class="test-faster browser-first">1.9x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-faster browser-first">1.3x faster</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-faster browser-first">5x faster</td>
+                <td class="test-faster">5x faster</td>
+                <td class="test-faster">1.7x faster</td>
+                <td class="test-faster browser-first">21x faster</td>
+                <td class="test-faster">21x faster</td>
+                <td class="test-faster">80x faster</td>
+                <td class="test-faster browser-first">1.8x faster</td>
+                <td class="test-faster browser-first">1.9x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>traceur</th>
@@ -990,36 +1401,50 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-faster browser-first">2.0x faster</td>
+                <td class="test-faster">2.0x faster</td>
                 <td class="test-faster">1.9x faster</td>
+                <td class="test-faster browser-first">40x faster</td>
+                <td class="test-faster">40x faster</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-faster browser-first">1.8x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-faster browser-first">7x faster</td>
+                <td class="test-faster browser-first">1144x faster</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-faster browser-first">2.0x faster</td>
+                <td class="test-faster">2.0x faster</td>
                 <td class="test-faster">1.9x faster</td>
                 <td class="test-faster browser-first">39x faster</td>
-                <td class="test-faster">35x faster</td>
+                <td class="test-faster">38x faster</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
+                <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster browser-first">5x faster</td>
-                <td class="test-faster browser-first">3x faster</td>
-                <td class="test-faster browser-first">3x faster</td>
+                <td class="test-faster browser-first">7x faster</td>
+                <td class="test-faster browser-first">8673x faster</td>
             </tr>
             <tr >
               <th>es6</th>
 
-                <td class="test-no-support browser-first"></td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-faster browser-first">2.0x faster</td>
+                <td class="test-faster">2.0x faster</td>
                 <td class="test-faster">1.9x faster</td>
-                <td class="test-faster">1.9x faster</td>
-                <td class="test-faster browser-first">37x faster</td>
-                <td class="test-faster">36x faster</td>
-                <td class="test-ok">Identical</td>
+                <td class="test-faster browser-first">39x faster</td>
+                <td class="test-faster">38x faster</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-faster browser-first">5x faster</td>
-                <td class="test-faster browser-first">3x faster</td>
-                <td class="test-faster browser-first">3x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-faster browser-first">7x faster</td>
+                <td class="test-faster browser-first">8x faster</td>
             </tr>
             <tr class="feature-row" id="test-proto">
-                <th rowspan="4">
+                <th rowspan="5">
                   proto
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/proto">tests</a>
                 </th>
@@ -1030,12 +1455,11 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-slow">1.4x slower</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-faster browser-first">9x faster</td>
-                <td class="test-slow browser-first">1543x slower</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -1050,9 +1474,24 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-faster browser-first">10x faster</td>
-                <td class="test-faster browser-first">2.2x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -1067,9 +1506,8 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-faster browser-first">10x faster</td>
-                <td class="test-faster browser-first">2.0x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-faster browser-first">1.2x faster</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -1084,9 +1522,8 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-faster browser-first">9x faster</td>
-                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -1097,56 +1534,53 @@
                 </th>
               <th>babel</th>
 
-                <td class="test-faster browser-first">1.4x faster</td>
-                <td class="test-faster">1.7x faster</td>
-                <td class="test-faster browser-first">1.8x faster</td>
-                <td class="test-faster">1.7x faster</td>
-                <td class="test-faster">1.7x faster</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow browser-first">4x slower</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster browser-first">1.3x faster</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow">1.4x slower</td>
+                <td class="test-slow browser-first">1.7x slower</td>
+                <td class="test-slow">1.5x slower</td>
+                <td class="test-slow">1.5x slower</td>
+                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-slow">2.1x slower</td>
+                <td class="test-slow">2.3x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">2.2x slower</td>
+                <td class="test-slow browser-first">1.7x slower</td>
+                <td class="test-slow browser-first">1.7x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-faster browser-first">1.4x faster</td>
-                <td class="test-faster">1.7x faster</td>
-                <td class="test-faster browser-first">1.8x faster</td>
-                <td class="test-faster">1.8x faster</td>
-                <td class="test-faster">1.7x faster</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-faster">1.2x faster</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">1.2x slower</td>
-                <td class="test-slow browser-first">1.7x slower</td>
-                <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster browser-first">1.3x faster</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow">1.4x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow">1.5x slower</td>
+                <td class="test-slow">1.5x slower</td>
+                <td class="test-slow browser-first">2.2x slower</td>
+                <td class="test-slow">2.2x slower</td>
+                <td class="test-slow">2.3x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">2.3x slower</td>
+                <td class="test-slow browser-first">1.8x slower</td>
+                <td class="test-slow browser-first">1.8x slower</td>
             </tr>
             <tr >
               <th>es6</th>
 
                 <td class="test-no-support browser-first"></td>
-                <td class="test-ok">Identical</td>
+                <td class="test-error">Incorrect</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
                 <td class="test-no-support"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
                 <td class="test-no-support"></td>
-                <td class="test-no-support"></td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">2.1x slower</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-rest">
-                <th rowspan="3">
+                <th rowspan="4">
                   rest
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/rest">tests</a>
                 </th>
@@ -1160,9 +1594,8 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">1.9x slower</td>
-                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -1170,38 +1603,52 @@
               <th>traceur</th>
 
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-faster">1.6x faster</td>
-                <td class="test-faster browser-first">1.3x faster</td>
-                <td class="test-faster">1.2x faster</td>
+                <td class="test-faster">1.4x faster</td>
+                <td class="test-faster browser-first">1.2x faster</td>
                 <td class="test-faster">1.3x faster</td>
-                <td class="test-faster browser-first">33x faster</td>
-                <td class="test-faster">33x faster</td>
-                <td class="test-faster">27x faster</td>
+                <td class="test-faster">1.4x faster</td>
+                <td class="test-faster browser-first">27x faster</td>
+                <td class="test-faster">25x faster</td>
                 <td class="test-faster">13x faster</td>
-                <td class="test-slow browser-first">20x slower</td>
-                <td class="test-slow browser-first">1.5x slower</td>
-                <td class="test-faster browser-first">1.3x faster</td>
+                <td class="test-slow browser-first">2.3x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-faster browser-first">1.2x faster</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-faster">1.5x faster</td>
+                <td class="test-faster browser-first">1.2x faster</td>
+                <td class="test-faster">1.2x faster</td>
+                <td class="test-faster">1.4x faster</td>
+                <td class="test-faster browser-first">28x faster</td>
+                <td class="test-faster">26x faster</td>
+                <td class="test-faster">13x faster</td>
+                <td class="test-slow browser-first">2.1x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-faster browser-first">1.2x faster</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>es6</th>
 
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow">3x slower</td>
+                <td class="test-slow">4x slower</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
-                <td class="test-slow">4x slower</td>
-                <td class="test-faster browser-first">42x faster</td>
-                <td class="test-faster">40x faster</td>
-                <td class="test-faster">32x faster</td>
-                <td class="test-faster">17x faster</td>
+                <td class="test-slow">3x slower</td>
+                <td class="test-faster browser-first">32x faster</td>
+                <td class="test-faster">30x faster</td>
+                <td class="test-faster">18x faster</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-faster browser-first">17x faster</td>
+                <td class="test-faster browser-first">3x faster</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-spread">
-                <th rowspan="3">
+                <th rowspan="4">
                   spread
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/spread">tests</a>
                 </th>
@@ -1215,28 +1662,42 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow browser-first">32x slower</td>
                 <td class="test-slow">6x slower</td>
-                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
                 <td class="test-slow">6x slower</td>
-                <td class="test-slow">5x slower</td>
-                <td class="test-slow browser-first">2.7x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow browser-first">3.0x slower</td>
                 <td class="test-slow">3x slower</td>
-                <td class="test-slow">3x slower</td>
-                <td class="test-slow">6x slower</td>
+                <td class="test-slow">4x slower</td>
                 <td class="test-slow browser-first">8x slower</td>
-                <td class="test-slow browser-first">1232x slower</td>
-                <td class="test-slow browser-first">15x slower</td>
-                <td class="test-slow browser-first">45x slower</td>
+                <td class="test-slow browser-first">959x slower</td>
+                <td class="test-slow browser-first">11x slower</td>
+                <td class="test-slow browser-first">29x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow browser-first">1.9x slower</td>
             </tr>
             <tr >
               <th>es6</th>
@@ -1245,70 +1706,98 @@
                 <td class="test-no-support"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
-                <td class="test-slow">10x slower</td>
+                <td class="test-slow">12x slower</td>
                 <td class="test-slow browser-first">4x slower</td>
-                <td class="test-slow">4x slower</td>
                 <td class="test-slow">4x slower</td>
                 <td class="test-slow">6x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow browser-first">1.6x slower</td>
-                <td class="test-slow browser-first">2.4x slower</td>
-                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow browser-first">2.8x slower</td>
+                <td class="test-slow browser-first">2.8x slower</td>
             </tr>
             <tr class="feature-row" id="test-spread-generator">
-                <th rowspan="4">
+                <th rowspan="6">
                   spread-generator
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/spread-generator">tests</a>
                 </th>
               <th>babel</th>
 
                 <td class="test-slow browser-first">56x slower</td>
-                <td class="test-slow">52x slower</td>
-                <td class="test-slow browser-first">54x slower</td>
-                <td class="test-slow">73x slower</td>
-                <td class="test-slow">58x slower</td>
-                <td class="test-slow browser-first">162x slower</td>
-                <td class="test-slow">159x slower</td>
-                <td class="test-slow">88x slower</td>
-                <td class="test-slow">130x slower</td>
-                <td class="test-slow browser-first">55x slower</td>
-                <td class="test-slow browser-first">10197x slower</td>
-                <td class="test-slow browser-first">62x slower</td>
-                <td class="test-slow browser-first">43x slower</td>
+                <td class="test-slow">51x slower</td>
+                <td class="test-slow browser-first">63x slower</td>
+                <td class="test-slow">57x slower</td>
+                <td class="test-slow">53x slower</td>
+                <td class="test-slow browser-first">112x slower</td>
+                <td class="test-slow">118x slower</td>
+                <td class="test-slow">102x slower</td>
+                <td class="test-slow browser-first">45x slower</td>
+                <td class="test-slow browser-first">854x slower</td>
+                <td class="test-slow browser-first">39x slower</td>
+                <td class="test-slow browser-first">83x slower</td>
             </tr>
             <tr >
               <th>babel-loose</th>
 
-                <td class="test-slow browser-first">45x slower</td>
-                <td class="test-slow">43x slower</td>
-                <td class="test-slow browser-first">42x slower</td>
-                <td class="test-slow">47x slower</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error browser-first">Incorrect</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">57x slower</td>
+                <td class="test-slow">51x slower</td>
+                <td class="test-slow browser-first">62x slower</td>
                 <td class="test-slow">50x slower</td>
+                <td class="test-slow">52x slower</td>
+                <td class="test-slow browser-first">128x slower</td>
+                <td class="test-slow">127x slower</td>
+                <td class="test-slow">116x slower</td>
+                <td class="test-slow browser-first">44x slower</td>
+                <td class="test-slow browser-first">829x slower</td>
+                <td class="test-slow browser-first">39x slower</td>
                 <td class="test-slow browser-first">80x slower</td>
-                <td class="test-slow">63x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow">69x slower</td>
-                <td class="test-slow browser-first">22x slower</td>
-                <td class="test-slow browser-first">30x slower</td>
-                <td class="test-slow browser-first">22x slower</td>
-                <td class="test-slow browser-first">24x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
+                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow">9x slower</td>
                 <td class="test-slow browser-first">10x slower</td>
+                <td class="test-slow">9x slower</td>
                 <td class="test-slow">10x slower</td>
                 <td class="test-slow browser-first">9x slower</td>
+                <td class="test-slow">9x slower</td>
                 <td class="test-slow">11x slower</td>
-                <td class="test-slow">11x slower</td>
-                <td class="test-slow browser-first">14x slower</td>
-                <td class="test-slow">13x slower</td>
-                <td class="test-slow">11x slower</td>
-                <td class="test-slow">12x slower</td>
                 <td class="test-slow browser-first">12x slower</td>
-                <td class="test-slow browser-first">1572x slower</td>
-                <td class="test-slow browser-first">8x slower</td>
-                <td class="test-slow browser-first">10x slower</td>
+                <td class="test-slow browser-first">729x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">13x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-no-support browser-first"></td>
+                <td class="test-no-support"></td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-no-support"></td>
+                <td class="test-no-support"></td>
+                <td class="test-error browser-first">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-error">Incorrect</td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-no-support browser-first"></td>
             </tr>
             <tr >
               <th>es6</th>
@@ -1317,18 +1806,17 @@
                 <td class="test-no-support"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
-                <td class="test-slow">2.9x slower</td>
-                <td class="test-slow browser-first">9x slower</td>
-                <td class="test-slow">9x slower</td>
+                <td class="test-slow">2.6x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow">6x slower</td>
                 <td class="test-slow">7x slower</td>
-                <td class="test-slow">8x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-spread-literal">
-                <th rowspan="3">
+                <th rowspan="4">
                   spread-literal
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/spread-literal">tests</a>
                 </th>
@@ -1337,33 +1825,47 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-ok">Identical</td>
+                <td class="test-slow">1.3x slower</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-slow">1.2x slower</td>
-                <td class="test-faster">1.6x faster</td>
-                <td class="test-slow browser-first">29x slower</td>
-                <td class="test-slow browser-first">25x slower</td>
+                <td class="test-faster">1.7x faster</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow browser-first">2.1x slower</td>
+                <td class="test-slow browser-first">1.8x slower</td>
                 <td class="test-slow browser-first">1.9x slower</td>
-                <td class="test-slow browser-first">2.0x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow browser-first">23x slower</td>
                 <td class="test-slow">3x slower</td>
-                <td class="test-slow browser-first">2.1x slower</td>
-                <td class="test-slow">2.5x slower</td>
+                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-slow">3.0x slower</td>
                 <td class="test-slow">3x slower</td>
                 <td class="test-slow browser-first">6x slower</td>
                 <td class="test-slow">6x slower</td>
                 <td class="test-slow">5x slower</td>
-                <td class="test-slow">5x slower</td>
-                <td class="test-slow browser-first">23x slower</td>
-                <td class="test-slow browser-first">3235x slower</td>
+                <td class="test-slow browser-first">26x slower</td>
+                <td class="test-slow browser-first">2056x slower</td>
+                <td class="test-slow browser-first">7x slower</td>
                 <td class="test-slow browser-first">9x slower</td>
-                <td class="test-slow browser-first">19x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-slow">1.3x slower</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-faster">1.7x faster</td>
+                <td class="test-slow browser-first">2.9x slower</td>
+                <td class="test-slow browser-first">1.8x slower</td>
+                <td class="test-slow browser-first">1.9x slower</td>
+                <td class="test-slow browser-first">1.9x slower</td>
             </tr>
             <tr >
               <th>es6</th>
@@ -1372,90 +1874,117 @@
                 <td class="test-no-support"></td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
-                <td class="test-slow">5x slower</td>
+                <td class="test-slow">6x slower</td>
                 <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow">9x slower</td>
-                <td class="test-slow">8x slower</td>
+                <td class="test-slow">7x slower</td>
                 <td class="test-slow">6x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow browser-first">2.0x slower</td>
                 <td class="test-slow browser-first">3x slower</td>
-                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
             </tr>
             <tr class="feature-row" id="test-super">
-                <th rowspan="4">
+                <th rowspan="6">
                   super
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/super">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">26x slower</td>
-                <td class="test-slow">47x slower</td>
-                <td class="test-slow browser-first">58x slower</td>
+                <td class="test-slow browser-first">29x slower</td>
                 <td class="test-slow">40x slower</td>
-                <td class="test-slow">35x slower</td>
-                <td class="test-slow browser-first">64x slower</td>
-                <td class="test-slow">61x slower</td>
+                <td class="test-slow browser-first">138x slower</td>
+                <td class="test-slow">40x slower</td>
+                <td class="test-slow">33x slower</td>
+                <td class="test-slow browser-first">57x slower</td>
                 <td class="test-slow">62x slower</td>
-                <td class="test-slow">47x slower</td>
-                <td class="test-slow browser-first">24x slower</td>
-                <td class="test-slow browser-first">14x slower</td>
-                <td class="test-slow browser-first">13x slower</td>
-                <td class="test-slow browser-first">82x slower</td>
+                <td class="test-slow">45x slower</td>
+                <td class="test-slow browser-first">30x slower</td>
+                <td class="test-slow browser-first">32x slower</td>
+                <td class="test-slow browser-first">18x slower</td>
+                <td class="test-slow browser-first">38x slower</td>
             </tr>
             <tr >
               <th>babel-loose</th>
 
-                <td class="test-slow browser-first">2.0x slower</td>
-                <td class="test-slow">1.5x slower</td>
-                <td class="test-slow browser-first">1.8x slower</td>
-                <td class="test-slow">1.7x slower</td>
+                <td class="test-slow browser-first">1.4x slower</td>
+                <td class="test-slow">1.8x slower</td>
+                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-slow">1.6x slower</td>
                 <td class="test-slow">1.6x slower</td>
                 <td class="test-slow browser-first">5x slower</td>
-                <td class="test-slow">5x slower</td>
                 <td class="test-slow">5x slower</td>
                 <td class="test-slow">3x slower</td>
                 <td class="test-slow browser-first">3x slower</td>
                 <td class="test-slow browser-first">4x slower</td>
-                <td class="test-slow browser-first">1.3x slower</td>
-                <td class="test-slow browser-first">7x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-slow browser-first">1.7x slower</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">29x slower</td>
+                <td class="test-slow">34x slower</td>
+                <td class="test-slow browser-first">47x slower</td>
+                <td class="test-slow">43x slower</td>
+                <td class="test-slow">35x slower</td>
+                <td class="test-slow browser-first">58x slower</td>
+                <td class="test-slow">57x slower</td>
+                <td class="test-slow">45x slower</td>
+                <td class="test-slow browser-first">28x slower</td>
+                <td class="test-slow browser-first">52x slower</td>
+                <td class="test-slow browser-first">21x slower</td>
+                <td class="test-slow browser-first">37x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
+                <td class="test-slow browser-first">12x slower</td>
+                <td class="test-slow">15x slower</td>
+                <td class="test-slow browser-first">57x slower</td>
+                <td class="test-slow">17x slower</td>
+                <td class="test-slow">14x slower</td>
+                <td class="test-slow browser-first">26x slower</td>
+                <td class="test-slow">27x slower</td>
+                <td class="test-slow">21x slower</td>
+                <td class="test-slow browser-first">10x slower</td>
                 <td class="test-slow browser-first">13x slower</td>
-                <td class="test-slow">24x slower</td>
-                <td class="test-slow browser-first">24x slower</td>
-                <td class="test-slow">15x slower</td>
-                <td class="test-slow">15x slower</td>
-                <td class="test-slow browser-first">28x slower</td>
-                <td class="test-slow">28x slower</td>
-                <td class="test-slow">30x slower</td>
-                <td class="test-slow">22x slower</td>
-                <td class="test-slow browser-first">10x slower</td>
-                <td class="test-slow browser-first">14x slower</td>
-                <td class="test-slow browser-first">10x slower</td>
-                <td class="test-slow browser-first">44x slower</td>
+                <td class="test-slow browser-first">8x slower</td>
+                <td class="test-slow browser-first">23x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th>es6</th>
 
                 <td class="test-no-support browser-first"></td>
                 <td class="test-slow">14x slower</td>
-                <td class="test-slow browser-first">20x slower</td>
-                <td class="test-slow">15x slower</td>
+                <td class="test-slow browser-first">18x slower</td>
+                <td class="test-slow">19x slower</td>
                 <td class="test-slow">14x slower</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-no-support"></td>
                 <td class="test-no-support"></td>
-                <td class="test-no-support"></td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-faster browser-first">1.4x faster</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow browser-first">11x slower</td>
+                <td class="test-no-support browser-first"></td>
+                <td class="test-slow browser-first">9x slower</td>
             </tr>
             <tr class="feature-row" id="test-template_string">
-                <th rowspan="3">
+                <th rowspan="4">
                   template_string
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/template_string">tests</a>
                 </th>
@@ -1469,9 +1998,8 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
-                <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">9x slower</td>
-                <td class="test-slow browser-first">2.7x slower</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -1486,9 +2014,24 @@
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
-                <td class="test-slow browser-first">2.2x slower</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
+                <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
@@ -1497,89 +2040,116 @@
 
                 <td class="test-no-support browser-first"></td>
                 <td class="test-ok">Identical</td>
-                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-slow browser-first">1.6x slower</td>
+                <td class="test-slow">1.9x slower</td>
                 <td class="test-slow">2.0x slower</td>
-                <td class="test-slow">2.1x slower</td>
-                <td class="test-slow browser-first">656x slower</td>
-                <td class="test-slow">646x slower</td>
-                <td class="test-slow">591x slower</td>
-                <td class="test-slow">865x slower</td>
+                <td class="test-slow browser-first">625x slower</td>
+                <td class="test-slow">651x slower</td>
+                <td class="test-slow">824x slower</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-faster browser-first">1.3x faster</td>
                 <td class="test-no-support browser-first"></td>
                 <td class="test-ok browser-first">Identical</td>
             </tr>
             <tr class="feature-row" id="test-template_string_tag">
-                <th rowspan="4">
+                <th rowspan="6">
                   template_string_tag
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/template_string_tag">tests</a>
                 </th>
               <th>babel</th>
 
-                <td class="test-slow browser-first">576x slower</td>
-                <td class="test-slow">407x slower</td>
-                <td class="test-slow browser-first">807x slower</td>
-                <td class="test-slow">692x slower</td>
-                <td class="test-slow">475x slower</td>
-                <td class="test-slow browser-first">2347x slower</td>
-                <td class="test-slow">2904x slower</td>
-                <td class="test-slow">2028x slower</td>
-                <td class="test-slow">1422x slower</td>
-                <td class="test-slow browser-first">106x slower</td>
-                <td class="test-slow browser-first">165x slower</td>
-                <td class="test-slow browser-first">57x slower</td>
-                <td class="test-slow browser-first">92x slower</td>
+                <td class="test-slow browser-first">50x slower</td>
+                <td class="test-slow">57x slower</td>
+                <td class="test-slow browser-first">84x slower</td>
+                <td class="test-slow">79x slower</td>
+                <td class="test-slow">58x slower</td>
+                <td class="test-slow browser-first">764x slower</td>
+                <td class="test-slow">765x slower</td>
+                <td class="test-slow">556x slower</td>
+                <td class="test-slow browser-first">25x slower</td>
+                <td class="test-slow browser-first">17x slower</td>
+                <td class="test-slow browser-first">29x slower</td>
+                <td class="test-slow browser-first">34x slower</td>
             </tr>
             <tr >
               <th>babel-loose</th>
 
-                <td class="test-slow browser-first">2.0x slower</td>
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow">1.2x slower</td>
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow">1.2x slower</td>
                 <td class="test-slow">1.3x slower</td>
-                <td class="test-slow browser-first">1.7x slower</td>
-                <td class="test-slow">1.6x slower</td>
-                <td class="test-slow">1.5x slower</td>
-                <td class="test-slow browser-first">103x slower</td>
-                <td class="test-slow">102x slower</td>
-                <td class="test-slow">84x slower</td>
-                <td class="test-slow">82x slower</td>
+                <td class="test-slow browser-first">86x slower</td>
+                <td class="test-slow">78x slower</td>
+                <td class="test-slow">79x slower</td>
                 <td class="test-slow browser-first">1.5x slower</td>
-                <td class="test-slow browser-first">1.6x slower</td>
-                <td class="test-slow browser-first">1.9x slower</td>
-                <td class="test-slow browser-first">5x slower</td>
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow browser-first">1.7x slower</td>
+                <td class="test-slow browser-first">2.0x slower</td>
+            </tr>
+            <tr >
+              <th>babel-runtime</th>
+
+                <td class="test-slow browser-first">56x slower</td>
+                <td class="test-slow">51x slower</td>
+                <td class="test-slow browser-first">81x slower</td>
+                <td class="test-slow">81x slower</td>
+                <td class="test-slow">56x slower</td>
+                <td class="test-slow browser-first">781x slower</td>
+                <td class="test-slow">780x slower</td>
+                <td class="test-slow">579x slower</td>
+                <td class="test-slow browser-first">25x slower</td>
+                <td class="test-slow browser-first">16x slower</td>
+                <td class="test-slow browser-first">28x slower</td>
+                <td class="test-slow browser-first">37x slower</td>
             </tr>
             <tr >
               <th>traceur</th>
 
-                <td class="test-slow browser-first">9x slower</td>
-                <td class="test-slow">10x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow">6x slower</td>
+                <td class="test-slow browser-first">6x slower</td>
+                <td class="test-slow">7x slower</td>
+                <td class="test-slow">7x slower</td>
+                <td class="test-slow browser-first">284x slower</td>
+                <td class="test-slow">272x slower</td>
+                <td class="test-slow">135x slower</td>
+                <td class="test-slow browser-first">15x slower</td>
                 <td class="test-slow browser-first">14x slower</td>
-                <td class="test-slow">13x slower</td>
-                <td class="test-slow">12x slower</td>
-                <td class="test-slow browser-first">292x slower</td>
-                <td class="test-slow">353x slower</td>
-                <td class="test-slow">261x slower</td>
-                <td class="test-slow">146x slower</td>
-                <td class="test-slow browser-first">16x slower</td>
-                <td class="test-slow browser-first">14x slower</td>
+                <td class="test-slow browser-first">5x slower</td>
                 <td class="test-slow browser-first">7x slower</td>
-                <td class="test-slow browser-first">11x slower</td>
+            </tr>
+            <tr >
+              <th>typescript</th>
+
+                <td class="test-slow browser-first">3x slower</td>
+                <td class="test-slow">1.2x slower</td>
+                <td class="test-slow browser-first">1.2x slower</td>
+                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow">1.3x slower</td>
+                <td class="test-slow browser-first">82x slower</td>
+                <td class="test-slow">76x slower</td>
+                <td class="test-slow">78x slower</td>
+                <td class="test-slow browser-first">1.5x slower</td>
+                <td class="test-slow browser-first">1.3x slower</td>
+                <td class="test-slow browser-first">1.9x slower</td>
+                <td class="test-slow browser-first">2.3x slower</td>
             </tr>
             <tr >
               <th>es6</th>
 
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow">7x slower</td>
-                <td class="test-slow browser-first">9x slower</td>
-                <td class="test-slow">8x slower</td>
-                <td class="test-slow">7x slower</td>
-                <td class="test-slow browser-first">68x slower</td>
-                <td class="test-slow">72x slower</td>
-                <td class="test-slow">59x slower</td>
+                <td class="test-slow">4x slower</td>
+                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow">4x slower</td>
+                <td class="test-slow">4x slower</td>
+                <td class="test-slow browser-first">59x slower</td>
+                <td class="test-slow">61x slower</td>
                 <td class="test-slow">43x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-faster browser-first">1.6x faster</td>
+                <td class="test-slow browser-first">1.6x slower</td>
                 <td class="test-no-support browser-first"></td>
-                <td class="test-slow browser-first">4x slower</td>
+                <td class="test-slow browser-first">2.6x slower</td>
             </tr>
       </tbody>
     </table>
@@ -1587,7 +2157,7 @@
     <p>
       Maintained by <a href="https://twitter.com/kpdecker">@kpdecker</a>.
       <br>
-      Run on Sunday, June 28, 2015 using babel 5.6.14, babel-runtime 5.6.14, and traceur 0.0.90.
+      Run on Saturday, July 04, 2015 using babel 5.6.15, babel-runtime 5.6.15, and traceur 0.0.90.
     </o>
 
 
