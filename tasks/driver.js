@@ -68,8 +68,6 @@ module.exports.test = function(remote, config, done) {
 
         userAgent = UserAgent.parse(data.value);
         browserId = userAgent.name + ' ' + userAgent.version;
-
-        GUtil.log('testing browser', GUtil.colors.magenta(browserId));
       });
 
   (function exec() {

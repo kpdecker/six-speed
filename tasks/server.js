@@ -38,6 +38,18 @@ exports.start = function(startup, testComplete) {
       reply({});
     }
   });
+  server.route({
+    method: 'POST',
+    path: '/debug',
+    handler: function(request, reply) {
+      var userAgent = UserAgent.parse(request.payload.browser),
+          message = request.payload.message;
+
+      GUtil.log(GUtil.colors.magenta('[debug]'), GUtil.colors.magenta(userAgent.name), GUtil.colors.magenta(userAgent.version), message);
+
+      reply({});
+    }
+  });
 
   server.route({
     method: 'POST',
