@@ -70,9 +70,9 @@ module.exports.test = function(remote, config, done) {
         browserId = userAgent.name + ' ' + userAgent.version;
       });
 
-  (function exec() {
+  (function exec(timeout) {
     /*global SixSpeed */
-    client.pause(15000)
+    client.pause(Math.max(timeout, 15000))
       .execute(function() {
           return !SixSpeed.running && SixSpeed.ran;
         },
@@ -82,12 +82,12 @@ module.exports.test = function(remote, config, done) {
           }
 
           if (!ret.value) {
-            exec();
+            exec(timeout / 2);
           } else {
             cleanup();
           }
         });
-  }());
+  }(2 * 60 * 1000));
 
   function cleanup() {
     client
