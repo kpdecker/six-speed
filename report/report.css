@@ -12,6 +12,9 @@ table {
 td {
   padding: 5px;
 }
+th {
+  padding: 0 5px;
+}
 
 .feature-row {
   margin-top: 5px;
@@ -23,7 +26,7 @@ td {
 }
 
 .test-error {
-  background: red;
+  background: #F99;
 }
 
 .test-link {
@@ -33,14 +36,14 @@ td {
 }
 
 .test-ok {
-  background: #3c3;
+  background: #CFC;
 }
 .test-faster {
-  background: #1ab31a;
+  background: #9F9;
 }
 
 .test-slow {
-  background: #ff3;
+  background: #FFB;
 }
 
 

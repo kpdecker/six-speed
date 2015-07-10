@@ -27,6 +27,7 @@
     "gulp-util": "^3.0.5",
     "handlebars": "^3.0.3",
     "hapi": "^8.6.1",
+    "imports-loader": "^0.6.4",
     "lodash": "^3.9.3",
     "minimist": "^1.1.1",
     "node-libs-browser": "^0.5.2",

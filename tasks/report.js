@@ -4,12 +4,13 @@ var _ = require('lodash'),
     DataStore = require('../lib/data-store'),
     Fs = require('fs'),
     Gulp = require('gulp'),
+    GUtil = require('gulp-util'),
     Handlebars = require('handlebars'),
-    TraceurPackage = require('traceur/package');
+    Path = require('path'),
+    TraceurPackage = require('traceur/package'),
+    webpack = require('webpack');
 
-var template = Handlebars.compile(Fs.readFileSync(__dirname + '/report.handlebars').toString());
-
-Gulp.task('report', ['report:static'], function() {
+Gulp.task('report', ['report:static', 'report:bootstrap:fonts', 'report:bootstrap:css', 'report:webpack'], function() {
   var report = render();
   Fs.writeFileSync('site/index.html', report);
 });
@@ -17,6 +18,52 @@ Gulp.task('report', ['report:static'], function() {
 Gulp.task('report:static', function() {
   return Gulp.src('report/*.css')
       .pipe(Gulp.dest('site/'));
+});
+Gulp.task('report:bootstrap:fonts', function() {
+  return Gulp.src(['bower_components/bootstrap/fonts/*'], {base: 'bower_components/bootstrap'})
+      .pipe(Gulp.dest('site/'));
+});
+Gulp.task('report:bootstrap:css', function() {
+  return Gulp.src(['bower_components/bootstrap/dist/css/*'], {base: 'bower_components/bootstrap/dist'})
+      .pipe(Gulp.dest('site/'));
+});
+
+
+Gulp.task('report:webpack', function(callback) {
+  webpack({
+    entry: {
+      report: './report/index.js'
+    },
+    output: {
+      path: 'site/',
+      filename: '[name].js'
+    },
+    module: {
+      loaders: [{
+        test: /\.jsx?$/,
+        exclude: /node_modules|vendor|bower_components/,
+        loader: 'babel-loader'
+      }, {
+        test: /bootstrap\/js/,
+        loader: 'imports?jQuery=jquery'
+      }]
+    },
+
+    resolve: {
+      root: [Path.join(__dirname, '..', 'bower_components')]
+    },
+    plugins: [
+      new webpack.ResolverPlugin(
+        new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
+      )
+    ]
+  }, function(err, stats) {
+      if (err) {
+        throw new GUtil.PluginError('webpack', err);
+      }
+      GUtil.log('[webpack]', stats.toString());
+      callback();
+  });
 });
 
 function render() {
@@ -124,10 +171,12 @@ function render() {
 
     return {
       name: test,
+      display: test.replace(/_/g, ' '),
       types: types
     };
   });
 
+  var template = Handlebars.compile(Fs.readFileSync(__dirname + '/report.handlebars').toString());
   return template({
     browsers: browsers,
     tests: tests,
