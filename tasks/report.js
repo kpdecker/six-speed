@@ -15,7 +15,7 @@ Gulp.task('report', ['report:static'], function() {
 });
 
 Gulp.task('report:static', function() {
-  return Gulp.src('static/*')
+  return Gulp.src('report/*.css')
       .pipe(Gulp.dest('site/'));
 });
 
