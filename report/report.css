@@ -5,7 +5,7 @@ a, a:visited {
 
 table {
   border-collapse: collapse;
-  margin: 10px;
+  margin: 10px auto;
   text-align: center;
 }
 
