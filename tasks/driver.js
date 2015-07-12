@@ -63,7 +63,7 @@ module.exports.test = function(remote, config, done) {
       },
       function(err, data) {
         if (err) {
-          throw new GUtil.PluginError('test:sauce', config.browserName, err);
+          throw new GUtil.PluginError('test:sauce', config.browserName + ' ' + err);
         }
 
         userAgent = UserAgent.parse(data.value);
@@ -78,7 +78,7 @@ module.exports.test = function(remote, config, done) {
         },
         function(err, ret) {
           if (err) {
-            throw new GUtil.PluginError('test:sauce', browserId, err);
+            throw new GUtil.PluginError('test:sauce', browserId + ' ' + err);
           }
 
           if (!ret.value) {
@@ -104,7 +104,7 @@ module.exports.test = function(remote, config, done) {
         },
         function(err, ret) {
           if (err) {
-            throw new GUtil.PluginError('test:sauce', browserId, err);
+            throw new GUtil.PluginError('test:sauce', browserId + ' ' + err);
           }
 
           stats = ret.value;
