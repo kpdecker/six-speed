@@ -103,6 +103,7 @@ Gulp.task('build:tests', function() {
 
 Gulp.task('build:browser-runner', function() {
   return Gulp.src([
+        'lib/redirect.html',
         'lib/browser.js',
         'lib/browser-profile.js',
         'lib/iframe.js',
