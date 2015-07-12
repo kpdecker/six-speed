@@ -87,7 +87,7 @@ module.exports.test = function(remote, config, done) {
             cleanup();
           }
         });
-  }(2 * 60 * 1000));
+  }(60 * 1000));
 
   function cleanup() {
     client
