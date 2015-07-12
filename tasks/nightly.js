@@ -12,10 +12,6 @@ var browsers = [
     }
   },
   {
-    browserName: 'safari'
-    // Nightly path configured through Selenium Server
-  },
-  {
     browserName: 'firefox',
     firefox_binary: '/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin'
   }

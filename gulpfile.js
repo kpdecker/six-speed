@@ -2,6 +2,7 @@ var del = require('del'),
     Gulp = require('gulp');
 
 require('./tasks/build');
+require('./tasks/local');
 require('./tasks/nightly');
 require('./tasks/node');
 require('./tasks/report');

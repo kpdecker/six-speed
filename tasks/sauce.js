@@ -24,10 +24,6 @@ var browsers = [
   },
   {
     browserName: 'internet explorer'
-  },
-  {
-    browserName: 'safari',
-    platform: 'OS X 10.10'
   }
 ];
 
