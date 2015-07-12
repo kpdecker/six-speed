@@ -1,5 +1,6 @@
 var _ = require('lodash'),
     Babel = require('babel'),
+    Esprima = require('esprima'),
     Fs = require('fs'),
     Gulp = require('gulp'),
     GUtil = require('gulp-util'),
@@ -56,40 +57,52 @@ Gulp.task('build:tests', function() {
 
       Gulp.src(testDir.path + '/*.*')
           .pipe(Through.obj(function(testFile, enc, fileCallback) {
-            var ext = Path.extname(testFile.path).replace(/^\./, ''),
+            var self = this,
+                ext = Path.extname(testFile.path).replace(/^\./, ''),
                 content = testFile.contents.toString();
 
             function createFile(testType, src) {
               var fileName = 'tests/' + testName + '__' + testType + '.js';
 
+              if (testType !== 'es6') {
+                try {
+                  // If it loads, then assume support
+                  Esprima.parse(src);
+                } catch (err) {
+                  if (!(/Unexpected token/.test(err)) && !(/Invalid regular expression/.test(err))) {
+                    throw new Error(err);
+                  }
+                  return;
+                }
+              }
+
               src = 'function(test, testName, testType, require, assertEqual) {' + src + '}';
               scripts.push(fileName);
-              return new GUtil.File({
+              self.push(new GUtil.File({
                 path: fileName,
                 contents: new Buffer(
                   '"use strict";\n'
                   + 'SixSpeed.tests[' + JSON.stringify(testName) + '] = SixSpeed.tests[' + JSON.stringify(testName) + '] || {};\n'
                   + 'SixSpeed.tests[' + JSON.stringify(testName) + '][' + JSON.stringify(testType) + '] = ' + src + ';\n')
-              });
+              }));
             }
 
             if (ext === 'es6') {
               var babel = Babel.transform(content, {optional: []}).code,
                   babelRuntime = Babel.transform(content, {optional: ['runtime']}).code,
                   babelLoose = Babel.transform(content, {loose: 'all', optional: ['runtime']}).code;
-              this.push(createFile('babel', babel));
+              createFile('babel', babel);
               if (babel !== babelRuntime) {
-                this.push(createFile('babel-runtime', babelRuntime));
+                createFile('babel-runtime', babelRuntime);
               }
               if (babel !== babelLoose) {
-                this.push(createFile('babel-loose', babelLoose));
+                createFile('babel-loose', babelLoose);
               }
-              this.push(createFile('traceur', Traceur.compile(content)));
 
-              var typeScript = TypeScript.transpile(content, { module: TypeScript.ModuleKind.CommonJS });
-              this.push(createFile('typescript', typeScript));
+              createFile('traceur', Traceur.compile(content));
+              createFile('typescript', TypeScript.transpile(content, { module: TypeScript.ModuleKind.CommonJS }));
             }
-            this.push(createFile(ext, content));
+            createFile(ext, content);
 
             fileCallback();
           }.bind(this),
