@@ -32,7 +32,7 @@
     "lodash": "^3.10.1",
     "minimist": "^1.1.1",
     "node-libs-browser": "^0.5.2",
-    "sauce-tunnel": "^2.2.4",
+    "sauce-tunnel": "^2.2.3",
     "through2": "^2.0.0",
     "traceur": "0.0.91",
     "typescript": "^1.5.3",
