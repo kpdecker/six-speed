@@ -10,10 +10,6 @@ var browsers = [
     chromeOptions: {
       binary: '/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
     }
-  },
-  {
-    browserName: 'firefox',
-    firefox_binary: '/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin'
   }
 ];
 
