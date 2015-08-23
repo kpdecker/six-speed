@@ -3,6 +3,16 @@ a, a:visited {
   text-decoration: none;
 }
 
+[data-toggle="tooltip"] > .glyphicon {
+  font-size: 0.75em;
+  vertical-align: text-top;
+  color: #2C2E3A;
+}
+.tooltip-inner {
+  white-space: pre-wrap;
+  text-align: left;
+}
+
 table {
   border-collapse: collapse;
   margin: 10px auto;

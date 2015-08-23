@@ -46,7 +46,15 @@
 
 	'use strict';
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
 	__webpack_require__(1);
+
+	var _jquery = __webpack_require__(3);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	(0, _jquery2['default'])('[data-toggle="tooltip"]').tooltip();
 
 /***/ },
 /* 1 */
