@@ -147,6 +147,7 @@ function render() {
             }
           } else if (error && !(/SyntaxError|(Promise|Symbol)/.test(error))) {
             text = (/AssertError/).test(error) ? 'Incorrect' : 'Error';
+            text = '<span data-toggle="tooltip" title="' + error.replace(/"/g, '&#x27;') + '">' + text + ' <span class="glyphicon glyphicon-info-sign"></span></span>';
             clazz = 'test-error';
           }
 
