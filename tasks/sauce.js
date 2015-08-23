@@ -12,15 +12,7 @@ var browsers = [
     browserName: 'chrome'
   },
   {
-    browserName: 'chrome',
-    version: 'beta'
-  },
-  {
     browserName: 'firefox'
-  },
-  {
-    browserName: 'firefox',
-    version: 'beta'
   },
   {
     browserName: 'internet explorer'
