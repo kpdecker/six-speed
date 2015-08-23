@@ -132,7 +132,8 @@ function render() {
               error = (stats.errors || {})[type];
 
           var text = '',
-              clazz = 'test-no-support';
+              clazz = 'test-no-support',
+              tip = '';
           if (speed && !error) {
             if (speed.toFixed(1) === '1.0' || speed.toFixed(1) === '1.1' || speed.toFixed(1) === '0.9') {
               text = 'Identical';
@@ -147,13 +148,17 @@ function render() {
             }
           } else if (error && !(/SyntaxError|(Promise|Symbol)/.test(error))) {
             text = (/AssertError/).test(error) ? 'Incorrect' : 'Error';
-            text = '<span data-toggle="tooltip" title="' + error.replace(/"/g, '&#x27;') + '">' + text + ' <span class="glyphicon glyphicon-info-sign"></span></span>';
             clazz = 'test-error';
+            tip = error;
           }
 
           if (firstVersion) {
             clazz += ' browser-first';
             firstVersion = false;
+          }
+
+          if (tip) {
+            text = '<span data-toggle="tooltip" title="' + tip.replace(/"/g, '&#x27;') + '">' + text + ' <span class="glyphicon glyphicon-info-sign"></span></span>';
           }
 
           results.push({
