@@ -3,6 +3,15 @@ a, a:visited {
   text-decoration: none;
 }
 
+.dropdown-menu > li > a {
+  margin-left: 20px;
+}
+.dropdown-menu .glyphicon-ok {
+  font-size: 0.75em;
+  padding-right: 10px;
+  margin-left: -25px;
+}
+
 [data-toggle="tooltip"] > .glyphicon {
   font-size: 0.75em;
   vertical-align: text-top;
@@ -11,6 +20,10 @@ a, a:visited {
 .tooltip-inner {
   white-space: pre-wrap;
   text-align: left;
+}
+
+.initial-hide {
+  display: none;
 }
 
 table {
@@ -33,6 +46,9 @@ th {
 
 .browser-first {
   border-left: 2px solid #cdcdcd;
+}
+.version-filter .browser-first {
+  border-left: none;
 }
 
 .test-error {

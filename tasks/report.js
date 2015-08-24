@@ -118,6 +118,7 @@ function render() {
   });
 
   // Pull out all of the tests that were actually run
+  var implementations = [];
   var tests = _.map(data, function(browserData) {
     return _.flatten(_.map(browserData, function(versionData) {
       return _.keys(versionData.stats);
@@ -147,6 +148,9 @@ function render() {
       }
       return a.localeCompare(b);
     });
+
+    // Save these results to the full implementation list
+    implementations = _.union(implementations, types);
 
     // And then collect the results for each type
     types = _.map(types, function(type) {
@@ -213,6 +217,31 @@ function render() {
     };
   });
 
+
+  implementations = _.map(implementations, function(impl) {
+    return impl.replace(/-.*$/, '');
+  });
+  implementations = _.unique(implementations.sort());
+  implementations = _.map(implementations, function(implementation) {
+    return {
+      name: implementation,
+      selector: 'js-impl-' + implementation
+    };
+  });
+
+  var reportData = {
+    engines: _.union(_.unique(browserTags).map(function(tag) {
+        return {name: _.capitalize(tag), selector: 'js-version-' + tag};
+      }),
+      [{dash: true}],
+      familyTags.sort().map(function(tag) {
+        return {name: _.capitalize(tag), selector: 'js-family-' + tag};
+      })),
+    implementations: implementations
+  };
+
+
+
   var template = Handlebars.compile(Fs.readFileSync(__dirname + '/report.handlebars').toString());
   return template({
     browsers: browsers,
@@ -220,6 +249,8 @@ function render() {
     date: new Date().toLocaleDateString(),
     babelVersion: Babel.version,
     babelRuntimeVersion: BabelRuntimePackage.version,
-    traceurVersion: TraceurPackage.version
+    traceurVersion: TraceurPackage.version,
+
+    reportData: JSON.stringify(reportData)
   });
 }

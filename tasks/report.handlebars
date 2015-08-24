@@ -21,6 +21,16 @@
         </div>
 
         <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav navbar-filter">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Engines <span class="caret"></span></a>
+              <ul class="dropdown-menu js-engine-list"></ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Implementations <span class="caret"></span></a>
+              <ul class="dropdown-menu js-implementation-list"></ul>
+            </ul>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://github.com/kpdecker/six-speed">Fork me on GitHub</a></li>
           </ul>
@@ -31,7 +41,7 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid initial-hide">
     <table>
       <caption>Performance of ES6 features relative to the ES5 baseline operations per second.</caption>
       <thead>
@@ -72,7 +82,7 @@
       </tbody>
     </table>
   </div>
-  <div class="container">
+  <div class="container initial-hide">
     <div class="panel panel-info">
       <div class="panel-heading">
         <h2 class="panel-title">Testing methodology</h2>
@@ -94,6 +104,17 @@
       </div>
     </div>
     </div>
+
+    <noscript>
+      <style>
+        .initial-hide { display: block; }
+        .navbar-filter { display: none; }
+      </style>
+    </noscript>
+
+    <script>
+      var REPORT_DATA = {{{reportData}}};
+    </script>
 
     <script src="report.js"></script>
     <script>
