@@ -72,15 +72,21 @@ function render() {
   // And the browsers tested
   var browsers = _.map(data, function(browserData, browserName) {
     var fullVersions = _.keys(browserData).sort();
+    fullVersions = _.map(fullVersions, function(versionName) {
+      var displayName = versionName;
+      if (browserName !== 'node' && browserName !== 'webkit') {
+        displayName = parseFloat(versionName);
+      }
+
+      return {
+        name: versionName,
+        display: displayName
+      };
+    });
+
     return {
       name: browserName,
-      fullVersions: fullVersions,
-      versions: _.map(fullVersions, function(versionName) {
-        if (browserName !== 'node' && browserName !== 'webkit') {
-          versionName = parseFloat(versionName);
-        }
-        return versionName;
-      })
+      versions: fullVersions
     };
   });
   browsers = _.filter(browsers, function(browser) {
@@ -122,11 +128,11 @@ function render() {
     types = _.map(types, function(type) {
       var results = [];
       _.each(browsers, function(browser) {
-        var browserData = data[browser.name];
-        var firstVersion = true;
+        var browserData = data[browser.name],
+            firstVersion = true;
 
-        _.each(browser.fullVersions, function(versionName) {
-          var versionData = browserData[versionName],
+        _.each(browser.versions, function(version) {
+          var versionData = browserData[version.name],
               stats = versionData.stats[test] || {},
               speed = (stats.relative || {})[type],
               error = (stats.errors || {})[type];

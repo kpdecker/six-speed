@@ -45,7 +45,7 @@
           <td colspan="2"></td>
           {{#each browsers}}
             {{#each versions}}
-              <th class="{{#if @first}}browser-first{{/if}}">{{this}}</th>
+              <th class="{{#if @first}}browser-first{{/if}} {{tag}}">{{display}}</th>
             {{/each}}
           {{/each}}
         </tr>
