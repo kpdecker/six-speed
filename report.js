@@ -87,20 +87,16 @@
 	}
 
 	function filterUI() {
-	  // Update the row headers
-	  toggleMatching((0, _jquery2['default'])('tbody').find('th'), filter.implementation);
+	  // Adjust the colspan if we need to
+	  if (/version/.test(filter.engine)) {
+	    (0, _jquery2['default'])('table').addClass('version-filter');
+	    toggleColspan('data-old-colspan', 'colspan');
+	  } else {
+	    (0, _jquery2['default'])('table').removeClass('version-filter');
+	    toggleColspan('colspan', 'data-old-colspan');
+	  }
 
 	  // Update the column headers
-	  if (filter.engine) {
-	    // Adjust the colspan if we need to
-	    if (/version/.test(filter.engine)) {
-	      (0, _jquery2['default'])('table').addClass('version-filter');
-	      toggleColspan('data-old-colspan', 'colspan');
-	    } else {
-	      (0, _jquery2['default'])('table').removeClass('version-filter');
-	      toggleColspan('colspan', 'data-old-colspan');
-	    }
-	  }
 	  toggleMatching((0, _jquery2['default'])('thead').find('th'), filter.engine);
 
 	  // Update the row headers
