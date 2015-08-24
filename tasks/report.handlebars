@@ -38,7 +38,7 @@
         <tr>
           <td colspan="2"></td>
           {{#each browsers}}
-            <th class="browser-first" colspan="{{versions.length}}">{{name}}</th>
+            <th class="browser-first {{tag}}" colspan="{{versions.length}}">{{name}}</th>
           {{/each}}
         </tr>
         <tr>
@@ -61,7 +61,7 @@
                   <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/{{../../name}}">tests</a>
                 </th>
               {{/if}}
-              <th>{{name}}</th>
+              <th class="{{clazz}}">{{name}}</th>
 
               {{#each results}}
                 <td class="{{clazz}}">{{{text}}}</td>

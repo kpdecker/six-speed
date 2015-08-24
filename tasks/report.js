@@ -67,12 +67,33 @@ Gulp.task('report:webpack', function(callback) {
 });
 
 function render() {
-  var data = DataStore.load();
+  var data = DataStore.load(),
+      notes = DataStore.notes();
 
   // And the browsers tested
+  var browserTags = [],
+      familyTags = [];
   var browsers = _.map(data, function(browserData, browserName) {
-    var fullVersions = _.keys(browserData).sort();
+    var fullVersions = _.keys(browserData).sort(),
+        browserNotes = notes.versions[browserName],
+        family = notes.family[browserName].map(function(tag) { return 'js-family-' + tag; }).join(' '),
+        versionTag = '';
+
     fullVersions = _.map(fullVersions, function(versionName) {
+      var tagName = _.keys(browserNotes).reduce(function(left, current) {
+        if (left) {
+          return left;
+        } else if (new RegExp('^' + current.replace(/\./g, '\.').replace(/\*/g, '.*')).test(versionName)) {
+          return browserNotes[current];
+        }
+      }, undefined);
+      if (tagName) {
+        browserTags = browserTags.concat(tagName);
+
+        tagName = ' js-version-' + tagName;
+        versionTag += tagName;
+      }
+
       var displayName = versionName;
       if (browserName !== 'node' && browserName !== 'webkit') {
         displayName = parseFloat(versionName);
@@ -80,13 +101,16 @@ function render() {
 
       return {
         name: versionName,
-        display: displayName
+        display: displayName,
+        tag: family + tagName
       };
     });
 
+    familyTags = _.union(familyTags, notes.family[browserName]);
     return {
       name: browserName,
-      versions: fullVersions
+      versions: fullVersions,
+      tag: family + versionTag
     };
   });
   browsers = _.filter(browsers, function(browser) {
@@ -126,7 +150,8 @@ function render() {
 
     // And then collect the results for each type
     types = _.map(types, function(type) {
-      var results = [];
+      var results = [],
+          typeClazz = 'js-impl-' + type.replace(/-.*$/, '');
       _.each(browsers, function(browser) {
         var browserData = data[browser.name],
             firstVersion = true;
@@ -169,14 +194,14 @@ function render() {
 
           results.push({
             text: text,
-            clazz: clazz
+            clazz: version.tag + ' ' + typeClazz + ' ' + clazz
           });
-
         });
       });
 
       return {
         name: type,
+        clazz: typeClazz,
         results: results
       };
     });
