@@ -39,20 +39,16 @@ function renderList(id, list) {
 }
 
 function filterUI() {
-  // Update the row headers
-  toggleMatching($('tbody').find('th'), filter.implementation);
+  // Adjust the colspan if we need to
+  if (/version/.test(filter.engine)) {
+    $('table').addClass('version-filter');
+    toggleColspan('data-old-colspan', 'colspan');
+  } else {
+    $('table').removeClass('version-filter');
+    toggleColspan('colspan', 'data-old-colspan');
+  }
 
   // Update the column headers
-  if (filter.engine) {
-    // Adjust the colspan if we need to
-    if (/version/.test(filter.engine)) {
-      $('table').addClass('version-filter');
-      toggleColspan('data-old-colspan', 'colspan');
-    } else {
-      $('table').removeClass('version-filter');
-      toggleColspan('colspan', 'data-old-colspan');
-    }
-  }
   toggleMatching($('thead').find('th'), filter.engine);
 
   // Update the row headers
