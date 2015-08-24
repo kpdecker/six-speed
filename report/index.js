@@ -1,4 +1,7 @@
 import 'bootstrap';
 import $ from 'jquery';
 
-$('[data-toggle="tooltip"]').tooltip();
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
