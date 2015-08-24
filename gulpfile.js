@@ -11,8 +11,9 @@ require('./tasks/server');
 
 Gulp.task('test', ['test:node']);
 
-Gulp.task('watch', ['build'], function() {
+Gulp.task('watch', ['build', 'report'], function() {
   Gulp.watch(['lib/*.js', 'tests/**'], ['build']);
+  Gulp.watch(['tasks/report.*', 'report/**', 'data.json', 'notes.json'], ['report']);
 });
 
 Gulp.task('clean', function(callback) {
