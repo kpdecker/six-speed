@@ -51,23 +51,12 @@ All of these test instances were then benchmarked in the given JavaScript engine
 
 ## Test Steps
 
-1. `npm update`
-2. `nvm install iojs`
-3. `./node_modules/.bin/gulp test:node`
-4. `nvm use iojs-2`
-5. `./node_modules/.bin/gulp test:node`
-6. `nvm use 0.12`
-7. `./node_modules/.bin/gulp test:node`
-8. Manually update all nightly browsers
-9. `./bin/selenium.sh` (Run in another window)
-10. `gulp test:nightly` (Must focus on test UI for Chrome during promises section)
-11. `gulp test:sauce`
-12. `gulp test:local`  (Must focus on test UI during promises section)
-13. `gulp test:edge`
-14. Open page in Edge instance
+1. `./bin/test-all.sh`
+2. `gulp test:edge`
+3. Open page in Edge instance
   a. Ensure ES6 feature enabled in `about:flags` (See [#10](https://github.com/kpdecker/six-speed/issues/10))
-15. `gulp report`
-16. Checkin changes to site sub-repository.
+4. `gulp report`
+5. Checkin changes to site sub-repository.
 
 ## Links
 

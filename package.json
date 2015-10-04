@@ -22,6 +22,7 @@
     "babel-runtime": "^5.8.20",
     "benchmark": "^1.0.0",
     "bluebird": "^2.9.34",
+    "browser-downloader": "^1.0.0",
     "del": "^1.2.0",
     "esprima": "^1.2.5",
     "gulp": "^3.9.0",

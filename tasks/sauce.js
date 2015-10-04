@@ -9,12 +9,6 @@ var _ = require('lodash'),
 
 var browsers = [
   {
-    browserName: 'chrome'
-  },
-  {
-    browserName: 'firefox'
-  },
-  {
     browserName: 'internet explorer'
   }
 ];
