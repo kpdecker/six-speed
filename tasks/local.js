@@ -1,4 +1,5 @@
 var Async = require('async'),
+    AppleScript = require('applescript'),
     ChildProcess = require('child_process'),
     Gulp = require('gulp'),
     Path = require('path'),
@@ -29,26 +30,32 @@ var chromeArgs = [
 var browsers = [
   {
     path: './browsers/Google Chrome.app/Contents/MacOS/Google Chrome',
+    app: './browsers/Google Chrome.app',
     args: chromeArgs
   },
   {
     path: './browsers/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+    app: './browsers/Google Chrome Canary.app',
     args: chromeArgs
   },
   {
     path: './browsers/Firefox.app/Contents/MacOS/firefox',
+    app: './browsers/Firefox.app',
     args: ['http://localhost:9999']
   },
   {
     path: './browsers/FirefoxNightly.app/Contents/MacOS/firefox',
+    app: './browsers/FirefoxNightly.app',
     args: ['http://localhost:9999']
   },
   {
     path: '/Applications/Safari.app/Contents/MacOS/Safari',
+    app: '/Applications/Safari.app',
     args: [safariRedirect]
   },
   {
     path: './browsers/WebKit.app/Contents/MacOS/WebKit',
+    app: './browsers/WebKit.app',
     args: [safariRedirect]
   }
 ];
@@ -63,6 +70,10 @@ function runProcess(config, callback) {
   var child;
   Server.start(function() {
     child = ChildProcess.spawn(config.path, config.args, {stdio: 'inherit'});
+
+    setTimeout(function() {
+      AppleScript.execString('tell application "' + config.app + '" to activate', function() {});
+    }, 1000);
   }, function() {
     child.kill();
 
