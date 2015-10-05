@@ -1,3 +1,5 @@
+. ~/.nvm/nvm.sh
+
 npm update
 
 rm -rf browsers
