@@ -4,3 +4,4 @@ site/
 bower_components/
 v8.log
 browsers/
+nohup.out
