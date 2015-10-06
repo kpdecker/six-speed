@@ -3,7 +3,6 @@ var del = require('del'),
 
 require('./tasks/build');
 require('./tasks/local');
-require('./tasks/nightly');
 require('./tasks/node');
 require('./tasks/report');
 require('./tasks/sauce');
