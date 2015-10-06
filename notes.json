@@ -7,31 +7,5 @@
     "edge": ["Chakra"],
     "safari": ["JavaScriptCore"],
     "webkit": ["JavaScriptCore"]
-  },
-  "versions": {
-    "node": {
-      "0.12.*": "current",
-      "*": "prerelease"
-    },
-    "chrome": {
-      "44.*": "current",
-      "47.*": "prerelease"
-    },
-    "firefox": {
-      "40.*": "current",
-      "43.*": "prerelease"
-    },
-    "ie": {
-      "*": "current"
-    },
-    "edge": {
-      "*": "prerelease"
-    },
-    "safari": {
-      "8.*": "current"
-    },
-    "webkit": {
-      "*": "prerelease"
-    }
   }
 }

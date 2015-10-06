@@ -81,8 +81,11 @@ function saveFilters() {
 function toggleColspan(to, from) {
   $(`thead > tr:first-of-type > th[${from}]`).each(function() {
     var $el = $(this);
-    $el.attr(to, $el.attr(from))
-        .removeAttr(from);
+    // Node is distinct in that all of it's tested versions are stable.
+    if ($el.text() !== 'node') {
+      $el.attr(to, $el.attr(from))
+          .removeAttr(from);
+    }
   });
 }
 

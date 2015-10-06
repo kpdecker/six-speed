@@ -33,7 +33,7 @@ exports.start = function(startup, testComplete) {
           data = JSON.parse(request.payload.data);
 
       GUtil.log('Storing data for browser', GUtil.colors.magenta(userAgent.name), GUtil.colors.magenta(userAgent.version), '{' + Object.keys(data).join(', ') + '}');
-      DataStore.store(userAgent.name, userAgent.version, data);
+      DataStore.store(userAgent.name, request.payload.tag, userAgent.version, data);
 
       reply({});
     }

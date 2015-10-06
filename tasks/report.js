@@ -74,32 +74,30 @@ function render() {
   var browserTags = [],
       familyTags = [];
   var browsers = _.map(data, function(browserData, browserName) {
-    var fullVersions = _.keys(browserData).sort(),
-        browserNotes = notes.versions[browserName],
+    var tags = _.keys(browserData).sort(),
         family = notes.family[browserName].map(function(tag) { return 'js-family-' + tag; }).join(' '),
         versionTag = '';
 
-    fullVersions = _.map(fullVersions, function(versionName) {
-      var tagName = _.keys(browserNotes).reduce(function(left, current) {
-        if (left) {
-          return left;
-        } else if (new RegExp('^' + current.replace(/\./g, '\.').replace(/\*/g, '.*')).test(versionName)) {
-          return browserNotes[current];
-        }
-      }, undefined);
-      if (tagName) {
-        browserTags = browserTags.concat(tagName);
-
-        tagName = ' js-version-' + tagName;
-        versionTag += tagName;
+    var fullVersions = _.map(tags, function(tag) {
+      // A bit of a hack here, but we treat all node releases that we are testing as stable
+      var tagName = tag;
+      if (/^\d/.test(tag)) {
+        tagName = 'stable';
       }
 
-      var displayName = versionName;
+      browserTags = browserTags.concat(tagName);
+
+      tagName = ' js-version-' + tagName;
+      versionTag += tagName;
+
+      var versionName = browserData[tag].version,
+          displayName = versionName;
       if (browserName !== 'node' && browserName !== 'webkit') {
         displayName = parseFloat(versionName);
       }
 
       return {
+        id: tag,
         name: versionName,
         display: displayName,
         tag: family + tagName
@@ -161,7 +159,7 @@ function render() {
             firstVersion = true;
 
         _.each(browser.versions, function(version) {
-          var versionData = browserData[version.name],
+          var versionData = browserData[version.id],
               stats = versionData.stats[test] || {},
               speed = (stats.relative || {})[type],
               error = (stats.errors || {})[type];

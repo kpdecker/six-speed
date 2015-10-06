@@ -1,6 +1,7 @@
 {
   "node": {
     "0.12.7": {
+      "version": "0.12.7",
       "stats": {
         "arrow-args": {
           "supportsES6": true,
@@ -779,23 +780,10 @@
           },
           "errors": {}
         }
-      },
-      "log": [
-        "Failed to load classes__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/classes__es6.js:3\n][\"es6\"] = function(test, testName, testType, require, assertEqual) {class C {\n                                                                     ^^^^^\nUnexpected reserved word",
-        "Failed to load defaults__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/defaults__es6.js:3\non(test, testName, testType, require, assertEqual) {function fn(arg = 1, other\n                                                                    ^\nUnexpected token =",
-        "Failed to load destructuring-simple__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/destructuring-simple__es6.js:10\n  var {a, b} = data;\n      ^\nUnexpected token {",
-        "Failed to load destructuring__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/destructuring__es6.js:10\n  var {a, b:{c:b}, arr:[, c]} = data;\n      ^\nUnexpected token {",
-        "Failed to load object-literal-ext__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/object-literal-ext__es6.js:6\n    'bizz buzz'() {\n               ^\nUnexpected token (",
-        "Failed to load rest__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/rest__es6.js:3\nn(test, testName, testType, require, assertEqual) {function fn(foo, ...args) {\n                                                                    ^\nUnexpected token .",
-        "Failed to load spread-generator__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread-generator__es6.js:10\n  return Math.max(... generate());\n                  ^\nUnexpected token .",
-        "Failed to load spread-literal__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread-literal__es6.js:4\n  return [1, ... [1, 2, 3]];\n             ^\nUnexpected token .",
-        "Failed to load spread__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/spread__es6.js:4\n  return Math.max(...[1,2,3]);\n                  ^\nUnexpected token .",
-        "Failed to load super__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/super__es6.js:4\nclass C {\n^^^^^\nUnexpected reserved word",
-        "Failed to load template_string__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/template_string__es6.js:5\n  return `${data[0]} ${data[1] + data[2]}`;\n         ^\nUnexpected token ILLEGAL",
-        "Failed to load template_string_tag__es6.js SyntaxError: /Users/kpdecker/dev/kpdecker/es6-perf/build/tests/template_string_tag__es6.js:9\n  return tag`${data[0]} ${data[1] + data[2]}`;\n            ^\nUnexpected token ILLEGAL"
-      ]
+      }
     },
     "4.0.0": {
+      "version": "4.0.0",
       "stats": {
         "promises": {
           "supportsES6": true,
@@ -1625,14 +1613,12 @@
           },
           "errors": {}
         }
-      },
-      "log": [
-        "Failed to load defaults__es6.js SyntaxError: Unexpected token ="
-      ]
+      }
     }
   },
   "chrome": {
-    "45.0.2454.85": {
+    "stable": {
+      "version": "45.0.2454.85",
       "stats": {
         "promises": {
           "count": {
@@ -2446,50 +2432,10 @@
           },
           "supportsES6": true
         }
-      },
-      "log": [{
-        "source": "javascript",
-        "message": "http://localhost:9999/tests/defaults__es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
-        "timestamp": 1441989777897,
-        "level": "SEVERE"
-      }, {
-        "source": "javascript",
-        "message": "http://localhost:9999/tests/destructuring-simple__es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-        "timestamp": 1441989777998,
-        "level": "SEVERE"
-      }, {
-        "source": "javascript",
-        "message": "http://localhost:9999/tests/destructuring__es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-        "timestamp": 1441989778136,
-        "level": "SEVERE"
-      }, {
-        "source": "javascript",
-        "message": "http://localhost:9999/tests/rest__es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
-        "timestamp": 1441989779409,
-        "level": "SEVERE"
-      }, {
-        "source": "javascript",
-        "message": "http://localhost:9999/tests/spread-generator__es6.js 10:0 Uncaught SyntaxError: Unexpected token ...",
-        "timestamp": 1441989779543,
-        "level": "SEVERE"
-      }, {
-        "source": "javascript",
-        "message": "http://localhost:9999/tests/spread-literal__es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-        "timestamp": 1441989779609,
-        "level": "SEVERE"
-      }, {
-        "source": "javascript",
-        "message": "http://localhost:9999/tests/spread__es6.js 4:0 Uncaught SyntaxError: Unexpected token ...",
-        "timestamp": 1441989779732,
-        "level": "SEVERE"
-      }, {
-        "source": "network",
-        "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "timestamp": 1441989780675,
-        "level": "SEVERE"
-      }]
+      }
     },
-    "47.0.2507.0": {
+    "prerelease": {
+      "version": "47.0.2507.0",
       "stats": {
         "promises": {
           "elapsed": {
@@ -3315,32 +3261,12 @@
             "babel-runtime": 0.665838645005175
           }
         }
-      },
-      "log": [{
-        "level": "SEVERE",
-        "message": "http://localhost:9999/tests/defaults__es6.js 3:0 Uncaught SyntaxError: Unexpected token =",
-        "timestamp": 1441987517720
-      }, {
-        "level": "SEVERE",
-        "message": "http://localhost:9999/tests/destructuring-simple__es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-        "timestamp": 1441987517721
-      }, {
-        "level": "SEVERE",
-        "message": "http://localhost:9999/tests/destructuring__es6.js 10:0 Uncaught SyntaxError: Unexpected token {",
-        "timestamp": 1441987517723
-      }, {
-        "level": "SEVERE",
-        "message": "http://localhost:9999/tests/rest__es6.js 3:0 Uncaught SyntaxError: Unexpected token ...",
-        "timestamp": 1441987517756
-      }, {
-        "level": "SEVERE",
-        "message": "http://localhost:9999/favicon.ico 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "timestamp": 1441987517823
-      }]
+      }
     }
   },
   "firefox": {
-    "40.0": {
+    "stable": {
+      "version": "40.0",
       "stats": {
         "template_string_tag": {
           "count": {
@@ -4169,110 +4095,10 @@
           },
           "supportsES6": true
         }
-      },
-      "log": [{
-        "timestamp": 1441989779247,
-        "message": "Trying to re-register CID '{e26dbdcd-d3ba-4ded-88c3-6cb07ee3e9e0}' already registered by file:///tmp/anonymous7948094766636702612webdriver-profile/extensions/fxdriver@googlecode.com/components/prompt-service.js.",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989779250,
-        "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989780422,
-        "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989781336,
-        "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989781412,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989781426,
-        "message": "SyntaxError: class is a reserved identifier",
-        "level": "SEVERE"
-      }, {
-        "timestamp": 1441989781662,
-        "message": "SyntaxError: invalid regular expression flag u",
-        "level": "SEVERE"
-      }, {
-        "timestamp": 1441989781739,
-        "message": "SyntaxError: class is a reserved identifier",
-        "level": "SEVERE"
-      }, {
-        "timestamp": 1441989782124,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989782145,
-        "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989788857,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989788931,
-        "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989795800,
-        "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989795800,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989802693,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989802748,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989808908,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989808948,
-        "message": "SyntaxError: class is a reserved identifier",
-        "level": "SEVERE"
-      }, {
-        "timestamp": 1441989808957,
-        "message": "SyntaxError: invalid regular expression flag u",
-        "level": "SEVERE"
-      }, {
-        "timestamp": 1441989808975,
-        "message": "SyntaxError: class is a reserved identifier",
-        "level": "SEVERE"
-      }, {
-        "timestamp": 1441989817703,
-        "message": "mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989817703,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989826133,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989840290,
-        "message": "This site makes use of a SHA-1 Certificate; it's recommended you use certificates with signature algorithms that use hash functions stronger than SHA-1.",
-        "level": "WARNING"
-      }, {
-        "timestamp": 1441989840445,
-        "message": "SyntaxError: unreachable code after return statement",
-        "level": "WARNING"
-      }]
+      }
     },
-    "43.0": {
+    "prerelease": {
+      "version": "43.0",
       "stats": {
         "arrow-args": {
           "supportsES6": true,
@@ -5100,7 +4926,8 @@
     }
   },
   "ie": {
-    "11.0": {
+    "stable": {
+      "version": "11.0",
       "stats": {
         "arrow-args": {
           "supportsES6": false,
@@ -5850,7 +5677,8 @@
     }
   },
   "edge": {
-    "20.10240": {
+    "prerelease": {
+      "version": "20.10240",
       "stats": {
         "promises": {
           "supportsES6": true,
@@ -6662,7 +6490,8 @@
     }
   },
   "safari": {
-    "8.0.8": {
+    "stable": {
+      "version": "8.0.8",
       "stats": {
         "promises": {
           "supportsES6": true,
@@ -7436,7 +7265,8 @@
     }
   },
   "webkit": {
-    "602.1.3+": {
+    "prerelease": {
+      "version": "602.1.3+",
       "stats": {
         "promises": {
           "supportsES6": true,

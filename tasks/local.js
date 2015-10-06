@@ -22,41 +22,39 @@ var chromeArgs = [
   '--test-type',
 
   // Our own exec flags
-  '--enable-javascript-harmony',
-
-  'http://localhost:9999'
+  '--enable-javascript-harmony'
 ];
 
 var browsers = [
   {
     path: './browsers/Google Chrome.app/Contents/MacOS/Google Chrome',
     app: './browsers/Google Chrome.app',
-    args: chromeArgs
+    args: chromeArgs.concat('http://localhost:9999/?tag=stable')
   },
   {
     path: './browsers/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
     app: './browsers/Google Chrome Canary.app',
-    args: chromeArgs
+    args: chromeArgs.concat('http://localhost:9999/?tag=prerelease')
   },
   {
     path: './browsers/Firefox.app/Contents/MacOS/firefox',
     app: './browsers/Firefox.app',
-    args: ['http://localhost:9999']
+    args: ['http://localhost:9999/moz/?tag=stable']
   },
   {
     path: './browsers/FirefoxNightly.app/Contents/MacOS/firefox',
     app: './browsers/FirefoxNightly.app',
-    args: ['http://localhost:9999']
+    args: ['http://localhost:9999/moz/?tag=prerelease']
   },
   {
     path: '/Applications/Safari.app/Contents/MacOS/Safari',
     app: '/Applications/Safari.app',
-    args: [safariRedirect]
+    args: [safariRedirect + '?tag=stable']
   },
   {
     path: './browsers/WebKit.app/Contents/MacOS/WebKit',
     app: './browsers/WebKit.app',
-    args: [safariRedirect]
+    args: [safariRedirect + '?tag=prerelease']
   }
 ];
 

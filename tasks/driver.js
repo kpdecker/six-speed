@@ -1,7 +1,6 @@
 /*eslint-disable no-process-env */
 
 var _ = require('lodash'),
-    DataStore = require('../lib/data-store'),
     GUtil = require('gulp-util'),
     WebdriverIO = require('webdriverio'),
     UserAgent = require('../lib/user-agent');
@@ -51,7 +50,7 @@ module.exports.test = function(remote, config, done) {
       stats;
 
   var testServer = remote.testServer || 'http://localhost:9999/',
-      indexFile = config.browserName === 'firefox' ? 'moz/index.html' : 'index.html';
+      indexFile = config.browserName === 'firefox' ? 'moz/index.html?tag=stable' : 'index.html?tag=stable';
 
   var client = WebdriverIO
     .remote(options)
@@ -122,9 +121,6 @@ module.exports.test = function(remote, config, done) {
             return GUtil.colors.yellow(type) + ': ' + (relative * 100).toFixed(5) + '%';
           }).join(' '));
         });
-
-        // Log in our data store
-        DataStore.store(userAgent.name, userAgent.version, stats, browserLog);
 
         done();
       });
