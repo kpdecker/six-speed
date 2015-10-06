@@ -5,7 +5,8 @@ var Async = require('async'),
     Path = require('path'),
     Server = require('./server');
 
-var safariRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect.html'));
+var safariStableRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-stable.html')),
+    safariPrereleaseRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-prerelease.html'));
 
 var chromeArgs = [
   // Defaults from Sauce Labs
@@ -49,12 +50,12 @@ var browsers = [
   {
     path: '/Applications/Safari.app/Contents/MacOS/Safari',
     app: '/Applications/Safari.app',
-    args: [safariRedirect + '?tag=stable']
+    args: [safariStableRedirect]
   },
   {
     path: './browsers/WebKit.app/Contents/MacOS/WebKit',
     app: './browsers/WebKit.app',
-    args: [safariRedirect + '?tag=prerelease']
+    args: [safariPrereleaseRedirect]
   }
 ];
 
@@ -71,7 +72,7 @@ function runProcess(config, callback) {
 
     setTimeout(function() {
       AppleScript.execString('tell application "' + config.app + '" to activate', function() {});
-    }, 1000);
+    }, 5000);
   }, function() {
     child.kill();
 

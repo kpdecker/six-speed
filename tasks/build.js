@@ -116,7 +116,8 @@ Gulp.task('build:tests', function() {
 
 Gulp.task('build:browser-runner', function() {
   return Gulp.src([
-        'lib/redirect.html',
+        'lib/redirect-stable.html',
+        'lib/redirect-prerelease.html',
         'lib/browser.js',
         'lib/browser-profile.js',
         'lib/iframe.js',
