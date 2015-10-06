@@ -54,7 +54,7 @@ All of these test instances were then benchmarked in the given JavaScript engine
 1. `./bin/test-all.sh`
 2. `gulp test:edge`
 3. Open page in Edge instance
-  a. Ensure ES6 feature enabled in `about:flags` (See [#10](https://github.com/kpdecker/six-speed/issues/10))
+  1. Ensure ES6 feature enabled in `about:flags` (See [#10](https://github.com/kpdecker/six-speed/issues/10))
 4. `gulp report`
 5. Checkin changes to site sub-repository.
 
