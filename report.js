@@ -129,7 +129,10 @@
 	function toggleColspan(to, from) {
 	  (0, _jquery2['default'])('thead > tr:first-of-type > th[' + from + ']').each(function () {
 	    var $el = (0, _jquery2['default'])(this);
-	    $el.attr(to, $el.attr(from)).removeAttr(from);
+	    // Node is distinct in that all of it's tested versions are stable.
+	    if ($el.text() !== 'node') {
+	      $el.attr(to, $el.attr(from)).removeAttr(from);
+	    }
 	  });
 	}
 
