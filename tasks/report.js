@@ -74,7 +74,7 @@ function render() {
   var browserTags = [],
       familyTags = [];
   var browsers = _.map(data, function(browserData, browserName) {
-    var tags = _.keys(browserData).sort(),
+    var tags = _.keys(browserData),
         family = notes.family[browserName].map(function(tag) { return 'js-family-' + tag; }).join(' '),
         versionTag = '';
 
