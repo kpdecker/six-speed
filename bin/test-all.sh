@@ -15,7 +15,7 @@ if [ $? -ne 0 ]; then
 fi
 
 ./node_modules/.bin/gulp test:local
-./node_modules/.bin/gulp test:sauce
+./node_modules/.bin/gulp test:vm
 
 ./node_modules/.bin/gulp test:node
 

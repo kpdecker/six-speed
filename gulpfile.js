@@ -6,6 +6,7 @@ require('./tasks/local');
 require('./tasks/node');
 require('./tasks/report');
 require('./tasks/sauce');
+require('./tasks/vm');
 require('./tasks/server');
 
 Gulp.task('test', ['test:node']);
