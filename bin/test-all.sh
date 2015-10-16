@@ -6,11 +6,13 @@ nvm install 4
 rm -rf node_modules
 npm install
 
-rm -rf browsers
 mkdir browsers
+rm -rf browsers/*.app browsers/*.dmg
 ./node_modules/.bin/browser-downloader browsers
-
-./node_modules/.bin/gulp build
+if [ $? -ne 0 ]; then
+  echo "Download failed";
+  exit 1;
+fi
 
 ./node_modules/.bin/gulp test:local
 ./node_modules/.bin/gulp test:sauce
