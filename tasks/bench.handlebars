@@ -1,5 +1,8 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge"/> 
+  </head>
   <body>
     {{#each scripts}}
       <script src="{{.}}" {{#if ../jsType}}type="{{../../jsType}}"{{/if}}></script>
