@@ -37,7 +37,7 @@ Gulp.task('build:webpack', function(callback) {
       if (err) {
         throw new GUtil.PluginError('webpack', err);
       }
-      GUtil.log('[webpack]', stats.toString());
+      GUtil.log('[webpack]', stats.toString({timings: true, chunks: false}));
       callback();
   });
 });
