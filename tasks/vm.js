@@ -38,13 +38,15 @@ function startVM(vmx) {
   return run('vmrun start "' + vmx + '"')
       // Introduce our own arbitrary wait as the Win10 VM seems to have issues when sending
       // VMTools commands immediately after the first startup.
-      .then(() => new Promise(function(resolve) {
-        // After it says we've started, put in a nice long timeout to allow the VM tools to startup
-        // There appears to be some sort of hang that occurs if we do this too soon in the process.
-        setTimeout(function() {
-          resolve(vmx);
-        }, 60 * 1000);
-      }));
+      .then(function() {
+        return new Promise(function(resolve) {
+          // After it says we've started, put in a nice long timeout to allow the VM tools to startup
+          // There appears to be some sort of hang that occurs if we do this too soon in the process.
+          setTimeout(function() {
+            resolve(vmx);
+          }, 60 * 1000);
+        });
+      });
 }
 
 function setExperimental(vmx) {
