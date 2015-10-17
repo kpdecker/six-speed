@@ -63,7 +63,7 @@ function runIE(vmx, uri) {
   return run(RUN_USER + 'runScriptInGuest "' + vmx + '" -interactive -activeWindow -noWait "" "\\"C:\\Program Files\\Internet Explorer\\iexplore.exe\\" ' + uri + '/?tag=stable"');
 }
 function stopVM(vmx) {
-  return run('vmrun stop "' + vmx + '"');
+  return run('vmrun stop "' + vmx + '" hard');
 }
 
 function run(command, options, counter) {
