@@ -17,7 +17,8 @@ Gulp.task('test:vm:ie', ['build:browser', 'test:vm:edge'], function(callback) {
 function runVM(run, callback) {
   var vmx = './browsers/MsEdge-Win10-VMware.vmwarevm';
   Server.start(function(uri) {
-    startVM(vmx)
+    loadSnapshot(vmx)
+        .then(function() { return startVM(vmx); })
         .then(function() { return setExperimental(vmx); })
         .then(function() { return run(vmx, uri); })
         .catch(cleanup);
@@ -50,6 +51,17 @@ function delay(seconds) {
       }, seconds * 1000);
     });
   };
+}
+
+function loadSnapshot(vmx) {
+  return run('vmrun listSnapshots "' + vmx + '"')
+      .then(function(snapshots) {
+        if (!/six-speed/.test(snapshots)) {
+          return Promise.reject(new Error('No six-speed snapshot in VM, please setup per README'));
+        }
+
+        return run('vmrun revertToSnapshot "' + vmx + '" six-speed');
+      });
 }
 
 function setExperimental(vmx) {

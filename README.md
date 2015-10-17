@@ -55,6 +55,17 @@ All of these test instances were then benchmarked in the given JavaScript engine
 2. `gulp report`
 3. Checkin changes to site sub-repository.
 
+### VM Setup
+
+The Windows 10 VM used must be manually setup to ensure the proper state prior to testing. This can be done with this command:
+
+```
+mkdir browsers
+./node_modules/.bin/browser-downloader vm ./browsers
+```
+
+After this the image should be restarted a few times until all setup and update processes have completed and then a snapshot named `six-speed` taken from the idle desktop screen. The `test-all.sh` script will check that the VM image is up to date and will halt execution if the image is not setup properly, as a sanity check.
+
 ## Links
 
 - [V8 Harmony Features](https://code.google.com/p/v8/issues/list?q=label:Harmony)
