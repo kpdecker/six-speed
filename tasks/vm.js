@@ -2,6 +2,8 @@ var ChildProcess = require('child_process'),
     Gulp = require('gulp'),
     Server = require('./server');
 
+var RUN_USER = 'vmrun -gu IEUser -gp Passw0rd! ';
+
 Gulp.task('test:vm', ['build:browser', 'test:vm:edge', 'test:vm:ie']);
 
 Gulp.task('test:vm:edge', ['build:browser'], function(callback) {
@@ -52,13 +54,13 @@ function startVM(vmx) {
 function setExperimental(vmx) {
   // Enable Edge experimental features
   var key = 'HKCU\\SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppContainer\\Storage\\microsoft.microsoftedge_8wekyb3d8bbwe\\MicrosoftEdge\\ExperimentalFeatures';
-  return run('vmrun -gu IEUser -gp Passw0rd! runProgramInGuest "' + vmx + '" "C:\\Windows\\System32\\reg.exe" ADD "' + key + '" /v ExperimentalJS /t REG_DWORD /d 1 /f');
+  return run(RUN_USER + 'runProgramInGuest "' + vmx + '" "C:\\Windows\\System32\\reg.exe" ADD "' + key + '" /v ExperimentalJS /t REG_DWORD /d 1 /f');
 }
 function runEdge(vmx, uri) {
-  return run('vmrun -gu IEUser -gp Passw0rd! runProgramInGuest "' + vmx + '" -interactive -activeWindow  "C:\\Windows\\explorer.exe" microsoft-edge:' + uri + '/?tag=prerelease');
+  return run(RUN_USER + 'runProgramInGuest "' + vmx + '" -interactive -activeWindow  "C:\\Windows\\explorer.exe" microsoft-edge:' + uri + '/?tag=prerelease');
 }
 function runIE(vmx, uri) {
-  return run('vmrun -gu IEUser -gp Passw0rd! runScriptInGuest "' + vmx + '" -interactive -activeWindow -noWait "" "\\"C:\\Program Files\\Internet Explorer\\iexplore.exe\\" ' + uri + '/?tag=stable"');
+  return run(RUN_USER + 'runScriptInGuest "' + vmx + '" -interactive -activeWindow -noWait "" "\\"C:\\Program Files\\Internet Explorer\\iexplore.exe\\" ' + uri + '/?tag=stable"');
 }
 function stopVM(vmx) {
   return run('vmrun stop "' + vmx + '"');
