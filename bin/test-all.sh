@@ -1,5 +1,4 @@
 . ~/.nvm/nvm.sh
-killall sc
 
 nvm install 4
 
@@ -13,6 +12,11 @@ if [ $? -ne 0 ]; then
   echo "Download failed";
   exit 1;
 fi
+
+devices=`hdiutil info | grep partition_scheme | awk '{print $1}'`
+for x in $devices; do
+  hdiutil detach $x
+done
 
 ./node_modules/.bin/gulp test:local
 ./node_modules/.bin/gulp test:vm
