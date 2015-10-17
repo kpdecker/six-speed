@@ -69,9 +69,11 @@ function runProcess(config, callback) {
   Server.start(function() {
     child = ChildProcess.spawn(config.path, config.args, {stdio: 'inherit'});
 
-    setTimeout(function() {
-      AppleScript.execString('tell application "' + config.app + '" to activate', function() {});
-    }, 3000);
+    if (!(/firefox/.test(config.path))) {
+      setTimeout(function() {
+        AppleScript.execString('tell application "' + config.app + '" to activate', function() {});
+      }, 3000);
+    }
   }, function() {
     child.kill();
 
