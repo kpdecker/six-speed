@@ -72,12 +72,18 @@ function run(command, options, counter) {
   return new Promise(function(resolve, reject) {
     console.log('run', command);
     ChildProcess.exec(command, options, function(err, stdout, stderr) {
-      if (/The specified guest user must be logged in interactively to perform this operation/.test(stdout)
-          && counter < 5) {
+      if (counter < 5
+          && (/The specified guest user must be logged in interactively to perform this operation/.test(stdout)
+            || (/The VMware Tools are not running in the virtual machine/).test(stdout)
+            || nonZero(/reg.exe/, command, stdout))) {
         // Allow retries if there is something that might be waiting for background processes like updates
+        counter++;
+        console.log('retry', counter, command);
         setTimeout(function() {
-          resolve(run(command, options, counter++));
-        }, 10 * 1000 * (counter + 1));
+          resolve(run(command, options, counter));
+        }, 10 * 1000 * counter);
+
+        return;
       }
 
       /* istanbul ignore if */
@@ -87,8 +93,8 @@ function run(command, options, counter) {
 
           // Complete hack, but we want to ignore explorer error codes as they
           // occur when the command actually completed.
-          && !((/Guest program exited with non-zero exit code/).test(stdout)
-            && (/explorer.exe/).test(command))) {
+          && !nonZero(/explorer.exe/, command, stdout)
+          && !nonZero(/taskkill/, command, stdout)) {
         console.log(err, stdout, stderr);
         reject(err);
       } else {
@@ -98,4 +104,9 @@ function run(command, options, counter) {
       }
     });
   });
+}
+
+function nonZero(exe, command, stdout) {
+  return (/Guest program exited with non-zero exit code/).test(stdout)
+      && (exe).test(command);
 }
