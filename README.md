@@ -7,25 +7,25 @@ Report is located at http://kpdecker.github.io/six-speed/
 ## Usage
 
 ```
-gulp test:sauce
+npm run test:sauce
 ```
 
 Test against all registered Sauce Labs browsers.
 
 ```
-gulp test:node
+npm run test:node
 ```
 
 Tests against the current node version.
 
 ```
-gulp profile:node --testName=$name --type=$type --count=$iterationCount
+npm run profile:node -- --testName=$name --type=$type --count=$iterationCount
 ```
 
 Profiles a given test within the current Node environment.
 
 ```
-gulp server
+npm start
 ```
 
 Starts a server instance for manual browser testing. Tests may be accessed via `http://machineName:9999/` and the `#` component may be used to filter the tests to be executed, i.e. `http://machineName:9999/#promise`
@@ -35,7 +35,7 @@ Profiling of specific tests may be done through `http://machineName:9999/profile
 Firefox browsers need to use `/moz/index.html` and `/moz/profile.html` respectively to enable all supported ES6 features.
 
 ```
-gulp report
+npm run report
 ```
 
 Generates the data report.

@@ -10,7 +10,12 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "test:sauce" : "gulp test:sauce",
+    "test:node" : "gulp test:node",
+    "start" : "gulp server",
+    "profile:node" : "gulp profile:node",
+    "report" : "gulp report"
   },
   "author": "Kevin Decker <kpdecker@gmail.com>",
   "license": "MIT",
