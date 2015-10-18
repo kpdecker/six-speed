@@ -52,7 +52,7 @@ All of these test instances were then benchmarked in the given JavaScript engine
 ## Test Steps
 
 1. `./bin/test-all.sh`
-2. `gulp report`
+2. `npm run report`
 3. Checkin changes to site sub-repository.
 
 ### VM Setup
