@@ -33,7 +33,7 @@
     "esprima": "^1.2.5",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.5",
-    "handlebars": "^3.0.3",
+    "handlebars": "^4.0.3",
     "hapi": "^8.6.1",
     "imports-loader": "^0.6.4",
     "lodash": "^3.10.1",
