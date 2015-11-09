@@ -23,6 +23,13 @@ done
 
 ./node_modules/.bin/gulp test:node
 
+nvm install 5
+
+rm -rf node_modules
+npm install
+
+./node_modules/.bin/gulp test:node
+
 nvm install 0.12
 
 rm -rf node_modules
