@@ -62,13 +62,13 @@
       </thead>
 
       <tbody>
-        {{#each tests}}
+        {{#each tests as |test|}}
           {{#each types}}
-            <tr {{#if @first}}class="feature-row" id="test-{{../../name}}"{{/if}}>
+            <tr {{#if @first}}class="feature-row" id="test-{{test.name}}"{{/if}}>
               {{#if @first}}
-                <th rowspan="{{../../types.length}}">
-                  {{../../display}}
-                  <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/{{../../name}}">tests</a>
+                <th rowspan="{{test.types.length}}">
+                  {{test.display}}
+                  <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/{{test.name}}">tests</a>
                 </th>
               {{/if}}
               <th class="{{clazz}}">{{name}}</th>
