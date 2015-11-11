@@ -56,12 +56,12 @@
         </tr>
         <tr>
           <td colspan="2"></td>
-              <th class="browser-first js-family-v8 js-version-stable">0.12.7</th>
-              <th class=" js-family-v8 js-version-stable">4.2.1</th>
+              <th class="browser-first js-family-v8 js-version-stable">4.2.2</th>
+              <th class=" js-family-v8 js-version-stable">5.0.0</th>
               <th class="browser-first js-family-v8 js-version-stable">46</th>
               <th class=" js-family-v8 js-version-prerelease">48</th>
-              <th class="browser-first js-family-SpiderMonkey js-version-stable">41</th>
-              <th class=" js-family-SpiderMonkey js-version-prerelease">44</th>
+              <th class="browser-first js-family-SpiderMonkey js-version-stable">42</th>
+              <th class=" js-family-SpiderMonkey js-version-prerelease">45</th>
               <th class="browser-first js-family-Chakra js-version-stable">11</th>
               <th class="browser-first js-family-Chakra js-version-prerelease">12.1024</th>
               <th class="browser-first js-family-JavaScriptCore js-version-stable">9</th>
@@ -78,11 +78,11 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
             </tr>
@@ -115,11 +115,11 @@
             <tr >
               <th class="js-impl-es5">es5-bind</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es5 test-slow browser-first">14x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es5 test-slow">15x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es5 test-slow browser-first">14x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es5 test-slow">36x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es5 test-slow browser-first">31x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es5 test-slow browser-first">15x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es5 test-slow">17x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es5 test-slow browser-first">15x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es5 test-slow">35x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es5 test-slow browser-first">10x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es5 test-slow">10x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es5 test-slow browser-first">4x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es5 test-slow browser-first">4x slower</td>
@@ -128,14 +128,14 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-error browser-first"><span data-toggle="tooltip" title="TypeError: Cannot read property 'value' of undefined">Error <span class="glyphicon glyphicon-info-sign"></span></span></td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-ok browser-first">Identical</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.2x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-arrow-args">
@@ -147,20 +147,20 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-ok browser-first">Identical</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.2x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">1.2x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-ok">Identical</td>
@@ -184,14 +184,14 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-error browser-first"><span data-toggle="tooltip" title="Error: AssertError - Expect undefined to equal 1">Incorrect <span class="glyphicon glyphicon-info-sign"></span></span></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">1.2x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-error browser-first"><span data-toggle="tooltip" title="Error: AssertError - Expect undefined to equal 1">Incorrect <span class="glyphicon glyphicon-info-sign"></span></span></td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.3x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-arrow-declare">
@@ -201,13 +201,13 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.8x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">15x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">37x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">2.4x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">58x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">39x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">2.3x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
             </tr>
@@ -216,38 +216,38 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">1.5x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">1.4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">1.2x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">1.4x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">1.4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">11x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">18x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">2.2x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">37x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">19x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">2.1x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">1.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.5x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.2x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">1.3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">11x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">18x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow">1.2x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">1.4x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">37x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">19x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">2.3x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.6x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.7x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-error browser-first"><span data-toggle="tooltip" title="TypeError: Cannot read property 'value' of undefined">Error <span class="glyphicon glyphicon-info-sign"></span></span></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">1.4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">1.4x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">1.3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">97x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">342x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">368x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">353x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.5x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-bindings">
@@ -257,14 +257,152 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-ok browser-first">Identical</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th class="js-impl-traceur">traceur</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">1.3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-ok">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-ok">Identical</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th class="js-impl-typescript">typescript</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-Chakra js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th class="js-impl-es6">es6</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">1.3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-ok">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-no-support browser-first"></td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
+                <td class="js-family-Chakra js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.3x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-no-support browser-first"></td>
+            </tr>
+            <tr class="feature-row" id="test-bindings-compound">
+                <th rowspan="4">
+                  bindings-compound
+                  <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/bindings-compound">tests</a>
+                </th>
+              <th class="js-impl-babel">babel</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th class="js-impl-traceur">traceur</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-ok">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-ok">Identical</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th class="js-impl-typescript">typescript</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.3x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">1.4x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th class="js-impl-es6">es6</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">1.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-no-support"></td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-no-support browser-first"></td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
+                <td class="js-family-Chakra js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-no-support browser-first"></td>
+            </tr>
+            <tr class="feature-row" id="test-classes">
+                <th rowspan="6">
+                  classes
+                  <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/classes">tests</a>
+                </th>
+              <th class="js-impl-babel">babel</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.7x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.3x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">27x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">29x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.2x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th class="js-impl-babel">babel-loose</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.2x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.3x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">28x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">29x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.3x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+            </tr>
+            <tr >
+              <th class="js-impl-babel">babel-runtime</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.2x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.3x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">28x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">29x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
             </tr>
             <tr >
@@ -289,88 +427,6 @@
                 <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-ok">Identical</td>
-                <td class="js-family-Chakra js-version-stable js-impl-typescript test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-no-support browser-first"></td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-            </tr>
-            <tr >
-              <th class="js-impl-es6">es6</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-ok">Identical</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
-                <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-ok browser-first">Identical</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-no-support browser-first"></td>
-            </tr>
-            <tr class="feature-row" id="test-classes">
-                <th rowspan="6">
-                  classes
-                  <a class="test-link" href="https://github.com/kpdecker/six-speed/tree/master/tests/classes">tests</a>
-                </th>
-              <th class="js-impl-babel">babel</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.5x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">27x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
-            </tr>
-            <tr >
-              <th class="js-impl-babel">babel-loose</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">28x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
-            </tr>
-            <tr >
-              <th class="js-impl-babel">babel-runtime</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.2x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">28x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
-            </tr>
-            <tr >
-              <th class="js-impl-traceur">traceur</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">1.2x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-ok">Identical</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">1.5x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-ok">Identical</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-ok browser-first">Identical</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
-            </tr>
-            <tr >
-              <th class="js-impl-typescript">typescript</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
@@ -378,14 +434,14 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">1.2x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.2x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
             </tr>
             <tr class="feature-row" id="test-defaults">
@@ -395,27 +451,27 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.4x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.2x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">2.4x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">2.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">32x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">10x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">59x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">1380x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">2595x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">189x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">276x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">1135x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">2579x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">202x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">281x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
             </tr>
             <tr >
@@ -435,7 +491,7 @@
               <th class="js-impl-es6">es6</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support"></td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">2.6x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-no-support"></td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
@@ -451,61 +507,61 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.7x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.9x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.6x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">27x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">2.9x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">3x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">2.4x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.4x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">1.2x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">1.2x faster</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-ok browser-first">Identical</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-no-support browser-first"></td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-no-support browser-first"></td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.2x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.2x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.2x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.3x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">27x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">3x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">3.0x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.4x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">123x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">12x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">11x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">10x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">10x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">10x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">224x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">129x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">60x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">28x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">32x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">214x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">131x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">61x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">29x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">33x slower</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">1.2x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.2x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-ok">Identical</td>
@@ -516,15 +572,15 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">13x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">11x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">11x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-no-support"></td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">213x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">123x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">219x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">122x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">29x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">27x slower</td>
             </tr>
             <tr class="feature-row" id="test-destructuring-simple">
                 <th rowspan="4">
@@ -533,9 +589,9 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">1.3x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
@@ -548,12 +604,12 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">1.5x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-ok">Identical</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-faster browser-first">1.4x faster</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-faster browser-first">1.2x faster</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-faster browser-first">1.6x faster</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
             </tr>
             <tr >
@@ -561,7 +617,7 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">1.5x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-ok">Identical</td>
@@ -572,12 +628,12 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">1.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">1.3x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-no-support"></td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">3x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">4x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">4x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
@@ -589,15 +645,15 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">42x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">8x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">18x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">14x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">15x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">11x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">10x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">8x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
@@ -606,36 +662,36 @@
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">1.4x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">1.2x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">43x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow">8x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">14x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">13x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">12x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">26x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">24x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">22x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">42x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">7x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">7x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">22x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">18x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">11x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">17x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">19x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">12x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">7x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">7x slower</td>
             </tr>
             <tr >
@@ -648,13 +704,13 @@
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-slow browser-first">1.2x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.7x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">40x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">8x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">8x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">6x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">6x slower</td>
@@ -671,12 +727,12 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">2.6x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">3.0x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">3.0x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">2.6x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">6x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-error browser-first"><span data-toggle="tooltip" title="Error: AssertError - Expect bdfunction () {
   var array = Object.keys(data),
       nextIndex = 0;
@@ -687,18 +743,18 @@
     }
   };
 } to equal bd">Incorrect <span class="glyphicon glyphicon-info-sign"></span></span></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">6x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.9x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">5x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">3x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">2.3x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">2.7x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.4x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">2.3x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">2.9x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">3x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-error browser-first"><span data-toggle="tooltip" title="Error: AssertError - Expect bdfunction () {
   var array = _Object$keys(data),
       nextIndex = 0;
@@ -709,15 +765,15 @@
     }
   };
 } to equal bd">Incorrect <span class="glyphicon glyphicon-info-sign"></span></span></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">12x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.1x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">10x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.3x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">2.7x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.8x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">2.6x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">5x slower</td>
@@ -731,20 +787,20 @@
     }
   };
 } to equal bd">Incorrect <span class="glyphicon glyphicon-info-sign"></span></span></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">22x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">21x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.9x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">7x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">5x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">6x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">7x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">8x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">6x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">4x slower</td>
             </tr>
             <tr >
@@ -763,15 +819,15 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">2.3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">2.7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">2.4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">2.7x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">2.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">2.8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">2.6x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">2.6x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">2.8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">2.7x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">3x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">2.3x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">2.4x slower</td>
             </tr>
             <tr class="feature-row" id="test-generator">
                 <th rowspan="5">
@@ -780,54 +836,54 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">8x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">11x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">17x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">36x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">20x slower</td>
-            </tr>
-            <tr >
-              <th class="js-impl-babel">babel-loose</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">11x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">11x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">16x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">37x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">19x slower</td>
-            </tr>
-            <tr >
-              <th class="js-impl-babel">babel-runtime</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">10x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">10x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">18x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">37x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">18x slower</td>
+            </tr>
+            <tr >
+              <th class="js-impl-babel">babel-loose</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">12x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">12x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">16x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">37x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">18x slower</td>
+            </tr>
+            <tr >
+              <th class="js-impl-babel">babel-runtime</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">11x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">12x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">17x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">39x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">19x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">38x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">18x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">10x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">11x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">11x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">10x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">16x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">27x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">37x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">18x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">38x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">15x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">34x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">12x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">20x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">37x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">16x slower</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
@@ -835,11 +891,11 @@
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">2.0x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">10x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">1.9x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">11x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">11x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">18x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">19x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-map-set">
@@ -849,78 +905,78 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">14x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">14x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">6x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">16x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">15x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">24x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">2.5x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.6x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">8x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">8x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">22x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">25x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">25x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">25x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">28x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">24x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">4x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">19x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">20x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">7x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">8x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">22x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">26x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">25x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">5x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">19x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">25x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">28x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">24x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">4x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">20x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">14x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">5x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">15x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">14x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">6x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">1.6x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">5x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">1.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow">4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">13x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">14x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">2.7x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow">6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">5x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">16x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">15x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">2.6x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-slow browser-first">8x slower</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">8x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">13x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">14x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-es6 test-slow browser-first">2.7x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">5x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">16x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">15x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-es6 test-slow browser-first">2.6x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">8x slower</td>
             </tr>
@@ -931,80 +987,80 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">5x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">9x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">9x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">6x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">8x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">8x faster</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">9x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">185x faster</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-faster">13x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">14x faster</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-faster">12x faster</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-faster browser-first">16x faster</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-faster browser-first">72x faster</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-faster browser-first">64x faster</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">62x faster</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">4x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">6x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">6x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">5x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">5x faster</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">6x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">53x faster</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-faster">3.0x faster</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-faster browser-first">16x faster</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-faster browser-first">21x faster</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">9x faster</td>
-            </tr>
-            <tr >
-              <th class="js-impl-babel">babel-runtime</th>
-
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">4x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">6x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">6x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">6x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">54x faster</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-faster">3.0x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">4x faster</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-faster">2.8x faster</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-faster browser-first">16x faster</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-faster browser-first">20x faster</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">9x faster</td>
             </tr>
             <tr >
+              <th class="js-impl-babel">babel-runtime</th>
+
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">5x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">5x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">5x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">5x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">4x faster</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-faster">2.9x faster</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-faster browser-first">16x faster</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-faster browser-first">19x faster</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">9x faster</td>
+            </tr>
+            <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">6x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster">10x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">10x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster">9x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">9x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-faster">9x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-faster browser-first">187x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-faster">10x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-faster browser-first">14x faster</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-faster">13x faster</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-faster browser-first">38x faster</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-faster browser-first">71x faster</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-faster browser-first">61x faster</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-faster browser-first">39x faster</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-faster browser-first">53x faster</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-faster browser-first">62x faster</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">6x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">10x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-faster">10x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">9x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-faster">10x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-faster browser-first">180x faster</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-faster">13x faster</td>
-                <td class="js-family-Chakra js-version-stable js-impl-typescript test-faster browser-first">107x faster</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-faster browser-first">63x faster</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-faster browser-first">61x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">10x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-faster">9x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-faster browser-first">14x faster</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-faster">12x faster</td>
+                <td class="js-family-Chakra js-version-stable js-impl-typescript test-faster browser-first">112x faster</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-faster browser-first">49x faster</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-faster browser-first">62x faster</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">6x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster">10x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">10x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster">9x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">9x faster</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-faster">9x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-faster browser-first">182x faster</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-faster">12x faster</td>
-                <td class="js-family-Chakra js-version-stable js-impl-es6 test-faster browser-first">118x faster</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-faster browser-first">63x faster</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-faster browser-first">63x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-faster browser-first">14x faster</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-faster">13x faster</td>
+                <td class="js-family-Chakra js-version-stable js-impl-es6 test-faster browser-first">106x faster</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-faster browser-first">59x faster</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-faster browser-first">62x faster</td>
             </tr>
             <tr class="feature-row" id="test-map-set-object">
                 <th rowspan="6">
@@ -1013,78 +1069,78 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">10x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">1.7x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.7x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">8x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">50x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">2.2x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">1.8x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">7x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">39x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">10x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">1.4x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">2.0x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">16x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">34x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">4x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">10x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">1.7x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">1.5x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">10x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">13x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">14x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">40x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">6x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">11x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">10x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">1.4x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.9x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">15x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">37x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">3x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">10x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">1.7x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster">1.5x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">10x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">13x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">14x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">41x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">4x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">11x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster">1.9x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">1.5x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">9x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">7x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">2.2x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster">1.8x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">6x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">7x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">10x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">1.4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">4x slower</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">2.2x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-faster">1.9x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">1.6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">8x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">3x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">6x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">7x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">5x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.3x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-slow browser-first">4x slower</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">2.1x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-faster">1.9x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">7x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">1.5x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">8x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-es6 test-slow browser-first">3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">6x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">7x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">7x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-es6 test-slow browser-first">4x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.3x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">4x slower</td>
             </tr>
@@ -1095,77 +1151,77 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.8x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.0x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">2.0x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">47x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">49x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">24x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">46x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">52x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">25x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">9x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">1.3x faster</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">2.8x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">3x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">151x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">192x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">23x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">22x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">2.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.7x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">3.0x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">173x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">209x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">34x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">21x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">2.7x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">2.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.7x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">158x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">195x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">22x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">21x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">170x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">212x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">33x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">20x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">1.9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">2.2x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">2.1x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">47x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">51x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">1.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">1.7x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">1.8x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">2.0x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">48x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">52x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">10x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">9x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-faster browser-first">1.3x faster</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-faster browser-first">1.4x faster</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow">1.8x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">2.3x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">2.1x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">47x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">51x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">11x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow">1.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.8x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">2.0x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">46x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">53x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">12x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">10x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-faster browser-first">1.4x faster</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">1.7x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">1.9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">2.4x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">2.2x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">46x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">50x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">1.8x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">2.1x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">47x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">52x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-slow browser-first">11x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">9x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-faster browser-first">1.4x faster</td>
@@ -1177,13 +1233,13 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">7x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">1.2x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.9x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">3x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">2.0x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
             </tr>
@@ -1203,12 +1259,12 @@
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">7x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">7x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">7x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">1.2x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">1.2x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">6x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">3x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
@@ -1216,12 +1272,12 @@
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">114x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">95x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">98x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">92x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">106x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">100x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">110x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">2.6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">2.2x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">26x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">5x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">5x slower</td>
@@ -1229,7 +1285,7 @@
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">1.2x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
@@ -1242,12 +1298,12 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">17x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">19x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">17x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">17x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">1.3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">1.2x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">13x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
@@ -1261,7 +1317,7 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">3x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">7x faster</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">6x faster</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
@@ -1274,25 +1330,25 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">4x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">6x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">2.1x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">1.9x faster</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-faster browser-first">1.9x faster</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-faster browser-first">1.9x faster</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">7x faster</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">6x faster</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">4x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">6x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-faster browser-first">1.9x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-faster">1.9x faster</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-faster browser-first">1.9x faster</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-faster browser-first">1.9x faster</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">7x faster</td>
             </tr>
             <tr >
@@ -1300,8 +1356,8 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">1.9x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-faster">2.0x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">2.0x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-faster">1.8x faster</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-faster browser-first">1.9x faster</td>
@@ -1314,20 +1370,20 @@
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">2.0x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-faster">1.9x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-faster">1.8x faster</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-typescript test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-faster browser-first">8x faster</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-faster browser-first">7x faster</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">1.9x faster</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-faster">2.1x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-faster browser-first">2.0x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-faster">1.9x faster</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
@@ -1341,40 +1397,40 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.7x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.9x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.9x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.7x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">2.2x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.9x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">6x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">10x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">5x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">9x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">11x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">1.4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">1.4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">1.5x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">1.5x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">2.4x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">2.7x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">3x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">2.1x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">1.9x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">2.4x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">1.8x slower</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-error browser-first"><span data-toggle="tooltip" title="Error: AssertError - Expect false to equal true">Incorrect <span class="glyphicon glyphicon-info-sign"></span></span></td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-error"><span data-toggle="tooltip" title="Error: AssertError - Expect false to equal true">Incorrect <span class="glyphicon glyphicon-info-sign"></span></span></td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-no-support"></td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-no-support"></td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">2.1x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">2.4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-no-support browser-first"></td>
             </tr>
             <tr class="feature-row" id="test-rest">
@@ -1391,43 +1447,43 @@
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">2.1x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.7x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster">1.3x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">1.3x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster">1.5x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-faster browser-first">1.2x faster</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-faster">9x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-faster browser-first">15x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-faster browser-first">13x faster</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-faster">19x faster</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">2.3x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">2.2x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">1.6x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster">1.4x faster</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">1.2x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">1.4x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster">1.6x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">1.3x faster</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-typescript test-faster">8x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-faster browser-first">16x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-faster browser-first">13x faster</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-faster">19x faster</td>
                 <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">2.1x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.7x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.6x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">2.9x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-faster">2.3x faster</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-faster browser-first">20x faster</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-faster">2.6x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-faster browser-first">19x faster</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-faster">26x faster</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-faster browser-first">11x faster</td>
@@ -1453,14 +1509,14 @@
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">35x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">6x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">5x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">5x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">5x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">2.8x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">7x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">20x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">19x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">29x slower</td>
             </tr>
             <tr >
@@ -1479,11 +1535,11 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">11x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">11x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">12x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">11x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">11x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">8x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">5x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">5x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.5x slower</td>
@@ -1496,15 +1552,15 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">8x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">8x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">6x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">14x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">64x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">15x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">15x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">104x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">14x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
@@ -1522,35 +1578,35 @@
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow">5x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">5x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">6x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">6x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">5x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">13x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">23x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">14x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">24x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">14x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">8x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">10x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">10x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">13x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">12x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">12x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">10x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">27x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">14x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">5x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">11x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">29x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">11x slower</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">2.9x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">2.6x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">2.9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">2.9x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">4x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">8x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">7x slower</td>
@@ -1569,46 +1625,46 @@
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.8x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">1.7x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">1.9x faster</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-faster">2.2x faster</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">3x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.5x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">19x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">3x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">2.9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">2.9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">2.8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">3.0x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">2.6x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">5x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">2.4x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">2.3x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">27x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">25x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">27x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">9x slower</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster">1.2x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">1.9x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-faster browser-first">1.6x faster</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-faster">2.1x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-faster browser-first">1.9x faster</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-faster">2.2x faster</td>
                 <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">3x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.5x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-slow browser-first">1.6x slower</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">6x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">6x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">6x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">7x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">5x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">5x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">5x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">6x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.7x slower</td>
@@ -1622,59 +1678,59 @@
               <th class="js-impl-babel">babel</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">30x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">31x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">32x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">35x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">44x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">48x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">29x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">32x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">34x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">34x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">48x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">44x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">32x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">31x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">37x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">31x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.5x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.5x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">3x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.3x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">3x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">4x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">4x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">5x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">26x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">31x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">30x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">33x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">45x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">47x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">28x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">28x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">32x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">34x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">48x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">43x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">30x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">33x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">34x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">31x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">30x slower</td>
             </tr>
             <tr >
               <th class="js-impl-traceur">traceur</th>
 
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">12x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">13x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">13x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">16x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">21x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">23x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">12x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">14x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">17x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">23x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">20x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">11x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">15x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">22x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">14x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">19x slower</td>
             </tr>
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">1.2x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster">1.2x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
@@ -1686,14 +1742,14 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">13x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">13x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">14x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">12x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">14x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">13x slower</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">52x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">46x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.6x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.4x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">7x slower</td>
             </tr>
             <tr class="feature-row" id="test-template_string">
@@ -1705,7 +1761,7 @@
 
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.2x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-ok">Identical</td>
@@ -1729,8 +1785,8 @@
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster browser-first">1.3x faster</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-faster">1.2x faster</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-typescript test-ok">Identical</td>
                 <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
@@ -1742,11 +1798,11 @@
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">2.0x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">1.9x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">1.8x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">2.1x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">2.1x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-ok">Identical</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">788x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">196x slower</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-ok">Identical</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-faster browser-first">1.3x faster</td>
@@ -1759,15 +1815,15 @@
                 </th>
               <th class="js-impl-babel">babel</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.6x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.5x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">41x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">34x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">53x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">35x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.5x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.1x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.2x slower</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-loose</th>
@@ -1776,22 +1832,22 @@
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-babel test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-babel test-ok">Identical</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">10x faster</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-faster browser-first">8x faster</td>
                 <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-faster">9x faster</td>
                 <td class="js-family-Chakra js-version-stable js-impl-babel test-faster browser-first">1.5x faster</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-faster browser-first">1.3x faster</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">1.2x faster</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-faster browser-first">1.3x faster</td>
             </tr>
             <tr >
               <th class="js-impl-babel">babel-runtime</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.3x slower</td>
-                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">41x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">34x slower</td>
-                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow">1.4x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-babel test-slow browser-first">1.5x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-babel test-slow">1.5x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-babel test-slow browser-first">53x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-babel test-slow">33x slower</td>
+                <td class="js-family-Chakra js-version-stable js-impl-babel test-slow browser-first">1.4x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-babel test-slow browser-first">1.5x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-babel test-slow browser-first">2.2x slower</td>
             </tr>
@@ -1802,8 +1858,8 @@
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow">6x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-traceur test-slow browser-first">6x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-traceur test-slow">10x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">133x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">137x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-traceur test-slow browser-first">159x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-traceur test-slow">120x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-traceur test-slow browser-first">15x slower</td>
                 <td class="js-family-Chakra js-version-prerelease js-impl-traceur test-slow browser-first">13x slower</td>
                 <td class="js-family-JavaScriptCore js-version-stable js-impl-traceur test-slow browser-first">7x slower</td>
@@ -1811,28 +1867,28 @@
             <tr >
               <th class="js-impl-typescript">typescript</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">3x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-ok browser-first">Identical</td>
                 <td class="js-family-v8 js-version-stable js-impl-typescript test-ok">Identical</td>
-                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.3x slower</td>
-                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">1.3x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">75x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">87x slower</td>
+                <td class="js-family-v8 js-version-stable js-impl-typescript test-slow browser-first">1.4x slower</td>
+                <td class="js-family-v8 js-version-prerelease js-impl-typescript test-slow">1.4x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-typescript test-slow browser-first">94x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-typescript test-slow">95x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-typescript test-slow browser-first">1.6x slower</td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.3x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-slow browser-first">2.3x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-typescript test-slow browser-first">1.4x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-typescript test-slow browser-first">2.1x slower</td>
             </tr>
             <tr >
               <th class="js-impl-es6">es6</th>
 
-                <td class="js-family-v8 js-version-stable js-impl-es6 test-no-support browser-first"></td>
+                <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow">4x slower</td>
                 <td class="js-family-v8 js-version-stable js-impl-es6 test-slow browser-first">4x slower</td>
                 <td class="js-family-v8 js-version-prerelease js-impl-es6 test-slow">4x slower</td>
-                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">42x slower</td>
-                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">35x slower</td>
+                <td class="js-family-SpiderMonkey js-version-stable js-impl-es6 test-slow browser-first">54x slower</td>
+                <td class="js-family-SpiderMonkey js-version-prerelease js-impl-es6 test-slow">33x slower</td>
                 <td class="js-family-Chakra js-version-stable js-impl-es6 test-no-support browser-first"></td>
-                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.4x slower</td>
-                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">2.6x slower</td>
+                <td class="js-family-Chakra js-version-prerelease js-impl-es6 test-slow browser-first">1.5x slower</td>
+                <td class="js-family-JavaScriptCore js-version-stable js-impl-es6 test-slow browser-first">2.5x slower</td>
             </tr>
       </tbody>
     </table>
@@ -1845,7 +1901,7 @@
 
       <div class="panel-body">
         <p>
-          Run on 10/25/2015 using babel 5.8.29, babel-runtime 5.8.29, and traceur 0.0.91.
+          Run on 11/10/2015 using babel 5.8.33, babel-runtime 5.8.29, and traceur 0.0.91.
         </o>
         <p>
           For each of the ES6 features in question, a ES5 implementation of that functionality was written along with a ES6 version. It should be noted that the functionality is frequently the same, but in some cases the "common" vs. "correct" version was written, i.e. using <code>x[key] = value</code> vs. <code>defineProperty</code> which is faster but can be hit but a particular nasty edge case for those who deem it fun to extend <code>Object.prototype</code>.
