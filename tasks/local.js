@@ -23,7 +23,7 @@ var chromeArgs = [
 
   // Our own exec flags
   '--enable-javascript-harmony',
-
+  '--enable-benchmarking',
   '--disable-background-timer-throttling'
 ];
 
