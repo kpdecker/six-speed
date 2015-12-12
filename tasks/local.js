@@ -22,7 +22,9 @@ var chromeArgs = [
   '--test-type',
 
   // Our own exec flags
-  '--enable-javascript-harmony'
+  '--enable-javascript-harmony',
+
+  '--disable-background-timer-throttling'
 ];
 
 var browsers = [
