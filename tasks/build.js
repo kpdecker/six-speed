@@ -66,10 +66,11 @@ Gulp.task('build:tests', function() {
 
               if (testType !== 'es6') {
                 try {
-                  // If it loads, then assume support
+                  // If esprima can parse, then assume that it should work under es5
                   Esprima.parse(src);
                 } catch (err) {
-                  if (!(/Unexpected token/.test(err)) && !(/Invalid regular expression/.test(err))) {
+                  if (!(/Unexpected token/.test(err)) && !(/Invalid regular expression/.test(err))
+                      && !(/Use of future reserved word in strict mode/.test(err))) {
                     throw new Error(err);
                   }
                   return;
