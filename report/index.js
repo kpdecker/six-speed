@@ -1,5 +1,5 @@
 /*global REPORT_DATA, localStorage */
-import 'babel-core/browser-polyfill';
+import 'babel-polyfill/dist/polyfill';
 import 'bootstrap';
 import $ from 'jquery';
 

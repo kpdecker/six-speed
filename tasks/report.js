@@ -1,5 +1,5 @@
 var _ = require('lodash'),
-    Babel = require('babel'),
+    Babel = require('babel-core'),
     BabelRuntimePackage = require('babel-runtime/package'),
     DataStore = require('../lib/data-store'),
     Fs = require('fs'),

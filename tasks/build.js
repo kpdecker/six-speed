@@ -1,5 +1,5 @@
 var _ = require('lodash'),
-    Babel = require('babel'),
+    Babel = require('babel-core'),
     Esprima = require('esprima'),
     Fs = require('fs'),
     Gulp = require('gulp'),
@@ -89,9 +89,10 @@ Gulp.task('build:tests', function() {
             }
 
             if (ext === 'es6') {
-              var babel = Babel.transform(content, {optional: []}).code,
-                  babelRuntime = Babel.transform(content, {optional: ['runtime']}).code,
-                  babelLoose = Babel.transform(content, {loose: 'all', optional: ['runtime']}).code;
+              // TODO: Update these settings for Babel 6
+              var babel = Babel.transform(content, {presets: ['es2015', 'stage-0']}).code,
+                  babelRuntime = Babel.transform(content, {presets: ['es2015', 'stage-0'], plugins: ['transform-runtime']}).code,
+                  babelLoose = Babel.transform(content, {presets: ['es2015-loose', 'stage-0'], plugins: ['transform-runtime']}).code;
               createFile('babel', babel);
               if (babel !== babelRuntime) {
                 createFile('babel-runtime', babelRuntime);
@@ -125,7 +126,7 @@ Gulp.task('build:browser-runner', function() {
         'lib/worker.js',
         'lib/worker-test.js',
         require.resolve('benchmark'),
-        require.resolve('babel-core/browser-polyfill'),
+        require.resolve('babel-polyfill/dist/polyfill'),
         require.resolve('traceur/bin/traceur-runtime')
       ])
       .pipe(Gulp.dest('build'));
@@ -157,7 +158,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
             if (RegExp.$1 === 'traceur') {
               type.push('traceur-runtime.js');
             } else if (RegExp.$1 === 'babel') {
-              type.push('browser-polyfill.js');
+              type.push('polyfill.js');
             }
             type.push('runner.js');
           }
