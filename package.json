@@ -19,6 +19,12 @@
   },
   "author": "Kevin Decker <kpdecker@gmail.com>",
   "license": "MIT",
+  "contributors": [
+    {
+      "name": "Matthias v/d Meent",
+      "email": "boekewurm@gmail.com"
+    }
+  ],
   "dependencies": {
     "applescript": "^1.0.0",
     "async": "^1.2.1",

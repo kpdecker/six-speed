@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "homepage": "https://github.com/kpdecker/six-speed",
   "authors": [
-    "kpdecker <kpdecker@gmail.com>"
+    "kpdecker <kpdecker@gmail.com>",
+    "mmeent <boekewurm@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
