@@ -42,6 +42,6 @@ assertEqual(fn(0, __(list), 4), 2);
 test(function() {
   fn();
   fn(__(list));
-  fn(3, 2, __(list));
+  fn(3, [2, 1, 0], __(list));
   fn(0, __(list), 4);
 });
