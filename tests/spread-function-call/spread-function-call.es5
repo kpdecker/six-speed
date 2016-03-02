@@ -1,0 +1,47 @@
+var list = [1, 2, 3];
+
+Array.prototype.expand = false;
+
+function __(list) {
+  list.expand = true;
+  return list;
+}
+
+// wrap the function to be called, so that the arguments are parsed first.
+function wrap(func) {
+  return function() {
+    var args = [];
+    for (var i = 0; i < arguments.length; i++) {
+      var arg = arguments[i];
+      if ((arg instanceof Array) && arg.expand === true) {
+        Array.prototype.push.apply(args, arg);
+        arg.expand = false;
+      } else {
+        args.push(arg);
+      }
+    }
+    return func.apply(this, args);
+  }
+}
+
+var fn = wrap(function(a, b, c, d, e) {
+  return c;
+});
+
+assertEqual(fn(), undefined);
+// don't fail with no arguments.
+assertEqual(fn(list), undefined);
+// make sure that lists are not auto-spread.
+assertEqual(fn(__(list)), 3);
+// equivalent to fn(1, 2, 3);
+assertEqual(fn(3, [2, 1, 0], __(list)), 1);
+// equivalent to fn(3, [2, 1, 0], 1, 2, 3); Makes sure that list arguments are not spread by default.
+assertEqual(fn(0, __(list), 4), 2);
+// equivalent to fn(0, 1, 2, 3, 4);
+
+test(function() {
+  fn();
+  fn(__(list));
+  fn(3, 2, __(list));
+  fn(0, __(list), 4);
+});
