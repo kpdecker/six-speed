@@ -5,7 +5,8 @@ var Async = require('async'),
     Path = require('path'),
     Server = require('./server');
 
-var safariStableRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-stable.html'));
+var safariStableRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-stable.html')),
+    safariPrereleaseRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-prerelease.html'));
 
 var chromeArgs = [
   // Defaults from Sauce Labs
@@ -52,12 +53,12 @@ var browsers = [
     path: '/Applications/Safari.app/Contents/MacOS/Safari',
     app: '/Applications/Safari.app',
     args: [safariStableRedirect]
+  },
+  {
+    path: './browsers/WebKit.app/Contents/MacOS/WebKit',
+    app: './browsers/WebKit.app',
+    args: [safariPrereleaseRedirect]
   }
-  // {
-  //   path: './browsers/WebKit.app/Contents/MacOS/WebKit',
-  //   app: './browsers/WebKit.app',
-  //   args: [safariPrereleaseRedirect]
-  // }
 ];
 
 Gulp.task('test:local', ['build:browser'], function(callback) {
