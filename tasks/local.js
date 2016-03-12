@@ -68,20 +68,35 @@ Gulp.task('test:local', ['build:browser'], function(callback) {
 });
 
 function runProcess(config, callback) {
-  var child;
+  var child,
+      appPath = Path.resolve(config.app);
   Server.start(function() {
     child = ChildProcess.spawn(config.path, config.args, {stdio: 'inherit'});
 
     if (!(/firefox/.test(config.path))) {
       setTimeout(function() {
-        AppleScript.execString('tell application "' + config.app + '" to activate', function() {});
+        execAppleScript('tell application "' + appPath + '" to activate', function() {});
       }, 3000);
     }
   }, function() {
-    child.kill();
+    function killServer() {
+      Server.stop(function() {
+        callback();
+      });
+    }
 
-    Server.stop(function() {
-      callback();
-    });
+    if (/Safari|WebKit/.test(config.path)) {
+      execAppleScript('tell application "' + appPath + '" to close (every tab of window 1)', function() {
+        execAppleScript('tell application "' + appPath + '" to quit', killServer);
+      });
+    } else {
+      child.kill();
+      killServer();
+    }
   });
+}
+
+function execAppleScript(script, cb) {
+  console.log('Running script', script);
+  AppleScript.execString(script, cb);
 }
