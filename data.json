@@ -5649,24 +5649,24 @@
       "stats": {
         "arrow-args": {
           "supportsES6": false,
-          "baseline": 16227508.204939187,
+          "baseline": 12519610.408030186,
           "relative": {
-            "babel": 1.0469848823339782,
-            "traceur": 0.9868854831591295
+            "babel": 1.3547062531016234,
+            "traceur": 1.3602469417776164
           },
           "raw": {
-            "babel": 16989955.76852192,
-            "traceur": 16014692.275300147
+            "babel": 16960394.50615466,
+            "traceur": 17029761.769770276
           },
           "elapsed": {
-            "babel": 5.505,
-            "es5": 5.586,
-            "traceur": 5.563
+            "babel": 5.506,
+            "es5": 5.519,
+            "traceur": 5.467
           },
           "count": {
-            "babel": 1562500,
-            "es5": 1413943,
-            "traceur": 1442360
+            "babel": 1325487,
+            "es5": 986699,
+            "traceur": 1343644
           },
           "errors": {
             "typescript": "Error: AssertError - Expect undefined to equal 1"
@@ -5674,419 +5674,412 @@
         },
         "arrow": {
           "supportsES6": false,
-          "baseline": 126364073.26431473,
+          "baseline": 121039224.08405358,
           "relative": {
-            "babel": 1.102715944132894,
-            "es5-bind": 0.2868296404021462,
-            "traceur": 0.8420718536337521,
-            "typescript": 0.9673043643613587
+            "babel": 1.0068245029738314,
+            "es5-bind": 0.29064207335413067,
+            "traceur": 1.0062761867746945,
+            "typescript": 1.0262303560807857
           },
           "raw": {
-            "babel": 139343678.354137,
-            "es5-bind": 36244961.69415385,
-            "traceur": 106407629.40639277,
-            "typescript": 122232519.56705011
+            "babel": 121865256.62876545,
+            "es5-bind": 35179091.04496456,
+            "traceur": 121798888.86146921,
+            "typescript": 124214126.0315203
           },
           "elapsed": {
-            "babel": 5.724,
-            "es5-bind": 5.669,
-            "es5": 5.674,
-            "traceur": 5.611,
-            "typescript": 5.821
+            "babel": 5.61,
+            "es5-bind": 5.624,
+            "es5": 5.639,
+            "traceur": 5.548,
+            "typescript": 5.617
           },
           "count": {
-            "babel": 12779011,
-            "es5-bind": 2936091,
-            "es5": 11468586,
-            "traceur": 10262962,
-            "typescript": 10658087
+            "babel": 9640195,
+            "es5-bind": 2803196,
+            "es5": 9682430,
+            "traceur": 9559975,
+            "typescript": 9760229
           },
           "errors": {}
         },
         "arrow-declare": {
           "supportsES6": false,
-          "baseline": 29183785.111222815,
+          "baseline": 26793335.97771677,
           "relative": {
-            "babel": 0.4743686426870647,
-            "traceur": 0.442687688000379,
-            "typescript": 0.41112765180881294
+            "babel": 0.4759565431903296,
+            "traceur": 0.48830343031337703,
+            "typescript": 0.497565828172373
           },
           "raw": {
-            "babel": 13843872.531681733,
-            "traceur": 12919302.357987111,
-            "typescript": 11998261.043670032
+            "babel": 12752463.572491163,
+            "traceur": 13083277.867457919,
+            "typescript": 13331448.405253282
           },
           "elapsed": {
-            "babel": 5.584,
-            "es5": 5.864,
-            "traceur": 5.667,
-            "typescript": 5.581
+            "babel": 5.537,
+            "es5": 5.733,
+            "traceur": 5.581,
+            "typescript": 5.666
           },
           "count": {
-            "babel": 1286374,
-            "es5": 2732328,
-            "traceur": 1303873,
-            "typescript": 1153954
+            "babel": 1277200,
+            "es5": 2601262,
+            "traceur": 1130417,
+            "typescript": 1184277
           },
           "errors": {}
         },
         "bindings": {
           "supportsES6": true,
-          "baseline": 175274365.04373333,
+          "baseline": 174588028.2746221,
           "relative": {
-            "babel": 1.0239628858466177,
-            "es6": 0.9431690499709926,
-            "traceur": 1.061830355815469,
-            "typescript": 1.0243897567262366
+            "babel": 0.992401921812726,
+            "es6": 0.869907298372304,
+            "traceur": 1.0128611310430748,
+            "typescript": 1.0273067959375553
           },
           "raw": {
-            "babel": 179474444.64511472,
-            "es6": 165313356.36256692,
-            "traceur": 186111641.39971775,
-            "typescript": 179549264.16749558
+            "babel": 173261494.78522953,
+            "es6": 151875400.00452393,
+            "traceur": 176833427.7848141,
+            "typescript": 179355467.93585733
           },
           "elapsed": {
-            "babel": 5.62,
-            "es5": 5.417,
-            "es6": 5.68,
-            "traceur": 5.686,
-            "typescript": 5.448
+            "babel": 5.524,
+            "es5": 5.656,
+            "es6": 5.6,
+            "traceur": 5.579,
+            "typescript": 5.574
           },
           "count": {
-            "babel": 18750000,
-            "es5": 15047017,
-            "es6": 15429761,
-            "traceur": 14746517,
-            "typescript": 14771534
+            "babel": 13562254,
+            "es5": 13699789,
+            "es6": 12061540,
+            "traceur": 13945730,
+            "typescript": 14021522
           },
           "errors": {}
         },
         "classes": {
           "supportsES6": false,
-          "baseline": 21193849.01889535,
+          "baseline": 24891699.273337066,
           "relative": {
-            "babel-loose": 0.7830713026138194,
-            "babel-runtime": 0.8092260922771329,
-            "babel": 0.681611221514518,
-            "traceur": 1.1832241372108825,
-            "typescript": 1.342083259953594
+            "babel": 0.8242545857458315,
+            "traceur": 0.9361062556700971,
+            "typescript": 1.0380692574218668
           },
           "raw": {
-            "babel-loose": 16596294.958627,
-            "babel-runtime": 17150615.62187223,
-            "babel": 14445965.318363529,
-            "traceur": 25077073.71956016,
-            "typescript": 28443909.98224335
+            "babel": 20517097.27305426,
+            "traceur": 23301275.404029638,
+            "typescript": 25839307.78064143
           },
           "elapsed": {
-            "babel-loose": 5.556,
-            "babel-runtime": 5.801,
-            "babel": 5.636,
-            "es5": 5.793,
-            "traceur": 5.774,
-            "typescript": 5.869
+            "babel": 5.542,
+            "es5": 5.445,
+            "traceur": 5.461,
+            "typescript": 5.503
           },
           "count": {
-            "babel-loose": 1777631,
-            "babel-runtime": 1810377,
-            "babel": 1793478,
-            "es5": 2481935,
-            "traceur": 2650513,
-            "typescript": 17154203
+            "babel": 1908822,
+            "es5": 2343750,
+            "traceur": 2144532,
+            "typescript": 2377842
           },
-          "errors": {}
+          "errors": {
+            "babel-loose": "Error: Unsupported test library: babel-runtime/helpers/classCallCheck",
+            "babel-runtime": "Error: Unsupported test library: babel-runtime/helpers/classCallCheck"
+          }
         },
         "defaults": {
           "supportsES6": false,
-          "baseline": 77943651.13573876,
+          "baseline": 71243838.71186855,
           "relative": {
-            "babel": 0.7343016856934971,
-            "traceur": 0.0055711507239220035,
-            "typescript": 1.0113941079316906
+            "babel": 0.861964604755812,
+            "traceur": 0.006050262384758755,
+            "typescript": 0.9613145639587585
           },
           "raw": {
-            "babel": 57234154.41807883,
-            "traceur": 434235.8284499951,
-            "typescript": 78831749.5093694
+            "babel": 61409667.2765626,
+            "traceur": 431043.91750423796,
+            "typescript": 68487739.74604803
           },
           "elapsed": {
-            "babel": 5.591,
-            "es5": 5.535,
-            "traceur": 5.747,
-            "typescript": 5.515
+            "babel": 5.528,
+            "es5": 5.514,
+            "traceur": 5.565,
+            "typescript": 5.719
           },
           "count": {
-            "babel": 5092546,
-            "es5": 7200040,
-            "traceur": 45907,
-            "typescript": 7130376
+            "babel": 4828239,
+            "es5": 5606392,
+            "traceur": 39171,
+            "typescript": 5514235
           },
           "errors": {}
         },
         "destructuring": {
           "supportsES6": false,
-          "baseline": 107768196.05710874,
+          "baseline": 98852968.7643669,
           "relative": {
-            "babel-loose": 0.9912181060854443,
-            "babel-runtime": 0.3236027446151493,
-            "babel": 0.35186340715545145,
-            "traceur": 0.016841429825234806,
-            "typescript": 1.0163196198322708
+            "babel-loose": 0.9978722666816102,
+            "babel": 0.3603097169741479,
+            "traceur": 0.016868407643577266,
+            "typescript": 0.9835812739000775
           },
           "raw": {
-            "babel-loose": 106821787.19197217,
-            "babel-runtime": 34874084.0263039,
-            "babel": 37919684.64765097,
-            "traceur": 1814970.5112879432,
-            "typescript": 109526932.0467704
+            "babel-loose": 98642636.0091052,
+            "babel": 35617685.197543316,
+            "traceur": 1667492.1738951511,
+            "typescript": 97229928.94606057
           },
           "elapsed": {
-            "babel-loose": 5.578,
-            "babel-runtime": 5.537,
-            "babel": 5.746,
-            "es5": 5.606,
-            "traceur": 5.535,
-            "typescript": 5.715
+            "babel-loose": 5.516,
+            "babel": 5.364,
+            "es5": 5.459,
+            "traceur": 5.618,
+            "typescript": 5.687
           },
           "count": {
-            "babel-loose": 9795905,
-            "babel-runtime": 3191268,
-            "babel": 3443644,
-            "es5": 9718252,
-            "traceur": 175020,
-            "typescript": 9792577
+            "babel-loose": 7690067,
+            "babel": 2782095,
+            "es5": 7704073,
+            "traceur": 136933,
+            "typescript": 7796537
           },
-          "errors": {}
+          "errors": {
+            "babel-runtime": "Error: Unsupported test library: babel-runtime/helpers/slicedToArray"
+          }
         },
         "destructuring-simple": {
           "supportsES6": false,
-          "baseline": 162316584.25920895,
+          "baseline": 143192488.26291078,
           "relative": {
-            "babel": 1.0008833932227619,
-            "traceur": 1.254867349483876,
-            "typescript": 0.959085532826283
+            "babel": 1.0183057538978768,
+            "traceur": 1.2695180303207785,
+            "typescript": 0.9938601565901344
           },
           "raw": {
-            "babel": 162459973.6296854,
-            "traceur": 203685781.86662975,
-            "typescript": 155675487.70078567
+            "babel": 145813734.71307623,
+            "traceur": 181785445.65626168,
+            "typescript": 142313308.8075075
           },
           "elapsed": {
-            "babel": 5.401,
-            "es5": 5.374,
-            "traceur": 5.598,
-            "typescript": 5.529
+            "babel": 5.424,
+            "es5": 5.419,
+            "traceur": 5.417,
+            "typescript": 5.567
           },
           "count": {
             "babel": 12500000,
-            "es5": 14648438,
-            "traceur": 18414255,
-            "typescript": 14790493
+            "es5": 12500000,
+            "traceur": 14647500,
+            "typescript": 11392958
           },
           "errors": {}
         },
         "for-of-array": {
           "supportsES6": false,
-          "baseline": 11916367.534922322,
+          "baseline": 9078368.005519288,
           "relative": {
-            "babel-loose": 0.8481428987204618,
-            "babel-runtime": 0.04448783513689048,
-            "babel": 0.10769710304520873,
-            "traceur": 0.09094905314627924,
-            "typescript": 1.0196590459812618
+            "babel-loose": 0.8479626609240674,
+            "babel-runtime": 0.04936797245120284,
+            "babel": 0.11756364059427399,
+            "traceur": 0.10839214530463859,
+            "typescript": 1.074516567429649
           },
           "raw": {
-            "babel-loose": 10106782.503287422,
-            "babel-runtime": 530133.3943242183,
-            "babel": 1283358.2623331093,
-            "traceur": 1083782.3442442468,
-            "typescript": 12150631.952220974
+            "babel-loose": 7698117.0908080535,
+            "babel-runtime": 448180.6215983575,
+            "babel": 1067285.9933834255,
+            "traceur": 984023.7839832286,
+            "typescript": 9754856.827153735
           },
           "elapsed": {
-            "babel-loose": 5.63,
-            "babel-runtime": 5.623,
-            "babel": 5.688,
-            "es5": 5.654,
-            "traceur": 5.701,
-            "typescript": 5.845
+            "babel-loose": 5.478,
+            "babel-runtime": 5.68,
+            "babel": 5.799,
+            "es5": 5.502,
+            "traceur": 5.69,
+            "typescript": 5.488
           },
           "count": {
-            "babel-loose": 933426,
-            "babel-runtime": 48707,
-            "babel": 106486,
-            "es5": 1143351,
-            "traceur": 90816,
-            "typescript": 1122467
+            "babel-loose": 683913,
+            "babel-runtime": 36394,
+            "babel": 90204,
+            "es5": 832245,
+            "traceur": 81758,
+            "typescript": 909312
           },
           "errors": {}
         },
         "for-of-object": {
           "supportsES6": false,
-          "baseline": 6178582.299621256,
+          "baseline": 5613425.241346887,
           "relative": {
-            "traceur": 0.13110517477317904
+            "traceur": 0.13463880998201508
           },
           "raw": {
-            "traceur": 810044.1122423153
+            "traceur": 755784.8944179508
           },
           "elapsed": {
-            "es5": 5.68,
-            "traceur": 5.56
+            "es5": 5.721,
+            "traceur": 5.614
           },
           "count": {
-            "es5": 649628,
-            "traceur": 85806
+            "es5": 495881,
+            "traceur": 68993
           },
           "errors": {
-            "babel-loose": "Error: AssertError - Expect bdfunction () {\n  var array = _Object$keys(data),\n      nextIndex = 0;\n\n  return {\n    next: function next() {\n      return nextIndex < array.length ? { value: data[array[nextIndex++]], done: false } : { done: true };\n    }\n  };\n} to equal bd",
-            "babel-runtime": "Error: AssertError - Expect bdfunction () {\n  var array = _Object$keys(data),\n      nextIndex = 0;\n\n  return {\n    next: function next() {\n      return nextIndex < array.length ? { value: data[array[nextIndex++]], done: false } : { done: true };\n    }\n  };\n} to equal bd",
+            "babel-loose": "Error: AssertError - Expect bdfunction () {\n  var array = (0, _keys2.default)(data),\n      nextIndex = 0;\n\n  return {\n    next: function next() {\n      return nextIndex < array.length ? { value: data[array[nextIndex++]], done: false } : { done: true };\n    }\n  };\n} to equal bd",
+            "babel-runtime": "Error: AssertError - Expect bdfunction () {\n  var array = (0, _keys2.default)(data),\n      nextIndex = 0;\n\n  return {\n    next: function next() {\n      return nextIndex < array.length ? { value: data[array[nextIndex++]], done: false } : { done: true };\n    }\n  };\n} to equal bd",
             "babel": "Error: AssertError - Expect bdfunction () {\n  var array = Object.keys(data),\n      nextIndex = 0;\n\n  return {\n    next: function next() {\n      return nextIndex < array.length ? { value: data[array[nextIndex++]], done: false } : { done: true };\n    }\n  };\n} to equal bd",
             "typescript": "ReferenceError: 'Symbol' is undefined"
           }
         },
         "generator": {
           "supportsES6": false,
-          "baseline": 4648027.6752767535,
+          "baseline": 4350046.825420896,
           "relative": {
-            "babel-loose": 0.06453832438372185,
-            "babel-runtime": 0.06382579823843229,
-            "babel": 0.06017886747497582,
-            "traceur": 0.0581942494230167
+            "babel-loose": 0.05560159415222081,
+            "babel-runtime": 0.054053844197813526,
+            "babel": 0.05473498320866677,
+            "traceur": 0.051875760830334246
           },
           "raw": {
-            "babel-loose": 299975.9178515277,
-            "babel-runtime": 296664.07660886354,
-            "babel": 279713.0414904997,
-            "traceur": 270488.4818601399
+            "babel-loose": 241869.53813020917,
+            "babel-runtime": 235136.75335449443,
+            "babel": 238099.7399463269,
+            "traceur": 225661.98871628914
           },
           "elapsed": {
-            "babel-loose": 5.884,
-            "babel-runtime": 5.746,
-            "babel": 5.734,
-            "es5": 5.76,
-            "traceur": 5.741
+            "babel-loose": 5.681,
+            "babel-runtime": 5.608,
+            "babel": 5.732,
+            "es5": 5.447,
+            "traceur": 5.638
           },
           "count": {
-            "babel-loose": 30537,
-            "babel-runtime": 29837,
-            "babel": 31346,
-            "es5": 458042,
-            "traceur": 24567
+            "babel-loose": 22533,
+            "babel-runtime": 22290,
+            "babel": 21895,
+            "es5": 412035,
+            "traceur": 20177
           },
           "errors": {}
         },
         "map-set": {
           "supportsES6": true,
-          "baseline": 51410.55234534723,
+          "baseline": 47893.546977558406,
           "relative": {
-            "babel-loose": 0.04136821399654585,
-            "babel-runtime": 0.04157486717504125,
-            "babel": 0.04150017159062736,
-            "es6": 0.3802950172727851,
-            "traceur": 0.17323789235069526,
-            "typescript": 0.372498198957131
+            "babel-loose": 0.037137730188608574,
+            "babel-runtime": 0.04033855016193417,
+            "babel": 0.03964317292686794,
+            "es6": 0.3927817323914314,
+            "traceur": 0.18221676718492605,
+            "typescript": 0.39045428366654095
           },
           "raw": {
-            "babel-loose": 2126.762731102946,
-            "babel-runtime": 2137.386885153316,
-            "babel": 2133.54674390084,
-            "es6": 19551.176892177245,
-            "traceur": 8906.255732893047,
-            "typescript": 19150.338156033147
+            "babel-loose": 1778.6576254280137,
+            "babel-runtime": 1931.9562471871902,
+            "babel": 1898.6521649124213,
+            "es6": 18811.710352215792,
+            "traceur": 8727.007299270079,
+            "typescript": 18700.240577372395
           },
           "elapsed": {
-            "babel-loose": 5.619,
-            "babel-runtime": 5.624,
-            "babel": 5.628,
-            "es5": 5.665,
-            "es6": 5.577,
-            "traceur": 5.649,
-            "typescript": 5.495
+            "babel-loose": 5.875,
+            "babel-runtime": 5.64,
+            "babel": 5.784,
+            "es5": 5.635,
+            "es6": 5.708,
+            "traceur": 5.551,
+            "typescript": 5.702
           },
           "count": {
-            "babel-loose": 213,
-            "babel-runtime": 176,
-            "babel": 218,
-            "es5": 5021,
-            "es6": 2079,
-            "traceur": 916,
-            "typescript": 1692
+            "babel-loose": 147,
+            "babel-runtime": 163,
+            "babel": 163,
+            "es5": 3987,
+            "es6": 1643,
+            "traceur": 976,
+            "typescript": 1659
           },
           "errors": {}
         },
         "map-set-lookup": {
           "supportsES6": true,
-          "baseline": 72595.58072976611,
+          "baseline": 61879.83271634039,
           "relative": {
-            "babel-loose": 15.61531577156243,
-            "babel-runtime": 15.514995620026319,
-            "babel": 15.656172792378062,
-            "es6": 113.52112106276432,
-            "traceur": 40.972219462271205,
-            "typescript": 115.60491099914455
+            "babel-loose": 20.7291603362819,
+            "babel-runtime": 20.38510522579338,
+            "babel": 19.786922410558944,
+            "es6": 132.36873240398108,
+            "traceur": 44.67691092821618,
+            "typescript": 131.89700496983266
           },
           "raw": {
-            "babel-loose": 1133602.9167152504,
-            "babel-runtime": 1126320.1170555882,
-            "babel": 1136568.9558682493,
-            "es6": 8241131.708645459,
-            "traceur": 2974402.0656510033,
-            "typescript": 8392405.649195824
+            "babel-loose": 1282716.9739593223,
+            "babel-runtime": 1261426.9012770907,
+            "babel": 1224411.448736594,
+            "es6": 8190955.018032375,
+            "traceur": 2764599.7745208573,
+            "typescript": 8161764.603319563
           },
           "elapsed": {
-            "babel-loose": 5.663,
-            "babel-runtime": 5.62,
-            "babel": 5.554,
-            "es5": 5.556,
-            "es6": 5.488,
-            "traceur": 5.648,
-            "typescript": 5.436
+            "babel-loose": 5.47,
+            "babel-runtime": 5.435,
+            "babel": 5.401,
+            "es5": 5.61,
+            "es6": 5.669,
+            "traceur": 5.446,
+            "typescript": 5.558
           },
           "count": {
-            "babel-loose": 107915,
-            "babel-runtime": 165327,
-            "babel": 108660,
-            "es5": 6678,
-            "es6": 758798,
-            "traceur": 270640,
-            "typescript": 770381
+            "babel-loose": 100722,
+            "babel-runtime": 98565,
+            "babel": 96566,
+            "es5": 4896,
+            "es6": 644459,
+            "traceur": 219600,
+            "typescript": 644214
           },
           "errors": {}
         },
         "map-set-object": {
           "supportsES6": true,
-          "baseline": 31661.744741175873,
+          "baseline": 32900.8855975382,
           "relative": {
-            "babel-loose": 0.030783540209634305,
-            "babel-runtime": 0.03051457114961383,
-            "babel": 0.026328577330768297,
-            "es6": 0.2887029024628997,
-            "traceur": 0.1358188290556612,
-            "typescript": 0.27508338272918975
+            "babel-loose": 0.02446078918210766,
+            "babel-runtime": 0.026479480883730814,
+            "babel": 0.02574557043062382,
+            "es6": 0.2901604833547785,
+            "traceur": 0.13515880602246017,
+            "typescript": 0.29745980382119885
           },
           "raw": {
-            "babel-loose": 974.660592347165,
-            "babel-runtime": 966.1445626255227,
-            "babel": 833.6086948450954,
-            "es6": 9140.837603816926,
-            "traceur": 4300.2610966057455,
-            "typescript": 8709.619846510794
+            "babel-loose": 804.7816265060242,
+            "babel-runtime": 871.1983712378274,
+            "babel": 847.0520673813166,
+            "es6": 9546.536867781955,
+            "traceur": 4446.844414444819,
+            "typescript": 9786.69097538742
           },
           "elapsed": {
-            "babel-loose": 5.444,
-            "babel-runtime": 5.491,
-            "babel": 5.629,
-            "es5": 5.468,
-            "es6": 5.717,
-            "traceur": 6.168,
-            "typescript": 5.677
+            "babel-loose": 5.45,
+            "babel-runtime": 5.752,
+            "babel": 5.442,
+            "es5": 5.62,
+            "es6": 5.649,
+            "traceur": 5.969,
+            "typescript": 5.557
           },
           "count": {
-            "babel-loose": 83,
-            "babel-runtime": 99,
-            "babel": 77,
-            "es5": 3441,
-            "es6": 976,
+            "babel-loose": 75,
+            "babel-runtime": 80,
+            "babel": 75,
+            "es5": 2919,
+            "es6": 858,
             "traceur": 976,
             "typescript": 976
           },
@@ -6094,67 +6087,65 @@
         },
         "object-literal-ext": {
           "supportsES6": false,
-          "baseline": 1815430.2494865344,
+          "baseline": 2011835.5218350594,
           "relative": {
-            "babel-loose": 1.1097996161849824,
-            "babel-runtime": 0.7875051414469101,
-            "babel": 0.5498546272933269,
-            "traceur": 0.24932317251574224,
-            "typescript": 1.1261708971854731
+            "babel-loose": 1.003672231969947,
+            "babel": 0.5754513193019394,
+            "traceur": 0.20439223542033824,
+            "typescript": 1.0172643014295102
           },
           "raw": {
-            "babel-loose": 2014763.7940907627,
-            "babel-runtime": 1429660.6554088925,
-            "babel": 998222.7232084499,
-            "traceur": 452628.8292830282,
-            "typescript": 2044484.712841898
+            "babel-loose": 2019223.4485566171,
+            "babel": 1157713.4052584907,
+            "traceur": 411203.5596059105,
+            "typescript": 2046568.4567106157
           },
           "elapsed": {
-            "babel-loose": 5.749,
-            "babel-runtime": 5.649,
-            "babel": 5.418,
-            "es5": 5.538,
-            "traceur": 5.562,
-            "typescript": 5.646
+            "babel-loose": 5.66,
+            "babel": 5.492,
+            "es5": 5.484,
+            "traceur": 5.738,
+            "typescript": 5.721
           },
           "count": {
-            "babel-loose": 221729,
-            "babel-runtime": 121730,
-            "babel": 90271,
-            "es5": 215662,
-            "traceur": 44960,
-            "typescript": 227657
+            "babel-loose": 170106,
+            "babel": 95855,
+            "es5": 171682,
+            "traceur": 34025,
+            "typescript": 170741
           },
-          "errors": {}
+          "errors": {
+            "babel-runtime": "Error: Unsupported test library: babel-runtime/helpers/defineProperty"
+          }
         },
         "promises": {
           "supportsES6": true,
-          "baseline": 35.56609365737996,
+          "baseline": 35.74188562596598,
           "relative": {
-            "babel-loose": 1.8665391023638447,
-            "babel-runtime": 1.9030619168787115,
-            "babel": 1.9322466960352425,
-            "traceur": 1.8720951485717272
+            "babel-loose": 1.8696243413224558,
+            "babel-runtime": 1.8702124584477535,
+            "babel": 1.7946880987221705,
+            "traceur": 1.8188775310994334
           },
           "raw": {
-            "babel-loose": 66.38550452983442,
-            "babel-runtime": 67.68447837150129,
-            "babel": 68.72246696035242,
-            "traceur": 66.5831113896287
+            "babel-loose": 66.82389937106919,
+            "babel-runtime": 66.84491978609626,
+            "babel": 64.14553675881015,
+            "traceur": 65.01011268419532
           },
           "elapsed": {
-            "babel-loose": 6.975,
-            "babel-runtime": 6.599,
-            "babel": 6.537,
-            "es5": 6.239,
-            "traceur": 6.96
+            "babel-loose": 6.936,
+            "babel-runtime": 6.94,
+            "babel": 76.277,
+            "es5": 6.413,
+            "traceur": 10.723
           },
           "count": {
             "babel-loose": 25,
-            "babel-runtime": 19,
-            "babel": 15,
+            "babel-runtime": 25,
+            "babel": 976,
             "es5": 5,
-            "traceur": 25
+            "traceur": 75
           },
           "errors": {
             "es6": "ReferenceError: 'Promise' is undefined",
@@ -6163,332 +6154,319 @@
         },
         "regex-u": {
           "supportsES6": false,
-          "baseline": 11303886.25755475,
+          "baseline": 12765766.22518235,
           "relative": {
-            "babel": 0.11300542815573918,
-            "traceur": 0.2677663978547102
+            "babel": 0.09761085771787857,
+            "traceur": 0.2996311489605701
           },
           "raw": {
-            "babel": 1277400.5063587509,
-            "traceur": 3026800.904944796
+            "babel": 1246077.3906659742,
+            "traceur": 3825021.201413427
           },
           "elapsed": {
-            "babel": 5.569,
-            "es5": 5.738,
-            "traceur": 5.749
+            "babel": 5.621,
+            "es5": 5.67,
+            "traceur": 5.632
           },
           "count": {
-            "babel": 129617,
-            "es5": 969153,
-            "traceur": 341444
+            "babel": 107171,
+            "es5": 1108241,
+            "traceur": 360827
           },
           "errors": {}
         },
         "rest": {
           "supportsES6": false,
-          "baseline": 340766.2664392454,
+          "baseline": 442959.2929936562,
           "relative": {
-            "babel": 0.48081673132357405,
-            "traceur": 0.4050590547501666,
-            "typescript": 0.44729450467436244
+            "babel": 0.4931536517638747,
+            "traceur": 0.44826296222337814,
+            "typescript": 0.47649378989113
           },
           "raw": {
-            "babel": 163846.1223746561,
-            "traceur": 138030.46177462416,
-            "typescript": 152422.87835667407
+            "babel": 218446.99292256567,
+            "traceur": 198562.24482170958,
+            "typescript": 211067.3522860427
           },
           "elapsed": {
-            "babel": 5.534,
-            "es5": 5.759,
-            "traceur": 5.971,
-            "typescript": 5.592
+            "babel": 5.583,
+            "es5": 5.592,
+            "traceur": 5.792,
+            "typescript": 5.638
           },
           "count": {
-            "babel": 18884,
-            "es5": 40465,
-            "traceur": 19172,
-            "typescript": 20161
+            "babel": 20921,
+            "es5": 41993,
+            "traceur": 20072,
+            "typescript": 19816
           },
           "errors": {}
         },
         "spread": {
           "supportsES6": false,
-          "baseline": 4271423.883755863,
+          "baseline": 4870822.093536462,
           "relative": {
-            "babel": 1.0147773516756442,
-            "traceur": 0.16426402182719435,
-            "typescript": 1.1364517397905411
+            "babel": 0.976266161054642,
+            "traceur": 0.13114351182541226,
+            "typescript": 1.0186526176473931
           },
           "raw": {
-            "babel": 4334544.216641869,
-            "traceur": 701641.2660744723,
-            "typescript": 4854267.10407722
+            "babel": 4755218.786436976,
+            "traceur": 638776.7148231782,
+            "typescript": 4961675.6756756725
           },
           "elapsed": {
-            "babel": 5.604,
-            "es5": 5.828,
-            "traceur": 5.796,
-            "typescript": 5.739
+            "babel": 5.527,
+            "es5": 5.585,
+            "traceur": 5.804,
+            "typescript": 5.603
           },
           "count": {
-            "babel": 449595,
-            "es5": 440191,
-            "traceur": 72058,
-            "typescript": 540331
+            "babel": 450504,
+            "es5": 440345,
+            "traceur": 56469,
+            "typescript": 585900
           },
           "errors": {}
         },
         "spread-generator": {
           "supportsES6": false,
-          "baseline": 1757358.8452601363,
+          "baseline": 2071922.3476623956,
           "relative": {
-            "babel-runtime": 0.08546328528897018,
-            "babel": 0.0798049828725168,
-            "traceur": 0.1028778908861794
+            "babel": 0.047934644122906,
+            "traceur": 0.0720425085693078
           },
           "raw": {
-            "babel-runtime": 150189.66034756223,
-            "babel": 140245.99254685108,
-            "traceur": 180793.37153053452
+            "babel": 99316.86038549285,
+            "traceur": 149266.48348640846
           },
           "elapsed": {
-            "babel-runtime": 5.684,
-            "babel": 5.67,
-            "es5": 5.636,
-            "traceur": 5.691
+            "babel": 5.53,
+            "es5": 5.576,
+            "traceur": 5.525
           },
           "count": {
-            "babel-runtime": 16342,
-            "babel": 15719,
-            "es5": 191733,
-            "traceur": 20045
+            "babel": 9139,
+            "es5": 197351,
+            "traceur": 13362
           },
           "errors": {
-            "babel-loose": "Error: AssertError - Expect -Infinity to equal 3"
+            "babel-loose": "Error: AssertError - Expect -Infinity to equal 3",
+            "babel-runtime": "Error: Unsupported test library: babel-runtime/helpers/toConsumableArray"
           }
         },
         "spread-literal": {
           "supportsES6": false,
-          "baseline": 10881746.950624654,
+          "baseline": 10621702.6585057,
           "relative": {
-            "babel": 0.307101319441114,
-            "traceur": 0.040529286878678045,
-            "typescript": 0.30416931536016806
+            "babel": 0.28019370874178784,
+            "traceur": 0.036368149169992633,
+            "typescript": 0.301327060162973
           },
           "raw": {
-            "babel": 3341798.84636115,
-            "traceur": 441029.4439030466,
-            "typescript": 3309893.5198940975
+            "babel": 2976134.26103922,
+            "traceur": 386291.6667238427,
+            "typescript": 3200606.4360127575
           },
           "elapsed": {
-            "babel": 5.664,
-            "es5": 5.742,
-            "traceur": 5.619,
-            "typescript": 5.568
+            "babel": 5.596,
+            "es5": 5.542,
+            "traceur": 5.495,
+            "typescript": 5.713
           },
           "count": {
-            "babel": 324379,
-            "es5": 1066493,
-            "traceur": 44309,
-            "typescript": 326955
+            "babel": 285826,
+            "es5": 1031193,
+            "traceur": 33448,
+            "typescript": 281298
           },
           "errors": {}
         },
         "super": {
           "supportsES6": false,
-          "baseline": 16271458.064824915,
+          "baseline": 16621499.091100821,
           "relative": {
-            "babel-loose": 0.27047326241804887,
-            "babel-runtime": 0.032967282610797496,
-            "babel": 0.03285553175205538,
-            "traceur": 0.09101443234569352,
-            "typescript": 1.0124072392668337
+            "babel": 0.05037932831237389,
+            "traceur": 0.09381597781865487,
+            "typescript": 0.9790790729104041
           },
           "raw": {
-            "babel-loose": 4400994.347091666,
-            "babel-runtime": 536425.756512823,
-            "babel": 534607.4071010925,
-            "traceur": 1480937.5192067963,
-            "typescript": 16473341.938255448
+            "babel": 837379.9597543925,
+            "traceur": 1559362.190043507,
+            "typescript": 16273761.920496115
           },
           "elapsed": {
-            "babel-loose": 5.604,
-            "babel-runtime": 5.682,
-            "babel": 5.551,
-            "es5": 5.595,
-            "traceur": 5.563,
-            "typescript": 5.668
+            "babel": 5.408,
+            "es5": 5.469,
+            "traceur": 5.58,
+            "typescript": 5.631
           },
           "count": {
-            "babel-loose": 366081,
-            "babel-runtime": 49635,
-            "babel": 44135,
-            "es5": 1826878,
-            "traceur": 120420,
-            "typescript": 1690910
+            "babel": 69910,
+            "es5": 1525315,
+            "traceur": 130174,
+            "typescript": 1486429
           },
-          "errors": {}
+          "errors": {
+            "babel-loose": "Error: Unsupported test library: babel-runtime/helpers/possibleConstructorReturn",
+            "babel-runtime": "Error: Unsupported test library: babel-runtime/core-js/object/get-prototype-of"
+          }
         },
         "template_string": {
           "supportsES6": false,
-          "baseline": 7250675.216162064,
+          "baseline": 7360039.221607499,
           "relative": {
-            "babel": 0.9982584185663741,
-            "traceur": 0.9802433003586705,
-            "typescript": 1.0194025790672614
+            "babel": 0.9603576665930669,
+            "traceur": 0.959589059221054,
+            "typescript": 0.9897792262008025
           },
           "raw": {
-            "babel": 7238047.574824344,
-            "traceur": 7107425.803719518,
-            "typescript": 7391357.015334681
+            "babel": 7068270.09289643,
+            "traceur": 7062613.112492398,
+            "typescript": 7284813.925570227
           },
           "elapsed": {
-            "babel": 5.598,
-            "es5": 5.594,
-            "traceur": 5.417,
-            "typescript": 5.61
+            "babel": 5.525,
+            "es5": 5.551,
+            "traceur": 5.453,
+            "typescript": 5.483
           },
           "count": {
-            "babel": 750385,
-            "es5": 800948,
-            "traceur": 697500,
-            "typescript": 725594
+            "babel": 735270,
+            "es5": 670169,
+            "traceur": 702172,
+            "typescript": 697500
           },
           "errors": {}
         },
         "template_string_tag": {
           "supportsES6": false,
-          "baseline": 6815721.646044856,
+          "baseline": 5885753.424657535,
           "relative": {
-            "babel-loose": 1.4069785927532907,
-            "babel-runtime": 0.6772061906406067,
-            "babel": 0.6870226771035378,
-            "traceur": 0.06951358592067601,
-            "typescript": 0.6435424285778112
+            "babel": 0.6963557657406307,
+            "traceur": 0.07058471138252188,
+            "typescript": 0.6836015876096404
           },
           "raw": {
-            "babel-loose": 9589574.450150333,
-            "babel-runtime": 4615648.892384763,
-            "babel": 4682555.331658268,
-            "traceur": 473785.25225375046,
-            "typescript": 4386206.060606063
+            "babel": 4098578.332987937,
+            "traceur": 415444.20674814185,
+            "typescript": 4023510.3853747686
           },
           "elapsed": {
-            "babel-loose": 5.503,
-            "babel-runtime": 5.695,
-            "babel": 5.663,
-            "es5": 5.558,
-            "traceur": 5.71,
-            "typescript": 5.818
+            "babel": 5.65,
+            "es5": 5.549,
+            "traceur": 5.924,
+            "typescript": 5.616
           },
           "count": {
-            "babel-loose": 948444,
-            "babel-runtime": 415147,
-            "babel": 500604,
-            "es5": 625874,
-            "traceur": 52393,
-            "typescript": 411774
+            "babel": 359432,
+            "es5": 585900,
+            "traceur": 41383,
+            "typescript": 328595
           },
-          "errors": {}
+          "errors": {
+            "babel-loose": "Error: Unsupported test library: babel-runtime/helpers/taggedTemplateLiteralLoose",
+            "babel-runtime": "Error: Unsupported test library: babel-runtime/helpers/taggedTemplateLiteral"
+          }
         },
         "map-string": {
           "supportsES6": true,
-          "baseline": 108176384.49778,
+          "baseline": 102343503.2962893,
           "relative": {
-            "babel-loose": 0.040686807369010015,
-            "babel-runtime": 0.04061405820888615,
-            "babel": 0.04139929173507932,
-            "es6": 0.08731798864184712,
-            "traceur": 0.09410985385803546,
-            "typescript": 0.09118505121321048
+            "babel-loose": 0.0413289321748133,
+            "babel-runtime": 0.04368708608109546,
+            "babel": 0.042433135729035114,
+            "es6": 0.10199535439470585,
+            "traceur": 0.10385294630675124,
+            "typescript": 0.1056283848795936
           },
           "raw": {
-            "babel-loose": 4401351.717937136,
-            "babel-runtime": 4393481.976819687,
-            "babel": 4478425.700669706,
-            "es6": 9445744.31289324,
-            "traceur": 10180463.735976728,
-            "typescript": 9864069.160490017
+            "babel-loose": 4229747.706265122,
+            "babel-runtime": 4471089.438345867,
+            "babel": 4342755.7663563965,
+            "es6": 10438561.888700772,
+            "traceur": 10628674.35267435,
+            "typescript": 10810378.956106402
           },
           "elapsed": {
-            "babel-loose": 5.733,
-            "babel-runtime": 5.904,
-            "babel": 5.403,
-            "es5": 5.646,
-            "es6": 5.452,
-            "traceur": 5.739,
-            "typescript": 5.439
+            "babel-loose": 5.653,
+            "babel-runtime": 5.669,
+            "babel": 5.667,
+            "es5": 5.464,
+            "es6": 5.456,
+            "traceur": 5.546,
+            "typescript": 5.614
           },
           "count": {
-            "babel-loose": 479263,
-            "babel-runtime": 433698,
-            "babel": 404877,
-            "es5": 8680677,
-            "es6": 816663,
-            "traceur": 898113,
-            "typescript": 964287
+            "babel-loose": 360135,
+            "babel-runtime": 377684,
+            "babel": 377684,
+            "es5": 8109577,
+            "es6": 820695,
+            "traceur": 839348,
+            "typescript": 847189
           },
           "errors": {}
         },
         "bindings-compound": {
           "supportsES6": true,
-          "baseline": 156931648.159422,
+          "baseline": 152718262.50235906,
           "relative": {
-            "babel": 1.012584455522271,
-            "es6": 1.1085009239928694,
-            "traceur": 1.0565592975271119,
-            "typescript": 1.0641140010782795
+            "babel": 0.9808803143892512,
+            "es6": 0.8826865421537481,
+            "traceur": 0.9998598660709748,
+            "typescript": 0.9866559010887261
           },
           "raw": {
-            "babel": 158906547.5057209,
-            "es6": 173958876.98844317,
-            "traceur": 165807591.9390908,
-            "typescript": 166993164.01873136
+            "babel": 149798337.33629414,
+            "es6": 134802355.05193573,
+            "traceur": 152696861.4922007,
+            "typescript": 150680374.9019697
           },
           "elapsed": {
-            "babel": 5.672,
-            "es5": 5.538,
-            "es6": 5.515,
-            "traceur": 5.543,
-            "typescript": 5.44
+            "babel": 5.486,
+            "es5": 5.535,
+            "es6": 5.455,
+            "traceur": 5.426,
+            "typescript": 5.57
           },
           "count": {
-            "babel": 13500072,
-            "es5": 13634440,
-            "es6": 16392910,
-            "traceur": 13328372,
-            "typescript": 14352420
+            "babel": 11968463,
+            "es5": 12078419,
+            "es6": 10653410,
+            "traceur": 12500000,
+            "typescript": 11913579
           },
           "errors": {}
         },
         "object-assign": {
           "supportsES6": true,
-          "baseline": 870350.5761103391,
+          "baseline": 926535.9645673217,
           "relative": {
-            "babel-loose": 0.37886348453451324,
-            "babel-runtime": 0.4055684318780544,
-            "babel": 0.30466925040530063,
-            "traceur": 0.3554794771076263
+            "babel-loose": 0.2153282128024851,
+            "babel-runtime": 0.22055578380225357,
+            "babel": 0.21190847038981145,
+            "traceur": 0.3089134156920987
           },
           "raw": {
-            "babel-loose": 329744.05203178414,
-            "babel-runtime": 352986.7183372315,
-            "babel": 265169.0576133586,
-            "traceur": 309391.7676960247
+            "babel-loose": 199509.33334750804,
+            "babel-runtime": 204352.8658861227,
+            "babel": 196340.8190126097,
+            "traceur": 286219.38957606466
           },
           "elapsed": {
-            "babel-loose": 5.454,
-            "babel-runtime": 5.575,
-            "babel": 5.696,
-            "es5": 5.535,
-            "traceur": 5.752
+            "babel-loose": 5.644,
+            "babel-runtime": 5.548,
+            "babel": 5.671,
+            "es5": 5.666,
+            "traceur": 5.569
           },
           "count": {
-            "babel-loose": 36260,
-            "babel-runtime": 30452,
-            "babel": 26130,
-            "es5": 75487,
-            "traceur": 27531
+            "babel-loose": 17818,
+            "babel-runtime": 18213,
+            "babel": 17788,
+            "es5": 79081,
+            "traceur": 25752
           },
           "errors": {
             "es6": "TypeError: Object doesn't support property or method 'assign'",
