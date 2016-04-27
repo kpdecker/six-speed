@@ -29,3 +29,10 @@ rm -rf node_modules
 npm install
 
 ./node_modules/.bin/gulp test:node
+
+nvm install 6
+
+rm -rf node_modules
+npm install
+
+./node_modules/.bin/gulp test:node
