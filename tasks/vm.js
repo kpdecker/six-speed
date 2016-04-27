@@ -5,13 +5,10 @@ var ChildProcess = require('child_process'),
 
 var RUN_USER = 'vmrun -gu IEUser -gp Passw0rd! ';
 
-Gulp.task('test:vm', ['build:browser', 'test:vm:edge', 'test:vm:ie']);
+Gulp.task('test:vm', ['build:browser', 'test:vm:edge']);
 
 Gulp.task('test:vm:edge', ['build:browser'], function(callback) {
   runVM(runEdge, callback);
-});
-Gulp.task('test:vm:ie', ['build:browser', 'test:vm:edge'], function(callback) {
-  runVM(runIE, callback);
 });
 
 
@@ -72,9 +69,6 @@ function setExperimental(vmx) {
 }
 function runEdge(vmx, uri) {
   return run(RUN_USER + 'runProgramInGuest "' + vmx + '" -interactive -activeWindow  "C:\\Windows\\explorer.exe" microsoft-edge:' + uri + '/?tag=prerelease');
-}
-function runIE(vmx, uri) {
-  return run(RUN_USER + 'runScriptInGuest "' + vmx + '" -interactive -activeWindow -noWait "" "\\"C:\\Program Files\\Internet Explorer\\iexplore.exe\\" ' + uri + '/?tag=stable"');
 }
 function stopVM(vmx) {
   return run('vmrun stop "' + vmx + '" hard');
