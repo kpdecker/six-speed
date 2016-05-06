@@ -1,5 +1,5 @@
 function Fn() {
-  return (this.constructor === Fn);
+  return !!(this && this.constructor === Fn);
 }
 
 assertEqual(typeof Fn(), 'boolean');
