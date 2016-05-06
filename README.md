@@ -22,7 +22,13 @@ Tests against the current node version.
 npm run profile:node -- --testName=$name --type=$type --count=$iterationCount
 ```
 
-Profiles a given test within the current Node environment.
+Profiles a given test within the current Node environment. Type may be one of:
+- babel
+- babel-runtime
+- traceur
+- typescript
+- es5
+- es6
 
 ```
 npm start
