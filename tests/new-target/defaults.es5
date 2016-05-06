@@ -1,10 +1,10 @@
 function Fn() {
-  return (this && this.constructor === Fn);
+  return (this.constructor === Fn);
 }
 
+assertEqual(typeof Fn(), 'boolean');
 assertEqual(typeof (new Fn()), 'object');
 
 test(function() {
-  var f1 = Fn();
-  var f2 = new Fn();
+  return (Fn() || new Fn());
 });

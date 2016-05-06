@@ -1,10 +1,10 @@
 function Fn() {
-  return (this && new.target === Fn);
+  return (new.target === Fn);
 }
 
+assertEqual(typeof Fn(), 'boolean');
 assertEqual(typeof (new Fn()), 'object');
 
 test(function() {
-  const f1 = Fn();
-  const f2 = new Fn();
+  return (Fn() || new Fn());
 });
