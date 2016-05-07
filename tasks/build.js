@@ -101,7 +101,11 @@ Gulp.task('build:tests', function() {
                 createFile('babel-loose', babelLoose);
               }
 
-              createFile('traceur', Traceur.compile(content));
+              try {
+                createFile('traceur', Traceur.compile(content));
+              } catch (err) {
+                console.log('Error traceur compiling ' + testName + ':\n' + err, err);
+              }
               createFile('typescript', TypeScript.transpile(content, { module: TypeScript.ModuleKind.CommonJS }));
             }
             createFile(ext, content);
