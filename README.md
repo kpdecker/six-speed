@@ -34,7 +34,7 @@ Profiles a given test within the current Node environment. Type may be one of:
 npm start
 ```
 
-Starts a server instance for manual browser testing. Tests may be accessed via `http://machineName:9999/` and the `#` component may be used to filter the tests to be executed, i.e. `http://machineName:9999/#promise`
+Starts a server instance for manual browser testing. Tests may be accessed via `http://machineName:9999/` and the `#` component may be used to filter the tests to be executed, i.e. `http://machineName:9999/#promises`
 
 Profiling of specific tests may be done through `http://machineName:9999/profile.html?testName=$testName&type=$type&count=$number`, i.e. `http://localhost:9999/profile.html?testName=generator&type=babel&count=1000000`.
 

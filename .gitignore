@@ -5,3 +5,4 @@ bower_components/
 v8.log
 browsers/
 nohup.out
+npm-debug.log
