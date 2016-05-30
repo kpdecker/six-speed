@@ -1,8 +1,9 @@
 var obj = {
   value: 42,
   fn: function() {
+    var self = this;
     return function() {
-      return obj.value;
+      return self.value;
     };
   }
 };
