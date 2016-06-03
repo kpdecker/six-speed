@@ -1,5 +1,6 @@
 var _ = require('lodash'),
     Babel = require('babel-core'),
+    Buble = require('buble'),
     Esprima = require('esprima'),
     Fs = require('fs'),
     Gulp = require('gulp'),
@@ -99,6 +100,13 @@ Gulp.task('build:tests', function() {
               }
               if (babel !== babelLoose) {
                 createFile('babel-loose', babelLoose);
+              }
+
+              try {
+                var bubleCode = Buble.transform(content, { dangerousForOf: true }).code;
+                createFile('buble', bubleCode);
+              } catch (err) {
+                console.log('Error Buble compiling ' + testName + ':\n' + err.message);
               }
 
               try {
