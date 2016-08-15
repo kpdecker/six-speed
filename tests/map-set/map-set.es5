@@ -14,7 +14,7 @@ function fn() {
 
   for (var i = 0; i < 250; i++) {
     map[i] = i;
-    set.push(i);
+    set.add(i);
   }
 
   map.foo = 'bar';
