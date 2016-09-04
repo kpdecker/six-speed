@@ -3,7 +3,20 @@ import 'babel-polyfill/dist/polyfill';
 import 'bootstrap';
 import $ from 'jquery';
 
-var filter = JSON.parse(localStorage.getItem('filter') || '{}');
+const hasStorage = (function() {
+  try {
+    localStorage.setItem('_test', '1');
+  } catch (e) {
+    return false;
+  }
+
+  localStorage.removeItem('_test');
+  return true;
+}());
+
+var filter = hasStorage
+  ? JSON.parse(localStorage.getItem('filter') || '{}')
+  : {};
 
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();
@@ -75,7 +88,9 @@ function filterUI() {
 }
 
 function saveFilters() {
-  localStorage.setItem('filter', JSON.stringify(filter));
+  if (hasStorage) {
+    localStorage.setItem('filter', JSON.stringify(filter));
+  }
 }
 
 function toggleColspan(to, from) {
