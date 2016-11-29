@@ -3,7 +3,7 @@
 nvm install 4
 
 rm -rf node_modules
-npm install
+yarn
 
 mkdir browsers
 rm -rf browsers/*.app browsers/*.dmg
@@ -26,13 +26,13 @@ done
 nvm install 5
 
 rm -rf node_modules
-npm install
+yarn
 
 ./node_modules/.bin/gulp test:node
 
 nvm install 6
 
 rm -rf node_modules
-npm install
+yarn
 
 ./node_modules/.bin/gulp test:node
