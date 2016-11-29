@@ -23,14 +23,14 @@ done
 
 ./node_modules/.bin/gulp test:node
 
-nvm install 5
+nvm install 6
 
 rm -rf node_modules
 yarn
 
 ./node_modules/.bin/gulp test:node
 
-nvm install 6
+nvm install 7
 
 rm -rf node_modules
 yarn
