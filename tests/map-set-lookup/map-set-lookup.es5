@@ -1,20 +1,30 @@
+var NaiveSet = function(){
+  this.map = {};
+}
+NaiveSet.prototype.add = function(el){
+  this.map[el] = true;
+}
+NaiveSet.prototype.has = function(el){
+  return this.map[el] == true;
+}
+
 var keys = [],
     values = [],
-    set = [],
+    set = new NaiveSet(),
     key = {};
 
 for (var i = 0; i < 500; i++) {
   keys.push(i);
   values.push(i);
-  set.push(i);
+  set.add(i);
 }
 
 keys.push(key);
 values.push('bar');
-set.push(key);
+set.add(key);
 
 function fn() {
-  return set.indexOf(key) >= 0 && keys.indexOf(key) >= 0;
+  return set.has(key) && keys.indexOf(key) >= 0;
 }
 
 assertEqual(fn(), true);
