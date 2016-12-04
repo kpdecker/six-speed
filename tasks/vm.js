@@ -13,7 +13,7 @@ Gulp.task('test:vm:edge', ['build:browser'], function(callback) {
 
 
 function runVM(run, callback) {
-  var vmx = './browsers/MsEdge-Win10TH2-VMware.vmwarevm';
+  var vmx = './browsers/MSEdge - Win10_preview.vmx';
   Server.start(function(uri) {
     loadSnapshot(vmx)
         .then(function() { return startVM(vmx); })
