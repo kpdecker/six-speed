@@ -1,35 +1,44 @@
 var ChildProcess = require('child_process'),
     Gulp = require('gulp'),
     GUtil = require('gulp-util'),
-    Server = require('./server');
+    Server = require('./server'),
+    userhome = require('user-home');
 
 var RUN_USER = 'vmrun -gu IEUser -gp Passw0rd! ';
 
 Gulp.task('test:vm', ['build:browser', 'test:vm:edge']);
 
 Gulp.task('test:vm:edge', ['build:browser'], function(callback) {
-  runVM(runEdge, callback);
+  runVM('stable', runEdge, (err) => {
+    if (err) {
+      return callback(err);
+    }
+
+    runVM('preview', runEdge, callback);
+  });
 });
 
 
-function runVM(run, callback) {
-  var vmx = './browsers/MSEdge - Win10_preview.vmx';
+function runVM(branch, run, callback) {
+  var vmx = `${userhome}/browsers/edge/${branch}/MSEdge - Win10_preview.vmx`,
+      tag = branch === 'preview' ? '/?tag=prerelease' : '';
   Server.start(function(uri) {
     loadSnapshot(vmx)
-        .then(function() { return startVM(vmx); })
-        .then(function() { return setExperimental(vmx); })
-        .then(function() { return run(vmx, uri); })
+        .then(() => startVM(vmx))
+        .then(() => setExperimental(vmx))
+        .then(() => run(vmx, `${uri}${tag}`))
         .catch(cleanup);
   }, function() {
     cleanup();
   });
 
-  function cleanup() {
+  function cleanup(err) {
     // Kill the vm
     stopVM(vmx)
+      .catch(() => {})
       .then(function() {
         Server.stop(function() {
-          callback();
+          callback(err);
         });
       });
   }
@@ -68,7 +77,7 @@ function setExperimental(vmx) {
   return run(RUN_USER + 'runProgramInGuest "' + vmx + '" "C:\\Windows\\System32\\reg.exe" ADD "' + key + '" /v ExperimentalJS /t REG_DWORD /d 1 /f');
 }
 function runEdge(vmx, uri) {
-  return run(RUN_USER + 'runProgramInGuest "' + vmx + '" -interactive -activeWindow  "C:\\Windows\\explorer.exe" microsoft-edge:' + uri + '/?tag=prerelease');
+  return run(RUN_USER + 'runProgramInGuest "' + vmx + '" -interactive -activeWindow  "C:\\Windows\\explorer.exe" microsoft-edge:' + uri);
 }
 function stopVM(vmx) {
   return run('vmrun stop "' + vmx + '" hard');
@@ -97,7 +106,6 @@ function run(command, options, counter) {
       /* istanbul ignore if */
       if (err
           && !(/The virtual machine is not powered on/.test(stdout))
-          && !(/The virtual machine cannot be found/.test(stdout))
 
           // Complete hack, but we want to ignore explorer error codes as they
           // occur when the command actually completed.
