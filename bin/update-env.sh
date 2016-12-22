@@ -4,8 +4,8 @@ nvm install 6
 npm install -g yarn
 yarn
 
-mkdir browsers
-rm -rf browsers/*.app browsers/*.dmg
+mkdir ~/browsers
+rm -rf ~.browsers/*.app browsers/*.dmg ~.browsers/*.app browsers/*.dmg.etag
 ./node_modules/.bin/browser-downloader ~/browsers
 if [ $? -ne 0 ]; then
   echo "Download failed";

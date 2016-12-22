@@ -3,7 +3,8 @@ var Async = require('async'),
     ChildProcess = require('child_process'),
     Gulp = require('gulp'),
     Path = require('path'),
-    Server = require('./server');
+    Server = require('./server'),
+    userhome = require('user-home');
 
 var safariStableRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-stable.html')),
     safariPrereleaseRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-prerelease.html'));
@@ -30,23 +31,23 @@ var chromeArgs = [
 
 var browsers = [
   {
-    path: './browsers/Google Chrome.app/Contents/MacOS/Google Chrome',
-    app: './browsers/Google Chrome.app',
+    path: `${userhome}/browsers/Google Chrome.app/Contents/MacOS/Google Chrome`,
+    app: `${userhome}/browsers/Google Chrome.app`,
     args: chromeArgs.concat('http://localhost:9999/?tag=stable')
   },
   {
-    path: './browsers/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
-    app: './browsers/Google Chrome Canary.app',
+    path: `${userhome}/browsers/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary`,
+    app: `${userhome}/browsers/Google Chrome Canary.app`,
     args: chromeArgs.concat('http://localhost:9999/?tag=prerelease')
   },
   {
-    path: './browsers/Firefox.app/Contents/MacOS/firefox',
-    app: './browsers/Firefox.app',
+    path: `${userhome}/browsers/Firefox.app/Contents/MacOS/firefox`,
+    app: `${userhome}/browsers/Firefox.app`,
     args: ['http://localhost:9999/moz/?tag=stable']
   },
   {
-    path: './browsers/FirefoxNightly.app/Contents/MacOS/firefox',
-    app: './browsers/FirefoxNightly.app',
+    path: `${userhome}/browsers/FirefoxNightly.app/Contents/MacOS/firefox`,
+    app: `${userhome}/browsers/FirefoxNightly.app`,
     args: ['http://localhost:9999/moz/?tag=prerelease']
   },
   {
@@ -55,8 +56,8 @@ var browsers = [
     args: [safariStableRedirect]
   },
   {
-    path: './browsers/WebKit.app/Contents/MacOS/WebKit',
-    app: './browsers/WebKit.app',
+    path: `${userhome}/browsers/WebKit.app/Contents/MacOS/WebKit`,
+    app: `${userhome}/browsers/WebKit.app`,
     args: [safariPrereleaseRedirect]
   }
 ];

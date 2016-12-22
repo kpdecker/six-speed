@@ -51,6 +51,7 @@
     "through2": "^2.0.0",
     "traceur": "0.0.108",
     "typescript": "^1.5.3",
+    "user-home": "^2.0.0",
     "webdriverio": "^2.4.5",
     "webpack": "^1.9.11"
   }
