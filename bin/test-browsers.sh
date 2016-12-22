@@ -1,6 +1,6 @@
 . ~/.nvm/nvm.sh
 
-nvm use 4
+nvm use 6
 
 rm -rf node_modules
 yarn
