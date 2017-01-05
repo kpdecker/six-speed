@@ -123,7 +123,7 @@ function render() {
     }));
   });
   tests = _.flatten(tests);
-  tests = _.unique(tests);
+  tests = _.uniq(tests);
   tests = tests.sort();
 
   tests = _.map(tests, function(test) {
@@ -219,7 +219,7 @@ function render() {
   implementations = _.map(implementations, function(impl) {
     return impl.replace(/-.*$/, '');
   });
-  implementations = _.unique(implementations.sort());
+  implementations = _.uniq(implementations.sort());
   implementations = _.map(implementations, function(implementation) {
     return {
       name: implementation,
@@ -228,7 +228,7 @@ function render() {
   });
 
   var reportData = {
-    engines: _.union(_.unique(browserTags).map(function(tag) {
+    engines: _.union(_.uniq(browserTags).map(function(tag) {
         return {name: _.capitalize(tag), selector: 'js-version-' + tag};
       }),
       [{dash: true}],

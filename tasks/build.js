@@ -25,6 +25,7 @@ Gulp.task('build:webpack', function(callback) {
       filename: 'runner.js'
     },
     externals: {
+      lodash: '_',
       benchmark: 'Benchmark'
     },
     module: {
@@ -138,6 +139,7 @@ Gulp.task('build:browser-runner', function() {
         'lib/worker.js',
         'lib/worker-test.js',
         require.resolve('benchmark'),
+        require.resolve('lodash/lodash'),
         require.resolve('babel-polyfill/dist/polyfill'),
         require.resolve('traceur/bin/traceur-runtime')
       ])
@@ -146,6 +148,7 @@ Gulp.task('build:browser-runner', function() {
 
 Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:tests'], function() {
   var scripts = [
+    'lodash.js',
     'benchmark.js',
     'traceur-runtime.js',
     'runner.js'
@@ -166,6 +169,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
           if (!type) {
             type = types[RegExp.$1] = [];
 
+            type.push('lodash.js');
             type.push('benchmark.js');
             if (RegExp.$1 === 'traceur') {
               type.push('traceur-runtime.js');
@@ -196,7 +200,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
         }))
       }));
 
-      _.each(types, function(scripts, name) {
+      _.each(types, (scripts, name) => {
         var workerScripts = scripts.concat('worker-test.js');
         this.push(new GUtil.File({
           path: name + '.js',
@@ -211,7 +215,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
           path: 'moz/' + name + '.html',
           contents: new Buffer(benchTemplate({scripts: mozScripts, jsType: 'application/javascript;version=1.7'}))
         }));
-      }, this);
+      });
 
 
       scripts[scripts.length - 1] = 'browser-profile.js';
