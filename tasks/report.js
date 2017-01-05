@@ -149,6 +149,23 @@ function render() {
 
     // Save these results to the full implementation list
     implementations = _.union(implementations, types);
+    _.each(browsers, function(browser) {
+      var browserData = data[browser.name],
+          firstVersion = true;
+
+      _.each(browser.versions, function(version) {
+        var versionData = browserData[version.id],
+            {elapsed} = versionData.stats[test] || {};
+
+        // Look for elapsed times that have a high variance
+        const types = Object.keys(elapsed),
+              average = types.reduce((prev, curr) => prev + elapsed[curr], 0) / types.length;
+
+        if (types.find((type) => elapsed[type] / average > 2 || elapsed[type] / average < 0.5)) {
+          console.warn('Elapsed outlier detected', browser.name, version.id, test, elapsed);
+        }
+      });
+    });
 
     // And then collect the results for each type
     types = _.map(types, function(type) {
