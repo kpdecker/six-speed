@@ -1,6 +1,7 @@
 var _ = require('lodash'),
     Babel = require('babel-core'),
     Buble = require('buble'),
+    Closure = require('google-closure-compiler-js'),
     Esprima = require('esprima'),
     Fs = require('fs'),
     Gulp = require('gulp'),
@@ -14,6 +15,10 @@ var _ = require('lodash'),
 
 var benchTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/bench.handlebars').toString()),
     profileTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/profile.handlebars').toString());
+
+var closureExterns =
+    '/** @param {function()} fn */ function test(fn) {}\n' +
+    '/** @param {...*} var_args */ function assertEqual(var_args) {}\n';
 
 Gulp.task('build', ['build:browser']);
 
@@ -108,6 +113,24 @@ Gulp.task('build:tests', function() {
                 createFile('buble', bubleCode);
               } catch (err) {
                 console.log('Error Buble compiling ' + testName + ':\n' + err.message);
+              }
+
+              try {
+                var closureOut = Closure.compile({
+                  jsCode: [{src: content}],
+                  externs: [{src: closureExterns}],
+                  warningLevel: 'VERBOSE',
+                  env: 'CUSTOM',  // does not need browser externs, just language ones
+                  compilationLevel: 'SIMPLE',
+                  languageIn: 'ES6',
+                  languageOut: 'ES5'
+                });
+                if (closureOut.errors.length) {
+                  console.log('Error Closure compiling ' + testName + ':\n', closureOut.errors);
+                }
+                createFile('closure', closureOut.compiledCode);
+              } catch (err) {
+                console.log('Error Closure compiling ' + testName + ':\n' + err.message);
               }
 
               try {
