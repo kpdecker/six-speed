@@ -6,8 +6,8 @@ var data = {
 
 function fn() {
   var {a, b:{c:b}, arr:[, c]} = data;
-  return c;
+  return a.length + b.length + c;
 }
 
-assertEqual(fn(), 2);
+assertEqual(fn(), 6);
 test(fn);
