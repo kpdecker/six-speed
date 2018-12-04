@@ -37,7 +37,6 @@
     "buble": "^0.15.1",
     "del": "^1.2.0",
     "esprima": "^1.2.5",
-    "google-closure-compiler-js": "^20170124.0.0",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.5",
     "handlebars": "^4.0.3",

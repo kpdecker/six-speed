@@ -1,5 +1,5 @@
 /*eslint-disable no-process-env */
-var _ = require('lodash'),
+const _ = require('lodash'),
     Async = require('async'),
     Driver = require('./driver'),
     Gulp = require('gulp'),
@@ -54,7 +54,8 @@ function startTunnel(user, pass, tunnelId, done) {
   });
   tunnel.start(function(success) {
     if (!success) {
-      throw new GUtil.PluginError('test:sauce', 'Tunnel failed to open');
+      //throw new GUtil.PluginError('test:sauce', 'Tunnel failed to open');
+      console.log('Tunnel failed to open');
     }
 
     done(tunnel);

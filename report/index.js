@@ -24,7 +24,6 @@ $(function() {
   renderList('engine', REPORT_DATA.engines);
   renderList('implementation', REPORT_DATA.implementations);
   filterUI();
-  $('.initial-hide').removeClass('initial-hide');
 });
 
 function renderList(id, list) {

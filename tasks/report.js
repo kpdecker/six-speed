@@ -1,4 +1,4 @@
-var _ = require('lodash'),
+const _ = require('lodash'),
     Babel = require('babel-core'),
     BabelRuntimePackage = require('babel-runtime/package'),
     DataStore = require('../lib/data-store'),
@@ -11,7 +11,7 @@ var _ = require('lodash'),
     webpack = require('webpack');
 
 Gulp.task('report', ['report:static', 'report:bootstrap:fonts', 'report:bootstrap:css', 'report:webpack'], function() {
-  var report = render();
+  const report = render();
   Fs.writeFileSync('site/index.html', report);
 });
 
@@ -155,15 +155,17 @@ function render() {
 
       _.each(browser.versions, function(version) {
         var versionData = browserData[version.id],
-            {elapsed} = versionData.stats[test] || {};
+            elapsed = versionData.stats[test] || {};
 
         // Look for elapsed times that have a high variance
-        const types = Object.keys(elapsed),
-              average = types.reduce((prev, curr) => prev + elapsed[curr], 0) / types.length;
+		if (elapsed != undefined || elapsed != null) {
+          var types = Object.keys(elapsed);
+          var average = types.reduce((prev, curr) => prev + elapsed[curr], 0) / types.length;
 
-        if (types.find((type) => elapsed[type] / average > 2 || elapsed[type] / average < 0.5)) {
-          console.warn('Elapsed outlier detected', browser.name, version.id, test, elapsed);
-        }
+          if (types.find((type) => elapsed[type] / average > 2 || elapsed[type] / average < 0.5)) {
+            console.warn('Elapsed outlier detected', browser.name, version.id, test, elapsed);
+          }
+	    }
       });
     });
 

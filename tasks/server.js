@@ -1,8 +1,8 @@
-var DataStore = require('../lib/data-store'),
-    Gulp = require('gulp'),
-    GUtil = require('gulp-util'),
-    Hapi = require('hapi'),
-    UserAgent = require('../lib/user-agent');
+const DataStore = require('../lib/data-store');
+const Gulp = require('gulp');
+const GUtil = require('gulp-util');
+const Hapi = require('hapi');
+const UserAgent = require('../lib/user-agent');
 
 var server;
 

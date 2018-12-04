@@ -1,4 +1,4 @@
-var _ = require('lodash'),
+const _ = require('lodash'),
     Args = require('../lib/args'),
     ChildProcess = require('child_process'),
     Gulp = require('gulp'),
@@ -30,7 +30,7 @@ function findStagingArgs(callback) {
     }
 
     // Run with everything enabled, per https://iojs.org/en/es6.html
-    var args = _.compact(stdout.replace(/\n$/, '').split(/\n/g).map(function(line) {
+    const args = _.compact(stdout.replace(/\n$/, '').split(/\n/g).map(function(line) {
       if (/(--\w+)/.exec(line)) {
         return RegExp.$1;
       }
@@ -45,7 +45,7 @@ function findStagingArgs(callback) {
 }
 
 function runNode(args, callback) {
-  var test = ChildProcess.spawn('node', args, {stdio: 'inherit'});
+  const test = ChildProcess.spawn('node', args, {stdio: 'inherit'});
   test.on('close', function(code) {
     if (code) {
       throw new GUtil.PluginError('test:node', 'Exited with code: ' + code);

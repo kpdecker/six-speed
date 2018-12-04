@@ -25,6 +25,7 @@ npm run profile:node -- --testName=$name --type=$type --count=$iterationCount
 Profiles a given test within the current Node environment. Type may be one of:
 - babel
 - babel-runtime
+- babel-loose
 - traceur
 - typescript
 - es5

@@ -1,10 +1,10 @@
-var ChildProcess = require('child_process'),
-    Gulp = require('gulp'),
-    GUtil = require('gulp-util'),
-    Server = require('./server'),
-    userhome = require('user-home');
+const ChildProcess = require('child_process');
+const Gulp = require('gulp');
+const GUtil = require('gulp-util');
+const Server = require('./server');
+const userhome = require('user-home');
 
-var RUN_USER = 'vmrun -gu IEUser -gp Passw0rd! ';
+const RUN_USER = 'vmrun -gu IEUser -gp Passw0rd! ';
 
 Gulp.task('test:vm', ['build:browser', 'test:vm:edge']);
 
