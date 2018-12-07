@@ -79,3 +79,33 @@
 20181121 133949.740 [25548] Please check your firewall and proxy settings.
 20181121 133949.742 [25548] You can also use sc --doctor to launch Sauce Connect in diagnostic mode.
 20181121 133949.745 [25548] Goodbye.
+20181207 093803.842 [18200] Sauce Connect 4.3.16, build 2397 a59c79b
+20181207 093803.846 [18200] Trying to autodetect proxy settings
+20181207 093803.851 [18200] Starting up; pid 18200
+20181207 093803.852 [18200] Command line arguments: C:\dev\client\node_modules\sauce-tunnel\vendor\win32\bin\sc.exe -u undefined -k **** -i 42
+20181207 093803.853 [18200] Log file: sc_42.log
+20181207 093803.854 [18200] Pid file: C:\Users\Lodder\AppData\Roaming/sc_client_42.pid
+20181207 093803.854 [18200] Timezone: GMT Standard Time GMT OFfset: 0h
+20181207 093803.855 [18200] Using no proxy for connecting to Sauce Labs REST API.
+20181207 093803.880 [18200] Resolving saucelabs.com to 66.85.49.36 took 24 ms.
+20181207 093804.737 [18200] ***********************************************************
+20181207 093804.738 [18200] A newer version of Sauce Connect (build 2473) is available!
+20181207 093804.739 [18200] Download it here:
+20181207 093804.739 [18200] https://saucelabs.com/downloads/sc-4.5.2-win32.zip
+20181207 093804.740 [18200] ***********************************************************
+20181207 093804.741 [18200] PROXY *** scproxy started ***
+20181207 093804.817 [18200] PROXY found DNS server 8.8.8.8
+20181207 093804.818 [18200] PROXY found DNS server 8.8.4.4
+20181207 093804.818 [18200] PROXY found DNS server 194.168.4.100
+20181207 093804.819 [18200] PROXY found DNS server 194.168.8.100
+20181207 093805.046 [18200] Started scproxy on port 49639.
+20181207 093805.046 [18200] Please wait for 'you may start your tests' to start your tests.
+20181207 093805.047 [18200] Starting secure remote tunnel VM...
+20181207 093805.731 [18200] GET https://saucelabs.com/rest/v1/undefined/tunnels?full=1: HTTP response code indicated failure.
+20181207 093805.732 [18200] Response: {"message": "Not authorized"}.
+20181207 093805.733 [18200] Error checking overlapping tunnels.
+20181207 093805.734 [18200] Cleaning up.
+20181207 093805.734 [18200] Sauce Connect could not establish a connection.
+20181207 093805.735 [18200] Please check your firewall and proxy settings.
+20181207 093805.736 [18200] You can also use sc --doctor to launch Sauce Connect in diagnostic mode.
+20181207 093805.737 [18200] Goodbye.
