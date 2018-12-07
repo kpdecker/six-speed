@@ -1,6 +1,6 @@
 const ChildProcess = require('child_process');
 const Gulp = require('gulp');
-const GUtil = require('gulp-util');
+const Log = require('fancy-log');
 const Server = require('./server');
 const userhome = require('user-home');
 
@@ -87,7 +87,7 @@ function run(command, options, counter) {
   counter = counter || 0;
 
   return new Promise(function(resolve, reject) {
-    GUtil.log('[vm]', 'run', command);
+    Log('[vm]', 'run', command);
     ChildProcess.exec(command, options, function(err, stdout, stderr) {
       if (counter < 5
           && (/The specified guest user must be logged in interactively to perform this operation/.test(stdout)
@@ -95,7 +95,7 @@ function run(command, options, counter) {
             || nonZero(/reg.exe/, command, stdout))) {
         // Allow retries if there is something that might be waiting for background processes like updates
         counter++;
-        GUtil.log('[vm]', 'retry', counter, command);
+        Log('[vm]', 'retry', counter, command);
         setTimeout(function() {
           resolve(run(command, options, counter));
         }, 10 * 1000 * counter);
@@ -111,7 +111,7 @@ function run(command, options, counter) {
           // occur when the command actually completed.
           && !nonZero(/explorer.exe/, command, stdout)
           && !nonZero(/taskkill/, command, stdout)) {
-        GUtil.log('[vm]', err, stdout, stderr);
+        Log('[vm]', err, stdout, stderr);
         reject(err);
       } else {
         setTimeout(function() {

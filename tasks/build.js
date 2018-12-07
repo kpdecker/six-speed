@@ -4,7 +4,8 @@ var _ = require('lodash'),
     Esprima = require('esprima'),
     Fs = require('fs'),
     Gulp = require('gulp'),
-    GUtil = require('gulp-util'),
+    Vinyl = require('vinyl'),
+    PluginError = require('plugin-error'),
     Handlebars = require('handlebars'),
     Path = require('path'),
     Through = require('through2'),
@@ -41,9 +42,9 @@ Gulp.task('build:webpack', function(callback) {
     }
   }, function(err, stats) {
       if (err) {
-        throw new GUtil.PluginError('webpack', err);
+        throw new PluginError('webpack', err);
       }
-      GUtil.log('[webpack]', stats.toString({timings: true, chunks: false}));
+      Log('[webpack]', stats.toString({timings: true, chunks: false}));
       callback();
   });
 });
@@ -85,7 +86,7 @@ Gulp.task('build:tests', function() {
 
               src = 'function(test, testName, testType, require, assertEqual) {' + src + '}';
               scripts.push(fileName);
-              self.push(new GUtil.File({
+              self.push(new Vinyl({
                 path: fileName,
                 contents: new Buffer(
                   '"use strict";\n'
@@ -99,6 +100,14 @@ Gulp.task('build:tests', function() {
               var babel = Babel.transform(content, {presets: ['es2015', 'stage-0']}).code,
                   babelRuntime = Babel.transform(content, {presets: ['es2015', 'stage-0'], plugins: ['transform-runtime']}).code,
                   babelLoose = Babel.transform(content, {presets: ['es2015-loose', 'stage-0'], plugins: ['transform-runtime']}).code;
+              createFile('babel', babel);
+              if (babel !== babelRuntime) {
+                createFile('babel-runtime', babelRuntime);
+              }
+              if (babel !== babelLoose) {
+                createFile('babel-loose', babelLoose);
+              }
+
               createFile('babel', babel);
               if (babel !== babelRuntime) {
                 createFile('babel-runtime', babelRuntime);
@@ -188,7 +197,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
       scripts.push('worker.js');
       scripts.push('browser.js');
 
-      this.push(new GUtil.File({
+      this.push(new Vinyl({
         path: 'index.html',
         contents: new Buffer(benchTemplate({scripts: scripts}))
       }));
@@ -196,7 +205,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
       // We need a special mime type to enable all of the features on Firefox.
       var mozScripts = _.map(scripts, function(script) { return '../' + script; });
       mozScripts[mozScripts.length - 2] = '../iframe.js';
-      this.push(new GUtil.File({
+      this.push(new Vinyl({
         path: 'moz/index.html',
         contents: new Buffer(benchTemplate({
           scripts: mozScripts,
@@ -206,7 +215,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
 
       _.each(types, (scripts, name) => {
         var workerScripts = scripts.concat('worker-test.js');
-        this.push(new GUtil.File({
+        this.push(new Vinyl({
           path: name + '.js',
           contents: new Buffer(
             '$type = ' + JSON.stringify(name) + ';\n'
@@ -215,7 +224,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
 
         // We need a special mime type to enable all of the features on Firefox.
         var mozScripts = _.map(scripts, function(script) { return '../' + script; });
-        this.push(new GUtil.File({
+        this.push(new Vinyl({
           path: 'moz/' + name + '.html',
           contents: new Buffer(benchTemplate({scripts: mozScripts, jsType: 'application/javascript;version=1.7'}))
         }));
@@ -223,13 +232,13 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
 
 
       scripts[scripts.length - 1] = 'browser-profile.js';
-      this.push(new GUtil.File({
+      this.push(new Vinyl({
         path: 'profile.html',
         contents: new Buffer(profileTemplate({scripts: scripts}))
       }));
 
       // We need a special mime type to enable all of the features on Firefox.
-      this.push(new GUtil.File({
+      this.push(new Vinyl({
         path: 'moz/profile.html',
         contents: new Buffer(profileTemplate({
           scripts: _.map(scripts, function(script) { return '../' + script; }),

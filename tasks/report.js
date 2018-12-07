@@ -4,7 +4,8 @@ const _ = require('lodash'),
     DataStore = require('../lib/data-store'),
     Fs = require('fs'),
     Gulp = require('gulp'),
-    GUtil = require('gulp-util'),
+    Log = require('fancy-log'),
+    PluginError = require('plugin-error');
     Handlebars = require('handlebars'),
     Path = require('path'),
     TraceurPackage = require('traceur/package'),
@@ -59,9 +60,9 @@ Gulp.task('report:webpack', function(callback) {
     ]
   }, function(err, stats) {
       if (err) {
-        throw new GUtil.PluginError('webpack', err);
+        throw new PluginError('webpack', err);
       }
-      GUtil.log('[webpack]', stats.toString());
+      Log('[webpack]', stats.toString());
       callback();
   });
 });

@@ -3,7 +3,7 @@ const _ = require('lodash'),
     Async = require('async'),
     Driver = require('./driver'),
     Gulp = require('gulp'),
-    GUtil = require('gulp-util'),
+    PluginError = require('plugin-error'),
     SauceTunnel = require('sauce-tunnel'),
     Server = require('./server');
 
@@ -47,14 +47,14 @@ Gulp.task('test:sauce', ['build:browser'], function(callback) {
 function startTunnel(user, pass, tunnelId, done) {
   var tunnel = new SauceTunnel(user, pass, tunnelId, true, []);
   tunnel.on('log:error', function(data) {
-    GUtil.log(GUtil.colors.red(data));
+    Log(data);
   });
   tunnel.on('verbose:debug', function(data) {
-    GUtil.log(GUtil.colors.yellow(data));
+    Log(data);
   });
   tunnel.start(function(success) {
     if (!success) {
-      //throw new GUtil.PluginError('test:sauce', 'Tunnel failed to open');
+      //throw new PluginError('test:sauce', 'Tunnel failed to open');
       console.log('Tunnel failed to open');
     }
 
