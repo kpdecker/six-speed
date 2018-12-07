@@ -117,7 +117,7 @@ Gulp.task('build:tests', function() {
               }
 
               try {
-                var bubleCode = Buble.transform(content, { dangerousForOf: true }).code;
+                var bubleCode = Buble.transform(content, { transforms: { dangerousForOf: true, dangerousTaggedTemplateString: true } }).code;
                 createFile('buble', bubleCode);
               } catch (err) {
                 console.log('Error Buble compiling ' + testName + ':\n' + err.message);
