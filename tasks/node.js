@@ -1,8 +1,8 @@
-var _ = require('lodash'),
+const _ = require('lodash'),
     Args = require('../lib/args'),
     ChildProcess = require('child_process'),
     Gulp = require('gulp'),
-    GUtil = require('gulp-util');
+    PluginError = require('plugin-error');
 
 Gulp.task('test:node', ['build:tests'], function(callback) {
   findStagingArgs(function(args) {
@@ -26,11 +26,11 @@ Gulp.task('profile:node', ['build:tests'], function(callback) {
 function findStagingArgs(callback) {
   ChildProcess.exec('node  --v8-options | grep "in progress"', function(err, stdout) {
     if (err && err.code !== 1) {
-      throw new GUtil.PluginError('test:node', err);
+      throw new PluginError('test:node', err);
     }
 
     // Run with everything enabled, per https://iojs.org/en/es6.html
-    var args = _.compact(stdout.replace(/\n$/, '').split(/\n/g).map(function(line) {
+    const args = _.compact(stdout.replace(/\n$/, '').split(/\n/g).map(function(line) {
       if (/(--\w+)/.exec(line)) {
         return RegExp.$1;
       }
@@ -45,10 +45,10 @@ function findStagingArgs(callback) {
 }
 
 function runNode(args, callback) {
-  var test = ChildProcess.spawn('node', args, {stdio: 'inherit'});
+  const test = ChildProcess.spawn('node', args, {stdio: 'inherit'});
   test.on('close', function(code) {
     if (code) {
-      throw new GUtil.PluginError('test:node', 'Exited with code: ' + code);
+      throw new PluginError('test:node', 'Exited with code: ' + code);
     }
 
     callback();

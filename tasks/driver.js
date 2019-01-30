@@ -1,7 +1,7 @@
 /*eslint-disable no-process-env */
 
 var _ = require('lodash'),
-    GUtil = require('gulp-util'),
+    PluginError = require('plugin-error'),
     WebdriverIO = require('webdriverio'),
     UserAgent = require('../lib/user-agent');
 
@@ -62,7 +62,7 @@ module.exports.test = function(remote, config, done) {
       },
       function(err, data) {
         if (err) {
-          throw new GUtil.PluginError('test:sauce', config.browserName + ' ' + err);
+          throw new PluginError('test:sauce', config.browserName + ' ' + err);
         }
 
         userAgent = UserAgent.parse(data.value);
@@ -77,7 +77,7 @@ module.exports.test = function(remote, config, done) {
         },
         function(err, ret) {
           if (err) {
-            throw new GUtil.PluginError('test:sauce', browserId + ' ' + err);
+            throw new PluginError('test:sauce', browserId + ' ' + err);
           }
 
           if (!ret.value) {
@@ -93,7 +93,7 @@ module.exports.test = function(remote, config, done) {
       .log('browser', function(err, data) {
         if (err) {
           // Not supported under IE so just log and move on.
-          GUtil.log('test:sauce', browserId, GUtil.colors.red(err));
+          Log('test:sauce', browserId, err);
         } else {
           browserLog = data.value;
         }
@@ -103,7 +103,7 @@ module.exports.test = function(remote, config, done) {
         },
         function(err, ret) {
           if (err) {
-            throw new GUtil.PluginError('test:sauce', browserId + ' ' + err);
+            throw new PluginError('test:sauce', browserId + ' ' + err);
           }
 
           stats = ret.value;
@@ -112,13 +112,13 @@ module.exports.test = function(remote, config, done) {
       .call(function() {
         // Log for the user
         _.each(browserLog, function(message) {
-          GUtil.log(GUtil.colors.magenta(browserId), GUtil.colors.yellow(message.source || ''), '-', message.message);
+          Log(browserId, message.source || '', '-', message.message);
         });
         _.each(_.keys(stats).sort(), function(name) {
           var stat = stats[name];
 
-          GUtil.log(GUtil.colors.magenta(browserId), GUtil.colors.blue(name), _.map(stat.relative, function(relative, type) {
-            return GUtil.colors.yellow(type) + ': ' + (relative * 100).toFixed(5) + '%';
+          Log(browserId, name, _.map(stat.relative, function(relative, type) {
+            return type + ': ' + (relative * 100).toFixed(5) + '%';
           }).join(' '));
         });
 

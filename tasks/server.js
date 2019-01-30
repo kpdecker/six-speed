@@ -1,8 +1,8 @@
-var DataStore = require('../lib/data-store'),
-    Gulp = require('gulp'),
-    GUtil = require('gulp-util'),
-    Hapi = require('hapi'),
-    UserAgent = require('../lib/user-agent');
+const DataStore = require('../lib/data-store');
+const Gulp = require('gulp');
+const PluginError = require('plugin-error');
+const Hapi = require('hapi');
+const UserAgent = require('../lib/user-agent');
 
 var server;
 
@@ -22,7 +22,7 @@ exports.start = function(startup, testComplete) {
       var userAgent = UserAgent.parse(request.payload.browser),
           data = JSON.parse(request.payload.data);
 
-      GUtil.log('Storing data for browser', GUtil.colors.magenta(userAgent.name), GUtil.colors.magenta(userAgent.version), '{' + Object.keys(data).join(', ') + '}');
+      Log('Storing data for browser', userAgent.name, userAgent.version, '{' + Object.keys(data).join(', ') + '}');
       DataStore.store(userAgent.name, request.payload.tag, userAgent.version, data);
 
       reply({});
@@ -35,7 +35,7 @@ exports.start = function(startup, testComplete) {
       var userAgent = UserAgent.parse(request.payload.browser),
           message = request.payload.message;
 
-      GUtil.log(GUtil.colors.magenta('[debug]'), GUtil.colors.magenta(userAgent.name), GUtil.colors.magenta(userAgent.version), message);
+      Log('[debug]', userAgent.name, userAgent.version, message);
 
       reply({});
     }
@@ -64,10 +64,10 @@ exports.start = function(startup, testComplete) {
   });
   server.start(function(err) {
     if (err) {
-      throw new GUtil.PluginError('server', err);
+      throw new PluginError('server', err);
     }
 
-    GUtil.log('Server running at:', server.info.uri);
+    Log('Server running at:', server.info.uri);
     startup(server.info.uri);
   });
 };
