@@ -3,13 +3,9 @@ a, a:visited {
   text-decoration: none;
 }
 
-.dropdown-menu > li > a {
-  margin-left: 20px;
-}
 .dropdown-menu .glyphicon-ok {
   font-size: 0.75em;
   padding-right: 10px;
-  margin-left: -25px;
 }
 
 [data-toggle="tooltip"] > .glyphicon {

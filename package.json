@@ -36,7 +36,7 @@
     "babel-runtime": "^6.5.0",
     "benchmark": "^2.1.4",
     "bluebird": "^3.5.3",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.0",
     "browser-downloader": "^2.1.0",
     "buble": "^0.19.6",
     "del": "^3.0.0",
