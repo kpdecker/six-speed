@@ -1,7 +1,5 @@
 /*global REPORT_DATA, localStorage */
 import 'babel-polyfill/dist/polyfill';
-import 'bootstrap';
-import $ from 'jquery';
 
 const hasStorage = (function() {
   try {
@@ -79,10 +77,10 @@ function filterUI() {
   // Update the selected indicators
   $('.dropdown').find('.glyphicon').remove();
   if (filter.engine) {
-    $(`[data-engine="${filter.engine}"]`).prepend('<span class="glyphicon glyphicon-ok"></span>');
+    $(`[data-engine="${filter.engine}"]`).append('<span class="glyphicon glyphicon-ok"></span>');
   }
   if (filter.implementation) {
-    $(`[data-implementation="${filter.implementation}"]`).prepend('<span class="glyphicon glyphicon-ok"></span>');
+    $(`[data-implementation="${filter.implementation}"]`).append('<span class="glyphicon glyphicon-ok"></span>');
   }
 }
 

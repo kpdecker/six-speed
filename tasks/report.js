@@ -9,7 +9,8 @@ const _ = require('lodash'),
     Handlebars = require('handlebars'),
     Path = require('path'),
     TraceurPackage = require('traceur/package'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    pkg = require('../package.json').dependencies;
 
 Gulp.task('report', ['report:static', 'report:bootstrap:fonts', 'report:bootstrap:css', 'report:webpack'], function() {
   const report = render();
@@ -268,6 +269,8 @@ function render() {
     babelVersion: Babel.version,
     babelRuntimeVersion: BabelRuntimePackage.version,
     traceurVersion: TraceurPackage.version,
+    jqueryVersion: pkg.jquery.replace('^', ''),
+    bootstrapVersion: pkg.bootstrap.replace('^', ''),
 
     reportData: JSON.stringify(reportData)
   });
