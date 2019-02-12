@@ -132,7 +132,10 @@ Gulp.task('build:tests', () => {
             createFile('babel-loose', babelLoose);
           }
 
-          createFile('typescript', TypeScript.transpile(content, { module: TypeScript.ModuleKind.CommonJS }));
+          createFile('typescript', TypeScript.transpile(content, {
+            module: TypeScript.ModuleKind.CommonJS,
+            downlevelIteration: true
+          }));
         }
         createFile(ext, content);
 
