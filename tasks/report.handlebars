@@ -90,7 +90,7 @@
 
       <div class="panel-body">
         <p>
-          Run on {{date}} using babel {{babelVersion}}, babel-runtime {{babelRuntimeVersion}}.
+          Run on {{date}} using babel {{babelVersion}}, babel-runtime {{babelRuntimeVersion}} and TypeScript {{typescriptVersion}}.
         </o>
         <p>
           For each of the ES6 features in question, a ES5 implementation of that functionality was written along with a ES6 version. It should be noted that the functionality is frequently the same, but in some cases the "common" vs. "correct" version was written, i.e. using <code>x[key] = value</code> vs. <code>defineProperty</code> which is faster but can be hit but a particular nasty edge case for those who deem it fun to extend <code>Object.prototype</code>.

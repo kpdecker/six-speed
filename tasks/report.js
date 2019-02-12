@@ -252,7 +252,8 @@ function render() {
     tests,
     date: new Date().toLocaleDateString(),
     babelVersion: Babel.version,
-    babelRuntimeVersion: BabelRuntimePackage.version,
+    babelRuntimeVersion: pkg['@babel/runtime'].replace('^', ''),
+    typescriptVersion: pkg.typescript.replace('^', ''),
     jqueryVersion: pkg.jquery.replace('^', ''),
     bootstrapVersion: pkg.bootstrap.replace('^', ''),
 
