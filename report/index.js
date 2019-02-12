@@ -1,5 +1,5 @@
 /*global REPORT_DATA, localStorage */
-import 'babel-polyfill/dist/polyfill';
+require('@babel/polyfill');
 
 const hasStorage = (() => {
   try {

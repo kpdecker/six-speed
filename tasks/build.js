@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const Babel = require('babel-core');
+const Babel = require('@babel/core');
 const Esprima = require('esprima');
 const Fs = require('fs');
 const Gulp = require('gulp');
@@ -92,11 +92,30 @@ Gulp.task('build:tests', () => {
         }
 
         if (ext === 'es6') {
-          // TODO: Update these settings for Babel 6
-          const babel = Babel.transform(content, {presets: ['es2015', 'stage-0']}).code;
+          const babel = Babel.transform(content, {
+            presets: [
+              ['@babel/preset-env']
+            ]
+          }).code;
 
-          const babelRuntime = Babel.transform(content, {presets: ['es2015', 'stage-0'], plugins: ['transform-runtime']}).code;
-          const babelLoose = Babel.transform(content, {presets: ['es2015-loose', 'stage-0'], plugins: ['transform-runtime']}).code;
+          const babelRuntime = Babel.transform(content, {
+            presets: [
+              ['@babel/preset-env']
+            ],
+            plugins: [
+              ['@babel/plugin-transform-runtime']
+            ]
+          }).code;
+
+          const babelLoose = Babel.transform(content, {
+            presets: [
+              ['@babel/preset-env', { loose: true }]
+            ],
+            plugins: [
+              ['@babel/plugin-transform-runtime']
+            ]
+          }).code;
+
           createFile('babel', babel);
           if (babel !== babelRuntime) {
             createFile('babel-runtime', babelRuntime);
@@ -137,7 +156,7 @@ Gulp.task('build:browser-runner', () => Gulp.src([
       'lib/worker-test.js',
       require.resolve('benchmark'),
       require.resolve('lodash/lodash'),
-      require.resolve('babel-polyfill/dist/polyfill')
+      require.resolve('@babel/polyfill/dist/polyfill')
     ])
     .pipe(Gulp.dest('build')));
 
