@@ -26,7 +26,6 @@ Profiles a given test within the current Node environment. Type may be one of:
 - babel
 - babel-runtime
 - babel-loose
-- traceur
 - typescript
 - es5
 - es6
@@ -52,7 +51,7 @@ Generates the data report.
 
 For each of the ES6 features in question, an ES5 implementation of that functionality was written along with an ES6 version. It should be noted that the functionality is frequently the same, but in some cases the "common" vs. "correct" version was written, i.e. using `x[key] = value` vs. `defineProperty` which is faster but can be hit but a particular nasty edge case for those who deem it fun to extend `Object.prototype`.
 
-Babel, in both loose+runtime and runtime mode, and Traceur were then used to compile the ES6 version to an ES5 compliant version, utilizing the runtime over polyfill to maintain test isolation and avoid native implementations where possible.
+Babel, in both loose+runtime and runtime mode, and Babel was then used to compile the ES6 version to an ES5 compliant version, utilizing the runtime over polyfill to maintain test isolation and avoid native implementations where possible.
 
 All of these test instances were then benchmarked in the given JavaScript engine using [Benchmark.js](http://benchmarkjs.com/) and then the operations per second compared to the ES5 implementation. Cross browser and cross execution comparisons are avoided as much as possible to isolate environmental issues when executing on VMs in the cloud.
 
