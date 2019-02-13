@@ -86,7 +86,7 @@ Gulp.task('build:tests', () => {
           scripts.push(fileName);
           self.push(new Vinyl({
             path: fileName,
-            contents: new Buffer(
+            contents: Buffer.from(
               `"use strict";\nSixSpeed.tests[${JSON.stringify(testName)}] = SixSpeed.tests[${JSON.stringify(testName)}] || {};\nSixSpeed.tests[${JSON.stringify(testName)}][${JSON.stringify(testType)}] = ${src};\n`)
           }));
         }
@@ -200,7 +200,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
 
       this.push(new Vinyl({
         path: 'index.html',
-        contents: new Buffer(benchTemplate({scripts}))
+        contents: Buffer.from(benchTemplate({scripts}))
       }));
 
       // We need a special mime type to enable all of the features on Firefox.
@@ -208,7 +208,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
       mozScripts[mozScripts.length - 2] = '../iframe.js';
       this.push(new Vinyl({
         path: 'moz/index.html',
-        contents: new Buffer(benchTemplate({
+        contents: Buffer.from(benchTemplate({
           scripts: mozScripts,
           jsType: 'application/javascript;version=1.7'
         }))
@@ -218,7 +218,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
         const workerScripts = scripts.concat('worker-test.js');
         this.push(new Vinyl({
           path: `${name}.js`,
-          contents: new Buffer(
+          contents: Buffer.from(
             `$type = ${JSON.stringify(name)};\n${workerScripts.map(script => `try { importScripts(${JSON.stringify(script)}); } catch (err) { console.log(${JSON.stringify(script)} + err); }`).join('\n')}`)
         }));
 
@@ -226,7 +226,7 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
         const mozScripts = _.map(scripts, script => `../${script}`);
         this.push(new Vinyl({
           path: `moz/${name}.html`,
-          contents: new Buffer(benchTemplate({scripts: mozScripts, jsType: 'application/javascript;version=1.7'}))
+          contents: Buffer.from(benchTemplate({scripts: mozScripts, jsType: 'application/javascript;version=1.7'}))
         }));
       });
 
@@ -234,13 +234,13 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
       scripts[scripts.length - 1] = 'browser-profile.js';
       this.push(new Vinyl({
         path: 'profile.html',
-        contents: new Buffer(profileTemplate({scripts}))
+        contents: Buffer.from(profileTemplate({scripts}))
       }));
 
       // We need a special mime type to enable all of the features on Firefox.
       this.push(new Vinyl({
         path: 'moz/profile.html',
-        contents: new Buffer(profileTemplate({
+        contents: Buffer.from(profileTemplate({
           scripts: _.map(scripts, script => `../${script}`),
           jsType: 'application/javascript;version=1.7'
         }))
