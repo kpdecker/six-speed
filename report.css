@@ -3,13 +3,9 @@ a, a:visited {
   text-decoration: none;
 }
 
-.dropdown-menu > li > a {
-  margin-left: 20px;
-}
 .dropdown-menu .glyphicon-ok {
   font-size: 0.75em;
   padding-right: 10px;
-  margin-left: -25px;
 }
 
 [data-toggle="tooltip"] > .glyphicon {
@@ -22,22 +18,22 @@ a, a:visited {
   text-align: left;
 }
 
-.initial-hide {
-  display: none;
+.table thead {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background: #fff;
 }
 
-table {
-  border-collapse: collapse;
-  margin: 10px auto;
-  text-align: center;
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+    padding: 6px;
 }
 
-td {
-  padding: 5px;
-}
-th {
-  padding: 0 5px;
-}
 
 .feature-row {
   margin-top: 5px;
