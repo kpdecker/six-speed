@@ -109,3 +109,35 @@
 20181207 093805.735 [18200] Please check your firewall and proxy settings.
 20181207 093805.736 [18200] You can also use sc --doctor to launch Sauce Connect in diagnostic mode.
 20181207 093805.737 [18200] Goodbye.
+20190212 115507.180 [11620] Sauce Connect 4.3.16, build 2397 a59c79b
+20190212 115507.187 [11620] Trying to autodetect proxy settings
+20190212 115507.195 [11620] Starting up; pid 11620
+20190212 115507.196 [11620] Command line arguments: C:\dev\six-speed\node_modules\sauce-tunnel\vendor\win32\bin\sc.exe -u undefined -k **** -i 42
+20190212 115507.201 [11620] Log file: sc_42.log
+20190212 115507.203 [11620] Pid file: C:\Users\charlie.lodder\AppData\Roaming/sc_client_42.pid
+20190212 115507.206 [11620] Timezone: GMT Standard Time GMT OFfset: 0h
+20190212 115507.208 [11620] Using no proxy for connecting to Sauce Labs REST API.
+20190212 115507.221 [11620] Resolving saucelabs.com to 66.85.49.36 took 11 ms.
+20190212 115507.989 [11620] ***********************************************************
+20190212 115507.991 [11620] A newer version of Sauce Connect (build 2589) is available!
+20190212 115507.993 [11620] Download it here:
+20190212 115507.994 [11620] https://saucelabs.com/downloads/sc-4.5.3-win32.zip
+20190212 115507.996 [11620] ***********************************************************
+20190212 115507.998 [11620] PROXY *** scproxy started ***
+20190212 115508.004 [11620] PROXY found DNS server 10.10.9.40
+20190212 115508.005 [11620] PROXY found DNS server 10.10.9.90
+20190212 115508.006 [11620] PROXY found DNS server 10.10.9.140
+20190212 115508.008 [11620] PROXY found DNS server 208.67.222.222
+20190212 115508.009 [11620] PROXY found DNS server 8.8.8.8
+20190212 115508.010 [11620] PROXY found DNS server 10.14.1.1
+20190212 115508.253 [11620] Started scproxy on port 49570.
+20190212 115508.254 [11620] Please wait for 'you may start your tests' to start your tests.
+20190212 115508.256 [11620] Starting secure remote tunnel VM...
+20190212 115508.917 [11620] GET https://saucelabs.com/rest/v1/undefined/tunnels?full=1: HTTP response code indicated failure.
+20190212 115508.920 [11620] Response: {"message": "Not authorized"}.
+20190212 115508.921 [11620] Error checking overlapping tunnels.
+20190212 115508.922 [11620] Cleaning up.
+20190212 115508.924 [11620] Sauce Connect could not establish a connection.
+20190212 115508.926 [11620] Please check your firewall and proxy settings.
+20190212 115508.928 [11620] You can also use sc --doctor to launch Sauce Connect in diagnostic mode.
+20190212 115508.930 [11620] Goodbye.

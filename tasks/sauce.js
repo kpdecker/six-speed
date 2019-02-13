@@ -1,41 +1,43 @@
 /*eslint-disable no-process-env */
-const _ = require('lodash'),
-    Async = require('async'),
-    Driver = require('./driver'),
-    Gulp = require('gulp'),
-    PluginError = require('plugin-error'),
-    SauceTunnel = require('sauce-tunnel'),
-    Server = require('./server');
+const _ = require('lodash');
 
-var browsers = [
+const Async = require('async');
+const Driver = require('./driver');
+const Gulp = require('gulp');
+const PluginError = require('plugin-error');
+const SauceTunnel = require('sauce-tunnel');
+const Server = require('./server');
+const Log = require('fancy-log');
+
+const browsers = [
   {
     browserName: 'internet explorer'
   }
 ];
 
-Gulp.task('test:sauce', ['build:browser'], function(callback) {
-  var user = process.env.SAUCE_USERNAME,
-      pass = process.env.SAUCE_ACCESS_KEY,
-      tunnelId = process.env.TRAVIS_JOB_ID || 42;
+Gulp.task('test:sauce', ['build:browser'], callback => {
+  const user = process.env.SAUCE_USERNAME;
+  const pass = process.env.SAUCE_ACCESS_KEY;
+  const tunnelId = process.env.TRAVIS_JOB_ID || 42;
 
-  Server.start(function() {
-    startTunnel(user, pass, tunnelId, function(tunnel) {
-      Async.eachLimit(browsers, 5, function(config, done) {
+  Server.start(() => {
+    startTunnel(user, pass, tunnelId, tunnel => {
+      Async.eachLimit(browsers, 5, (config, done) => {
           config = _.defaults({
             'tunnel-identifier': tunnelId
           }, config);
 
-          var remote = {
+          const remote = {
             port: 4445,
-            user: user,
+            user,
             key: pass
           };
 
           Driver.test(remote, config, done);
         },
-        function() {
-          tunnel.stop(function() {
-            Server.stop(function() {
+        () => {
+          tunnel.stop(() => {
+            Server.stop(() => {
               callback();
             });
           });
@@ -45,14 +47,14 @@ Gulp.task('test:sauce', ['build:browser'], function(callback) {
 });
 
 function startTunnel(user, pass, tunnelId, done) {
-  var tunnel = new SauceTunnel(user, pass, tunnelId, true, []);
-  tunnel.on('log:error', function(data) {
+  const tunnel = new SauceTunnel(user, pass, tunnelId, true, []);
+  tunnel.on('log:error', data => {
     Log(data);
   });
-  tunnel.on('verbose:debug', function(data) {
+  tunnel.on('verbose:debug', data => {
     Log(data);
   });
-  tunnel.start(function(success) {
+  tunnel.start(success => {
     if (!success) {
       //throw new PluginError('test:sauce', 'Tunnel failed to open');
       console.log('Tunnel failed to open');

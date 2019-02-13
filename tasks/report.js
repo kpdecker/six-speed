@@ -1,37 +1,30 @@
-const _ = require('lodash'),
-    Babel = require('babel-core'),
-    BabelRuntimePackage = require('babel-runtime/package'),
-    DataStore = require('../lib/data-store'),
-    Fs = require('fs'),
-    Gulp = require('gulp'),
-    Log = require('fancy-log'),
-    PluginError = require('plugin-error');
-    Handlebars = require('handlebars'),
-    Path = require('path'),
-    TraceurPackage = require('traceur/package'),
-    webpack = require('webpack'),
-    pkg = require('../package.json').dependencies;
+const _ = require('lodash');
+const Babel = require('@babel/core');
+const BabelRuntimePackage = require('@babel/plugin-transform-runtime');
+const DataStore = require('../lib/data-store');
+const Fs = require('fs');
+const Gulp = require('gulp');
+const Log = require('fancy-log');
+const PluginError = require('plugin-error');
+const Handlebars = require('handlebars');
+const Path = require('path');
+const webpack = require('webpack');
+const pkg = require('../package.json').dependencies;
 
-Gulp.task('report', ['report:static', 'report:bootstrap:fonts', 'report:bootstrap:css', 'report:webpack'], function() {
+Gulp.task('report', ['report:static', 'report:bootstrap:fonts', 'report:bootstrap:css', 'report:webpack'], () => {
   const report = render();
   Fs.writeFileSync('site/index.html', report);
 });
 
-Gulp.task('report:static', function() {
-  return Gulp.src('report/*.css')
-      .pipe(Gulp.dest('site/'));
-});
-Gulp.task('report:bootstrap:fonts', function() {
-  return Gulp.src(['bower_components/bootstrap/fonts/*'], {base: 'bower_components/bootstrap'})
-      .pipe(Gulp.dest('site/'));
-});
-Gulp.task('report:bootstrap:css', function() {
-  return Gulp.src(['bower_components/bootstrap/dist/css/*'], {base: 'bower_components/bootstrap/dist'})
-      .pipe(Gulp.dest('site/'));
-});
+Gulp.task('report:static', () => Gulp.src('report/*.css')
+    .pipe(Gulp.dest('site/')));
+Gulp.task('report:bootstrap:fonts', () => Gulp.src(['bower_components/bootstrap/fonts/*'], {base: 'bower_components/bootstrap'})
+    .pipe(Gulp.dest('site/')));
+Gulp.task('report:bootstrap:css', () => Gulp.src(['bower_components/bootstrap/dist/css/*'], {base: 'bower_components/bootstrap/dist'})
+    .pipe(Gulp.dest('site/')));
 
 
-Gulp.task('report:webpack', function(callback) {
+Gulp.task('report:webpack', callback => {
   webpack({
     entry: {
       report: './report/index.js'
@@ -59,7 +52,7 @@ Gulp.task('report:webpack', function(callback) {
         new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
       )
     ]
-  }, function(err, stats) {
+  }, (err, stats) => {
       if (err) {
         throw new PluginError('webpack', err);
       }
@@ -69,31 +62,32 @@ Gulp.task('report:webpack', function(callback) {
 });
 
 function render() {
-  var data = DataStore.load(),
-      notes = DataStore.notes();
+  const data = DataStore.load();
+  const notes = DataStore.notes();
 
   // And the browsers tested
-  var browserTags = [],
-      familyTags = [];
-  var browsers = _.map(data, function(browserData, browserName) {
-    var tags = _.keys(browserData),
-        family = notes.family[browserName].map(function(tag) { return 'js-family-' + tag; }).join(' '),
-        versionTag = '';
+  let browserTags = [];
 
-    var fullVersions = _.map(tags, function(tag) {
+  let familyTags = [];
+  let browsers = _.map(data, (browserData, browserName) => {
+    const tags = _.keys(browserData);
+    const family = notes.family[browserName].map(tag => `js-family-${tag}`).join(' ');
+    let versionTag = '';
+
+    const fullVersions = _.map(tags, tag => {
       // A bit of a hack here, but we treat all node releases that we are testing as stable
-      var tagName = tag;
+      let tagName = tag;
       if (/^\d/.test(tag)) {
         tagName = 'stable';
       }
 
       browserTags = browserTags.concat(tagName);
 
-      tagName = ' js-version-' + tagName;
+      tagName = ` js-version-${tagName}`;
       versionTag += tagName;
 
-      var versionName = browserData[tag].version,
-          displayName = versionName;
+      const versionName = browserData[tag].version;
+      let displayName = versionName;
       if (browserName !== 'node' && browserName !== 'webkit') {
         displayName = parseFloat(versionName);
       }
@@ -113,91 +107,84 @@ function render() {
       tag: family + versionTag
     };
   });
-  browsers = _.filter(browsers, function(browser) {
-    return browser.versions.length > 0;
-  });
+  browsers = _.filter(browsers, ({versions}) => versions.length > 0);
 
   // Pull out all of the tests that were actually run
-  var implementations = [];
-  var tests = _.map(data, function(browserData) {
-    return _.flatten(_.map(browserData, function(versionData) {
-      return _.keys(versionData.stats);
-    }));
-  });
+  let implementations = [];
+  let tests = _.map(data, browserData => _.flatten(_.map(browserData, ({stats}) => _.keys(stats))));
   tests = _.flatten(tests);
   tests = _.uniq(tests);
   tests = tests.sort();
 
-  tests = _.map(tests, function(test) {
-    var types = [];
+  tests = _.map(tests, test => {
+    let types = [];
 
     // Figure out what types this particular test has
-    _.each(data, function(browserData) {
-      _.each(browserData, function(versionData) {
-        var stats = versionData.stats[test] || {};
+    _.each(data, browserData => {
+      _.each(browserData, versionData => {
+        const stats = versionData.stats[test] || {};
         types = _.union(types, _.keys(stats.relative), _.keys(stats.errors));
       });
     });
-    types = types.sort(function(a, b) {
+    types = types.sort((a, b) => {
       // Push anything with es prefix to the end of the list
       if (/^es/.test(a)) {
-        a = 'zz' + a;
+        a = `zz${a}`;
       }
       if (/^es/.test(b)) {
-        b = 'zz' + b;
+        b = `zz${b}`;
       }
       return a.localeCompare(b);
     });
 
     // Save these results to the full implementation list
     implementations = _.union(implementations, types);
-    _.each(browsers, function(browser) {
-      var browserData = data[browser.name],
-          firstVersion = true;
+    _.each(browsers, ({name, versions}) => {
+      const browserData = data[name];
+      const firstVersion = true;
 
-      _.each(browser.versions, function(version) {
-        var versionData = browserData[version.id],
-            elapsed = versionData.stats[test] || {};
+      _.each(versions, ({id}) => {
+        const versionData = browserData[id];
+        const elapsed = versionData.stats[test] || {};
 
         // Look for elapsed times that have a high variance
-		if (elapsed != undefined || elapsed != null) {
-          var types = Object.keys(elapsed);
-          var average = types.reduce((prev, curr) => prev + elapsed[curr], 0) / types.length;
+        if (elapsed != undefined || elapsed != null) {
+          const types = Object.keys(elapsed);
+          const average = types.reduce((prev, curr) => prev + elapsed[curr], 0) / types.length;
 
           if (types.find((type) => elapsed[type] / average > 2 || elapsed[type] / average < 0.5)) {
-            console.warn('Elapsed outlier detected', browser.name, version.id, test, elapsed);
+            console.warn('Elapsed outlier detected', name, id, test, elapsed);
           }
 	    }
       });
     });
 
     // And then collect the results for each type
-    types = _.map(types, function(type) {
-      var results = [],
-          typeClazz = 'js-impl-' + type.replace(/-.*$/, '');
-      _.each(browsers, function(browser) {
-        var browserData = data[browser.name],
-            firstVersion = true;
+    types = _.map(types, type => {
+      const results = [];
+      const typeClazz = `js-impl-${type.replace(/-.*$/, '')}`;
+      _.each(browsers, ({name, versions}) => {
+        const browserData = data[name];
+        let firstVersion = true;
 
-        _.each(browser.versions, function(version) {
-          var versionData = browserData[version.id],
-              stats = versionData.stats[test] || {},
-              speed = (stats.relative || {})[type],
-              error = (stats.errors || {})[type];
-
-          var text = '',
-              clazz = 'test-no-support',
-              tip = '';
+        _.each(versions, ({id, tag}) => {
+          const versionData = browserData[id];
+          const stats = versionData.stats[test] || {};
+          let speed = (stats.relative || {})[type];
+          const error = (stats.errors || {})[type];
+          let text = '';
+          let clazz = 'test-no-support';
+          let tip = '';
           if (speed && !error) {
             if (speed.toFixed(1) === '1.0' || speed.toFixed(1) === '1.1' || speed.toFixed(1) === '0.9') {
               text = 'Identical';
               clazz = 'test-ok';
             } else if (speed > 1) {
-              text = speed.toFixed(speed > 3 ? 0 : 1) + 'x faster';
+              text = `${speed.toFixed(speed > 3 ? 0 : 1)}x faster`;
               clazz = 'test-faster';
             } else {
               speed = 1 / speed;
-              text = speed.toFixed(speed > 3 ? 0 : 1) + 'x slower';
+              text = `${speed.toFixed(speed > 3 ? 0 : 1)}x slower`;
               clazz = 'test-slow';
             }
           } else if (error && !(/SyntaxError|(Promise|Symbol)/.test(error))) {
@@ -212,12 +199,12 @@ function render() {
           }
 
           if (tip) {
-            text = '<span data-toggle="tooltip" title="' + tip.replace(/"/g, '&#x27;') + '">' + text + ' <span class="glyphicon glyphicon-info-sign"></span></span>';
+            text = `<span data-toggle="tooltip" title="${tip.replace(/"/g, '&#x27;')}">${text} <span class="glyphicon glyphicon-info-sign"></span></span>`;
           }
 
           results.push({
-            text: text,
-            clazz: version.tag + ' ' + typeClazz + ' ' + clazz
+            text,
+            clazz: `${tag} ${typeClazz} ${clazz}`
           });
         });
       });
@@ -225,50 +212,48 @@ function render() {
       return {
         name: type,
         clazz: typeClazz,
-        results: results
+        results
       };
     });
 
     return {
       name: test,
       display: test.replace(/_/g, ' '),
-      types: types
+      types
     };
   });
 
 
-  implementations = _.map(implementations, function(impl) {
-    return impl.replace(/-.*$/, '');
-  });
+  implementations = _.map(implementations, impl => impl.replace(/-.*$/, ''));
   implementations = _.uniq(implementations.sort());
-  implementations = _.map(implementations, function(implementation) {
-    return {
-      name: implementation,
-      selector: 'js-impl-' + implementation
-    };
-  });
+  implementations = _.map(implementations, implementation => ({
+    name: implementation,
+    selector: `js-impl-${implementation}`
+  }));
 
-  var reportData = {
-    engines: _.union(_.uniq(browserTags).map(function(tag) {
-        return {name: _.capitalize(tag), selector: 'js-version-' + tag};
-      }),
+  const reportData = {
+    engines: _.union(_.uniq(browserTags).map(tag => ({
+      name: _.capitalize(tag),
+      selector: `js-version-${tag}`
+    })),
       [{dash: true}],
-      familyTags.sort().map(function(tag) {
-        return {name: _.capitalize(tag), selector: 'js-family-' + tag};
-      })),
-    implementations: implementations
+      familyTags.sort().map(tag => ({
+        name: _.capitalize(tag),
+        selector: `js-family-${tag}`
+      }))),
+    implementations
   };
 
 
 
-  var template = Handlebars.compile(Fs.readFileSync(__dirname + '/report.handlebars').toString());
+  const template = Handlebars.compile(Fs.readFileSync(`${__dirname}/report.handlebars`).toString());
   return template({
-    browsers: browsers,
-    tests: tests,
+    browsers,
+    tests,
     date: new Date().toLocaleDateString(),
     babelVersion: Babel.version,
-    babelRuntimeVersion: BabelRuntimePackage.version,
-    traceurVersion: TraceurPackage.version,
+    babelRuntimeVersion: pkg['@babel/runtime'].replace('^', ''),
+    typescriptVersion: pkg.typescript.replace('^', ''),
     jqueryVersion: pkg.jquery.replace('^', ''),
     bootstrapVersion: pkg.bootstrap.replace('^', ''),
 

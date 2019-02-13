@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="report.css">
@@ -90,13 +89,13 @@
 
       <div class="panel-body">
         <p>
-          Run on {{date}} using babel {{babelVersion}}, babel-runtime {{babelRuntimeVersion}}, and traceur {{traceurVersion}}.
+          Run on {{date}} using babel {{babelVersion}}, babel-runtime {{babelRuntimeVersion}} and TypeScript {{typescriptVersion}}.
         </o>
         <p>
           For each of the ES6 features in question, a ES5 implementation of that functionality was written along with a ES6 version. It should be noted that the functionality is frequently the same, but in some cases the "common" vs. "correct" version was written, i.e. using <code>x[key] = value</code> vs. <code>defineProperty</code> which is faster but can be hit but a particular nasty edge case for those who deem it fun to extend <code>Object.prototype</code>.
         </p>
         <p>
-          Babel, in both loose+runtime and runtime mode, and Traceur were then used to compile the ES6 version to a ES5 compliant version, utilizing the runtime over polyfill to maintain test isolation and avoid native implementations where possible.
+          Babel, in both loose+runtime and runtime mode, and Babel were then used to compile the ES6 version to a ES5 compliant version, utilizing the runtime over polyfill to maintain test isolation and avoid native implementations where possible.
         </p>
         <p>
           All of these test instances were then benchmarked in the given JavaScript engine using <a href="https://benchmarkjs.com/">Benchmark.js</a> and then the operations per second compared to the ES5 implementation. Cross browser and cross execution comparisions are avoided as much as possible to isolate environmental issues when executing on VMs in the cloud. <code>Identical</code> indicates that the tested implementation was +/- 10% of the ES5 implementation.

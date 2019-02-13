@@ -1,7 +1,7 @@
 /*global REPORT_DATA, localStorage */
-import 'babel-polyfill/dist/polyfill';
+require('@babel/polyfill');
 
-const hasStorage = (function() {
+const hasStorage = (() => {
   try {
     localStorage.setItem('_test', '1');
   } catch (e) {
@@ -10,13 +10,13 @@ const hasStorage = (function() {
 
   localStorage.removeItem('_test');
   return true;
-}());
+})();
 
-var filter = hasStorage
+const filter = hasStorage
   ? JSON.parse(localStorage.getItem('filter') || '{}')
   : {};
 
-$(function() {
+$(() => {
   $('[data-toggle="tooltip"]').tooltip();
 
   renderList('engine', REPORT_DATA.engines);
@@ -25,27 +25,25 @@ $(function() {
 });
 
 function renderList(id, list) {
-  list = list.map((implementation) => {
-    return implementation.dash
-      ? `<li role="separator" class="divider"></li>`
-      : `<li><a href="#" data-${id}="${implementation.selector}">
-        ${implementation.name}
-      </a></li>`;
-  }).join('');
+  list = list.map(({dash, selector, name}) => dash
+    ? `<li role="separator" class="divider"></li>`
+    : `<li><a href="#" data-${id}="${selector}">
+      ${name}
+    </a></li>`).join('');
 
   $(`.js-${id}-list`)
       .html(list)
-      .on('click', 'a', function(e) {
-        var $target = $(e.target),
-            clazz = $target.data(id);
+      .on('click', 'a', e => {
+    const $target = $(e.target);
+    const clazz = $target.data(id);
 
-        filter[id] = filter[id] !== clazz ? clazz : undefined;
+    filter[id] = filter[id] !== clazz ? clazz : undefined;
 
-        filterUI();
-        saveFilters();
+    filterUI();
+    saveFilters();
 
-        e.preventDefault();
-      });
+    e.preventDefault();
+  });
 }
 
 function filterUI() {
@@ -65,7 +63,7 @@ function filterUI() {
   toggleMatching($('tbody th'), filter.implementation);
 
   // Update the cells
-  var toShow = '';
+  let toShow = '';
   if (filter.implementation) {
     toShow += `.${filter.implementation}`;
   }
@@ -92,7 +90,7 @@ function saveFilters() {
 
 function toggleColspan(to, from) {
   $(`thead > tr:first-of-type > th[${from}]`).each(function() {
-    var $el = $(this);
+    const $el = $(this);
     // Node is distinct in that all of it's tested versions are stable.
     if ($el.text() !== 'node') {
       $el.attr(to, $el.attr(from))

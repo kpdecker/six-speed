@@ -1,28 +1,26 @@
-var _ = require('lodash'),
-    Babel = require('babel-core'),
-    Buble = require('buble'),
-    Esprima = require('esprima'),
-    Fs = require('fs'),
-    Gulp = require('gulp'),
-    Vinyl = require('vinyl'),
-    PluginError = require('plugin-error'),
-    Handlebars = require('handlebars'),
-    Path = require('path'),
-    Through = require('through2'),
-    Traceur = require('traceur'),
-    TypeScript = require('typescript'),
-    webpack = require('webpack');
+const _ = require('lodash');
+const Babel = require('@babel/core');
+const Esprima = require('esprima');
+const Fs = require('fs');
+const Gulp = require('gulp');
+const Vinyl = require('vinyl');
+const PluginError = require('plugin-error');
+const Handlebars = require('handlebars');
+const Path = require('path');
+const Through = require('through2');
+const TypeScript = require('typescript');
+const webpack = require('webpack');
+const benchTemplate = Handlebars.compile(Fs.readFileSync(`${__dirname}/bench.handlebars`).toString());
+const profileTemplate = Handlebars.compile(Fs.readFileSync(`${__dirname}/profile.handlebars`).toString());
+const Log = require('fancy-log');
 
-var benchTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/bench.handlebars').toString()),
-    profileTemplate = Handlebars.compile(Fs.readFileSync(__dirname + '/profile.handlebars').toString());
-
-var closureExterns =
+const closureExterns =
     '/** @param {function()} fn */ function test(fn) {}\n' +
     '/** @param {...*} var_args */ function assertEqual(var_args) {}\n';
 
 Gulp.task('build', ['build:browser']);
 
-Gulp.task('build:webpack', function(callback) {
+Gulp.task('build:webpack', callback => {
   webpack({
     entry: './lib/runner',
     output: {
@@ -40,7 +38,7 @@ Gulp.task('build:webpack', function(callback) {
         loader: 'babel-loader'
       }]
     }
-  }, function(err, stats) {
+  }, (err, stats) => {
       if (err) {
         throw new PluginError('webpack', err);
       }
@@ -49,8 +47,8 @@ Gulp.task('build:webpack', function(callback) {
   });
 });
 
-Gulp.task('build:tests', function() {
-  var scripts = [
+Gulp.task('build:tests', () => {
+  const scripts = [
     'runner.js'
   ];
 
@@ -60,81 +58,90 @@ Gulp.task('build:tests', function() {
         return dirCallback();
       }
 
-      var testName = Path.basename(testDir.path);
+      const testName = Path.basename(testDir.path);
 
-      Gulp.src(testDir.path + '/*.*')
-          .pipe(Through.obj(function(testFile, enc, fileCallback) {
-            var self = this,
-                ext = Path.extname(testFile.path).replace(/^\./, ''),
-                content = testFile.contents.toString();
+      Gulp.src(`${testDir.path}/*.*`)
+          .pipe(Through.obj(({path, contents}, enc, fileCallback) => {
+        const self = this;
+        const ext = Path.extname(path).replace(/^\./, '');
+        const content = contents.toString();
 
-            function createFile(testType, src) {
-              var fileName = 'tests/' + testName + '__' + testType + '.js';
+        function createFile(testType, src) {
+          const fileName = `tests/${testName}__${testType}.js`;
 
-              if (testType !== 'es6') {
-                try {
-                  // If esprima can parse, then assume that it should work under es5
-                  Esprima.parse(src);
-                } catch (err) {
-                  if (!(/Unexpected token/.test(err)) && !(/Invalid regular expression/.test(err))
-                      && !(/Use of future reserved word in strict mode/.test(err))) {
-                    throw new Error(err);
-                  }
-                  return;
-                }
+          if (testType !== 'es6') {
+            try {
+              // If esprima can parse, then assume that it should work under es5
+              Esprima.parse(src);
+            } catch (err) {
+              if (!(/Unexpected token/.test(err)) && !(/Invalid regular expression/.test(err))
+                  && !(/Use of future reserved word in strict mode/.test(err))) {
+                throw new Error(err);
               }
-
-              src = 'function(test, testName, testType, require, assertEqual) {' + src + '}';
-              scripts.push(fileName);
-              self.push(new Vinyl({
-                path: fileName,
-                contents: new Buffer(
-                  '"use strict";\n'
-                  + 'SixSpeed.tests[' + JSON.stringify(testName) + '] = SixSpeed.tests[' + JSON.stringify(testName) + '] || {};\n'
-                  + 'SixSpeed.tests[' + JSON.stringify(testName) + '][' + JSON.stringify(testType) + '] = ' + src + ';\n')
-              }));
+              return;
             }
+          }
 
-            if (ext === 'es6') {
-              // TODO: Update these settings for Babel 6
-              var babel = Babel.transform(content, {presets: ['es2015', 'stage-0']}).code,
-                  babelRuntime = Babel.transform(content, {presets: ['es2015', 'stage-0'], plugins: ['transform-runtime']}).code,
-                  babelLoose = Babel.transform(content, {presets: ['es2015-loose', 'stage-0'], plugins: ['transform-runtime']}).code;
-              createFile('babel', babel);
-              if (babel !== babelRuntime) {
-                createFile('babel-runtime', babelRuntime);
-              }
-              if (babel !== babelLoose) {
-                createFile('babel-loose', babelLoose);
-              }
+          src = `function(test, testName, testType, require, assertEqual) {${src}}`;
+          scripts.push(fileName);
+          self.push(new Vinyl({
+            path: fileName,
+            contents: Buffer.from(
+              `"use strict";\nSixSpeed.tests[${JSON.stringify(testName)}] = SixSpeed.tests[${JSON.stringify(testName)}] || {};\nSixSpeed.tests[${JSON.stringify(testName)}][${JSON.stringify(testType)}] = ${src};\n`)
+          }));
+        }
 
-              createFile('babel', babel);
-              if (babel !== babelRuntime) {
-                createFile('babel-runtime', babelRuntime);
-              }
-              if (babel !== babelLoose) {
-                createFile('babel-loose', babelLoose);
-              }
+        if (ext === 'es6') {
+          const babel = Babel.transform(content, {
+            presets: [
+              ['@babel/preset-env']
+            ]
+          }).code;
 
-              try {
-                var bubleCode = Buble.transform(content, { transforms: { dangerousForOf: true, dangerousTaggedTemplateString: true } }).code;
-                createFile('buble', bubleCode);
-              } catch (err) {
-                console.log('Error Buble compiling ' + testName + ':\n' + err.message);
-              }
+          const babelRuntime = Babel.transform(content, {
+            presets: [
+              ['@babel/preset-env']
+            ],
+            plugins: [
+              ['@babel/plugin-transform-runtime']
+            ]
+          }).code;
 
-              try {
-                createFile('traceur', Traceur.compile(content));
-              } catch (err) {
-                console.log('Error traceur compiling ' + testName + ':\n' + err, err);
-              }
-              createFile('typescript', TypeScript.transpile(content, { module: TypeScript.ModuleKind.CommonJS }));
-            }
-            createFile(ext, content);
+          const babelLoose = Babel.transform(content, {
+            presets: [
+              ['@babel/preset-env', { loose: true }]
+            ],
+            plugins: [
+              ['@babel/plugin-transform-runtime']
+            ]
+          }).code;
 
-            fileCallback();
-          }.bind(this),
-          function(cb) {
+          createFile('babel', babel);
+          if (babel !== babelRuntime) {
+            createFile('babel-runtime', babelRuntime);
+          }
+          if (babel !== babelLoose) {
+            createFile('babel-loose', babelLoose);
+          }
+
+          createFile('babel', babel);
+          if (babel !== babelRuntime) {
+            createFile('babel-runtime', babelRuntime);
+          }
+          if (babel !== babelLoose) {
+            createFile('babel-loose', babelLoose);
+          }
+
+          createFile('typescript', TypeScript.transpile(content, {
+            module: TypeScript.ModuleKind.CommonJS,
+            downlevelIteration: true
+          }));
+        }
+        createFile(ext, content);
+
+        fileCallback();
+      },
+          cb => {
             cb();
             dirCallback();
           }));
@@ -142,51 +149,45 @@ Gulp.task('build:tests', function() {
     .pipe(Gulp.dest('build/'));
 });
 
-Gulp.task('build:browser-runner', function() {
-  return Gulp.src([
-        'lib/redirect-stable.html',
-        'lib/redirect-prerelease.html',
-        'lib/browser.js',
-        'lib/browser-profile.js',
-        'lib/iframe.js',
-        'lib/worker.js',
-        'lib/worker-test.js',
-        require.resolve('benchmark'),
-        require.resolve('lodash/lodash'),
-        require.resolve('babel-polyfill/dist/polyfill'),
-        require.resolve('traceur/bin/traceur-runtime')
-      ])
-      .pipe(Gulp.dest('build'));
-});
+Gulp.task('build:browser-runner', () => Gulp.src([
+      'lib/redirect-stable.html',
+      'lib/redirect-prerelease.html',
+      'lib/browser.js',
+      'lib/browser-profile.js',
+      'lib/iframe.js',
+      'lib/worker.js',
+      'lib/worker-test.js',
+      require.resolve('benchmark'),
+      require.resolve('lodash/lodash'),
+      require.resolve('@babel/polyfill/dist/polyfill')
+    ])
+    .pipe(Gulp.dest('build')));
 
-Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:tests'], function() {
-  var scripts = [
+Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:tests'], () => {
+  const scripts = [
     'lodash.js',
     'benchmark.js',
-    'traceur-runtime.js',
     'runner.js'
   ];
 
   return Gulp.src('build/tests/*.*')
-    .pipe(Through.obj(function(testDir, dirEnc, callback) {
+    .pipe(Through.obj((testDir, dirEnc, callback) => {
       if (!testDir.isDirectory()) {
-        scripts.push('tests/' + Path.basename(testDir.path));
+        scripts.push(`tests/${Path.basename(testDir.path)}`);
       }
       return callback();
     },
     function(callback) {
-      var types = {};
-      _.each(scripts, function(script) {
+      const types = {};
+      _.each(scripts, script => {
         if ((/.*__(.*)\.js$/).exec(script)) {
-          var type = types[RegExp.$1];
+          let type = types[RegExp.$1];
           if (!type) {
             type = types[RegExp.$1] = [];
 
             type.push('lodash.js');
             type.push('benchmark.js');
-            if (RegExp.$1 === 'traceur') {
-              type.push('traceur-runtime.js');
-            } else if (RegExp.$1 === 'babel') {
+            if (RegExp.$1 === 'babel') {
               type.push('polyfill.js');
             }
             type.push('runner.js');
@@ -199,34 +200,33 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
 
       this.push(new Vinyl({
         path: 'index.html',
-        contents: new Buffer(benchTemplate({scripts: scripts}))
+        contents: Buffer.from(benchTemplate({scripts}))
       }));
 
       // We need a special mime type to enable all of the features on Firefox.
-      var mozScripts = _.map(scripts, function(script) { return '../' + script; });
+      const mozScripts = _.map(scripts, script => `../${script}`);
       mozScripts[mozScripts.length - 2] = '../iframe.js';
       this.push(new Vinyl({
         path: 'moz/index.html',
-        contents: new Buffer(benchTemplate({
+        contents: Buffer.from(benchTemplate({
           scripts: mozScripts,
           jsType: 'application/javascript;version=1.7'
         }))
       }));
 
       _.each(types, (scripts, name) => {
-        var workerScripts = scripts.concat('worker-test.js');
+        const workerScripts = scripts.concat('worker-test.js');
         this.push(new Vinyl({
-          path: name + '.js',
-          contents: new Buffer(
-            '$type = ' + JSON.stringify(name) + ';\n'
-            + workerScripts.map(function(script) { return 'try { importScripts(' + JSON.stringify(script) + '); } catch (err) { console.log(' + JSON.stringify(script) + ' + err); }'; }).join('\n'))
+          path: `${name}.js`,
+          contents: Buffer.from(
+            `$type = ${JSON.stringify(name)};\n${workerScripts.map(script => `try { importScripts(${JSON.stringify(script)}); } catch (err) { console.log(${JSON.stringify(script)} + err); }`).join('\n')}`)
         }));
 
         // We need a special mime type to enable all of the features on Firefox.
-        var mozScripts = _.map(scripts, function(script) { return '../' + script; });
+        const mozScripts = _.map(scripts, script => `../${script}`);
         this.push(new Vinyl({
-          path: 'moz/' + name + '.html',
-          contents: new Buffer(benchTemplate({scripts: mozScripts, jsType: 'application/javascript;version=1.7'}))
+          path: `moz/${name}.html`,
+          contents: Buffer.from(benchTemplate({scripts: mozScripts, jsType: 'application/javascript;version=1.7'}))
         }));
       });
 
@@ -234,14 +234,14 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
       scripts[scripts.length - 1] = 'browser-profile.js';
       this.push(new Vinyl({
         path: 'profile.html',
-        contents: new Buffer(profileTemplate({scripts: scripts}))
+        contents: Buffer.from(profileTemplate({scripts}))
       }));
 
       // We need a special mime type to enable all of the features on Firefox.
       this.push(new Vinyl({
         path: 'moz/profile.html',
-        contents: new Buffer(profileTemplate({
-          scripts: _.map(scripts, function(script) { return '../' + script; }),
+        contents: Buffer.from(profileTemplate({
+          scripts: _.map(scripts, script => `../${script}`),
           jsType: 'application/javascript;version=1.7'
         }))
       }));

@@ -1,11 +1,13 @@
 /*eslint-disable no-process-env */
 
-var _ = require('lodash'),
-    PluginError = require('plugin-error'),
-    WebdriverIO = require('webdriverio'),
-    UserAgent = require('../lib/user-agent');
+const _ = require('lodash');
 
-var browserOptions = {
+const PluginError = require('plugin-error');
+const WebdriverIO = require('webdriverio');
+const UserAgent = require('../lib/user-agent');
+const Log = require('fancy-log');
+
+const browserOptions = {
   chrome: {
     chromeOptions: {
       args: [
@@ -29,10 +31,10 @@ var browserOptions = {
   }
 };
 
-module.exports.test = function(remote, config, done) {
-  var options = _.defaults({
+module.exports.test = (remote, config, done) => {
+  const options = _.defaults({
     desiredCapabilities: _.merge({
-      name: 'SixSpeed - ' + config.browserName,
+      name: `SixSpeed - ${config.browserName}`,
       public: 'public',
       build: process.env.TRAVIS_BUILD_ID,
 
@@ -44,43 +46,38 @@ module.exports.test = function(remote, config, done) {
     }, config, browserOptions[config.browserName])
   }, remote);
 
-  var userAgent,
-      browserId,
-      browserLog,
-      stats;
+  let userAgent;
+  let browserId;
+  let browserLog;
+  let stats;
+  const testServer = remote.testServer || 'http://localhost:9999/';
+  const indexFile = config.browserName === 'firefox' ? 'moz/index.html?tag=stable' : 'index.html?tag=stable';
 
-  var testServer = remote.testServer || 'http://localhost:9999/',
-      indexFile = config.browserName === 'firefox' ? 'moz/index.html?tag=stable' : 'index.html?tag=stable';
-
-  var client = WebdriverIO
+  const client = WebdriverIO
     .remote(options)
     .init()
     .url(testServer + indexFile)
-    .execute(function() {
-        /*global navigator */
-        return navigator.userAgent;
-      },
-      function(err, data) {
+    .execute(() => /*global navigator */
+  navigator.userAgent,
+      (err, {value}) => {
         if (err) {
-          throw new PluginError('test:sauce', config.browserName + ' ' + err);
+          throw new PluginError('test:sauce', `${config.browserName} ${err}`);
         }
 
-        userAgent = UserAgent.parse(data.value);
-        browserId = userAgent.name + ' ' + userAgent.version;
+        userAgent = UserAgent.parse(value);
+        browserId = `${userAgent.name} ${userAgent.version}`;
       });
 
   (function exec(timeout) {
     /*global SixSpeed */
     client.pause(Math.max(timeout, 15000))
-      .execute(function() {
-          return !SixSpeed.running && SixSpeed.ran;
-        },
-        function(err, ret) {
+      .execute(() => !SixSpeed.running && SixSpeed.ran,
+        (err, {value}) => {
           if (err) {
-            throw new PluginError('test:sauce', browserId + ' ' + err);
+            throw new PluginError('test:sauce', `${browserId} ${err}`);
           }
 
-          if (!ret.value) {
+          if (!value) {
             exec(timeout / 2);
           } else {
             cleanup();
@@ -90,36 +87,32 @@ module.exports.test = function(remote, config, done) {
 
   function cleanup() {
     client
-      .log('browser', function(err, data) {
+      .log('browser', (err, {value}) => {
         if (err) {
           // Not supported under IE so just log and move on.
           Log('test:sauce', browserId, err);
         } else {
-          browserLog = data.value;
+          browserLog = value;
         }
       })
-      .execute(function() {
-          return SixSpeed.stats;
-        },
-        function(err, ret) {
+      .execute(() => SixSpeed.stats,
+        (err, {value}) => {
           if (err) {
-            throw new PluginError('test:sauce', browserId + ' ' + err);
+            throw new PluginError('test:sauce', `${browserId} ${err}`);
           }
 
-          stats = ret.value;
+          stats = value;
         })
       .end()
-      .call(function() {
+      .call(() => {
         // Log for the user
-        _.each(browserLog, function(message) {
+        _.each(browserLog, message => {
           Log(browserId, message.source || '', '-', message.message);
         });
-        _.each(_.keys(stats).sort(), function(name) {
-          var stat = stats[name];
+        _.each(_.keys(stats).sort(), name => {
+          const stat = stats[name];
 
-          Log(browserId, name, _.map(stat.relative, function(relative, type) {
-            return type + ': ' + (relative * 100).toFixed(5) + '%';
-          }).join(' '));
+          Log(browserId, name, _.map(stat.relative, (relative, type) => `${type}: ${(relative * 100).toFixed(5)}%`).join(' '));
         });
 
         done();

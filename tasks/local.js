@@ -1,15 +1,14 @@
-var Async = require('async'),
-    AppleScript = require('applescript'),
-    ChildProcess = require('child_process'),
-    Gulp = require('gulp'),
-    Path = require('path'),
-    Server = require('./server'),
-    userhome = require('user-home');
+const Async = require('async');
+const AppleScript = require('applescript');
+const ChildProcess = require('child_process');
+const Gulp = require('gulp');
+const Path = require('path');
+const Server = require('./server');
+const userhome = require('user-home');
+const safariStableRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-stable.html'));
+const safariPrereleaseRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-prerelease.html'));
 
-var safariStableRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-stable.html')),
-    safariPrereleaseRedirect = Path.resolve(Path.join(__dirname, '..', 'build/redirect-prerelease.html'));
-
-var chromeArgs = [
+const chromeArgs = [
   // Defaults from Sauce Labs
   '--disable-webgl',
   '--blacklist-webgl',
@@ -29,7 +28,7 @@ var chromeArgs = [
   '--disable-background-timer-throttling'
 ];
 
-var browsers = [
+const browsers = [
   {
     path: `${userhome}/browsers/Google Chrome.app/Contents/MacOS/Google Chrome`,
     app: `${userhome}/browsers/Google Chrome.app`,
@@ -62,33 +61,33 @@ var browsers = [
   }
 ];
 
-Gulp.task('test:local', ['build:browser'], function(callback) {
-  Async.eachSeries(browsers, runProcess, function() {
+Gulp.task('test:local', ['build:browser'], callback => {
+  Async.eachSeries(browsers, runProcess, () => {
     callback();
   });
 });
 
-function runProcess(config, callback) {
-  var child,
-      appPath = Path.resolve(config.app);
-  Server.start(function() {
-    child = ChildProcess.spawn(config.path, config.args, {stdio: 'inherit'});
+function runProcess({app, path, args}, callback) {
+  let child;
+  const appPath = Path.resolve(app);
+  Server.start(() => {
+    child = ChildProcess.spawn(path, args, {stdio: 'inherit'});
 
-    if (!(/firefox/.test(config.path))) {
-      setTimeout(function() {
-        execAppleScript('tell application "' + appPath + '" to activate', function() {});
+    if (!(/firefox/.test(path))) {
+      setTimeout(() => {
+        execAppleScript(`tell application "${appPath}" to activate`, () => {});
       }, 3000);
     }
-  }, function() {
+  }, () => {
     function killServer() {
-      Server.stop(function() {
+      Server.stop(() => {
         callback();
       });
     }
 
-    if (/Safari|WebKit/.test(config.path)) {
-      execAppleScript('tell application "' + appPath + '" to close (every tab of window 1)', function() {
-        execAppleScript('tell application "' + appPath + '" to quit', killServer);
+    if (/Safari|WebKit/.test(path)) {
+      execAppleScript(`tell application "${appPath}" to close (every tab of window 1)`, () => {
+        execAppleScript(`tell application "${appPath}" to quit`, killServer);
       });
     } else {
       child.kill();

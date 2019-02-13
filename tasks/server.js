@@ -3,14 +3,15 @@ const Gulp = require('gulp');
 const PluginError = require('plugin-error');
 const Hapi = require('hapi');
 const UserAgent = require('../lib/user-agent');
+const Log = require('fancy-log');
 
-var server;
+let server;
 
-Gulp.task('server', function(callback) {    // eslint-disable-line no-unused-vars
-  exports.start(function() {});
+Gulp.task('server', callback => {    // eslint-disable-line no-unused-vars
+  exports.start(() => {});
 });
 
-exports.start = function(startup, testComplete) {
+exports.start = (startup, testComplete) => {
   server = new Hapi.Server();
   server.connection({ port: 9999 });
 
@@ -18,12 +19,12 @@ exports.start = function(startup, testComplete) {
   server.route({
     method: 'POST',
     path: '/log',
-    handler: function(request, reply) {
-      var userAgent = UserAgent.parse(request.payload.browser),
-          data = JSON.parse(request.payload.data);
+    handler({payload}, reply) {
+      const userAgent = UserAgent.parse(payload.browser);
+      const data = JSON.parse(payload.data);
 
-      Log('Storing data for browser', userAgent.name, userAgent.version, '{' + Object.keys(data).join(', ') + '}');
-      DataStore.store(userAgent.name, request.payload.tag, userAgent.version, data);
+      Log('Storing data for browser', userAgent.name, userAgent.version, `{${Object.keys(data).join(', ')}}`);
+      DataStore.store(userAgent.name, payload.tag, userAgent.version, data);
 
       reply({});
     }
@@ -31,9 +32,9 @@ exports.start = function(startup, testComplete) {
   server.route({
     method: 'POST',
     path: '/debug',
-    handler: function(request, reply) {
-      var userAgent = UserAgent.parse(request.payload.browser),
-          message = request.payload.message;
+    handler({payload}, reply) {
+      const userAgent = UserAgent.parse(payload.browser);
+      const message = payload.message;
 
       Log('[debug]', userAgent.name, userAgent.version, message);
 
@@ -44,7 +45,7 @@ exports.start = function(startup, testComplete) {
   server.route({
     method: 'POST',
     path: '/done',
-    handler: function(request, reply) {
+    handler(request, reply) {
       reply({});
 
       if (testComplete) {
@@ -62,7 +63,7 @@ exports.start = function(startup, testComplete) {
       }
     }
   });
-  server.start(function(err) {
+  server.start(err => {
     if (err) {
       throw new PluginError('server', err);
     }
@@ -72,6 +73,6 @@ exports.start = function(startup, testComplete) {
   });
 };
 
-exports.stop = function(done) {
+exports.stop = done => {
   server.stop(done);
 };
