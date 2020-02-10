@@ -19,10 +19,11 @@ const closureExterns =
     '/** @param {...*} var_args */ function assertEqual(var_args) {}\n';
 
 Gulp.task('build:webpack', async (callback) => {
-  webpack({
+  return webpack({
+    mode: 'production',
     entry: './lib/runner',
     output: {
-      path: 'build/',
+      path: Path.resolve(__dirname, '../build/'),
       filename: 'runner.js'
     },
     externals: {
@@ -30,7 +31,7 @@ Gulp.task('build:webpack', async (callback) => {
       benchmark: 'Benchmark'
     },
     module: {
-      loaders: [{
+      rules: [{
         test: /\.jsx?$/,
         exclude: /node_modules|vendor/,
         loader: 'babel-loader'
@@ -163,7 +164,7 @@ Gulp.task('build:browser-runner', () =>
     .pipe(Gulp.dest('build'))
 );
 
-Gulp.task('build:browser', Gulp.series('build:browser-runner', 'build:webpack', 'build:tests'), async () => {
+Gulp.task('build:browser', Gulp.series('build:browser-runner', 'build:webpack', 'build:tests', async () => {
   const scripts = [
     'lodash.js',
     'benchmark.js',
@@ -176,8 +177,7 @@ Gulp.task('build:browser', Gulp.series('build:browser-runner', 'build:webpack', 
         scripts.push(`tests/${Path.basename(testDir.path)}`);
       }
       return callback();
-    },
-    function(callback) {
+    }, function(callback) {
       const types = {};
       _.each(scripts, script => {
         if ((/.*__(.*)\.js$/).exec(script)) {
@@ -249,6 +249,6 @@ Gulp.task('build:browser', Gulp.series('build:browser-runner', 'build:webpack', 
       callback();
     }))
     .pipe(Gulp.dest('build/'));
-});
+}));
 
 Gulp.task('build', Gulp.series('build:browser'));

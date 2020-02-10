@@ -28,15 +28,16 @@ Gulp.task('report:bootstrap:css', async () => {
 
 Gulp.task('report:webpack', async (callback) => {
   return webpack({
+    mode: 'production',
     entry: {
       report: './report/index.js'
     },
     output: {
-      path: 'site/',
+      path: Path.resolve(__dirname, '../site/'),
       filename: '[name].js'
     },
     module: {
-      loaders: [{
+      rules: [{
         test: /\.jsx?$/,
         exclude: /node_modules|vendor|bower_components/,
         loader: 'babel-loader'
@@ -45,15 +46,11 @@ Gulp.task('report:webpack', async (callback) => {
         loader: 'imports?jQuery=jquery'
       }]
     },
-
     resolve: {
-      root: [Path.join(__dirname, '..', 'bower_components')]
+      alias: {
+        root: Path.join(__dirname, '..', 'bower_components')
+      }
     },
-    plugins: [
-      new webpack.ResolverPlugin(
-        new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
-      )
-    ]
   }, (err, stats) => {
       if (err) {
         throw new PluginError('webpack', err);
