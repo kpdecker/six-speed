@@ -9,13 +9,18 @@ require('./tasks/sauce');
 require('./tasks/vm');
 require('./tasks/server');
 
-Gulp.task('test', ['test:node']);
 
-Gulp.task('watch', ['build', 'report'], () => {
-  Gulp.watch(['lib/*.js', 'tests/**'], ['build']);
-  Gulp.watch(['tasks/report.*', 'report/**', 'data.json', 'notes.json'], ['report']);
+function watchFiles() {
+  Gulp.task('watch', Gulp.series('build', 'report'), () => {
+    Gulp.watch(['lib/*.js', 'tests/**'], Gulp.series('build'));
+    Gulp.watch(['tasks/report.*', 'report/**', 'data.json', 'notes.json'], Gulp.series('report'));
+  });
+}
+
+const watch = Gulp.series(watchFiles);
+
+Gulp.task('clean', async (callback) => {
+  return del(['build/**'], callback);
 });
 
-Gulp.task('clean', (callback) => {
-  del(['build/**'], callback);
-});
+Gulp.task('test', Gulp.series('test:node'));

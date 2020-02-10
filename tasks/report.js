@@ -11,21 +11,23 @@ const Path = require('path');
 const webpack = require('webpack');
 const pkg = require('../package.json').dependencies;
 
-Gulp.task('report', ['report:static', 'report:bootstrap:fonts', 'report:bootstrap:css', 'report:webpack'], () => {
-  const report = render();
-  Fs.writeFileSync('site/index.html', report);
+Gulp.task('report:static', async () => {
+  return Gulp.src('report/*.css')
+    .pipe(Gulp.dest('site/'))
 });
 
-Gulp.task('report:static', () => Gulp.src('report/*.css')
-    .pipe(Gulp.dest('site/')));
-Gulp.task('report:bootstrap:fonts', () => Gulp.src(['bower_components/bootstrap/fonts/*'], {base: 'bower_components/bootstrap'})
-    .pipe(Gulp.dest('site/')));
-Gulp.task('report:bootstrap:css', () => Gulp.src(['bower_components/bootstrap/dist/css/*'], {base: 'bower_components/bootstrap/dist'})
-    .pipe(Gulp.dest('site/')));
+Gulp.task('report:bootstrap:fonts', async () => {
+  return Gulp.src(['bower_components/bootstrap/fonts/*'], {base: 'bower_components/bootstrap'})
+    .pipe(Gulp.dest('site/'))
+});
 
+Gulp.task('report:bootstrap:css', async () => {
+  return Gulp.src(['bower_components/bootstrap/dist/css/*'], {base: 'bower_components/bootstrap/dist'})
+    .pipe(Gulp.dest('site/'))
+});
 
-Gulp.task('report:webpack', callback => {
-  webpack({
+Gulp.task('report:webpack', async (callback) => {
+  return webpack({
     entry: {
       report: './report/index.js'
     },
@@ -223,7 +225,6 @@ function render() {
     };
   });
 
-
   implementations = _.map(implementations, impl => impl.replace(/-.*$/, ''));
   implementations = _.uniq(implementations.sort());
   implementations = _.map(implementations, implementation => ({
@@ -244,8 +245,6 @@ function render() {
     implementations
   };
 
-
-
   const template = Handlebars.compile(Fs.readFileSync(`${__dirname}/report.handlebars`).toString());
   return template({
     browsers,
@@ -260,3 +259,8 @@ function render() {
     reportData: JSON.stringify(reportData)
   });
 }
+
+Gulp.task('report', Gulp.series('report:static', 'report:bootstrap:fonts', 'report:bootstrap:css', 'report:webpack', async () => {
+  const report = render();
+  return Fs.writeFileSync('site/index.html', report);
+}));

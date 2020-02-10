@@ -6,18 +6,15 @@ const userhome = require('user-home');
 
 const RUN_USER = 'vmrun -gu IEUser -gp Passw0rd! ';
 
-Gulp.task('test:vm', ['build:browser', 'test:vm:edge']);
-
-Gulp.task('test:vm:edge', ['build:browser'], callback => {
-  runVM('stable', runEdge, (err) => {
+Gulp.task('test:vm:edge', Gulp.series('build:browser', async (callback) => {
+  return runVM('stable', runEdge, (err) => {
     if (err) {
       return callback(err);
     }
 
     runVM('preview', runEdge, callback);
   });
-});
-
+}));
 
 function runVM(branch, run, callback) {
   const vmx = `${userhome}/browsers/edge/${branch}/MSEdge - Win10_preview.vmx`;
@@ -122,3 +119,5 @@ function nonZero(exe, command, stdout) {
   return (/Guest program exited with non-zero exit code/).test(stdout)
       && (exe).test(command);
 }
+
+Gulp.task('test:vm', Gulp.series('build:browser', 'test:vm:edge'));

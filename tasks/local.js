@@ -61,11 +61,11 @@ const browsers = [
   }
 ];
 
-Gulp.task('test:local', ['build:browser'], callback => {
-  Async.eachSeries(browsers, runProcess, () => {
+Gulp.task('test:local', Gulp.series('build:browser', async (callback) => {
+  return Async.eachSeries(browsers, runProcess, () => {
     callback();
   });
-});
+}));
 
 function runProcess({app, path, args}, callback) {
   let child;

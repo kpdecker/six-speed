@@ -15,12 +15,12 @@ const browsers = [
   }
 ];
 
-Gulp.task('test:sauce', ['build:browser'], callback => {
+Gulp.task('test:sauce', Gulp.series('build:browser', async (callback) => {
   const user = process.env.SAUCE_USERNAME;
   const pass = process.env.SAUCE_ACCESS_KEY;
   const tunnelId = process.env.TRAVIS_JOB_ID || 42;
 
-  Server.start(() => {
+  return Server.start(() => {
     startTunnel(user, pass, tunnelId, tunnel => {
       Async.eachLimit(browsers, 5, (config, done) => {
           config = _.defaults({
@@ -44,7 +44,7 @@ Gulp.task('test:sauce', ['build:browser'], callback => {
         });
     });
   });
-});
+}));
 
 function startTunnel(user, pass, tunnelId, done) {
   const tunnel = new SauceTunnel(user, pass, tunnelId, true, []);

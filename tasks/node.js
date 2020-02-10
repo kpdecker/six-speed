@@ -4,15 +4,15 @@ const ChildProcess = require('child_process');
 const Gulp = require('gulp');
 const PluginError = require('plugin-error');
 
-Gulp.task('test:node', ['build:tests'], callback => {
-  findStagingArgs(args => {
+Gulp.task('test:node', Gulp.series('build:tests', async (callback) => {
+  return findStagingArgs(args => {
     args.push('lib/node');
     runNode(args, callback);
   });
-});
+}));
 
-Gulp.task('profile:node', ['build:tests'], callback => {
-  findStagingArgs(args => {
+Gulp.task('profile:node', Gulp.series('build:tests', (callback) => {
+  return findStagingArgs(args => {
     args.push('--prof');
     args.push('lib/node-profile');
     args.push(`--testName=${Args.testName}`);
@@ -21,7 +21,7 @@ Gulp.task('profile:node', ['build:tests'], callback => {
 
     runNode(args, callback);
   });
-});
+}));
 
 function findStagingArgs(callback) {
   ChildProcess.exec('node  --v8-options | grep "in progress"', (err, stdout) => {

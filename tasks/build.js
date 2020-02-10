@@ -18,9 +18,7 @@ const closureExterns =
     '/** @param {function()} fn */ function test(fn) {}\n' +
     '/** @param {...*} var_args */ function assertEqual(var_args) {}\n';
 
-Gulp.task('build', ['build:browser']);
-
-Gulp.task('build:webpack', callback => {
+Gulp.task('build:webpack', async (callback) => {
   webpack({
     entry: './lib/runner',
     output: {
@@ -47,7 +45,7 @@ Gulp.task('build:webpack', callback => {
   });
 });
 
-Gulp.task('build:tests', () => {
+Gulp.task('build:tests', async () => {
   const scripts = [
     'runner.js'
   ];
@@ -149,7 +147,8 @@ Gulp.task('build:tests', () => {
     .pipe(Gulp.dest('build/'));
 });
 
-Gulp.task('build:browser-runner', () => Gulp.src([
+Gulp.task('build:browser-runner', () =>
+    Gulp.src([
       'lib/redirect-stable.html',
       'lib/redirect-prerelease.html',
       'lib/browser.js',
@@ -161,9 +160,10 @@ Gulp.task('build:browser-runner', () => Gulp.src([
       require.resolve('lodash/lodash'),
       require.resolve('@babel/polyfill/dist/polyfill')
     ])
-    .pipe(Gulp.dest('build')));
+    .pipe(Gulp.dest('build'))
+);
 
-Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:tests'], () => {
+Gulp.task('build:browser', Gulp.series('build:browser-runner', 'build:webpack', 'build:tests'), async () => {
   const scripts = [
     'lodash.js',
     'benchmark.js',
@@ -250,3 +250,5 @@ Gulp.task('build:browser', ['build:browser-runner', 'build:webpack', 'build:test
     }))
     .pipe(Gulp.dest('build/'));
 });
+
+Gulp.task('build', Gulp.series('build:browser'));
