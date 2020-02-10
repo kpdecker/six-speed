@@ -32,6 +32,7 @@ a, a:visited {
 .table > thead > tr > td,
 .table > thead > tr > th {
     padding: 6px;
+    font-size: 1.2rem;
 }
 
 
