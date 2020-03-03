@@ -259,5 +259,10 @@ function render() {
 
 Gulp.task('report', Gulp.series('report:static', 'report:bootstrap:fonts', 'report:bootstrap:css', 'report:webpack', async () => {
   const report = render();
+  try {
+    Fs.statSync('site');
+  } catch(e) {
+    Fs.mkdirSync('site');
+  }
   return Fs.writeFileSync('site/index.html', report);
 }));
