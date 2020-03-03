@@ -30,6 +30,14 @@ Profiles a given test within the current Node environment. Type may be one of:
 - es5
 - es6
 
+
+```
+npm run build
+```
+
+Builds test files into build directory.
+
+
 ```
 npm start
 ```

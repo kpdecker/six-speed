@@ -19,7 +19,8 @@
     "test:node": "gulp test:node",
     "start": "gulp server",
     "profile:node": "gulp profile:node",
-    "report": "gulp report"
+    "report": "gulp report",
+    "build": "gulp build"
   },
   "author": "Kevin Decker <kpdecker@gmail.com>",
   "license": "MIT",
