@@ -80,6 +80,15 @@ mkdir browsers
 
 After this the image should be restarted a few times until all setup and update processes have completed and then a snapshot named `six-speed` taken from the idle desktop screen. The `test-all.sh` script will check that the VM image is up to date and will halt execution if the image is not setup properly, as a sanity check.
 
+## Adding a custom browser to the report
+
+- Run the server (`npm run build && npm start`)
+- Visit the test url in your browser to perform the tests
+ - This updates `data.json` to include the results
+- Update `notes.json` to include the useragent and engine
+- Run the report builder (`npm run report`)
+    - Report is generated in `site/index.html`
+
 ## Links
 
 - [V8 Harmony Features](https://code.google.com/p/v8/issues/list?q=label:Harmony)
