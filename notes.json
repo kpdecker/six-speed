@@ -2,7 +2,7 @@
   "family": {
     "node": ["v8"],
     "chrome": ["v8"],
-    "firefox": ["family"],
+    "firefox": ["SpiderMonkey"],
     "ie": ["Chakra"],
     "edge": ["v8"],
     "safari": ["JavaScriptCore"],
