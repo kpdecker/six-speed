@@ -40,10 +40,17 @@ Gulp.task('report:webpack', async (callback) => {
       rules: [{
         test: /\.jsx?$/,
         exclude: /node_modules|vendor|bower_components/,
-        loader: 'babel-loader'
+        use: [{
+          loader: 'babel-loader',
+        }]
       }, {
         test: /bootstrap\/js/,
-        loader: 'imports?jQuery=jquery'
+        use: [{
+          loader: 'imports',
+          options: {
+            jQuery: 'jquery'
+          }
+        }]
       }]
     },
     resolve: {

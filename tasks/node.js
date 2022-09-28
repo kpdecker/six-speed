@@ -35,11 +35,7 @@ function findStagingArgs(callback) {
         return RegExp.$1;
       }
     }));
-    if (/^0/.test(process.versions.node)) {
-      args.push('--harmony');
-    } else {
-      args.push('--es_staging');
-    }
+    args.push('--harmony');
     callback(args);
   });
 }
