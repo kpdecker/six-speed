@@ -4,7 +4,7 @@
     "chrome": ["v8"],
     "firefox": ["SpiderMonkey"],
     "ie": ["Chakra"],
-    "edge": ["Chakra"],
+    "edge": ["v8"],
     "safari": ["JavaScriptCore"],
     "webkit": ["JavaScriptCore"]
   }
