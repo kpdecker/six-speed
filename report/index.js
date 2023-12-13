@@ -33,11 +33,21 @@ function renderList(id, list) {
 
   $(`.js-${id}-list`)
       .html(list)
-      .on('click', 'a', e => {
-    const $target = $(e.target);
-    const clazz = $target.data(id);
-
-    filter[id] = filter[id] !== clazz ? clazz : undefined;
+    .on('click', 'a', e => {
+      const $target = $(e.target);
+      const clazz = $target.data(id);
+      if (id === 'engine') {
+        filter[id] = filter[id] !== clazz ? clazz : undefined;
+      } else {
+        const list = filter[id] ? filter[id].split(' ') : []
+            const index = list.indexOf(clazz)
+            if (index > -1) {
+              list.splice(index, 1)
+            } else {
+              list.push(clazz)
+            }
+        filter[id] = list.length > 0 ? list.join(' ') : undefined;
+      }
 
     filterUI();
     saveFilters();
@@ -64,21 +74,23 @@ function filterUI() {
 
   // Update the cells
   let toShow = '';
-  if (filter.implementation) {
-    toShow += `.${filter.implementation}`;
+  const implementationList = filter.implementation ? filter.implementation.split(' ') : []
+  const implementationListLen = implementationList.length
+  for (let i = 0; i < implementationListLen; i++) {
+    toShow += ` .${implementationList[i]}`;
   }
   if (filter.engine) {
-    toShow += `.${filter.engine}`;
+    toShow += `#.${filter.engine}`;
   }
-  toggleMatching($('tbody td'), toShow);
+  toggleMatching($('tbody td'), toShow.trim());
 
   // Update the selected indicators
   $('.dropdown').find('.glyphicon').remove();
   if (filter.engine) {
     $(`[data-engine="${filter.engine}"]`).append('<span class="glyphicon glyphicon-ok"></span>');
   }
-  if (filter.implementation) {
-    $(`[data-implementation="${filter.implementation}"]`).append('<span class="glyphicon glyphicon-ok"></span>');
+  for (let i = 0; i < implementationListLen; i++) {
+    $(`[data-implementation="${implementationList[i]}"]`).append('<span class="glyphicon glyphicon-ok"></span>');
   }
 }
 
@@ -99,15 +111,28 @@ function toggleColspan(to, from) {
   });
 }
 
-function toggleMatching($el, filterClass) {
-  if (filterClass) {
-    if (!(/\./.test(filterClass))) {
-      filterClass = `.${filterClass}`;
+function toggleMatching($el, filters) {
+  const objList = filters ? filters.split('#') : []
+  let engine = objList[1] || ''
+  const implementation = objList[0] || ''
+  let str = ''
+  const implementationList = implementation ? implementation.split(' ') : []
+  if (engine && !(/\./.test(engine))) {
+    engine = `.${engine}`;
+    $el.filter(`${engine}`).show();
+    str += `:not([rowspan],${engine}})`
+  }
+  for (let i = 0; i < implementationList.length; i++) {
+    const implement = implementationList[i]
+    if (!(/\./.test(implement))) {
+      implement = `.${implement}`;
     }
-
-    $el.filter(`${filterClass}`).show();
-    $el.filter(`:not([rowspan],${filterClass})`).hide();
-  } else {
+    $el.filter(`${implement}`).show();
+    str += `:not([rowspan],${implement + (engine ? engine : '')})`
+  }
+  if (!filters) {
     $el.show();
+  } else {
+    $el.filter(str).hide();
   }
 }
